@@ -14,9 +14,11 @@ body {
     margin-left: 1vw;
   }
   & button {
+    box-sizing: border-box;
     background-color: #00a6ef;
     border: none;
     width: 10vw;
+    height: 12vh;
     color: #fff;
     font-size: 1rem;
     padding: 5vh 0;
