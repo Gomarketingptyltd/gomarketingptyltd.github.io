@@ -1,0 +1,22 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & img {
+    width: 12vw;
+    height: 14vh;
+    margin-left: 1vw;
+  }
+  & button {
+    background-color: #00a6ef;
+    border: none;
+    width: 14vw;
+    color: #fff;
+    font-size: 1rem;
+    padding: 7vh 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
