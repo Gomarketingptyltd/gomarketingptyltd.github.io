@@ -1,5 +1,5 @@
 # GOM
-####URL: https://gomarketingptyltd.github.io/GOM/
+#### URL: https://gomarketingptyltd.github.io/GOM/
 
 1. 请大家在components文件夹下 找到自己要做的组件部分
 2. 在html和scss里完成组件内容的编写
