@@ -1,21 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-.box {
-  margin-left: 10%;
-  margin-right: 10%;
+  background-color: #19191b;
 }
 
 .wrap {
   max-width: 1440px;
   min-width: 600px;
+  width: 70%;
   padding-top: 5rem;
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .cards_wrap {
@@ -26,33 +22,32 @@ body {
 }
 
 .cards_wrap .card_item {
-  padding: 15px 25px;
-  width: 25%;
+  padding: 25px 15px;
+  width: 30%;
 }
 
 .cards_wrap .card_inner {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  border-radius: 5px;
-  padding: 30px 10px 3px;
-  min-width: 160px;
-  min-height: 180px;
-  max-height: 300px;
-  width: 100%;
-  margin: auto;
+  border-radius: 6px;
+  padding: 20px 5px;
+  min-height: 450px;
+  max-width: 400px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.cards_wrap .card_inner:hover {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .card_inner .imgDiv {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  width: 85%;
+  margin: auto;
 }
 
 .card_inner img {
-  width: 65%;
+  width: 100%;
 }
 
 .card_inner .content {
@@ -60,30 +55,43 @@ body {
 }
 
 .card_inner .header {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+  font-size: 28px;
+  margin: 1rem 0;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.card_inner .date {
+  font-size: 20px;
+  font-family: "Readex Pro", sans-serif;
+  color: #888888;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
   margin: 0.5rem 0;
 }
 
 .card_inner .text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
-  color: gray;
+  font-size: 20px;
+  font-family: "Readex Pro", sans-serif;
+  color: #888888;
 }
 
 h2 {
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 25px;
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #f69306;
 }
 
 @media screen and (max-width: 1440px) {
   .cards_wrap .card_item img {
-    width: 70%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 900px) {
   .cards_wrap .card_item img {
-    width: 80%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 568px) {
@@ -91,5 +99,6 @@ h2 {
     width: 100%;
   }
 }
+/*# sourceMappingURL=ourInsights.css.map */
 
 /*# sourceMappingURL=ourInsights.css.map */
