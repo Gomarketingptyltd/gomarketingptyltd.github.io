@@ -3,8 +3,6 @@ body {
   padding: 0;
 }
 
-/*# sourceMappingURL=ourTeam.css.map */
-
 .wrap {
   max-width: 1440px;
   min-width: 600px;
@@ -25,6 +23,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .content {
   display: flex;
   flex-direction: column;
@@ -42,3 +41,5 @@ p {
   font-size: 1.1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*# sourceMappingURL=ourTeam.css.map */

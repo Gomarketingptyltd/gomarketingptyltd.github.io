@@ -26,7 +26,7 @@ body {
 }
 
 .cards_wrap .card_inner {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   background: #fff;
   border-radius: 5px;
   padding: 30px 10px 3px;
@@ -49,6 +49,7 @@ body {
 .card_inner img {
   width: 65%;
 }
+
 .card_inner .content {
   margin: 15px 10px;
 }
@@ -75,15 +76,15 @@ h2 {
     width: 70%;
   }
 }
-
 @media screen and (max-width: 900) {
   .cards_wrap .card_item img {
     width: 80%;
   }
 }
-
 @media screen and (max-width: 568px) {
   .cards_wrap .card_item img {
     width: 100%;
   }
 }
+
+/*# sourceMappingURL=cd.map */
