@@ -1,9 +1,5 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .info {
+  margin-top: 8vh;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -14,14 +10,14 @@ body {
     width: 33%;
     font-size: 30px;
     & h2:first-child {
-        margin: 0;
-        color: #666;
-      }
-    & h2:last-child {
-        margin: 0;
-        color: #2981b8;
-      }
+      margin: 0;
+      color: #666;
     }
+    & h2:last-child {
+      margin: 0;
+      color: #2981b8;
+    }
+  }
 
   &-form {
     display: flex;
