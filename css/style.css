@@ -72,6 +72,11 @@
   font-size: 1rem;
 }
 
+.box {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .wrap {
   max-width: 1440px;
   min-width: 600px;
@@ -101,7 +106,7 @@ img {
 
 h2 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -109,6 +114,11 @@ p {
   margin: 0.5rem 0;
   font-size: 1.1rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.box {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .wrap {
@@ -175,7 +185,7 @@ p {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
