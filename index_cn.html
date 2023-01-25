@@ -9,7 +9,7 @@
     <meta name="description" content="">
 </head>
 <body>
-    <div class="container">
+    <div>
         <!--        header-->
         <header class="header">
             <img src="images/logo.png" alt="logo">
@@ -19,13 +19,65 @@
         <!--        nav-->
         <nav class="nav-bar">
             <ul class="nav">
-                <li class="active"><a href="#">主页</a></li>
+                <li class="nav-active"><a href="#">主页</a></li>
                 <li><a href="#">服务</a></li>
                 <li><a href="#">关于</a></li>
                 <li><a href="#">联系</a></li>
             </ul>
             <button><a href="index.html">English</a></button>
         </nav>
+
+        <!--        logos-->
+        <div class="logos">
+            <img src="https://d1icd6shlvmxi6.cloudfront.net/gsc/ZMXQ07/28/78/ef/2878efd2221e4770befeefb6c5acb803/images/page_1/u200.png?pageId=f5eecd21-68f5-45fc-af6b-9d3f6ccb43b7"
+                 alt="logos">
+        </div>
+
+        <!--        scroll bar-->
+        <div class="hero">
+            <h1>感言</h1>
+            <div class="container">
+                <div class="indicator">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+                <div class="testimonial">
+                    <div class="slide-row" id="slide">
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>这幅画描绘了一位貌美的女性，可能是罗马尼亚的公主或贵妇人，她的表情深情而哀伤。虽然她的眼泪未描绘，但是画中的气氛和表情让观众感到她正在流泪。</p>
+                                <h3>蒙娜丽莎</h3>
+                                <p>百年前的名画</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="./images/img1.jpg" alt="img1">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>奥巴马是美国前总统。他于2009年1月20日就职，并于2017年1月20日卸任。在他的任期内，他推动了医疗保健改革，以及减少碳排放的政策，还有美国对伊拉克和阿富汗战争的撤军。</p>
+                                <h3>奥巴马</h3>
+                                <p>骄傲的两任总统</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="./images/img2.jpg" alt="img2">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>Elizabeth II在1952年2月6日继承了英国和英联邦国家的王位，成为第些世代的英国国王。她是第二位统治英国超过65年的女王，也是英联邦国家历史上统治时间最长的君主。</p>
+                                <h3>伊丽莎白二世</h3>
+                                <p>英国已故女王</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="./images/img3.jpg" alt="img3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--        our team-->
         <div class="wrap">
@@ -202,5 +254,7 @@
             <p id="copyright">® 2022-2023 Go Marketing有限责任公司 版权所有</p>
         </div>
     </div>
+
+    <script src="js/scroll.js"></script>
 </body>
 </html>

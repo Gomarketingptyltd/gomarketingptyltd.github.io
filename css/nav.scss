@@ -20,10 +20,10 @@
         color: #fff;
       }
     }
-    & .active {
+    & .nav-active {
       position: relative;
     }
-    & .active::after {
+    & .nav-active::after {
       content: "";
       width: 100%;
       height: 0.5vh;
