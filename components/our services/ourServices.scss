@@ -1,4 +1,41 @@
-body {
-  margin: 0;
+$background-color: #19191b;
+$title-color:#F69306;
+$primary-font-color:#ffffff;
+$secondary-font-color:#FFFFFFB2;
+
+*{
+   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+font-family: 'Nunito sans';
+font-weight: 600;
+ font-size: 28px;
+  line-height: 28px;
+  color: $primary-font-color;
+}
+
+.random{
+  height: 100px;
+  background-color: antiquewhite;
+}
+
+.section__services{
+  background-color: $background-color;
+  height: 1000px;
+}
+
+.services{
+  padding: 49px 369px;
+}
+
+.services__title{
+  text-align: center;
+  p{
+  font-family: 'Readex pro', 'sans-serif';
+  font-size: 50px;
+  color: $title-color;
+}
+} 
