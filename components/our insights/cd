@@ -76,7 +76,7 @@ h2 {
     width: 70%;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900) {
   .cards_wrap .card_item img {
     width: 80%;
   }
@@ -87,4 +87,4 @@ h2 {
   }
 }
 
-/*# sourceMappingURL=ourInsights.css.map */
+/*# sourceMappingURL=cd.map */
