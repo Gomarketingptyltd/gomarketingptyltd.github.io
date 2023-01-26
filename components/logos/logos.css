@@ -1,18 +1,1 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.logos img {
-  max-width: 100vw;
-  flex-basis: 600px;
-  /* or any other value you want */
-  flex-shrink: 0;
-}
-
-/*# sourceMappingURL=logos.css.map */
+body{margin:0;padding:0;background:#19191b}.logos{display:flex;flex-wrap:wrap}.logos img{max-width:100vw;flex-basis:600px;flex-shrink:0}

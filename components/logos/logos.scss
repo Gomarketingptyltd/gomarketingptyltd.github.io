@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: #19191B;
 }
 
 .logos {
@@ -11,6 +12,5 @@ body {
 .logos img {
   max-width: 100vw;
   flex-basis: 600px;
-  /* or any other value you want */
   flex-shrink: 0;
 }
