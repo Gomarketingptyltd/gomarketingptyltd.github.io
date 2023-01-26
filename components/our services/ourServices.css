@@ -99,12 +99,107 @@ body {
 
 .section__cases {
   background-color: #19191b;
-  height: 900px;
   position: relative;
 }
 
 .cases {
   padding: 60px 200px;
+}
+
+.cases__title h2 {
+  font-family: "Nunito sans", "sans-serif";
+  font-weight: 800;
+  font-size: 50px;
+  color: #F69306;
+  margin-bottom: 49px;
+}
+
+/* SLIDER */
+.slider {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0px 10px 13px 0px #f1f1f1, 0px 5px 5px 5px rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  /* IN THE END */
+  overflow: hidden;
+}
+.slider:hover {
+  box-shadow: 0px 11px 21px 3px rgba(0, 0, 0, 0.1);
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  opacity: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 0.1rem;
+  width: 0.1rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.dots__dot {
+  border: none;
+  background-color: #121213;
+  opacity: 0.7;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  margin-right: 0.9rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+.dots__dot:last-child {
+  margin: 0;
+}
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #5454D4;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=ourServices.css.map */
