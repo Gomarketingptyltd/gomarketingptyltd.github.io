@@ -19,17 +19,37 @@ body {
 
 .section__services {
   background-color: #19191b;
-  height: 900px;
+  position: relative;
 }
 
 .services {
-  padding: 54px 200px;
+  padding: 60px 200px;
+}
+
+.triangle {
+  position: absolute;
+  left: 100px;
+}
+
+.cross {
+  position: absolute;
+  left: 90px;
+  bottom: 50px;
+}
+
+.blur {
+  position: absolute;
+  left: 0px;
+  top: 300px;
+  display: inline;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .services__title {
   text-align: center;
 }
-.services__title p {
+.services__title h2 {
   font-family: "Readex pro", "sans-serif";
   font-size: 50px;
   color: #F69306;
@@ -38,10 +58,11 @@ body {
 
 .services__cards {
   display: flex;
-  gap: 56px;
+  gap: 3.5rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 150px;
 }
 
 .card {
@@ -50,7 +71,7 @@ body {
   height: 298px;
   background-color: #19191b;
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .card:hover {
@@ -74,6 +95,16 @@ body {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6980392157);
   margin-top: 20px;
+}
+
+.section__cases {
+  background-color: #19191b;
+  height: 900px;
+  position: relative;
+}
+
+.cases {
+  padding: 60px 200px;
 }
 
 /*# sourceMappingURL=ourServices.css.map */
