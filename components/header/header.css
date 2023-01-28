@@ -1,31 +1,35 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .header {
-  box-sizing: border-box;
+  width: 86%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.header img {
-  width: 8vw;
-  height: 10vh;
-  margin-left: 1vw;
+.header-logo img {
+  width: 150px;
+  height: 150px;
 }
-.header button {
-  box-sizing: border-box;
-  background-color: #00a6ef;
-  border: none;
-  width: 10vw;
-  height: 12vh;
-  color: #fff;
-  font-size: 1rem;
-  padding: 5vh 0;
+.header-nav {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 40px;
 }
-.header button:hover {
-  cursor: pointer;
+.header-nav .nav-active {
+  font-weight: 800;
+  letter-spacing: -0.500211px;
+  color: #F69306;
+}
+.header-nav li {
+  padding-top: 50px;
+}
+.header-nav li a {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header-nav li:nth-child(4) {
+  margin-right: 14px;
 }
 
 /*# sourceMappingURL=header.css.map */
