@@ -40,7 +40,7 @@ body {
 .blur {
   position: absolute;
   left: 0px;
-  top: 300px;
+  top: 400px;
   display: inline;
   z-index: 1;
   pointer-events: none;
@@ -85,6 +85,9 @@ body {
   align-items: center;
   text-align: center;
 }
+.card__wrapper h3 {
+  font-weight: 600;
+}
 
 .icon {
   font-size: 69px;
@@ -95,6 +98,12 @@ body {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6980392157);
   margin-top: 20px;
+}
+
+.circle {
+  position: absolute;
+  top: 100px;
+  right: 200px;
 }
 
 .section__cases {
@@ -114,14 +123,48 @@ body {
   margin-bottom: 49px;
 }
 
+.container {
+  position: relative;
+}
+
+.slide--1 {
+  position: relative;
+}
+
+.slide--2 {
+  position: relative;
+}
+
+.slide--3 {
+  position: relative;
+}
+
+.img--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.img--middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img--bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 /* SLIDER */
 .slider {
   border: 1px solid transparent;
   border-radius: 20px;
-  box-shadow: 0px 10px 13px 0px #f1f1f1, 0px 5px 5px 5px rgba(0, 0, 0, 0);
   transition: 0.3s;
   max-width: 100rem;
-  height: 50rem;
+  height: 32rem;
   margin: 0 auto;
   position: relative;
   /* IN THE END */
@@ -158,7 +201,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 50rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,6 +242,8 @@ body {
 .dots__dot--active {
   /* background-color: #fff; */
   background-color: #5454D4;
+  width: 1.5rem;
+  border-radius: 10px;
   opacity: 1;
 }
 
