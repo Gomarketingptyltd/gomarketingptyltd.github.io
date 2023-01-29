@@ -16,6 +16,18 @@
       width: 50%;
       height: 500px;
       font-family: 'Nunito Sans', sans-serif;
+      & .banner-shadow {
+
+        position: absolute;
+        width: 500px;
+        height: 1233.79px;
+        left: -280px;
+        top: -1000px;
+        background: linear-gradient(180deg, rgba(251, 168, 28, 0.16) 0%, rgba(84, 84, 212, 0.336) 100%);
+        filter: blur(150px);
+        border-radius: 233.5px;
+        transform: rotate(-28.02deg);
+      }
       & .banner-title {
         @media screen and (max-width: 1200px) {
           font-size: 50px;
