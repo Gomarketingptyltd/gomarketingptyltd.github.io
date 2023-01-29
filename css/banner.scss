@@ -1,0 +1,116 @@
+.banner {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+  @media screen and (max-width: 1400px) {
+    width: 88%;
+  }
+  //border: 1px solid red;
+  &__content {
+    display: flex;
+
+    &-text {
+      //border: 1px solid blue;
+      position: relative;
+      width: 50%;
+      height: 500px;
+      font-family: 'Nunito Sans', sans-serif;
+      & .banner-title {
+        @media screen and (max-width: 1200px) {
+          font-size: 50px;
+          line-height: normal;
+        }
+        width: 520px;
+        height: 176px;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 84px;
+        color: #FFF;
+        & span {
+          color: #FE9701;
+        }
+      }
+      & .banner-description {
+        width: 420px;
+        height: 80px;
+        font-size: 21px;
+        line-height: 39px;
+        letter-spacing: -0.656526px;
+        color: #F69306;
+        & span {
+          color: rgba(255,255,255,0.7);
+        }
+      }
+      & .banner-btn {
+        margin-top: 70px;
+        & a {
+          padding: 22px 40px;
+          font-family: 'Nunito Sans', sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 27px;
+          background: #F69306;
+          border-radius: 4px;
+        }
+      }
+      & .icon-goMarket {
+        z-index: -2;
+        position: absolute;
+        left: 140px;
+        bottom: 20px;
+      }
+      & .icon-triangle {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &-image {
+      width: 40%;
+    }
+    & .btn-arrow {
+      width: 12px;
+      height: 12px;
+    }
+    & .icon-goMarket {
+      width: 146px;
+      height: 145px;
+    }
+    & .icon-triangle{
+      width: 94px;
+      height: 94px;
+    }
+
+
+    &-image {
+      //border: 1px solid blue;
+      width: 100%;
+      position: relative;
+      & .icon-circle {
+        position: absolute;
+        width: 60px;
+        height: 70px;
+        right: 0;
+      }
+      & .icon-square {
+        position: absolute;
+        //border: 1px solid red;
+        width: 620px;
+        height: 620px;
+        right: -40px;
+        bottom: -80px;
+      }
+    }
+  }
+
+  &__streamer {
+    position: relative;
+    width: 1400px;
+    margin: 100px 0;
+    right: 80px;
+    & #streamer {
+      width: 100%;
+    }
+  }
+}
