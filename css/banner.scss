@@ -1,6 +1,6 @@
 .banner {
   margin-top: 40px;
-  width: 100%;
+  width: 98%;
   padding: 0 100px;
   box-sizing: border-box;
   @media screen and (max-width: 1400px) {
@@ -106,9 +106,7 @@
 
   &__streamer {
     position: relative;
-    width: 1400px;
     margin: 100px 0;
-    right: 80px;
     & #streamer {
       width: 100%;
     }
