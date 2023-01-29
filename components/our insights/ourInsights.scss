@@ -5,10 +5,7 @@ body {
 }
 
 .wrap {
-  max-width: 1440px;
-  min-width: 600px;
   width: 80%;
-  padding-top: 5rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -17,21 +14,17 @@ body {
 .cards_wrap {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .cards_wrap .card_item {
-  padding: 25px 23px;
-  width: 29%;
+  padding: 25px 15px;
 }
 
 .cards_wrap .card_inner {
   border-radius: 6px;
   padding: 20px 5px;
-  min-height: 450px;
-  max-width: 400px;
-  min-width: 310px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,43 +73,9 @@ body {
 h2 {
   padding-left: 25px;
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   color: #f69306;
-}
-
-@media screen and (max-width: 1440px) {
-  .cards_wrap .card_item img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .cards_wrap .card_item img {
-    width: 90%;
-  }
-  .cards_wrap .card_item .card_inner .header {
-    font-size: 1.4rem;
-  }
-  .cards_wrap .card_item .card_inner .text {
-    font-size: 1.1rem;
-  }
-  .cards_wrap .card_item .card_inner .date {
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 568px) {
-  .cards_wrap .card_item img {
-    width: 80%;
-  }
-  .cards_wrap .card_item .card_inner .header {
-    font-size: 1.2rem;
-  }
-  .cards_wrap .card_item .card_inner .text {
-    font-size: 1rem;
-  }
-  .cards_wrap .card_item .card_inner .date {
-    font-size: 1rem;
-  }
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=ourInsights.css.map */
