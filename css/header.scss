@@ -1,5 +1,7 @@
 .header {
-  width: 86%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 100px;
   display: flex;
   justify-content: space-between;
   &-logo {
