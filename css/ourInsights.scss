@@ -1,4 +1,11 @@
+.bubbleDeco {
+  position: absolute;
+  left: -40px;
+  top: -40px;
+}
+
 .wrap {
+  position: relative;
   width: 80%;
   margin: auto;
   display: flex;

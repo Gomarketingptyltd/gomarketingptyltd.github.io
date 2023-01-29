@@ -675,7 +675,14 @@ p {
     width: 80%;
   }
 }
+.bubbleDeco {
+  position: absolute;
+  left: -40px;
+  top: -40px;
+}
+
 .wrap {
+  position: relative;
   width: 80%;
   margin: auto;
   display: flex;
@@ -750,6 +757,7 @@ h2 {
 }
 
 .info {
+  margin-top: 95px;
   width: 90%;
   padding: 40px;
   max-height: 540px;
