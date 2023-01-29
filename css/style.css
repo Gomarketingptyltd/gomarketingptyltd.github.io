@@ -362,11 +362,13 @@ body {
   top: 0;
   right: 0;
   height: 100%;
+  width: auto;
 }
 
 .user-img img {
   height: 100%;
   border-radius: 10px;
+  width: auto;
 }
 
 .user-text {
