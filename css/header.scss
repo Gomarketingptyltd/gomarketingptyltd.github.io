@@ -1,5 +1,8 @@
 .header {
   width: 100%;
+  @media screen and (max-width: 1400px) {
+    width: 88%;
+  }
   box-sizing: border-box;
   padding: 0 100px;
   display: flex;

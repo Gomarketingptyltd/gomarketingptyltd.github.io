@@ -3,6 +3,9 @@
   width: 100%;
   padding: 0 100px;
   box-sizing: border-box;
+  @media screen and (max-width: 1400px) {
+    width: 88%;
+  }
   //border: 1px solid red;
   &__content {
     display: flex;
@@ -93,10 +96,10 @@
       & .icon-square {
         position: absolute;
         //border: 1px solid red;
-        width: 720px;
-        height: 720px;
-        right: -120px;
-        bottom: -40px;
+        width: 620px;
+        height: 620px;
+        right: -40px;
+        bottom: -80px;
       }
     }
   }

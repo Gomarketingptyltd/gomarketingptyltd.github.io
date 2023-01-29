@@ -5,6 +5,11 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1400px) {
+  .header {
+    width: 88%;
+  }
+}
 .header-logo img {
   width: 150px;
   height: 150px;
@@ -39,6 +44,11 @@
   width: 100%;
   padding: 0 100px;
   box-sizing: border-box;
+}
+@media screen and (max-width: 1400px) {
+  .banner {
+    width: 88%;
+  }
 }
 .banner__content {
   display: flex;
@@ -126,10 +136,10 @@
 }
 .banner__content-image .icon-square {
   position: absolute;
-  width: 720px;
-  height: 720px;
-  right: -120px;
-  bottom: -40px;
+  width: 620px;
+  height: 620px;
+  right: -40px;
+  bottom: -80px;
 }
 .banner__streamer {
   position: relative;
