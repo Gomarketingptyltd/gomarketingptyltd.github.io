@@ -4,15 +4,15 @@ $primary-font-color:#ffffff;
 $secondary-font-color:#FFFFFFB2;
 
 *{
-   margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-font-family: 'Nunito sans';
-font-weight: 600;
- font-size: 28px;
+  font-family: 'Nunito sans';
+  font-weight: 600;
+  font-size: 28px;
   line-height: 28px;
   color: $primary-font-color;
 }
@@ -62,20 +62,20 @@ font-weight: 600;
 .services__title{
   text-align: center;
   h2{
-  font-family: 'Readex pro', 'sans-serif';
-  font-size: 50px;
-  color: $title-color;
-  margin-bottom: 49px;
+    font-family: 'Readex pro', 'sans-serif';
+    font-size: 50px;
+    color: $title-color;
+    margin-bottom: 49px;
+  }
 }
-} 
 
 .services__cards{
   display: flex;
-gap: 3.5rem;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-margin-bottom: 150px;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
 }
 
 .card{
@@ -85,7 +85,7 @@ margin-bottom: 150px;
   background-color: $background-color;
   border-radius: 5px;
   transition: all .3s;
-  
+
 }
 
 .card:hover{
@@ -128,6 +128,7 @@ margin-bottom: 150px;
 }
 
 .section__cases{
+  width: 100%;
   background-color: $background-color;
   position: relative;
 }
@@ -139,15 +140,15 @@ margin-bottom: 150px;
 
 
 .cases__title{
-  
+
   h2{
-  font-family: 'Nunito sans', 'sans-serif';
-  font-weight: 800;
-  font-size: 50px;
-  color: $title-color;
-  margin-bottom: 49px;
+    font-family: 'Nunito sans', 'sans-serif';
+    font-weight: 800;
+    font-size: 50px;
+    color: $title-color;
+    margin-bottom: 49px;
+  }
 }
-} 
 
 .container{
   position: relative;
@@ -169,48 +170,48 @@ margin-bottom: 150px;
 }
 
 .img--top{
-position: absolute;
-top: 0;
-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
 }
 
 .img--middle{
   position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .img--bottom{
   position: absolute;
-right: 0;
-bottom: 0;
+  right: 0;
+  bottom: 0;
 }
 /* SLIDER */
 .slider {
   border: 1px solid transparent;
   border-radius: 20px;
- 
+
   transition: 0.3s;
-  
-    max-width: 100rem;
-    height: 32rem;
-    margin: 0 auto;
-    position: relative;
-  
-    /* IN THE END */
-    overflow: hidden;
-  
-    &:hover{
-      box-shadow: 0px 11px 21px 3px rgba(0,0,0,0.1);
-    }
-  
+
+  max-width: 100rem;
+  height: 32rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+
+  &:hover{
+    box-shadow: 0px 11px 21px 3px rgba(0,0,0,0.1);
+  }
+
   &__btn{
     position: absolute;
     top: 50%;
     z-index: 10;
-  opacity: 0;
+    opacity: 0;
     border: none;
     background: rgba(255, 255, 255, 0.7);
     font-family: inherit;
@@ -220,99 +221,99 @@ bottom: 0;
     width: .1rem;
     font-size: 3.25rem;
     cursor: pointer;
-  
-  
- 
+
+
+
     &--left{
       left: 6%;
       transform: translate(-50%, -50%);
     }
-  
+
     &--right{
       right: 6%;
       transform: translate(50%, -50%);
     }
   }
-  }
-  
-  .slide {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    /* THIS creates the animation! */
-    transition: transform 1s;
-  }
-  
-  .slide > img {
-    /* Only for images that have different size than slide */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  
-  
-  .dots {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-  
-    &__dot{
-      border: none;
-      background-color: #121213;
-      opacity: 0.7;
-      height: .7rem;
-      width: .7rem;
-      border-radius: 50%;
-      margin-right: 0.9rem;
-      cursor: pointer;
-      transition: all 0.5s;
-    
-      /* Only necessary when overlying images */
-      /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
-  
-      &:last-child {
-        margin: 0;
-      }
-  
-      &--active{
-         /* background-color: #fff; */
-    background-color: #5454D4;
-    width: 1.5rem;
-    border-radius: 10px;
-    opacity: 1;
-      }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  &__dot{
+    border: none;
+    background-color: #121213;
+    opacity: 0.7;
+    height: .7rem;
+    width: .7rem;
+    border-radius: 50%;
+    margin-right: 0.9rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    /* Only necessary when overlying images */
+    /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &--active{
+      /* background-color: #fff; */
+      background-color: #5454D4;
+      width: 1.5rem;
+      border-radius: 10px;
+      opacity: 1;
     }
   }
-  
-  
+}
+
+
 /**********************************************************************************/
 /*media
 /*********************************************************************************/
-  @media (max-width: 1700px){
-    .services{
-      padding: 60px 100px;
-    }
+@media (max-width: 1700px){
+  .services{
+    padding: 60px 100px;
   }
+}
 /**********************************************************************************/
 /*media below 1456px(smaller laptop)*/
 /*********************************************************************************/
 
 @media (max-width: 1456px){
   .services__cards{
-  margin-bottom: 150px;
-  gap: 1.5rem;
-  
+    margin-bottom: 150px;
+    gap: 1.5rem;
+
   }
-  
+
   .card{
     max-width: 350px;
     height: 278px;
@@ -334,35 +335,35 @@ bottom: 0;
 
   .services__title{
     h2{
-    font-size: 45px;
+      font-size: 45px;
+    }
   }
-  } 
 
   .cases{
     padding: 60px 50px;
   }
-  }
+}
 
-  .cases__title{
-  
-    h2{
+.cases__title{
+
+  h2{
     font-size: 45px;
   }
-  } 
+}
 
 
 
-  /**********************************************************************************/
+/**********************************************************************************/
 /*media below 1300px(smaller laptop)*/
 /*********************************************************************************/
 
 @media (max-width: 1300px){
   .services__cards{
-  margin-bottom: 140px;
-  gap: .5rem;
-  
+    margin-bottom: 140px;
+    gap: .5rem;
+
   }
-  
+
   .card{
     max-width: 330px;
     height: 265px;
@@ -373,7 +374,7 @@ bottom: 0;
     color: $secondary-font-color;
     margin-top: 20px;
   }
- 
+
   .card__wrapper{
     h3{
       font-weight: 600;
@@ -383,9 +384,9 @@ bottom: 0;
 
   .services__title{
     h2{
-    font-size: 40px;
+      font-size: 40px;
+    }
   }
-  } 
 
   .cases{
     padding: 60px 50px;
@@ -395,9 +396,9 @@ bottom: 0;
     height: 275px;
     width: 344px;
   }
-  }
+}
 
-    /**********************************************************************************/
+/**********************************************************************************/
 /*media below 700px(smaller laptop)*/
 /*********************************************************************************/
 
@@ -418,19 +419,19 @@ bottom: 0;
 
 
   .services__cards{
-  margin-bottom: 140px;
-  gap: 1.5rem;
+    margin-bottom: 140px;
+    gap: 1.5rem;
 
   }
 
   .services{
     padding: 60px 10px;
   }
-  
+
   .card{
     max-width: 300px;
     height: 268px;
-    
+
   }
 
 
@@ -440,7 +441,7 @@ bottom: 0;
     margin-top: 10px;
     line-height: 20px;
   }
- 
+
   .icon{
     font-size: 60px;
     margin-bottom: 10px;
@@ -454,9 +455,9 @@ bottom: 0;
 
   .services__title{
     h2{
-    font-size: 40px;
+      font-size: 40px;
+    }
   }
-  } 
 
   .cases{
     padding: 60px 10px;
@@ -479,11 +480,11 @@ bottom: 0;
   .slide{
     height: 96%;
   }
-  }
+}
 
 
 
-    /**********************************************************************************/
+/**********************************************************************************/
 /*media below 430px(phone)*/
 /*********************************************************************************/
 
@@ -501,7 +502,7 @@ bottom: 0;
     left: 0px;
   }
   .cross{
-   display: none;
+    display: none;
   }
 
   .ten--services-top{
@@ -517,32 +518,32 @@ bottom: 0;
     left: 20px;
     position: absolute;
   }
-  
-    .title--long{
+
+  .title--long{
     display: block;
-    
+
   }
 
   .title--short{
     display: none;
   }
-  
+
   .card__text{
     font-weight: 400;
   }
 
   .dots {
     &__dot{
-    
+
       background-color: #404042;
       opacity: 0.8;
       height: 1rem;
       width: 1rem;
       margin-right: 1.1rem;
-    
+
       &--active{
-    background-color: #5454D4;
-    width: 1.8rem;
+        background-color: #5454D4;
+        width: 1.8rem;
       }
     }
   }
