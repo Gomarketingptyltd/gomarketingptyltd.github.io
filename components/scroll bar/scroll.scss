@@ -105,8 +105,22 @@ body {
   }
 
 
-  .prev,
-  .next {
-    margin: 0 10px;
-  }
+}
+
+.prev,
+.next {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: 2px solid gold;
+  border-radius: 25px;
+  color: gold;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: gold;
+  color: #19191b;
 }
