@@ -10,9 +10,9 @@ $secondary-font-color:#FFFFFFB2;
 }
 
 body {
-font-family: 'Nunito sans';
+  font-family: 'Inter', sans-serif;
 font-weight: 600;
- font-size: 28px;
+ font-size: 20px;
   line-height: 28px;
   color: $primary-font-color;
 }
@@ -29,9 +29,6 @@ font-weight: 600;
 
 }
 
-.title--long{
-  display: none;
-}
 
 .services{
   padding: 60px 200px;
@@ -60,12 +57,14 @@ font-weight: 600;
 }
 
 .services__title{
-  text-align: center;
+  text-align: start;
   h2{
-  font-family: 'Readex pro', 'sans-serif';
+    font-family: 'Inter', sans-serif;
   font-size: 50px;
+  font-style: italic;
   color: $title-color;
   margin-bottom: 49px;
+  margin-left: 100px;
 }
 } 
 
@@ -101,6 +100,8 @@ margin-bottom: 150px;
 
   h3{
     font-weight: 600;
+    font-size: 28px;
+
   }
 }
 
@@ -113,6 +114,7 @@ margin-bottom: 150px;
   font-size: 20px;
   color: $secondary-font-color;
   margin-top: 20px;
+  font-weight: 400;
 }
 
 
@@ -141,9 +143,10 @@ margin-bottom: 150px;
 .cases__title{
   
   h2{
-  font-family: 'Nunito sans', 'sans-serif';
-  font-weight: 800;
+    font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 50px;
+  font-style: italic;
   color: $title-color;
   margin-bottom: 49px;
 }
@@ -307,12 +310,24 @@ bottom: 0;
 /*********************************************************************************/
 
 @media (max-width: 1456px){
+
+
+
   .services__cards{
   margin-bottom: 150px;
   gap: 1.5rem;
   
   }
-  
+    .services__title{
+    text-align: start;
+    h2{
+      font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    color: $title-color;
+    margin-bottom: 49px;
+    margin-left: auto;
+  }
+  } 
   .card{
     max-width: 350px;
     height: 278px;
@@ -332,23 +347,12 @@ bottom: 0;
   }
 
 
-  .services__title{
-    h2{
-    font-size: 45px;
-  }
-  } 
+  
 
   .cases{
     padding: 60px 50px;
   }
   }
-
-  .cases__title{
-  
-    h2{
-    font-size: 45px;
-  }
-  } 
 
 
 
@@ -381,11 +385,9 @@ bottom: 0;
     }
   }
 
-  .services__title{
-    h2{
-    font-size: 40px;
-  }
-  } 
+.services{
+  padding: 60px 50px;
+}
 
   .cases{
     padding: 60px 50px;
@@ -457,6 +459,11 @@ bottom: 0;
     font-size: 40px;
   }
   } 
+  .cases__title{
+    h2{
+    font-size: 40px;
+  }
+  } 
 
   .cases{
     padding: 60px 10px;
@@ -484,10 +491,10 @@ bottom: 0;
 
 
     /**********************************************************************************/
-/*media below 430px(phone)*/
+/*media below 375px(phone)*/
 /*********************************************************************************/
 
-@media (max-width: 420px){
+@media (max-width: 375px){
 
   .services{
     padding-top: 100px;
@@ -518,15 +525,32 @@ bottom: 0;
     position: absolute;
   }
   
-    .title--long{
-    display: block;
-    
-  }
+  
+.slider{
+  height: 800px;
+}
 
-  .title--short{
-    display: none;
+.img--top{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   }
   
+  .img--middle{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  .img--bottom{
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 0);
+  bottom: 0;
+  }
+ 
   .card__text{
     font-weight: 400;
   }
