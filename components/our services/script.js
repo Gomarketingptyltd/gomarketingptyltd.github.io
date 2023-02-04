@@ -1,5 +1,6 @@
 // slider
 const slides = document.querySelectorAll(".slide");
+const slider = document.querySelector(".slider");
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
 const dotContainer = document.querySelector(".dots");
@@ -26,7 +27,6 @@ const activatedDot = function (slide) {
     .classList.add("dots__dot--active");
 };
 
-const slider = document.querySelector(".slider");
 slider.style.transform = "scale(1)";
 // slider.style.overflow = "visible";
 
@@ -65,6 +65,7 @@ const init = function () {
 
 init();
 
+slider.addEventListener("touchmove", nextSlide);
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
 document.addEventListener("keydown", function (e) {
