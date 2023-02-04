@@ -135,10 +135,6 @@
   left: 140px;
   bottom: 20px;
 }
-.banner__content-text .icon-triangle {
-  position: absolute;
-  right: 0;
-}
 .banner__content-image {
   width: 40%;
 }
@@ -150,21 +146,19 @@
   width: 146px;
   height: 145px;
 }
-.banner__content .icon-triangle {
-  width: 94px;
-  height: 94px;
+.banner__content .double-triangle {
+  position: absolute;
+  bottom: 0;
 }
 .banner__content-image {
   width: 100%;
   position: relative;
 }
-.banner__content-image .icon-circle {
+.banner__content-image .double-circle {
   position: absolute;
-  width: 60px;
-  height: 70px;
   right: 0;
 }
-.banner__content-image .icon-square {
+.banner__content-image .double-square {
   position: absolute;
   width: 620px;
   height: 620px;
@@ -978,6 +972,16 @@ a {
   align-items: center;
   overflow-x: hidden;
   border: 1px solid red;
+}
+
+.double-triangle {
+  width: 90px;
+  height: 90px;
+}
+
+.double-circle {
+  width: 50px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
