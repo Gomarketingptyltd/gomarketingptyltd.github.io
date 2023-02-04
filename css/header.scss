@@ -1,18 +1,22 @@
 .header {
-  width: 100%;
-  @media screen and (max-width: 1400px) {
-    width: 88%;
-  }
   box-sizing: border-box;
-  padding: 0 100px;
+  padding: 0 5vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  height: 10vh;
+
   &-logo {
     & img {
-      width: 150px;
-      height: 150px;
+      width: 110px;
+      height: 50px;
     }
   }
+
+  &-hamburger_icon {
+    display: none;
+  }
+
   &-nav {
     margin: 0;
     list-style: none;
@@ -23,9 +27,6 @@
       letter-spacing: -0.500211px;
       color: #F69306;
     }
-    & li {
-      padding-top: 50px;
-    }
     & li a {
       font-family: 'Nunito Sans', sans-serif;
       font-weight: 400;
@@ -35,6 +36,31 @@
     }
     & li:nth-child(4) {
       margin-right: 14px;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    &-nav {
+      gap: 20px;
+      & li:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    padding: 0 4vw;
+    &-logo {
+      & img {
+        width: 90px;
+        height: 40px;
+      }
+    }
+    &-nav {
+      display: none;
+    }
+    &-hamburger_icon {
+      display: block;
     }
   }
 }

@@ -24,13 +24,18 @@ a {
 .main-container {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-}
-
-.secondary-container {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  border: 1px solid red;
 }
+
+//.secondary-container {
+//  display: flex;
+//  width: 100vw;
+//  height: 100vh;
+//  flex-direction: column;
+//  align-items: center;
+//  border: 1px solid blue;
+//
+//}
