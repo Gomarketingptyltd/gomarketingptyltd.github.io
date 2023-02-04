@@ -66,6 +66,7 @@ const init = function () {
 init();
 
 slider.addEventListener("touchmove", nextSlide);
+
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
 document.addEventListener("keydown", function (e) {

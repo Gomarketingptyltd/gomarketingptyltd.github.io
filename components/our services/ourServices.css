@@ -18,7 +18,7 @@ body {
 }
 
 .services {
-  padding: 60px 200px;
+  padding: 100px 200px;
 }
 
 .triangle {
@@ -261,7 +261,7 @@ body {
 /*********************************************************************************/
 @media (max-width: 1700px) {
   .services {
-    padding: 60px 100px;
+    padding: 100px 100px;
   }
 }
 /**********************************************************************************/
@@ -321,7 +321,7 @@ body {
     font-size: 24px;
   }
   .services {
-    padding: 60px 50px;
+    padding: 100px 50px;
   }
   .cases {
     padding: 60px 50px;
@@ -351,7 +351,7 @@ body {
     gap: 1.5rem;
   }
   .services {
-    padding: 60px 10px;
+    padding: 100px 10px;
   }
   .card {
     max-width: 300px;
