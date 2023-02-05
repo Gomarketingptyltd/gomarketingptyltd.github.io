@@ -5,8 +5,6 @@ body {
 }
 
 .wrap {
-  max-width: 1440px;
-  min-width: 600px;
   padding-top: 5rem;
   width: 80%;
   margin: auto;
@@ -15,11 +13,12 @@ body {
 .ourTeamBox {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .rowBox {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 5%;
   margin-bottom: 5%;
 }
@@ -35,10 +34,13 @@ body {
 }
 
 h2 {
+  margin-top: 80px;
   font-size: 50px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: italic;
   color: #f69306;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .subHeader {
@@ -59,9 +61,63 @@ p {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 1200px) {
-  .ourTeamBox .content {
+/* for ipad screens */
+/* responsible for the effect 744px - 1024*/
+@media only screen and (max-width: 1138px) and (min-width: 744px) {
+  .rowBox {
+    width: 100%;
+  }
+  img {
+    /* width: 270px; */
+    width: 90%;
+  }
+  .subHeader {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0.3rem 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/* transitional sizes */
+@media only screen and (max-width: 840px) and (min-width: 744px) {
+  .rowBox {
+    gap: 2%;
+  }
+  img {
+    width: 90%;
+  }
+  .content {
     width: 80%;
   }
 }
-/*# sourceMappingURL=ourTeam.css.map */
+
+/* phone sizes */
+@media only screen and (max-width: 744px) {
+  img {
+    width: 90%;
+  }
+
+  .rowBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: none;
+  }
+  .subHeader {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .content {
+    width: 80%;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
