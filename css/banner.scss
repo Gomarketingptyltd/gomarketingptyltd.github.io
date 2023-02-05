@@ -2,14 +2,11 @@
   margin-top: 40px;
   padding: 0 5%;
   box-sizing: border-box;
-
   &__content {
     display: flex;
-    //width: 60%;
-    margin: 0 auto;
+    justify-content: space-between;
+
     &-text {
-      flex: 100%;
-      border: 1px solid blue;
       position: relative;
       height: 500px;
       font-family: 'Nunito Sans', sans-serif;
@@ -25,12 +22,8 @@
         transform: rotate(-28.02deg);
       }
       & .banner-title {
-        @media screen and (max-width: 1200px) {
-          font-size: 50px;
-          line-height: normal;
-        }
-        width: 520px;
-        height: 176px;
+        margin-bottom: 3%;
+        font-style: italic;
         font-weight: 600;
         font-size: 80px;
         line-height: 84px;
@@ -78,10 +71,6 @@
         }
       }
     }
-
-    &-image {
-      border: 1px solid red;
-    }
     & .btn-arrow {
       width: 12px;
       height: 12px;
@@ -90,36 +79,29 @@
       width: 146px;
       height: 145px;
     }
-    & .double-triangle{
-      position: absolute;
-      bottom: 0;
-    }
 
 
     &-image {
+      box-sizing: border-box;
       //border: 1px solid blue;
       width: 100%;
       position: relative;
+      & .double-triangle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
       & .double-circle {
         position: absolute;
         right: 0;
+        top: 0;
       }
       & .double-square {
         position: absolute;
-        //border: 1px solid red;
-        width: 620px;
-        height: 620px;
-        right: -40px;
-        bottom: -80px;
+        width: 560px;
+        right: -2vw;
       }
-    }
-  }
 
-  &__streamer {
-    position: relative;
-    margin: 100px 0;
-    & #streamer {
-      width: 100%;
     }
   }
 }

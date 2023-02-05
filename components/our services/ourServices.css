@@ -21,7 +21,7 @@ body {
   padding: 100px 200px;
 }
 
-.double-triangle {
+.section__services .double-triangle {
   position: absolute;
   left: 100px;
 }
@@ -341,7 +341,7 @@ body {
   .double-circle {
     right: 40px;
   }
-  .double-triangle {
+  .section__services .double-triangle {
     position: absolute;
     top: 0;
     left: 30px;
@@ -405,7 +405,7 @@ body {
   .double-circle {
     right: 20px;
   }
-  .double-triangle {
+  .section__services .double-triangle {
     left: 0px;
   }
   .cross {

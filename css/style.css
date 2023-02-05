@@ -27,7 +27,7 @@
 .header-nav li a {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 25px;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -40,9 +40,6 @@
   }
   .header-nav li:nth-child(4) {
     margin-right: 0;
-  }
-  .header-nav li a {
-    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 800px) {
@@ -68,11 +65,9 @@
 }
 .banner__content {
   display: flex;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 .banner__content-text {
-  flex: 100%;
-  border: 1px solid blue;
   position: relative;
   height: 500px;
   font-family: "Nunito Sans", sans-serif;
@@ -89,18 +84,12 @@
   transform: rotate(-28.02deg);
 }
 .banner__content-text .banner-title {
-  width: 520px;
-  height: 176px;
+  margin-bottom: 3%;
+  font-style: italic;
   font-weight: 600;
   font-size: 80px;
   line-height: 84px;
   color: #FFF;
-}
-@media screen and (max-width: 1200px) {
-  .banner__content-text .banner-title {
-    font-size: 50px;
-    line-height: normal;
-  }
 }
 .banner__content-text .banner-title span {
   color: #FE9701;
@@ -143,9 +132,6 @@
     transform: rotate(360deg);
   }
 }
-.banner__content-image {
-  border: 1px solid red;
-}
 .banner__content .btn-arrow {
   width: 12px;
   height: 12px;
@@ -154,31 +140,25 @@
   width: 146px;
   height: 145px;
 }
-.banner__content .double-triangle {
-  position: absolute;
-  bottom: 0;
-}
 .banner__content-image {
+  box-sizing: border-box;
   width: 100%;
   position: relative;
+}
+.banner__content-image .double-triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .banner__content-image .double-circle {
   position: absolute;
   right: 0;
+  top: 0;
 }
 .banner__content-image .double-square {
   position: absolute;
-  width: 620px;
-  height: 620px;
-  right: -40px;
-  bottom: -80px;
-}
-.banner__streamer {
-  position: relative;
-  margin: 100px 0;
-}
-.banner__streamer #streamer {
-  width: 100%;
+  width: 560px;
+  right: -2vw;
 }
 
 * {
@@ -204,7 +184,7 @@ body {
   padding: 100px 200px;
 }
 
-.double-triangle {
+.section__services .double-triangle {
   position: absolute;
   left: 100px;
 }
@@ -524,7 +504,7 @@ body {
   .double-circle {
     right: 40px;
   }
-  .double-triangle {
+  .section__services .double-triangle {
     position: absolute;
     top: 0;
     left: 30px;
@@ -588,7 +568,7 @@ body {
   .double-circle {
     right: 20px;
   }
-  .double-triangle {
+  .section__services .double-triangle {
     left: 0px;
   }
   .cross {
@@ -726,7 +706,7 @@ p {
   .rowBox {
     width: 100%;
   }
-  img {
+  .rowBox img {
     /* width: 270px; */
     width: 90%;
   }
@@ -746,7 +726,7 @@ p {
   .rowBox {
     gap: 2%;
   }
-  img {
+  .rowBox img {
     width: 90%;
   }
   .content {
@@ -912,10 +892,8 @@ h2 {
   }
 }
 .info {
-  margin-top: 95px;
-  width: 90%;
+  margin-top: 50px;
   padding: 40px;
-  max-height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -931,7 +909,7 @@ h2 {
 }
 .info-form {
   width: 90%;
-  height: 40vh;
+  height: auto;
   background: rgba(255, 255, 255, 0.2);
   mix-blend-mode: normal;
   box-shadow: 2px 2px 75px rgba(0, 0, 0, 0.2);
@@ -947,7 +925,7 @@ h2 {
 }
 .info-form .info-details input {
   width: 80%;
-  height: 5vh;
+  height: 58px;
   border-radius: 8px;
   background-color: #6c6c6d;
   border: none;
@@ -1010,20 +988,15 @@ h2 {
 .footer {
   margin-top: 100px;
   width: 100%;
+  padding: 0 7%;
   box-sizing: border-box;
-  padding: 0 190px 0 160px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 1400px) {
-  .footer {
-    width: 88%;
-  }
-}
 .footer-logo img {
-  width: 300px;
-  height: 200px;
+  width: 110px;
+  height: 50px;
 }
 .footer-nav {
   margin: 0;
@@ -1043,7 +1016,34 @@ h2 {
 .footer-nav li:nth-child(3) {
   margin-right: 14px;
 }
+.footer-copyright {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
 
+@media screen and (max-width: 1460px) {
+  .footer-nav {
+    gap: 15px;
+  }
+  .footer-nav li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .footer {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -1104,7 +1104,7 @@ h2 {
   color: #F69036;
 }
 
-h3,
+.testimonial h3,
 p {
   margin-block-start: 0;
   margin-block-end: 0;

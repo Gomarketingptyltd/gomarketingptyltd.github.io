@@ -30,7 +30,7 @@
     & li a {
       font-family: 'Nunito Sans', sans-serif;
       font-weight: 400;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       line-height: 25px;
       color: rgba(255, 255, 255, 0.7);
     }
@@ -44,9 +44,6 @@
       gap: 20px;
       & li:nth-child(4) {
         margin-right: 0;
-      }
-      & li a {
-        font-size: 1.2rem;
       }
     }
   }
