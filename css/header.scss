@@ -1,6 +1,6 @@
 .header {
   box-sizing: border-box;
-  padding: 0 5vw;
+  padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,7 @@
     & li a {
       font-family: 'Nunito Sans', sans-serif;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 1.5rem;
       line-height: 25px;
       color: rgba(255, 255, 255, 0.7);
     }
@@ -39,17 +39,20 @@
     }
   }
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 962px) {
     &-nav {
       gap: 20px;
       & li:nth-child(4) {
         margin-right: 0;
       }
+      & li a {
+        font-size: 1.2rem;
+      }
     }
   }
 
-  @media screen and (max-width: 420px) {
-    padding: 0 4vw;
+  @media screen and (max-width: 800px) {
+    padding: 0 6%;
     &-logo {
       & img {
         width: 90px;

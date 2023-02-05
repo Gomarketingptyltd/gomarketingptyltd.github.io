@@ -6,7 +6,6 @@
 @import "ourInsights";
 @import "info";
 @import "footer";
-
 @import "scroll";
 
 body {
@@ -14,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #19191B;
+  cursor: url("../images/cursor.gif"),auto;
 }
 
 a {
@@ -22,12 +22,7 @@ a {
 }
 
 .main-container {
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
   overflow-x: hidden;
-  border: 1px solid red;
 }
 
 .double-triangle{

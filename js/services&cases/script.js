@@ -1,5 +1,6 @@
 // slider
 const slides = document.querySelectorAll(".slide");
+const slider = document.querySelector(".slider");
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
 const dotContainer = document.querySelector(".dots");
@@ -26,7 +27,6 @@ const activatedDot = function (slide) {
     .classList.add("dots__dot--active");
 };
 
-const slider = document.querySelector(".slider");
 slider.style.transform = "scale(1)";
 // slider.style.overflow = "visible";
 
@@ -64,6 +64,26 @@ const init = function () {
 };
 
 init();
+
+// Touch events on touch devices
+let start;
+let change;
+slider.addEventListener("touchstart", (e) => {
+  start = e.changedTouches[0].clientX;
+});
+slider.addEventListener("touchmove", (e) => {
+  e.preventDefault();
+  let touch = e.changedTouches[0].clientX;
+  change = start - touch;
+});
+const slideHandler = function () {
+  if (change > 0) {
+    nextSlide();
+  } else {
+    prevSlide();
+  }
+};
+slider.addEventListener("touchend", slideHandler);
 
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);

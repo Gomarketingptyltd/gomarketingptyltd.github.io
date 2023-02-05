@@ -1,23 +1,19 @@
 .banner {
   margin-top: 40px;
-  width: 98%;
-  padding: 0 100px;
+  padding: 0 5%;
   box-sizing: border-box;
-  @media screen and (max-width: 1400px) {
-    width: 88%;
-  }
-  //border: 1px solid red;
+
   &__content {
     display: flex;
-
+    //width: 60%;
+    margin: 0 auto;
     &-text {
-      //border: 1px solid blue;
+      flex: 100%;
+      border: 1px solid blue;
       position: relative;
-      width: 50%;
       height: 500px;
       font-family: 'Nunito Sans', sans-serif;
       & .banner-shadow {
-
         position: absolute;
         width: 500px;
         height: 1233.79px;
@@ -71,12 +67,20 @@
         position: absolute;
         left: 140px;
         bottom: 20px;
+        animation: spin infinite 10s linear ;
       }
-
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     }
 
     &-image {
-      width: 40%;
+      border: 1px solid red;
     }
     & .btn-arrow {
       width: 12px;
