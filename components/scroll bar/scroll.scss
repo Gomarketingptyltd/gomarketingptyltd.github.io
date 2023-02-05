@@ -1,5 +1,10 @@
-// unable to reduce vertical gap between h3 and p for now
+// copied body {} from Xiaofangzong
 body {
+  box-sizing: border-box;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #19191B;
 }
 
@@ -51,9 +56,10 @@ body {
 
   flex: 0 0 100%;
 
-  background: #FFFFFF08;
+  background: #19191B;
   padding: 40px 40px;
-  min-width: 300px;
+  // adjusted min-width to fit 820px screen, all 3 in same row
+  min-width: 150px;
   min-height: auto;
 
   img {
@@ -62,18 +68,25 @@ body {
     margin: 0 auto;
   }
 
-  p h3 {
+  // changed h3 color as per visual requirement
+  h3 {
     margin: 0;
     padding: 0;
+    color: #F69036;
   }
 }
 
+h3,
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
 .golden {
   color: gold;
 }
 
-@media (min-width: 1453px) {
+@media (min-width: 820px) {
   .prev {
     display: none;
   }
@@ -83,7 +96,7 @@ body {
   }
 
   .testimonial {
-    max-width: 25%;
+    max-width: 20%;
     display: flex;
     flex-direction: column;
 
