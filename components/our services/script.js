@@ -65,7 +65,25 @@ const init = function () {
 
 init();
 
-slider.addEventListener("touchmove", nextSlide);
+// Touch events on touch devices
+let start;
+let change;
+slider.addEventListener("touchstart", (e) => {
+  start = e.changedTouches[0].clientX;
+});
+slider.addEventListener("touchmove", (e) => {
+  e.preventDefault();
+  let touch = e.changedTouches[0].clientX;
+  change = start - touch;
+});
+const slideHandler = function () {
+  if (change > 0) {
+    nextSlide();
+  } else {
+    prevSlide();
+  }
+};
+slider.addEventListener("touchend", slideHandler);
 
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
