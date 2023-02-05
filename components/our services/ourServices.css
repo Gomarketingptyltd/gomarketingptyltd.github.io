@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Nunito sans";
+  font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 28px;
   color: #ffffff;
 }
@@ -17,12 +17,8 @@ body {
   position: relative;
 }
 
-.title--long {
-  display: none;
-}
-
 .services {
-  padding: 60px 200px;
+  padding: 100px 200px;
 }
 
 .triangle {
@@ -50,13 +46,15 @@ body {
 }
 
 .services__title {
-  text-align: center;
+  text-align: start;
 }
 .services__title h2 {
-  font-family: "Readex pro", "sans-serif";
+  font-family: "Inter", sans-serif;
   font-size: 50px;
+  font-style: italic;
   color: #F69306;
   margin-bottom: 49px;
+  margin-left: 100px;
 }
 
 .services__cards {
@@ -90,6 +88,7 @@ body {
 }
 .card__wrapper h3 {
   font-weight: 600;
+  font-size: 28px;
 }
 
 .icon {
@@ -101,6 +100,7 @@ body {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.6980392157);
   margin-top: 20px;
+  font-weight: 400;
 }
 
 .circle {
@@ -119,9 +119,10 @@ body {
 }
 
 .cases__title h2 {
-  font-family: "Nunito sans", "sans-serif";
-  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   font-size: 50px;
+  font-style: italic;
   color: #F69306;
   margin-bottom: 49px;
 }
@@ -260,7 +261,7 @@ body {
 /*********************************************************************************/
 @media (max-width: 1700px) {
   .services {
-    padding: 60px 100px;
+    padding: 100px 100px;
   }
 }
 /**********************************************************************************/
@@ -270,6 +271,16 @@ body {
   .services__cards {
     margin-bottom: 150px;
     gap: 1.5rem;
+  }
+  .services__title {
+    text-align: start;
+  }
+  .services__title h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 50px;
+    color: #F69306;
+    margin-bottom: 49px;
+    margin-left: auto;
   }
   .card {
     max-width: 350px;
@@ -284,17 +295,10 @@ body {
     color: rgba(255, 255, 255, 0.6980392157);
     margin-top: 20px;
   }
-  .services__title h2 {
-    font-size: 45px;
-  }
   .cases {
     padding: 60px 50px;
   }
 }
-.cases__title h2 {
-  font-size: 45px;
-}
-
 /**********************************************************************************/
 /*media below 1300px(smaller laptop)*/
 /*********************************************************************************/
@@ -316,8 +320,8 @@ body {
     font-weight: 600;
     font-size: 24px;
   }
-  .services__title h2 {
-    font-size: 40px;
+  .services {
+    padding: 100px 50px;
   }
   .cases {
     padding: 60px 50px;
@@ -347,7 +351,7 @@ body {
     gap: 1.5rem;
   }
   .services {
-    padding: 60px 10px;
+    padding: 100px 10px;
   }
   .card {
     max-width: 300px;
@@ -370,6 +374,9 @@ body {
   .services__title h2 {
     font-size: 40px;
   }
+  .cases__title h2 {
+    font-size: 40px;
+  }
   .cases {
     padding: 60px 10px;
   }
@@ -389,9 +396,9 @@ body {
   }
 }
 /**********************************************************************************/
-/*media below 430px(phone)*/
+/*media below 375px(phone)*/
 /*********************************************************************************/
-@media (max-width: 420px) {
+@media (max-width: 375px) {
   .services {
     padding-top: 100px;
   }
@@ -416,11 +423,26 @@ body {
     left: 20px;
     position: absolute;
   }
-  .title--long {
-    display: block;
+  .slider {
+    height: 800px;
   }
-  .title--short {
-    display: none;
+  .img--top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .img--middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .img--bottom {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 0);
+    bottom: 0;
   }
   .card__text {
     font-weight: 400;

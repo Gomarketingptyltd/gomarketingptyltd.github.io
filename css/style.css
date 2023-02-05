@@ -1,18 +1,17 @@
 .header {
-  width: 100%;
   box-sizing: border-box;
-  padding: 0 100px;
+  padding: 0 5vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-}
-@media screen and (max-width: 1400px) {
-  .header {
-    width: 88%;
-  }
+  height: 10vh;
 }
 .header-logo img {
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 50px;
+}
+.header-hamburger_icon {
+  display: none;
 }
 .header-nav {
   margin: 0;
@@ -25,9 +24,6 @@
   letter-spacing: -0.500211px;
   color: #F69306;
 }
-.header-nav li {
-  padding-top: 50px;
-}
 .header-nav li a {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
@@ -37,6 +33,29 @@
 }
 .header-nav li:nth-child(4) {
   margin-right: 14px;
+}
+@media screen and (max-width: 820px) {
+  .header-nav {
+    gap: 20px;
+  }
+  .header-nav li:nth-child(4) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header {
+    padding: 0 4vw;
+  }
+  .header-logo img {
+    width: 90px;
+    height: 40px;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-hamburger_icon {
+    display: block;
+  }
 }
 
 .banner {
@@ -116,10 +135,6 @@
   left: 140px;
   bottom: 20px;
 }
-.banner__content-text .icon-triangle {
-  position: absolute;
-  right: 0;
-}
 .banner__content-image {
   width: 40%;
 }
@@ -131,21 +146,19 @@
   width: 146px;
   height: 145px;
 }
-.banner__content .icon-triangle {
-  width: 94px;
-  height: 94px;
+.banner__content .double-triangle {
+  position: absolute;
+  bottom: 0;
 }
 .banner__content-image {
   width: 100%;
   position: relative;
 }
-.banner__content-image .icon-circle {
+.banner__content-image .double-circle {
   position: absolute;
-  width: 60px;
-  height: 70px;
   right: 0;
 }
-.banner__content-image .icon-square {
+.banner__content-image .double-square {
   position: absolute;
   width: 620px;
   height: 620px;
@@ -955,15 +968,20 @@ a {
 .main-container {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-}
-
-.secondary-container {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  border: 1px solid red;
+}
+
+.double-triangle {
+  width: 90px;
+  height: 90px;
+}
+
+.double-circle {
+  width: 50px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
