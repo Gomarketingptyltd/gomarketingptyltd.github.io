@@ -72,10 +72,7 @@
         left: 140px;
         bottom: 20px;
       }
-      & .icon-triangle {
-        position: absolute;
-        right: 0;
-      }
+
     }
 
     &-image {
@@ -89,9 +86,9 @@
       width: 146px;
       height: 145px;
     }
-    & .icon-triangle{
-      width: 94px;
-      height: 94px;
+    & .double-triangle{
+      position: absolute;
+      bottom: 0;
     }
 
 
@@ -99,13 +96,11 @@
       //border: 1px solid blue;
       width: 100%;
       position: relative;
-      & .icon-circle {
+      & .double-circle {
         position: absolute;
-        width: 60px;
-        height: 70px;
         right: 0;
       }
-      & .icon-square {
+      & .double-square {
         position: absolute;
         //border: 1px solid red;
         width: 620px;
