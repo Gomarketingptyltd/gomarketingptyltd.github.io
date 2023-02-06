@@ -1,21 +1,21 @@
-const container = document.querySelector('.container');
-const testimonials = document.querySelectorAll('.testimonial');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+const container = document.querySelector('.testimonial__container');
+const testimonials = document.querySelectorAll('.testimonial__text');
+const prevButton = document.querySelector('.testimonial__prev');
+const nextButton = document.querySelector('.testimonial__next');
 let currentSlide = 0;
 
 const updateSlider = () => {
   if (window.innerWidth <= 1453) {
-    testimonials.forEach((testimonial, index) => {
+    testimonials.forEach((testimonial__text, index) => {
       if (index === currentSlide) {
-        testimonial.style.display = 'block';
+        testimonial__text.style.display = 'block';
       } else {
-        testimonial.style.display = 'none';
+        testimonial__text.style.display = 'none';
       }
     });
   } else {
-    testimonials.forEach(testimonial => {
-      testimonial.style.display = 'flex';
+    testimonials.forEach(testimonial__text => {
+      testimonial__text.style.display = 'flex';
     });
   }
 };
