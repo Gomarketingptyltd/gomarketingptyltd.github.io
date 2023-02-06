@@ -13,6 +13,7 @@
     />
     <link rel="icon" type="image/png" href="images/logo.png">
     <meta name="description" content="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -38,7 +39,7 @@
             <div class="banner">
                 <div class="banner__content">
                     <div class="banner__content-text">
-<!--                        <div class="banner-shadow"></div>-->
+                        <div class="banner-shadow"></div>
                         <div class="banner-title"><span>GROW</span> YOUR BUSINESS</div>
                         <p class="banner-description">Go Marketing <span>is a</span> digital marketing agency <span>that
                             helps you</span> succeed in the global market.</p>
@@ -49,47 +50,87 @@
                             </a>
                         </div>
                         <img src="images/banner/icon-gomarket.svg" alt="icon-goMarket" class="icon-goMarket">
-
                     </div>
                     <div class="banner__content-image">
                         <img class="double-triangle" draggable="false" src="images/banner/double-triangle.png" alt="double-triangle">
                         <img draggable="false" src="images/banner/double-square.svg" alt="double-square" class="double-square">
                         <img class="double-circle" draggable="false" src="images/banner/double-circle.png" alt="double-circle">
+                        <script src="js/banner/sketch.js" type="text/javascript"></script>
                     </div>
                 </div>
-                <div class="banner__streamer">
-                    <img draggable="false" src="images/banner/streamer.gif" alt="streamer" id="streamer">
-                </div>
+<!--                <div class="banner__streamer">-->
+<!--                    <img draggable="false" src="images/banner/streamer.gif" alt="streamer" id="streamer">-->
+<!--                </div>-->
             </div>
+        <svg width="100%" height="100%" viewBox="0 0 1000 200"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <path id="MyPath"
+                      d="M 0 100
+       C 200 100 400   0 600 100
+       C 800 180 800 40 1200 100
+       " />
+                <path id="MyPath_01"
+                      d="M 0 130
+       C 200 130 400   30 600 130
+       C 800 210 800 70 1200 130
+       " />
+            </defs>
+
+            <use xlink:href="#MyPath" fill="none" stroke="none"  />
+            <use xlink:href="#MyPath_01" fill="none" stroke="none"  />
+
+            <text font-family="Verdana" font-size="18" stroke="white" >
+                <textPath xlink:href="#MyPath">
+                    10+ year experience in digital marketing  10+ year experience in digital marketing
+                    <animate attributeName="startOffset" from="-1000" to ="930" begin="0s" dur="8s" repeatCount="indefinite"/>
+
+                </textPath>
+            </text>
+
+            <text font-family="Verdana" font-size="18" stroke="orange" >
+                <textPath xlink:href="#MyPath_01">
+
+                    Graphic Design/ Web Design/ Advertising/ Digital Marketing/ Marketing Strategy/ Marketing Research/ Social Media
+                    <animate attributeName="startOffset" from="-1500" to ="830" begin="0s" dur="12s" repeatCount="indefinite"/>
+
+                </textPath>
+            </text>
+        </svg>
 
             <!-- our services -->
             <section class="section__services">
-                <img class="triangle" src="images/services&cases/double-triangle.png" alt="" />
-                <img class="cross" src="images/services&cases/cross.png" alt="" />
-                <img class="blur" src="images/services&cases/blur.png" alt="" />
-                <img class="ten--services-top" src="images/services&cases/ten.png" alt="" />
-                <img class="ten--services-bottom" src="images/services&cases/ten.png" alt="" />
+                <img
+                        draggable="false"
+                        class="double-triangle"
+                        src="images/services&cases/double-triangle.png"
+                        alt=""
+                />
+                <img draggable="false" class="cross" src="images/services&cases/cross.png" alt="" />
+                <img draggable="false" class="blur" src="images/services&cases/blur.png" alt="" />
+                <img
+                        draggable="false"
+                        class="ten--services-top"
+                        src="images/services&cases/ten.png"
+                        alt=""
+                />
+                <img
+                        draggable="false"
+                        class="ten--services-bottom"
+                        src="images/services&cases/ten.png"
+                        alt=""
+                />
 
                 <div class="services">
                     <div class="services__title">
                         <h2 class="title--short">Our Services</h2>
-                        <h2
-                                style="
-                                      color: white;
-                                      line-height: 54px;
-                                      font-size: 36px;
-                                      text-align: start;
-                                    "
-                                class="title--long"
-                        >
-                            The Service We Provide For You
-                        </h2>
                     </div>
                     <div class="services__cards">
                         <div class="card">
                             <div class="card__wrapper">
                                 <div class="card__icon">
-                                    <img class="icon" src="images/services&cases/1.png" alt="" />
+                                    <img draggable="false" class="icon" src="images/services&cases/1.png" alt="" />
                                 </div>
                                 <h3>Development</h3>
                                 <p class="card__text">
@@ -100,7 +141,7 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <div class="card__icon">
-                                    <img class="icon" src="images/services&cases/2.png" alt="" />
+                                    <img draggable="false" class="icon" src="images/services&cases/2.png" alt="" />
                                 </div>
                                 <h3>UI/UX Designer</h3>
                                 <p class="card__text">
@@ -112,7 +153,7 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <div class="card__icon">
-                                    <img class="icon" src="images/services&cases/3.png" alt="" />
+                                    <img draggable="false" class="icon" src="images/services&cases/3.png" alt="" />
                                 </div>
                                 <h3>Graphic Designer</h3>
                                 <p class="card__text">
@@ -123,7 +164,7 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <div class="card__icon">
-                                    <img class="icon" src="images/services&cases/4.png" alt="" />
+                                    <img draggable="false" class="icon" src="images/services&cases/4.png" alt="" />
                                 </div>
                                 <h3>Motion Graphic</h3>
                                 <p class="card__text">
@@ -134,7 +175,7 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <div class="card__icon">
-                                    <img class="icon" src="images/services&cases/5.png" alt="" />
+                                    <img draggable="false" class="icon" src="images/services&cases/5.png" alt="" />
                                 </div>
                                 <h3>Photography</h3>
                                 <p class="card__text">
@@ -146,7 +187,7 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <div class="card__icon">
-                                    <img class="icon" src="images/services&cases/6.png" alt="" />
+                                    <img draggable="false" class="icon" src="images/services&cases/6.png" alt="" />
                                 </div>
                                 <h3>Videography</h3>
                                 <p class="card__text">
@@ -160,50 +201,94 @@
 
             <!-- Cases section -->
             <section class="section__cases">
-                <img class="circle" src="images/services&cases/double-circle.png" alt="" />
+                <img
+                        draggable="false"
+                        class="double-circle"
+                        src="images/services&cases/double-circle.png"
+                        alt=""
+                />
 
                 <div class="cases">
                     <div class="cases__title">
                         <h2 class="title--short">Our Cases</h2>
-                        <h2
-                                style="color: white; line-height: 54px; font-size: 36px"
-                                class="title--long"
-                        >
-                            Our Awesome Portfolio
-                        </h2>
                     </div>
                     <div class="slider">
                         <div class="slide slide--1">
                             <div class="img--top">
-                                <img class="img-card" src="images/services&cases/squidCard.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/squidCard.png"
+                                        alt=""
+                                />
                             </div>
                             <div class="img--middle">
-                                <img class="img-card" src="images/services&cases/homeCard.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/homeCard.png"
+                                        alt=""
+                                />
                             </div>
                             <div class="img--bottom">
-                                <img class="img-card" src="images/services&cases/workCard.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/workCard.png"
+                                        alt=""
+                                />
                             </div>
                         </div>
                         <div class="slide slide--2">
                             <div class="img--top">
-                                <img class="img-card" src="images/services&cases/test.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/test.png"
+                                        alt=""
+                                />
                             </div>
                             <div class="img--middle">
-                                <img class="img-card" src="images/services&cases/test.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/test.png"
+                                        alt=""
+                                />
                             </div>
                             <div class="img--bottom">
-                                <img class="img-card" src="images/services&cases/test.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/test.png"
+                                        alt=""
+                                />
                             </div>
                         </div>
                         <div class="slide slide--2">
                             <div class="img--top">
-                                <img class="img-card" src="images/services&cases/test.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/test.png"
+                                        alt=""
+                                />
                             </div>
                             <div class="img--middle">
-                                <img class="img-card" src="images/services&cases/test.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/test.png"
+                                        alt=""
+                                />
                             </div>
                             <div class="img--bottom">
-                                <img class="img-card" src="images/services&cases/test.png" alt="" />
+                                <img
+                                        draggable="false"
+                                        class="img-card"
+                                        src="images/services&cases/test.png"
+                                        alt=""
+                                />
                             </div>
                         </div>
                         <button class="slider__btn slider__btn--left"></button>
@@ -220,62 +305,54 @@
             </div>
 
             <!--        scroll bar-->
-            <div class="container">
-                <div class="testimonial">
-                    <p>I have to recommend GOM, they provided me with a lot of professional social media operation strategies and helped me to solve the difficulties of brand social media content production. All things are excellent. Smart staff, efficient team, and high quality delivery of outputs. </p>
-                    <span class="golden">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                    </span>
-                    <div class="profile">
-                        <img src="images/scroll/img1.png" alt="img1">
-                        <h3>Jane Smith</h3>
-                        <p>Freelance Designer</p>
-                    </div>
+            <div class="testimonial__container">
+                <div class="testimonial__text-container">
+                  <div class="testimonial__text">
+                    <p>“Left has been using this web hosting service for over a year and impressed with the uptime and
+                      support.
+                      Website never gone down and the customer service always quick to help with any issues I have. I
+                      will certainly recommend their service!”</p>
+                    <span class="testimonial__golden">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+                    <!-- added draggable='false' to all img -->
+                    <img draggable='false' src="./images/scroll/img1.png" alt="img1">
+                    <h3>Jane Smith</h3>
+                    <h5>Freelance Designer</h5>
+                  </div>
+                  <div class="testimonial__text">
+                    <p>“Centre been using this web hosting service for a few months now and overall it's been fine. The uptime has
+                      been
+                      good and I haven't had any major issues. The pricing is also reasonable. Nothing particularly stands out as
+                      exceptional, but it gets the job done.”</p>
+                    <span class="testimonial__golden">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+                    <img draggable='false' src="./images/scroll/img2.png" alt="img2">
+                    <h3>Tom Williams</h3>
+                    <h5>Software Developer</h5>
+                  </div>
+                  <div class="testimonial__text">
+                    <p>“Right has been using this web hosting service for a few months and it's been nothing but problems. My
+                      website has
+                      gone down multiple times and the customer service has been unresponsive. Not recommend, this company."
+                    </p>
+                    <span class="testimonial__golden">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+                    <img draggable='false' src="./images/scroll/img3.png" alt="img3">
+                    <h3>Michael Brown</h3>
+                    <h5>Online Entrepreneur</h5>
+                  </div>
                 </div>
-                <div class="testimonial">
-                    <p>Thanks a lot to Rosy and her passionate team. I was not satisfied with my company's website interface and Google ranking but didn't know how to improve it. Go Marketing provided the strategy and technical support to get my website's Google ranking to the desired level within a month.</p>
-                    <span class="golden">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                    </span>
-                    <div class="profile">
-                        <img src="images/scroll/img2.png" alt="img2">
-                        <h3>Tom Williams</h3>
-                        <p>Software Developer</p>
-                    </div>
+                <div class="testimonial__button-container">
+                  <button class="testimonial__prev">Prev</button>
+                  <button class="testimonial__next">Next</button>
                 </div>
-                <div class="testimonial">
-                    <p>Working with Go Marketing has been a pleasure. The Marketing team is helpful in giving me feedback when I have questions or new needs. I'm glad to meet such a good communication team and I'm looking forward to working with them in the future.</p>
-                    <span class="golden">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                        <img src="images/scroll/star.svg" alt="star">
-                    </span>
-                    <div class="profile">
-                        <img src="images/scroll/img3.png" alt="img3">
-                        <h3>Michael Brown</h3>
-                        <p>Online Entrepreneur</p>
-                    </div>
-                </div>
-            </div>
+              </div>
 
             <!--        our team-->
-            <div class="team-wrap">
+            <div class="wrap">
                 <h2>Our Team</h2>
 
                 <div class="ourTeamBox">
                     <div class="rowBox">
                         <div class="imgBox">
-                            <img src="images/team/rec2.png" alt="rec1" />
+                            <img draggable="false" src="images/team/rec2.png" alt="rec1" />
                         </div>
                         <div class="content">
                             <div class="subHeader">We’re professional</div>
@@ -291,7 +368,7 @@
 
                     <div class="rowBox">
                         <div class="imgBox">
-                            <img src="images/team/rec1.png" alt="rec1" />
+                            <img draggable="false" src="images/team/rec1.png" alt="rec1" />
                         </div>
                         <div class="content">
                             <div class="subHeader">We’re experienced</div>
@@ -308,8 +385,8 @@
 
             <!--        our insights-->
             <div class="wrap">
-                <div class="bubbleDeco">
-                    <img src="images/insights/bubble.png" alt="">
+                <div class="double-circle">
+                    <img draggable = "false" src="images/insights/double-circle.png" alt="">
                 </div>
                 <h2>Our Insights</h2>
                 <div class="cards_wrap">
@@ -321,43 +398,43 @@
                                     MAR 1, 2022
                                 </div>
 
-                                <div class="card-header">
+                                <div class="cardHeader">
                                     How to connect with your customers through social media
                                 </div>
 
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
+                                <div class="insightsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
                             </div>
                         </div>
                     </div>
                     <div class="card_item">
                         <div class="card_inner">
                             <div class="imgDiv">
-                                <img src="images/insights/img2.png" alt="img">
+                                <img draggable = "false" src="images/insights/img2.png" alt="img">
                                 <div class="date">
                                     MAR 1, 2022
                                 </div>
 
-                                <div class="card-header">
+                                <div class="cardHeader">
                                     SEO & SEM: What’s the Difference?
                                 </div>
 
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
+                                <div class="insightsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
                             </div>
                         </div>
                     </div>
                     <div class="card_item">
                         <div class="card_inner">
                             <div class="imgDiv">
-                                <img src="images/insights/img3.png" alt="img">
+                                <img draggable = "false" src="images/insights/img3.png" alt="img">
                                 <div class="date">
                                     MAR 1, 2022
                                 </div>
 
-                                <div class="card-header">
+                                <div class="cardHeader">
                                     How brands can capture new audience?
                                 </div>
 
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
+                                <div class="insightsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
                             </div>
                         </div>
                     </div>
@@ -369,43 +446,43 @@
                                     MAR 1, 2022
                                 </div>
 
-                                <div class="card-header">
+                                <div class="cardHeader">
                                     Outdoor Advertising for Small Business
                                 </div>
 
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
+                                <div class="insightsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
                             </div>
                         </div>
                     </div>
                     <div class="card_item">
                         <div class="card_inner">
                             <div class="imgDiv">
-                                <img src="images/insights/img5.png" alt="img">
+                                <img draggable = "false" src="images/insights/img5.png" alt="img">
                                 <div class="date">
                                     MAR 1, 2022
                                 </div>
 
-                                <div class="card-header">
+                                <div class="cardHeader">
                                     How to Map the Client's Business Opportunities
                                 </div>
 
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
+                                <div class="insightsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
                             </div>
                         </div>
                     </div>
                     <div class="card_item">
                         <div class="card_inner">
                             <div class="imgDiv">
-                                <img src="images/insights/img6.png" alt="img">
+                                <img draggable = "false" src="images/insights/img6.png" alt="img">
                                 <div class="date">
                                     MAR 1, 2022
                                 </div>
 
-                                <div class="card-header">
+                                <div class="cardHeader">
                                     Out-of-Home Advertising Trends & Predictions for 2023
                                 </div>
 
-                                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
+                                <div class="insightsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium laudantium, eius quasi.</div>
                             </div>
                         </div>
                     </div>
@@ -428,8 +505,10 @@
                     </div>
                     <div class="info-content">
                         <textarea placeholder="Describe Your Project"></textarea>
-                        <p>By submitting this form, you agree to our <a href="#">terms and conditions</a> and
-                            <br/><a href="#">privacy policy</a> *</p>
+                        <p>By submitting this form, you agree to our
+                            <a href="#">terms and conditions</a>
+                            and
+                            <a href="#">privacy policy</a> *</p>
                         <button class="info-btn">I'm ready to grow</button>
                     </div>
                 </form>
@@ -438,18 +517,20 @@
             <!--        footer-->
             <footer class="footer">
                 <div class="footer-logo">
-                    <img src="images/footer/logo.svg" alt="logo">
+                    <img src="images/footer/logo.png" alt="logo">
                 </div>
                 <ul class="footer-nav">
                     <li><a href="#">Support</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">© 2023 GO MARKETING, All Rights Reserved</a></li>
                 </ul>
+                <div class="footer-copyright"><a href="#">© 2023 GO MARKETING, All Rights Reserved</a></div>
+
             </footer>
 <!--        </div>-->
     </div>
 
     <script src="js/services&cases/script.js"></script>
+    <script src="js/scroll/scroll.js"></script>
 </body>
 </html>

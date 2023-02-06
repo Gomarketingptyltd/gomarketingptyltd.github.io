@@ -1,23 +1,16 @@
 .banner {
   margin-top: 40px;
-  width: 98%;
-  padding: 0 100px;
+  padding: 0 5%;
   box-sizing: border-box;
-  @media screen and (max-width: 1400px) {
-    width: 88%;
-  }
-  //border: 1px solid red;
   &__content {
     display: flex;
+    justify-content: space-between;
 
     &-text {
-      //border: 1px solid blue;
       position: relative;
-      width: 50%;
       height: 500px;
       font-family: 'Nunito Sans', sans-serif;
       & .banner-shadow {
-
         position: absolute;
         width: 500px;
         height: 1233.79px;
@@ -29,12 +22,8 @@
         transform: rotate(-28.02deg);
       }
       & .banner-title {
-        @media screen and (max-width: 1200px) {
-          font-size: 50px;
-          line-height: normal;
-        }
-        width: 520px;
-        height: 176px;
+        margin-bottom: 3%;
+        font-style: italic;
         font-weight: 600;
         font-size: 80px;
         line-height: 84px;
@@ -71,12 +60,16 @@
         position: absolute;
         left: 140px;
         bottom: 20px;
+        animation: spin infinite 10s linear ;
       }
-
-    }
-
-    &-image {
-      width: 40%;
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     }
     & .btn-arrow {
       width: 12px;
@@ -86,36 +79,29 @@
       width: 146px;
       height: 145px;
     }
-    & .double-triangle{
-      position: absolute;
-      bottom: 0;
-    }
 
 
     &-image {
+      box-sizing: border-box;
       //border: 1px solid blue;
       width: 100%;
       position: relative;
+      & .double-triangle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
       & .double-circle {
         position: absolute;
         right: 0;
+        top: 0;
       }
       & .double-square {
         position: absolute;
-        //border: 1px solid red;
-        width: 620px;
-        height: 620px;
-        right: -40px;
-        bottom: -80px;
+        width: 560px;
+        right: -2vw;
       }
-    }
-  }
 
-  &__streamer {
-    position: relative;
-    margin: 100px 0;
-    & #streamer {
-      width: 100%;
     }
   }
 }
