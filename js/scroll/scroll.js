@@ -1,23 +1,43 @@
-const btn = document.getElementsByClassName("btn");
-const slide = document.getElementById("slide");
-btn[0].onclick = function () {
-  slide.style.transform = "translatex(0px)";
-  for (i = 0; i < 3; i++) {
-    btn[i].classList.remove("active");
+const container = document.querySelector('.testimonial__container');
+const testimonials = document.querySelectorAll('.testimonial__text');
+const prevButton = document.querySelector('.testimonial__prev');
+const nextButton = document.querySelector('.testimonial__next');
+let currentSlide = 0;
+
+const updateSlider = () => {
+  if (window.innerWidth <= 1453) {
+    testimonials.forEach((testimonial__text, index) => {
+      if (index === currentSlide) {
+        testimonial__text.style.display = 'block';
+      } else {
+        testimonial__text.style.display = 'none';
+      }
+    });
+  } else {
+    testimonials.forEach(testimonial__text => {
+      testimonial__text.style.display = 'flex';
+    });
   }
-  this.classList.add("active");
 };
-btn[1].onclick = function () {
-  slide.style.transform = "translatex(-800px)";
-  for (i = 0; i < 3; i++) {
-    btn[i].classList.remove("active");
+
+updateSlider();
+
+prevButton.addEventListener('click', () => {
+  if (window.innerWidth <= 1453) {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = testimonials.length - 1;
+    }
   }
-  this.classList.add("active");
-};
-btn[2].onclick = function () {
-  slide.style.transform = "translatex(-1600px)";
-  for (i = 0; i < 3; i++) {
-    btn[i].classList.remove("active");
+  updateSlider();
+});
+
+nextButton.addEventListener('click', () => {
+  if (window.innerWidth <= 1453) {
+    currentSlide++;
+    if (currentSlide === testimonials.length) {
+      currentSlide = 0;
+    }
   }
-  this.classList.add("active");
-};
+  updateSlider();
+});
