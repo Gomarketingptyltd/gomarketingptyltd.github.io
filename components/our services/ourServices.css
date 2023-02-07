@@ -103,7 +103,7 @@ body {
   font-weight: 400;
 }
 
-.double-circle {
+.section__cases .double-circle {
   position: absolute;
   top: 100px;
   right: 200px;
@@ -338,7 +338,7 @@ body {
   .blur {
     display: none;
   }
-  .double-circle {
+  .section__cases .double-circle {
     right: 40px;
   }
   .section__services .double-triangle {
@@ -402,7 +402,7 @@ body {
   .services {
     padding-top: 100px;
   }
-  .double-circle {
+  .section__cases .double-circle {
     right: 20px;
   }
   .section__services .double-triangle {

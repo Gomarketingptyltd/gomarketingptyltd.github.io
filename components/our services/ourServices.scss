@@ -124,7 +124,7 @@ margin-bottom: 150px;
 /// ////// our cases///////////////////////////////////////
 /// ////////////////////////////////////////////////////////
 
-.double-circle{
+.section__cases .double-circle{
   position: absolute;
   top: 100px;
   right: 200px;
@@ -409,7 +409,7 @@ bottom: 0;
     display: none;
   }
 
-  .double-circle{
+  .section__cases .double-circle{
     right: 40px;
   }
 
@@ -501,7 +501,7 @@ bottom: 0;
     padding-top: 100px;
   }
 
-  .double-circle{
+  .section__cases .double-circle{
     right: 20px;
   }
 
