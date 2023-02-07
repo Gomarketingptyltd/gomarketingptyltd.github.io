@@ -1,5 +1,7 @@
 @import "header";
 @import "banner";
+@import "double-triangle";
+@import "double-circle";
 @import "services&cases";
 @import "logos";
 @import "ourTeam";
@@ -24,14 +26,4 @@ a {
 
 .main-container {
   overflow-x: hidden;
-}
-
-.double-triangle {
-  width: 90px;
-  height: 90px;
-}
-
-.double-circle {
-  width: 50px;
-  height: 60px;
 }
