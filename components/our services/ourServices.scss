@@ -78,7 +78,7 @@ align-items: center;
 margin-bottom: 150px;
 }
 
-.card{
+.services__card{
   max-width: 380px;
   width: 100%;
   height: 298px;
@@ -88,7 +88,7 @@ margin-bottom: 150px;
   
 }
 
-.card:hover{
+.services__card:hover{
   background-color: #FFFFFF08;
 }
 
@@ -307,7 +307,7 @@ bottom: 0;
     }
   }
 /**********************************************************************************/
-/*media below 1456px(smaller laptop)*/
+/*media below 1456px(laptop)*/
 /*********************************************************************************/
 
 @media (max-width: 1456px){
@@ -329,7 +329,7 @@ bottom: 0;
     margin-left: auto;
   }
   } 
-  .card{
+  .services__card{
     max-width: 350px;
     height: 278px;
   }
@@ -368,7 +368,7 @@ bottom: 0;
   
   }
   
-  .card{
+  .services__card{
     max-width: 330px;
     height: 265px;
   }
@@ -404,7 +404,7 @@ bottom: 0;
 /*media below 820px(tablet)*/
 /*********************************************************************************/
 
-@media (max-width: 820px){
+@media (max-width: 962px){
   .blur{
     display: none;
   }
@@ -430,7 +430,7 @@ bottom: 0;
     padding: 100px 10px;
   }
   
-  .card{
+  .services__card{
     max-width: 300px;
     height: 268px;
     
@@ -495,7 +495,7 @@ bottom: 0;
 /*media below 420px(phone)*/
 /*********************************************************************************/
 
-@media (max-width: 420px){
+@media (max-width: 600px){
 
   .services{
     padding-top: 100px;
