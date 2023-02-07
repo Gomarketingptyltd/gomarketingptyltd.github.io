@@ -1,8 +1,6 @@
 .info {
-  margin-top: 95px;
-  width: 90%;
+  margin-top: 50px;
   padding: 40px;
-  max-height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +16,7 @@
   }
   &-form {
     width: 90%;
-    height: 40vh;
+    height: auto;
     background: rgba(255, 255, 255, 0.2);
     mix-blend-mode: normal;
     box-shadow: 2px 2px 75px rgba(0, 0, 0, 0.2);
@@ -33,7 +31,7 @@
       padding: 50px 0 50px 70px;
       & input {
         width: 80%;
-        height: 5vh;
+        height: 58px;
         border-radius: 8px;
         background-color: #6c6c6d;
         border: none;
