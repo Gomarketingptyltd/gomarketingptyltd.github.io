@@ -49,7 +49,7 @@ $secondary-font-color:#FFFFFFB2;
   left: 100px;
 
 }
-.cross{
+.services__cross{
   animation: spin 5s infinite linear;
   position: absolute;
   left: 90px;
@@ -522,7 +522,7 @@ $secondary-font-color:#FFFFFFB2;
   .section__services .double-triangle{
     left: 0px;
   }
-  .cross{
+  .services__cross{
     display: none;
   }
 
