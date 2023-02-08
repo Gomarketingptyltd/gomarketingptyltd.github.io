@@ -3,6 +3,27 @@ $title-color:#F69306;
 $primary-font-color:#ffffff;
 $secondary-font-color:#FFFFFFB2;
 
+@keyframes spin{
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 *{
    margin: 0;
   padding: 0;
@@ -40,9 +61,11 @@ font-weight: 600;
  
 }
 .cross{
+  animation: spin 5s infinite linear;
   position: absolute;
   left: 90px;
   bottom: 50px
+  
 }
 .blur{
   position: absolute;
@@ -401,7 +424,7 @@ bottom: 0;
   }
 
     /**********************************************************************************/
-/*media below 820px(tablet)*/
+/*media below 962px(tablet)*/
 /*********************************************************************************/
 
 @media (max-width: 962px){
@@ -492,7 +515,7 @@ bottom: 0;
 
 
     /**********************************************************************************/
-/*media below 420px(phone)*/
+/*media below 600px(phone)*/
 /*********************************************************************************/
 
 @media (max-width: 600px){
