@@ -11,12 +11,27 @@
 @import "scroll";
 @import "swiper-bundle.min.css";
 
+$background-color: #19191b;
+$title-color:#F69306;
+$primary-font-color:#ffffff;
+$secondary-font-color:#FFFFFFB2;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  color: white;
   margin: 0;
   padding: 0;
   background-color: #19191B;
   cursor: url("../images/cursor.gif"), auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: $primary-font-color;
 }
 
 a {
