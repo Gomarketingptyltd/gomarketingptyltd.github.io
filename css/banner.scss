@@ -1,5 +1,5 @@
 .banner {
-  margin-top: 40px;
+  margin: 40px 0 50px;
   padding: 0 5%;
   box-sizing: border-box;
   &__content {
@@ -7,8 +7,9 @@
     justify-content: space-between;
 
     &-text {
-      border: 1px solid red;
-      //position: relative;
+      box-sizing: border-box;
+      //border: 1px solid red;
+      position: relative;
       flex: 1;
       height: 500px;
       font-family: 'Nunito Sans', sans-serif;
@@ -47,6 +48,7 @@
         }
       }
       & .banner-btn {
+        position: relative;
         margin-top: 70px;
         & a {
           padding: 22px 40px;
@@ -57,14 +59,15 @@
           background: #F69306;
           border-radius: 4px;
         }
+        & .icon-goMarket {
+          z-index: -2;
+          position: absolute;
+          left: 140px;
+          top: 0;
+          animation: spin infinite 10s linear ;
+        }
       }
-      & .icon-goMarket {
-        z-index: -2;
-        position: absolute;
-        left: 140px;
-        bottom: 20px;
-        animation: spin infinite 10s linear ;
-      }
+
       @keyframes spin {
         from {
           transform: rotate(0deg);
@@ -85,7 +88,7 @@
 
 
     &-image {
-      border: 1px solid red;
+      //border: 1px solid red;
       box-sizing: border-box;
       position: relative;
       flex: 0.5;
@@ -138,11 +141,17 @@
 }
 
 @media screen and (max-width: 1200px){
+  .banner {
+    margin-bottom: 80px;
+  }
   .banner__content-text {
     height: 400px;
   }
   .banner__content-text .banner-title {
     font-size: 60px;
+  }
+  .banner__content-text .icon-goMarket {
+    width: 140px;
   }
   .banner__content-image .double-square {
     width: 400px;
