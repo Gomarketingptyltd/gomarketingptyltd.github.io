@@ -1,4 +1,3 @@
-<!-- unable to reduce vertical gap between h3 and p for now -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,52 +5,73 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+  <link rel="stylesheet" href="CSS/scroll.css">
   <title>Scroll</title>
-  <link rel="stylesheet" href="scroll.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="testimonial-container">
-      <div class="testimonial">
-        <p>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p>“Left has been using this web hosting service for over a year and impressed with the uptime and
           support.
-          The website has never gone down and the customer service is always quick to help with any issues I have.
-          Highly
-          recommend!”</p>
-        <span class="golden">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
-        <!-- added draggable='false' to all img -->
-        <img draggable='false' src="./images/img1.png" alt="img1">
+          Website never gone down and the customer service always quick to help with any issues I have. I
+          will certainly recommend their service!”</p>
+        <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <br><br>
+        <img draggable='false' src="./images/scroll/img1.png" alt="img1">
         <h3>Jane Smith</h3>
-        <p>Freelance Designer</p>
+        <h5>Freelance Designer</h5>
       </div>
-      <div class="testimonial">
-        <p>“I've been using this web hosting service for a few months now and overall it's been fine. The uptime has
+      <div class="swiper-slide">
+        <p>“Centre been using this web hosting service for a few months now and overall it's been fine. The uptime has
           been
           good and I haven't had any major issues. The pricing is also reasonable. Nothing particularly stands out as
           exceptional, but it gets the job done.”</p>
-        <span class="golden">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
-        <img draggable='false' src="./images/img2.png" alt="img2">
+          <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
+          <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+          <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+          <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+          <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <br><br>
+        <img draggable='false' src="./images/scroll/img2.png" alt="img2">
         <h3>Tom Williams</h3>
-        <p>Software Developer</p>
+        <h5>Software Developer</h5>
       </div>
-      <div class="testimonial">
-        <p>“I've been using this web hosting service for a few months and it's been nothing but problems. My website has
-          gone down multiple times and the customer service has been unresponsive. I would not recommend this company."
+      <div class="swiper-slide">
+        <p>“Right has been using this web hosting service for a few months and it's been nothing but problems. My
+          website has
+          gone down multiple times and the customer service has been unresponsive. Not recommend, this company."
         </p>
-        <span class="golden">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
-        <img draggable='false' src="./images/img3.png" alt="img3">
+        <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <img draggable='false' class="vector"src="images/scroll/Vector.svg" alt="star">
+        <br><br>
+        <img draggable='false' src="./images/scroll/img3.png" alt="img3">
         <h3>Michael Brown</h3>
-        <p>Online Entrepreneur</p>
+        <h5>Online Entrepreneur</h5>
       </div>
     </div>
-    <div class="button-container">
-      <button class="prev">Prev</button>
-      <button class="next">Next</button>
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
 
-  <script src="./scroll.js"></script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>

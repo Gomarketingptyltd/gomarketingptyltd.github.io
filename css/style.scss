@@ -1,5 +1,7 @@
 @import "header";
 @import "banner";
+@import "double-triangle";
+@import "double-circle";
 @import "services&cases";
 @import "logos";
 @import "ourTeam";
@@ -7,13 +9,29 @@
 @import "info";
 @import "footer";
 @import "scroll";
+@import "swiper-bundle.min.css";
+
+$background-color: #19191b;
+$title-color:#F69306;
+$primary-font-color:#ffffff;
+$secondary-font-color:#FFFFFFB2;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  color: white;
   margin: 0;
   padding: 0;
   background-color: #19191B;
-  cursor: url("../images/cursor.gif"),auto;
+  cursor: url("../images/cursor.gif"), auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: $primary-font-color;
 }
 
 a {
@@ -23,14 +41,4 @@ a {
 
 .main-container {
   overflow-x: hidden;
-}
-
-.double-triangle{
-  width: 90px;
-  height: 90px;
-}
-
-.double-circle {
-  width: 50px;
-  height: 60px;
 }

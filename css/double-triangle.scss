@@ -1,0 +1,41 @@
+//double triangle
+.triangle {
+  position: relative;
+}
+
+@keyframes thick-triangle {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes thin-triangle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thick-triangle {
+  width: 80px;
+  height: 80px;
+  transform-origin: 30px 40px;
+  animation: thick-triangle infinite 10s linear ;
+}
+
+.thin-triangle {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 30px 40px;
+  animation: thin-triangle infinite 6s linear ;
+}
+
+

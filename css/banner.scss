@@ -1,5 +1,5 @@
 .banner {
-  margin-top: 40px;
+  margin: 40px 0 50px;
   padding: 0 5%;
   box-sizing: border-box;
   &__content {
@@ -7,7 +7,10 @@
     justify-content: space-between;
 
     &-text {
+      box-sizing: border-box;
+      //border: 1px solid red;
       position: relative;
+      flex: 1;
       height: 500px;
       font-family: 'Nunito Sans', sans-serif;
       & .banner-shadow {
@@ -22,6 +25,7 @@
         transform: rotate(-28.02deg);
       }
       & .banner-title {
+        width: 80%;
         margin-bottom: 3%;
         font-style: italic;
         font-weight: 600;
@@ -44,6 +48,7 @@
         }
       }
       & .banner-btn {
+        position: relative;
         margin-top: 70px;
         & a {
           padding: 22px 40px;
@@ -54,14 +59,15 @@
           background: #F69306;
           border-radius: 4px;
         }
+        & .icon-goMarket {
+          z-index: -2;
+          position: absolute;
+          left: 140px;
+          top: 0;
+          animation: spin infinite 10s linear ;
+        }
       }
-      & .icon-goMarket {
-        z-index: -2;
-        position: absolute;
-        left: 140px;
-        bottom: 20px;
-        animation: spin infinite 10s linear ;
-      }
+
       @keyframes spin {
         from {
           transform: rotate(0deg);
@@ -82,10 +88,20 @@
 
 
     &-image {
+      //border: 1px solid red;
       box-sizing: border-box;
-      //border: 1px solid blue;
-      width: 100%;
       position: relative;
+      flex: 0.5;
+      @media screen and (max-width: 1745px){
+        flex: 0.6;
+      }
+      @media screen and (max-width: 1565px){
+        flex: 0.7;
+      }
+      @media screen and (max-width: 1430px){
+        flex: 0.8;
+      }
+
       & .double-triangle {
         position: absolute;
         bottom: 0;
@@ -104,4 +120,66 @@
 
     }
   }
+}
+
+@media screen and (max-width: 1335px){
+  .banner__content-image .double-triangle {
+    left: -50px;
+  }
+}
+
+@media screen and (max-width: 1275px){
+  .banner__content-text .banner-title {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .banner__content-image .double-triangle {
+    left: -100px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .banner {
+    margin-bottom: 80px;
+  }
+  .banner__content-text {
+    height: 400px;
+  }
+  .banner__content-text .banner-title {
+    font-size: 60px;
+  }
+  .banner__content-text .icon-goMarket {
+    width: 140px;
+  }
+  .banner__content-image .double-square {
+    width: 400px;
+    right: 10px;
+  }
+  .banner__content-image .double-triangle {
+    left: 50px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .banner__content-image .double-triangle {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .banner__content-image .double-circle {
+    display: none;
+  }
+  .banner__content-image .double-triangle {
+    display: none;
+  }
+  .banner__content-text .banner-title {
+  }
+  .banner__content-text .banner-description {
+  }
+
 }
