@@ -6,7 +6,7 @@
 
 .thick-circle {
   animation: thick-circle 6s linear infinite;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 430px) {
     width: 32px;
     height: 32px;
   }
@@ -17,7 +17,7 @@
   left: -25px;
   top: 20px;
   animation: thin-circle 6s linear infinite;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 430px) {
     width: 32px;
     height: 32px;
     left: -18px;

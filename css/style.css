@@ -313,7 +313,7 @@
     width: 120px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .banner__content-text .banner-title {
     width: 360px;
     font-size: 46px;
@@ -331,7 +331,7 @@
   }
   .banner {
     margin: 0 5px 40px;
-    height: 800px;
+    height: 400px;
   }
   .banner__content {
     display: flex;
@@ -344,18 +344,8 @@
   .banner .icon-goMarket {
     width: 120px;
   }
-  .banner__content-image .double-circle {
-    display: block;
-    right: 30px;
-    top: -20px;
-  }
-  .banner__content-image .double-triangle {
-    display: block;
-    top: 240px;
-  }
-  .banner__content-image .double-square {
-    width: 300px;
-    right: 20px;
+  .banner__content-image {
+    display: none;
   }
   .piao {
     display: none;
@@ -387,7 +377,7 @@
   transform-origin: 30px 40px;
   animation: thick-triangle infinite 10s linear;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .thick-triangle {
     width: 40px;
     height: 40px;
@@ -404,7 +394,7 @@
   transform-origin: 30px 40px;
   animation: thin-triangle infinite 6s linear;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .thin-triangle {
     width: 40px;
     height: 40px;
@@ -421,7 +411,7 @@
 .thick-circle {
   animation: thick-circle 6s linear infinite;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .thick-circle {
     width: 32px;
     height: 32px;
@@ -434,7 +424,7 @@
   top: 20px;
   animation: thin-circle 6s linear infinite;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .thin-circle {
     width: 32px;
     height: 32px;
@@ -1331,7 +1321,7 @@
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
   .footer {
     align-items: center;
   }

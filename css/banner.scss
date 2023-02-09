@@ -265,7 +265,7 @@
   }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 430px){
   .banner__content-text .banner-title {
     width: 360px;
     font-size: 46px;
@@ -283,16 +283,12 @@
   }
 
   .banner {
-    //border: 1px solid red;
     margin: 0 5px 40px;
-    height: 800px;
+    height: 400px;
     &__content {
       display: flex;
       flex-direction: column;
       gap: 180px;
-    }
-    .banner__content-text {
-      //border: 1px solid blue;
     }
     .banner-btn a {
       padding: 18px 30px;
@@ -301,18 +297,8 @@
       width: 120px;
     }
   }
-  .banner__content-image .double-circle {
-    display: block;
-    right: 30px;
-    top: -20px;
-  }
-  .banner__content-image .double-triangle {
-    display: block;
-    top: 240px;
-  }
-  .banner__content-image .double-square {
-    width: 300px;
-    right: 20px;
+  .banner__content-image {
+    display: none;
   }
   .piao {
     display: none;
