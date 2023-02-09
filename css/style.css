@@ -907,7 +907,7 @@
     font-size: 16px;
   }
 }
-.wrap {
+.ourInsightWrap {
   width: 80%;
   margin: auto;
   display: flex;
@@ -915,24 +915,30 @@
   position: relative;
 }
 
-.wrap .double-circle {
+.ourInsightWrap .double-circle {
   position: absolute;
-  left: 0;
-  top: 60px;
+  left: -30px;
 }
 
-.cards_wrap {
-  width: 100%;
+.ourInsightCards_wrap {
   display: flex;
+  gap: 3.5rem;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 150px;
 }
 
-.cards_wrap .card_item {
-  flex-basis: 30%;
-  padding: 25px 20px;
+.ourInsightCards_wrap .card_item {
+  flex-basis: 35%;
+  max-width: 400px;
+  width: 100%;
+  background-color: #19191b;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
 
-.cards_wrap .card_inner {
+.ourInsightCards_wrap .ourInsightCard_inner {
+  flex-basis: 35%;
   border-radius: 6px;
   padding: 20px 5px;
   width: 350px;
@@ -941,49 +947,49 @@
   align-items: center;
 }
 
-.cards_wrap .card_inner:hover {
+.ourInsightCards_wrap .ourInsightCard_inner:hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.card_inner .imgDiv {
+.ourInsightCard_inner .imgDiv {
   width: 85%;
   margin: auto;
 }
 
-.card_inner img {
+.ourInsightCard_inner img {
   width: 100%;
 }
 
-.card_inner .content {
+.ourInsightCard_inner.content {
   margin: 15px 15px;
 }
 
-.card_inner .cardHeader {
+.ourInsightCard_inner .cardHeader {
   font-size: 28px;
   margin: 1rem 0;
-  font-family: "Readex Pro", sans-serif;
-  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   color: white;
 }
 
-.card_inner .date {
+.ourInsightCard_inner .date {
   font-size: 20px;
-  font-family: "Readex Pro", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #888888;
   letter-spacing: 0.2rem;
   font-weight: 700;
   margin: 0.5rem 0;
 }
 
-.card_inner .insightsText {
+.ourInsightCard_inner .insightsText {
   font-size: 20px;
-  font-family: "Readex Pro", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #888888;
   font-weight: 200;
   line-height: 28px;
 }
 
-h2 {
+.ourInsightWrap h2 {
   margin-top: 80px;
   padding-left: 25px;
   font-size: 50px;
@@ -994,52 +1000,15 @@ h2 {
   margin-bottom: 30px;
 }
 
-.bubbleDeco {
-  position: absolute;
-  left: 100px;
-  top: 40px;
-}
-
 /* web sizes & above */
 @media screen and (min-width: 1442px) {
-  /* waiting for modification */
-}
-/* for ipad screens */
-/* 768px - 1024 */
-@media only screen and (max-width: 1024px) and (min-width: 415px) {
-  .cards_wrap {
-    width: 100%;
-  }
-  .cards_wrap .card_inner {
-    padding: 20px 5px;
-    width: 270px;
-  }
-  .cards_wrap .card_item {
-    padding: 20px 10px;
+  .ourInsightWrap {
+    width: 1442px;
   }
 }
-/* phone sizes */
-@media only screen and (max-width: 414px) {
-  .cards_wrap {
-    width: 100%;
-  }
-  .cards_wrap .card_inner {
-    padding: 20px 5px;
-    width: 250px;
-  }
-  .cards_wrap .card_item {
-    padding: 20px 15px;
-  }
-  /* responsive text sizes */
-  .card_inner .cardHeader {
-    font-size: 20px;
-  }
-  .card_inner .date {
-    font-size: 16px;
-  }
-  .card_inner .insightsText {
-    font-size: 16px;
-    line-height: 24px;
+@media screen and (max-width: 1442px) {
+  .ourInsightCards_wrap {
+    justify-content: center;
   }
 }
 .info {
