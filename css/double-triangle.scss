@@ -26,6 +26,11 @@
   height: 80px;
   transform-origin: 30px 40px;
   animation: thick-triangle infinite 10s linear ;
+  @media screen and (max-width: 420px){
+    width: 40px;
+    height: 40px;
+    transform-origin: 15px 20px;
+  }
 }
 
 .thin-triangle {
@@ -36,6 +41,11 @@
   top: 0;
   transform-origin: 30px 40px;
   animation: thin-triangle infinite 6s linear ;
+  @media screen and (max-width: 420px){
+    width: 40px;
+    height: 40px;
+    transform-origin: 15px 20px;
+  }
 }
 
 

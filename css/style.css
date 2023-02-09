@@ -73,7 +73,6 @@
   position: relative;
   flex: 1;
   height: 500px;
-  font-family: "Nunito Sans", sans-serif;
 }
 .banner__content-text .banner-shadow {
   position: absolute;
@@ -115,7 +114,6 @@
 }
 .banner__content-text .banner-btn a {
   padding: 22px 40px;
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
@@ -232,6 +230,138 @@
     display: none;
   }
 }
+@media screen and (max-width: 960px) {
+  .banner__content-text .banner-title {
+    font-size: 42px;
+    line-height: 54px;
+  }
+  .banner__content-text .banner-description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .banner__content-text .banner-btn {
+    margin-top: 40px;
+  }
+  .banner__content-image .double-square {
+    width: 300px;
+  }
+  .banner {
+    margin-bottom: 10px;
+  }
+  .banner .banner-btn a {
+    padding: 18px 30px;
+  }
+  .banner .icon-goMarket {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .banner__content-text .banner-description {
+    width: 340px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .banner__content-text .banner-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .banner__content-text .banner-description {
+    width: 300px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .banner__content-text .banner-btn {
+    margin-top: 30px;
+  }
+  .banner__content-image .double-square {
+    width: 260px;
+  }
+  .banner {
+    margin-bottom: 0;
+  }
+  .banner .banner-btn a {
+    padding: 18px 30px;
+  }
+  .banner .icon-goMarket {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .banner__content-text .banner-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .banner__content-text .banner-description {
+    width: 260px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .banner__content-text .banner-btn {
+    margin-top: 20px;
+  }
+  .banner__content-image .double-square {
+    width: 240px;
+  }
+  .banner {
+    margin-bottom: 0;
+  }
+  .banner .banner-btn a {
+    padding: 18px 30px;
+  }
+  .banner .icon-goMarket {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .banner__content-text .banner-title {
+    width: 360px;
+    font-size: 46px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .banner__content-text .banner-description {
+    width: 340px;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+  .banner__content-text .banner-btn {
+    margin-top: 20px;
+  }
+  .banner {
+    margin: 0 5px 40px;
+    height: 800px;
+  }
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+  }
+  .banner .banner-btn a {
+    padding: 18px 30px;
+  }
+  .banner .icon-goMarket {
+    width: 120px;
+  }
+  .banner__content-image .double-circle {
+    display: block;
+    right: 30px;
+    top: -20px;
+  }
+  .banner__content-image .double-triangle {
+    display: block;
+    top: 240px;
+  }
+  .banner__content-image .double-square {
+    width: 300px;
+    right: 20px;
+  }
+  .piao {
+    display: none;
+  }
+}
 .triangle {
   position: relative;
 }
@@ -258,6 +388,13 @@
   transform-origin: 30px 40px;
   animation: thick-triangle infinite 10s linear;
 }
+@media screen and (max-width: 420px) {
+  .thick-triangle {
+    width: 40px;
+    height: 40px;
+    transform-origin: 15px 20px;
+  }
+}
 
 .thin-triangle {
   width: 80px;
@@ -268,15 +405,28 @@
   transform-origin: 30px 40px;
   animation: thin-triangle infinite 6s linear;
 }
+@media screen and (max-width: 420px) {
+  .thin-triangle {
+    width: 40px;
+    height: 40px;
+    transform-origin: 15px 20px;
+  }
+}
 
 .double-circle {
-  width: 42px;
-  height: 42px;
+  width: 22px;
+  height: 22px;
   position: relative;
 }
 
 .thick-circle {
   animation: thick-circle 6s linear infinite;
+}
+@media screen and (max-width: 420px) {
+  .thick-circle {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .thin-circle {
@@ -284,6 +434,14 @@
   left: -25px;
   top: 20px;
   animation: thin-circle 6s linear infinite;
+}
+@media screen and (max-width: 420px) {
+  .thin-circle {
+    width: 32px;
+    height: 32px;
+    left: -18px;
+    top: 16px;
+  }
 }
 
 @keyframes thick-circle {
@@ -723,7 +881,8 @@
     right: 20px;
   }
   .section__services .double-triangle {
-    left: 0px;
+    left: 24px;
+    top: 24px;
   }
   .services__cross {
     display: none;

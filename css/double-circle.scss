@@ -1,11 +1,15 @@
 .double-circle {
-  width: 42px;
-  height: 42px;
+  width: 22px;
+  height: 22px;
   position: relative;
 }
 
 .thick-circle {
   animation: thick-circle 6s linear infinite;
+  @media screen and (max-width: 420px) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .thin-circle {
@@ -13,6 +17,12 @@
   left: -25px;
   top: 20px;
   animation: thin-circle 6s linear infinite;
+  @media screen and (max-width: 420px) {
+    width: 32px;
+    height: 32px;
+    left: -18px;
+    top: 16px;
+  }
 }
 
 @keyframes thick-circle {

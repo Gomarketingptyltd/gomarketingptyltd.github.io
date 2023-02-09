@@ -413,7 +413,8 @@
     right: 20px;
   }
   .section__services .double-triangle {
-    left: 0px;
+    left: 24px;
+    top: 24px;
   }
   .services__cross {
     display: none;
