@@ -1,4 +1,4 @@
-.wrap {
+.ourTeamWrap {
   padding-top: 5rem;
   width: 80%;
   margin: auto;
@@ -10,24 +10,27 @@
   margin: auto;
 }
 
-.rowBox {
+.ourTeamRowBox {
   display: flex;
-  /* flex-wrap: wrap; */
-  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 5%;
 }
 
-.imgBox {
+.ourTeamImgBox {
   margin-bottom: 20px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
+.ourTeamImg {
+  width: 35vw;
 }
 
-h2 {
+.ourTeamContent {
+  flex-direction: column;
+  width: 45vw;
+}
+
+.ourTeamWrap h2 {
   margin-top: 80px;
   font-size: 50px;
   font-family: "Inter", sans-serif;
@@ -37,81 +40,73 @@ h2 {
   margin-bottom: 30px;
 }
 
-.subHeader {
-  font-size: 45px;
-  font-family: "Readex Pro", sans-serif;
-  font-weight: 400;
+.ourTeamSubHeader {
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   margin-bottom: 15px;
   color: white;
 }
 
-p {
+.ourTeamContent p {
   margin: 0.5rem 0;
-  font-size: 23px;
-  line-height: 32px;
-  font-family: "Readex Pro", sans-serif;
-  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
   color: white;
   margin-bottom: 50px;
 }
 
-/* for ipad screens */
-/* responsible for the effect 744px - 1024*/
-@media only screen and (max-width: 1138px) and (min-width: 744px) {
-  .rowBox {
-    width: 100%;
+/* break points */
+@media screen and (min-width: 1600px) {
+  .ourTeamWrap {
+    width: 1442px;
   }
-  .rowBox img {
-    /* width: 270px; */
-    width: 90%;
+  .ourTeamImg {
+    width: 550px;
   }
-  .subHeader {
+  .ourTeamContent {
+    width: 750px;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 960px) {
+  .ourTeamContent {
+    width: 38vw;
+  }
+  .ourTeamImg {
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 1047px) and (min-width: 710px) {
+  .ourTeamImg {
+    width: 38vw;
+  }
+  .ourTeamContent {
+    width: 35vw;
+  }
+  .ourTeamSubHeader {
     font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 10px;
   }
-  p {
+  .ourTeamContent p {
     margin: 0.3rem 0;
     font-size: 16px;
-    line-height: 20px;
   }
 }
 
-/* transitional sizes */
-@media only screen and (max-width: 840px) and (min-width: 744px) {
-  .rowBox {
-    gap: 2%;
+@media only screen and (max-width: 710px) {
+  .ourTeamImg {
+    width: 70vw;
   }
-  .rowBox img {
-    width: 90%;
+  .ourTeamContent {
+    width: 80vw;
   }
-  .content {
-    width: 80%;
-  }
-}
-
-/* phone sizes */
-@media only screen and (max-width: 744px) {
-  img {
-    width: 90%;
-  }
-
-  .rowBox {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: none;
-  }
-  .subHeader {
+  .ourTeamSubHeader {
     font-size: 28px;
-    margin-bottom: 10px;
   }
-  .content {
-    width: 80%;
-  }
-
-  p {
+  .ourTeamContent p {
+    margin: 1rem 0;
     font-size: 16px;
-    line-height: 22px;
   }
 }

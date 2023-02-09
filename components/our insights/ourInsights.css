@@ -103,9 +103,10 @@ h2 {
     width: 1442px;
   }
 }
-
 @media screen and (max-width: 1442px) {
   .ourInsightCards_wrap {
     justify-content: center;
   }
 }
+
+/*# sourceMappingURL=ourInsights.css.map */

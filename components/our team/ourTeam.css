@@ -36,7 +36,7 @@ body {
   width: 45vw;
 }
 
-h2 {
+.ourTeamWrap h2 {
   margin-top: 80px;
   font-size: 50px;
   font-family: "Inter", sans-serif;
@@ -84,7 +84,6 @@ h2 {
     width: 35vw;
   }
 }
-
 @media only screen and (max-width: 1047px) and (min-width: 710px) {
   .ourTeamImg {
     width: 38vw;
@@ -100,7 +99,6 @@ h2 {
     font-size: 16px;
   }
 }
-
 @media only screen and (max-width: 710px) {
   .ourTeamImg {
     width: 70vw;
@@ -116,3 +114,5 @@ h2 {
     font-size: 16px;
   }
 }
+
+/*# sourceMappingURL=ourTeam.css.map */
