@@ -71,7 +71,6 @@ $secondary-font-color:#FFFFFFB2;
 .services__title{
   text-align: start;
   h2{
-    font-family: 'Inter', sans-serif;
     font-size: 50px;
     font-style: italic;
     color: $title-color;
@@ -155,7 +154,6 @@ $secondary-font-color:#FFFFFFB2;
 .cases__title{
 
   h2{
-    font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 50px;
     font-style: italic;
@@ -228,7 +226,6 @@ $secondary-font-color:#FFFFFFB2;
     opacity: 0;
     border: none;
     background: rgba(255, 255, 255, 0.7);
-    font-family: inherit;
     color: #333;
     border-radius: 50%;
     height: .1rem;
@@ -333,7 +330,6 @@ $secondary-font-color:#FFFFFFB2;
   .services__title{
     text-align: start;
     h2{
-      font-family: 'Inter', sans-serif;
       font-size: 50px;
       color: $title-color;
       margin-bottom: 49px;

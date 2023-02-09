@@ -26,7 +26,6 @@
   color: #F69306;
 }
 .header-nav li a {
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 25px;
@@ -524,7 +523,6 @@
   text-align: start;
 }
 .services__title h2 {
-  font-family: "Inter", sans-serif;
   font-size: 50px;
   font-style: italic;
   color: #F69306;
@@ -594,7 +592,6 @@
 }
 
 .cases__title h2 {
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 50px;
   font-style: italic;
@@ -664,7 +661,6 @@
   opacity: 0;
   border: none;
   background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
   color: #333;
   border-radius: 50%;
   height: 0.1rem;
@@ -751,7 +747,6 @@
     text-align: start;
   }
   .services__title h2 {
-    font-family: "Inter", sans-serif;
     font-size: 50px;
     color: #F69306;
     margin-bottom: 49px;
@@ -991,7 +986,6 @@
 .ourTeamWrap h2 {
   margin-top: 80px;
   font-size: 50px;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: italic;
   color: #f69306;
@@ -1000,7 +994,6 @@
 
 .ourTeamSubHeader {
   font-size: 32px;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   margin-bottom: 15px;
   color: white;
@@ -1010,7 +1003,6 @@
   margin: 0.5rem 0;
   font-size: 20px;
   line-height: 28px;
-  font-family: "Inter", sans-serif;
   font-weight: 200;
   color: white;
   margin-bottom: 50px;
@@ -1126,14 +1118,12 @@
 .ourInsightCard_inner .cardHeader {
   font-size: 28px;
   margin: 1rem 0;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: white;
 }
 
 .ourInsightCard_inner .date {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
   color: #888888;
   letter-spacing: 0.2rem;
   font-weight: 700;
@@ -1142,7 +1132,6 @@
 
 .ourInsightCard_inner .insightsText {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
   color: #888888;
   font-weight: 200;
   line-height: 28px;
@@ -1152,7 +1141,6 @@
   margin-top: 80px;
   padding-left: 25px;
   font-size: 50px;
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: italic;
   color: #f69306;
@@ -1179,7 +1167,6 @@
   align-items: center;
 }
 .info-title {
-  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
@@ -1188,31 +1175,36 @@
 }
 .info-form {
   width: 90%;
-  height: auto;
   background: rgba(255, 255, 255, 0.2);
-  mix-blend-mode: normal;
   box-shadow: 2px 2px 75px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
 }
 .info-form .info-details {
-  width: 30vw;
+  box-sizing: border-box;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 50px;
   gap: 20px;
-  padding: 50px 0 50px 70px;
+}
+@media screen and (max-width: 960px) {
+  .info-form .info-details {
+    padding: 8vh 5vw 0;
+  }
 }
 .info-form .info-details input {
-  width: 80%;
+  width: 100%;
   height: 58px;
   border-radius: 8px;
   background-color: #6c6c6d;
   border: none;
   outline: none;
-  padding-left: 20px;
   color: white;
   font-size: 18px;
-  font-weight: normal;
+  padding-left: 30px;
 }
 .info-form .info-details input::placeholder {
   color: white;
@@ -1220,8 +1212,16 @@
   font-weight: normal;
 }
 .info-form .info-content {
-  width: 40vw;
-  padding: 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 50px;
+  flex: 2;
+}
+@media screen and (max-width: 960px) {
+  .info-form .info-content {
+    padding: 5vh 5vw 8vh;
+  }
 }
 .info-form .info-content textarea {
   width: 100%;
@@ -1230,18 +1230,23 @@
   background-color: #6c6c6d;
   resize: none;
   outline: none;
-  padding: 10px 20px;
   color: white;
   font-size: 18px;
   font-weight: normal;
+  padding: 10px 10px;
+}
+@media screen and (max-width: 960px) {
+  .info-form .info-content textarea {
+    margin-bottom: 6vh;
+  }
 }
 .info-form .info-content textarea::placeholder {
   color: white;
   font-size: 18px;
   font-weight: normal;
+  padding: 20px;
 }
 .info-form .info-content p {
-  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 21px;
@@ -1257,13 +1262,17 @@
   background: #FE9701;
   border-radius: 5px;
   color: white;
-  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 29px;
 }
 
+@media screen and (max-width: 960px) {
+  .info .info-form {
+    flex-direction: column;
+  }
+}
 .footer {
   margin-top: 100px;
   width: 100%;
@@ -1284,7 +1293,6 @@
   gap: 40px;
 }
 .footer-nav li a {
-  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1296,7 +1304,6 @@
   margin-right: 14px;
 }
 .footer-copyright {
-  font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1339,7 +1346,6 @@
 
 .swiper-slide p {
   padding: 40px 30px 0 30px;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
