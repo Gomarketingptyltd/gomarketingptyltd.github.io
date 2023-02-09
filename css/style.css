@@ -69,7 +69,7 @@
   justify-content: space-between;
 }
 .banner__content-text {
-  position: relative;
+  border: 1px solid red;
   flex: 1;
   height: 500px;
   font-family: "Nunito Sans", sans-serif;
@@ -144,9 +144,25 @@
   height: 145px;
 }
 .banner__content-image {
+  border: 1px solid red;
   box-sizing: border-box;
-  flex: 0.5;
   position: relative;
+  flex: 0.5;
+}
+@media screen and (max-width: 1745px) {
+  .banner__content-image {
+    flex: 0.6;
+  }
+}
+@media screen and (max-width: 1565px) {
+  .banner__content-image {
+    flex: 0.7;
+  }
+}
+@media screen and (max-width: 1430px) {
+  .banner__content-image {
+    flex: 0.8;
+  }
 }
 .banner__content-image .double-triangle {
   position: absolute;
@@ -164,6 +180,51 @@
   right: -2vw;
 }
 
+@media screen and (max-width: 1335px) {
+  .banner__content-image .double-triangle {
+    left: -50px;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .banner__content-text .banner-title {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .banner__content-image .double-triangle {
+    left: -100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .banner__content-text {
+    height: 400px;
+  }
+  .banner__content-text .banner-title {
+    font-size: 60px;
+  }
+  .banner__content-image .double-square {
+    width: 400px;
+    right: 10px;
+  }
+  .banner__content-image .double-triangle {
+    left: 50px;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .banner__content-image .double-triangle {
+    left: 0;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .banner__content-image .double-circle {
+    display: none;
+  }
+  .banner__content-image .double-triangle {
+    display: none;
+  }
+}
 .triangle {
   position: relative;
 }
