@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Go Marketing Pty Ltd – marketing service</title>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/pagination.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -373,8 +374,8 @@
 
         <!--        scroll bar-->
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper scroll-wrapper">
-                <div class="swiper-slide scroll-card">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <p>“Left has been using this web hosting service for over a year and impressed with the uptime and
                         support.
                         Website never gone down and the customer service always quick to help with any issues I have. I
@@ -386,12 +387,11 @@
                         <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
                         <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
                     </div>
-                    <br><br>
                     <img class="scroll-avatar" draggable='false' src="./images/scroll/img1.png" alt="img1">
                     <h3>Jane Smith</h3>
                     <h5>Freelance Designer</h5>
                 </div>
-                <div class="swiper-slide scroll-card">
+                <div class="swiper-slide">
                     <p>“Centre been using this web hosting service for a few months now and overall it's been fine. The
                         uptime has
                         been
@@ -405,12 +405,11 @@
                         <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
                         <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
                     </div>
-                    <br><br>
                     <img class="scroll-avatar" draggable='false' src="./images/scroll/img2.png" alt="img2">
                     <h3>Tom Williams</h3>
                     <h5>Software Developer</h5>
                 </div>
-                <div class="swiper-slide scroll-card">
+                <div class="swiper-slide">
                     <p>“Right has been using this web hosting service for a few months and it's been nothing but
                         problems. My
                         website has
@@ -424,7 +423,6 @@
                         <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
                         <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
                     </div>
-                    <br><br>
                     <img class="scroll-avatar" draggable='false' src="./images/scroll/img3.png" alt="img3">
                     <h3>Michael Brown</h3>
                     <h5>Online Entrepreneur</h5>
@@ -639,7 +637,9 @@
 
                 </div>
                 <div class="info-content">
-                    <textarea name="message" placeholder="Describe Your Project"></textarea>
+                    <label>
+                        <textarea name="message" placeholder="Describe Your Project"></textarea>
+                    </label>
                     <p>By submitting this form, you agree to our
                         <a href="#">terms and conditions</a>
                         and
@@ -666,17 +666,32 @@
     </div>
 
     <!-- Swiper JS -->
-    <script src="js/scroll/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
             pagination: {
                 el: ".swiper-pagination",
+                clickable: true,
             },
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                961: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+
         });
     </script>
     <script src="js/services&cases/script.js"></script>
-    <script src="js/scroll/scroll.js"></script>
+<!--    <script src="js/scroll/scroll.js"></script>-->
 </body>
 
 </html>

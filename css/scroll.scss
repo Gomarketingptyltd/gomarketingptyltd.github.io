@@ -1,48 +1,59 @@
-// removed body copied from Xiaofangzong
-
 .swiper {
-  width: 100vw;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  //padding: 0 5vw;
-}
-
-.scroll-wrapper {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  width: 30vw;
+  width: 94%;
+  min-height: 60vh;
 }
 
 .swiper-slide {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-
-  & .star {
-    border: 1px solid blue;
-    width: 42px;
-    height: 42px;
-  }
-
-}
-
-.stars {
-  width: 400px;
-  background-color: red;
-}
-
-.scroll-avatar {
-  width: 80px;
-}
-
-.scroll-card {
+  box-sizing: border-box;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  justify-content: center;
+  padding: 40px 5vh;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
   & p {
-    width: 400px;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 3vh;
+    @media screen and (max-width: 960px) {
+      font-size: 1.8vw;
+    }
+    @media screen and (max-width: 430px) {
+      font-size: 3.4vw;
+    }
   }
+  & .stars {
+    display: flex;
+    gap: 8.33px;
+    margin-bottom: 3vh;
+  }
+  & .star {
+    width: 16px;
+    height: 16px;
+  }
+
+  & .scroll-avatar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 3vh;
+  }
+  & h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 2vh;
+  }
+  & h5 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  color: white;
 }

@@ -941,47 +941,66 @@
 }
 
 .swiper {
-  width: 100vw;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.scroll-wrapper {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  width: 30vw;
+  width: 94%;
+  min-height: 60vh;
 }
 
 .swiper-slide {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-}
-.swiper-slide .star {
-  border: 1px solid blue;
-  width: 42px;
-  height: 42px;
-}
-
-.stars {
-  width: 400px;
-  background-color: red;
-}
-
-.scroll-avatar {
-  width: 80px;
-}
-
-.scroll-card {
+  box-sizing: border-box;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  justify-content: center;
+  padding: 40px 5vh;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
 }
-.scroll-card p {
-  width: 400px;
+.swiper-slide p {
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 34px;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+@media screen and (max-width: 960px) {
+  .swiper-slide p {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 430px) {
+  .swiper-slide p {
+    font-size: 3.4vw;
+  }
+}
+.swiper-slide .stars {
+  display: flex;
+  gap: 8.33px;
+  margin-bottom: 3vh;
+}
+.swiper-slide .star {
+  width: 16px;
+  height: 16px;
+}
+.swiper-slide .scroll-avatar {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 3vh;
+}
+.swiper-slide h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 2vh;
+}
+.swiper-slide h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.swiper-pagination-bullet-active {
+  color: white;
 }
 
 .ourTeamWrap {
