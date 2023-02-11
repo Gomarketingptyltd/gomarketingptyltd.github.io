@@ -108,10 +108,11 @@ body {
     justify-content: center;
   }
 }
-
 @media screen and (max-width: 400px) {
   .ourInsightCards_wrap .ourInsightCard_inner {
     width: 80vw;
   }
 }
+/*# sourceMappingURL=ourInsights.css.map */
+
 /*# sourceMappingURL=ourInsights.css.map */

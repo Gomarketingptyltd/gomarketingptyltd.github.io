@@ -57,7 +57,7 @@ $secondary-font-color:#FFFFFFB2;
 }
 .blur{
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 400px;
   display: inline;
   z-index: 1;
@@ -216,7 +216,7 @@ $secondary-font-color:#FFFFFFB2;
   overflow: hidden;
 
   &:hover{
-    box-shadow: 0px 11px 21px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 11px 21px 3px rgba(0,0,0,0.1);
   }
 
   &__btn{
@@ -486,7 +486,7 @@ $secondary-font-color:#FFFFFFB2;
 
   .dots {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
@@ -508,6 +508,18 @@ $secondary-font-color:#FFFFFFB2;
 
   .services{
     padding-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .services__card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section__cases {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .section__cases .double-circle{

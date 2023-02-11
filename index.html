@@ -139,18 +139,6 @@
                     src="./images/services&cases/blur.png"
                     alt=""
             />
-            <img
-                    draggable="false"
-                    class="ten--services-top"
-                    src="./images/services&cases/ten.png"
-                    alt=""
-            />
-            <img
-                    draggable="false"
-                    class="ten--services-bottom"
-                    src="./images/services&cases/ten.png"
-                    alt=""
-            />
 
             <div class="services">
                 <div class="services__title">
@@ -302,7 +290,7 @@
                             <img
                                     draggable="false"
                                     class="img-card"
-                                    src="./images/services&cases//workCard.png"
+                                    src="images/services&cases/workCard.png"
                                     alt=""
                             />
                         </div>
@@ -500,10 +488,10 @@
                 <div class="card_item">
                     <div class="ourInsightCard_inner">
                         <div class="imgDiv">
-                            <img src="./images/insights/img1.png" alt="img" />
+                            <img src="images/insights/img1.png" alt="img" />
                             <div class="date">MAR 1, 2022</div>
 
-                            <div class="cardHeader">
+                            <div class="ourInsightCardHeader">
                                 How to connect with your customers through social media
                             </div>
 
@@ -519,12 +507,14 @@
                         <div class="imgDiv">
                             <img
                                     draggable="false"
-                                    src="./images/insights/img2.png"
+                                    src="images/insights/img2.png"
                                     alt="img"
                             />
                             <div class="date">MAR 1, 2022</div>
 
-                            <div class="cardHeader">SEO & SEM: What’s the Difference?</div>
+                            <div class="ourInsightCardHeader">
+                                SEO & SEM: What’s the Difference?
+                            </div>
 
                             <div class="insightsText">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -538,12 +528,14 @@
                         <div class="imgDiv">
                             <img
                                     draggable="false"
-                                    src="./images/insights/img3.png"
+                                    src="images/insights/img3.png"
                                     alt="img"
                             />
                             <div class="date">MAR 1, 2022</div>
 
-                            <div class="cardHeader">How brands can capture new audience?</div>
+                            <div class="ourInsightCardHeader">
+                                How brands can capture new audience?
+                            </div>
 
                             <div class="insightsText">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -555,10 +547,10 @@
                 <div class="card_item">
                     <div class="ourInsightCard_inner">
                         <div class="imgDiv">
-                            <img src="./images/insights/img4.png" alt="img" />
+                            <img src="images/insights/img4.png" alt="img" />
                             <div class="date">MAR 1, 2022</div>
 
-                            <div class="cardHeader">
+                            <div class="ourInsightCardHeader">
                                 Outdoor Advertising for Small Business
                             </div>
 
@@ -574,12 +566,12 @@
                         <div class="imgDiv">
                             <img
                                     draggable="false"
-                                    src="./images/insights/img5.png"
+                                    src="images/insights/img5.png"
                                     alt="img"
                             />
                             <div class="date">MAR 1, 2022</div>
 
-                            <div class="cardHeader">
+                            <div class="ourInsightCardHeader">
                                 How to Map the Client's Business Opportunities
                             </div>
 
@@ -595,12 +587,12 @@
                         <div class="imgDiv">
                             <img
                                     draggable="false"
-                                    src="./images/insights/img6.png"
+                                    src="images/insights/img6.png"
                                     alt="img"
                             />
                             <div class="date">MAR 1, 2022</div>
 
-                            <div class="cardHeader">
+                            <div class="ourInsightCardHeader">
                                 Out-of-Home Advertising Trends & Predictions for 2023
                             </div>
 
@@ -623,16 +615,16 @@
             <form class="info-form" action="https://formspree.io/f/mrgvpaep" method="POST">
                 <div class="info-details">
                     <label>
-                        <input type="text" name="username" placeholder="User Name">
+                        <input type="text" name="username" placeholder="User Name" required>
                     </label>
                     <label>
-                        <input type="email" name="email" placeholder="User Email">
+                        <input type="email" name="email" placeholder="User Email" required>
                     </label>
                     <label>
-                        <input type="text" name="phone" placeholder="Phone">
+                        <input type="text" name="phone" placeholder="Phone" required>
                     </label>
                     <label>
-                        <input type="text" name="services" placeholder="Services">
+                        <input type="text" name="services" placeholder="Services" required>
                     </label>
 
                 </div>
@@ -691,7 +683,6 @@
         });
     </script>
     <script src="js/services&cases/script.js"></script>
-<!--    <script src="js/scroll/scroll.js"></script>-->
 </body>
 
 </html>

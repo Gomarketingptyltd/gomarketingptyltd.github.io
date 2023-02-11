@@ -1,6 +1,8 @@
 .swiper {
   width: 94%;
   min-height: 60vh;
+  margin-top: 10vh;
+  margin-bottom: 100px;
 }
 
 .swiper-slide {
@@ -56,4 +58,10 @@
 
 .swiper-pagination-bullet-active {
   color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .swiper {
+    height: 67vh;
+  }
 }
