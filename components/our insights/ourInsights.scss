@@ -61,7 +61,7 @@ body {
   margin: 15px 15px;
 }
 
-.ourInsightCard_inner .cardHeader {
+.ourInsightCard_inner .ourInsightCardHeader {
   font-size: 28px;
   margin: 1rem 0;
   font-family: "Inter", sans-serif;
@@ -103,9 +103,15 @@ body {
     width: 1442px;
   }
 }
-
 @media screen and (max-width: 1442px) {
   .ourInsightCards_wrap {
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=ourInsights.css.map */
