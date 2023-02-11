@@ -1,4 +1,107 @@
-@import "swiper-bundle.min.css";
+.triangle {
+  position: relative;
+}
+
+@keyframes thick-triangle {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes thin-triangle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.thick-triangle {
+  width: 80px;
+  height: 80px;
+  transform-origin: 30px 40px;
+  animation: thick-triangle infinite 10s linear;
+}
+@media screen and (max-width: 430px) {
+  .thick-triangle {
+    width: 40px;
+    height: 40px;
+    transform-origin: 15px 20px;
+  }
+}
+
+.thin-triangle {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 30px 40px;
+  animation: thin-triangle infinite 6s linear;
+}
+@media screen and (max-width: 430px) {
+  .thin-triangle {
+    width: 40px;
+    height: 40px;
+    transform-origin: 15px 20px;
+  }
+}
+
+.double-circle {
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+
+.thick-circle {
+  animation: thick-circle 6s linear infinite;
+}
+@media screen and (max-width: 430px) {
+  .thick-circle {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.thin-circle {
+  position: absolute;
+  left: -25px;
+  top: 20px;
+  animation: thin-circle 6s linear infinite;
+}
+@media screen and (max-width: 430px) {
+  .thin-circle {
+    width: 32px;
+    height: 32px;
+    left: -18px;
+    top: 16px;
+  }
+}
+
+@keyframes thick-circle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thin-circle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .header {
   box-sizing: border-box;
   padding: 0 5%;
@@ -349,110 +452,6 @@
   }
   .piao {
     display: none;
-  }
-}
-.triangle {
-  position: relative;
-}
-
-@keyframes thick-triangle {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes thin-triangle {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.thick-triangle {
-  width: 80px;
-  height: 80px;
-  transform-origin: 30px 40px;
-  animation: thick-triangle infinite 10s linear;
-}
-@media screen and (max-width: 430px) {
-  .thick-triangle {
-    width: 40px;
-    height: 40px;
-    transform-origin: 15px 20px;
-  }
-}
-
-.thin-triangle {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: 30px 40px;
-  animation: thin-triangle infinite 6s linear;
-}
-@media screen and (max-width: 430px) {
-  .thin-triangle {
-    width: 40px;
-    height: 40px;
-    transform-origin: 15px 20px;
-  }
-}
-
-.double-circle {
-  width: 22px;
-  height: 22px;
-  position: relative;
-}
-
-.thick-circle {
-  animation: thick-circle 6s linear infinite;
-}
-@media screen and (max-width: 430px) {
-  .thick-circle {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-.thin-circle {
-  position: absolute;
-  left: -25px;
-  top: 20px;
-  animation: thin-circle 6s linear infinite;
-}
-@media screen and (max-width: 430px) {
-  .thin-circle {
-    width: 32px;
-    height: 32px;
-    left: -18px;
-    top: 16px;
-  }
-}
-
-@keyframes thick-circle {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes thin-circle {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes spin {
@@ -941,6 +940,50 @@
   transform: matrix(-0.58, -0.81, -0.81, 0.58, 0, 0);
 }
 
+.swiper {
+  width: 100vw;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.scroll-wrapper {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+}
+
+.swiper-slide {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.swiper-slide .star {
+  border: 1px solid blue;
+  width: 42px;
+  height: 42px;
+}
+
+.stars {
+  width: 400px;
+  background-color: red;
+}
+
+.scroll-avatar {
+  width: 80px;
+}
+
+.scroll-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+.scroll-card p {
+  width: 400px;
+}
+
 .ourTeamWrap {
   padding-top: 5rem;
   width: 80%;
@@ -1334,34 +1377,6 @@
     font-size: 14px;
   }
 }
-.swiper,
-.mySwiper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 70vw;
-}
-
-.swiper-wrapper {
-  text-align: center;
-}
-
-.swiper-slide p {
-  padding: 40px 30px 0 30px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 212%;
-  text-align: center;
-}
-.swiper-slide h3,
-.swiper-slide h5 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
 * {
   margin: 0;
   padding: 0;

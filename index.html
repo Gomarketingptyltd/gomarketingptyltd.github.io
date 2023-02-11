@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Go Marketing Pty Ltd – marketing service</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -372,53 +373,59 @@
 
         <!--        scroll bar-->
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+            <div class="swiper-wrapper scroll-wrapper">
+                <div class="swiper-slide scroll-card">
                     <p>“Left has been using this web hosting service for over a year and impressed with the uptime and
                         support.
                         Website never gone down and the customer service always quick to help with any issues I have. I
                         will certainly recommend their service!”</p>
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
+                    <div class="stars">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                    </div>
                     <br><br>
-                    <img draggable='false' src="./images/scroll/img1.png" alt="img1">
+                    <img class="scroll-avatar" draggable='false' src="./images/scroll/img1.png" alt="img1">
                     <h3>Jane Smith</h3>
                     <h5>Freelance Designer</h5>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide scroll-card">
                     <p>“Centre been using this web hosting service for a few months now and overall it's been fine. The
                         uptime has
                         been
                         good and I haven't had any major issues. The pricing is also reasonable. Nothing particularly
                         stands out as
                         exceptional, but it gets the job done.”</p>
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
+                    <div class="stars">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                    </div>
                     <br><br>
-                    <img draggable='false' src="./images/scroll/img2.png" alt="img2">
+                    <img class="scroll-avatar" draggable='false' src="./images/scroll/img2.png" alt="img2">
                     <h3>Tom Williams</h3>
                     <h5>Software Developer</h5>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide scroll-card">
                     <p>“Right has been using this web hosting service for a few months and it's been nothing but
                         problems. My
                         website has
                         gone down multiple times and the customer service has been unresponsive. Not recommend, this
                         company."
                     </p>
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
-                    <img draggable='false' class="vector" src="images/scroll/Vector.svg" alt="star">
+                    <div class="stars">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                        <img class="star" draggable='false' src="images/scroll/Vector.svg" alt="star">
+                    </div>
                     <br><br>
-                    <img draggable='false' src="./images/scroll/img3.png" alt="img3">
+                    <img class="scroll-avatar" draggable='false' src="./images/scroll/img3.png" alt="img3">
                     <h3>Michael Brown</h3>
                     <h5>Online Entrepreneur</h5>
                 </div>
@@ -615,16 +622,24 @@
             <div class="info-title">
                 <h3>Contact us</h3>
             </div>
-            <form class="info-form">
+            <form class="info-form" action="https://formspree.io/f/mrgvpaep" method="POST">
                 <div class="info-details">
-                    <input type="text" placeholder="User Name">
-                    <input type="email" placeholder="User Email">
-                    <input type="text" placeholder="Phone">
-                    <input type="text" placeholder="Services">
+                    <label>
+                        <input type="text" name="username" placeholder="User Name">
+                    </label>
+                    <label>
+                        <input type="email" name="email" placeholder="User Email">
+                    </label>
+                    <label>
+                        <input type="text" name="phone" placeholder="Phone">
+                    </label>
+                    <label>
+                        <input type="text" name="services" placeholder="Services">
+                    </label>
 
                 </div>
                 <div class="info-content">
-                    <textarea placeholder="Describe Your Project"></textarea>
+                    <textarea name="message" placeholder="Describe Your Project"></textarea>
                     <p>By submitting this form, you agree to our
                         <a href="#">terms and conditions</a>
                         and
