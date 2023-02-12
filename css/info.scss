@@ -4,6 +4,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 430px) {
+    margin-bottom: 8vh;
+    //border: 1px solid red;
+  }
   &-title {
     font-style: normal;
     font-weight: 700;
@@ -12,6 +16,7 @@
     margin-bottom: 60px;
     @media screen and (max-width: 430px) {
       font-size: 40px;
+      margin-bottom: 30px;
     }
   }
   &-form {
@@ -28,13 +33,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 80px 50px;
       @media screen and (max-width: 960px) {
-        padding: 8vh 5vw 0;
+        padding: 5vh 5vw 0;
+      }
+      @media screen and (max-width: 430px) {
+        padding-top: 30px;
       }
       gap: 20px;
       & input {
-        width: 100%;
+        width: 20vw;
         height: 58px;
         border-radius: 8px;
         background-color: #6c6c6d;
@@ -43,11 +50,16 @@
         color: white;
         font-size: 18px;
         padding-left: 30px;
+        @media screen and (max-width: 960px) {
+          width: 75vw;
+        }
+        @media screen and (max-width: 430px) {
+          width: 70vw;
+        }
         &::placeholder {
           color: white;
           font-size: 18px;
           font-weight: normal;
-          //padding-left: 20px;
         }
       }
     }
@@ -72,9 +84,6 @@
         font-size: 18px;
         font-weight: normal;
         padding: 20px 30px;
-        @media screen and (max-width: 960px) {
-          margin-bottom: 6vh;
-        }
         &::placeholder {
           color: white;
           font-size: 18px;

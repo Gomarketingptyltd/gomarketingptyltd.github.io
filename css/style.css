@@ -477,10 +477,22 @@
 .section__services {
   background-color: #19191b;
   position: relative;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 430px) {
+  .section__services {
+    padding-bottom: 0;
+  }
 }
 
 .services {
   padding: 100px 200px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 430px) {
+  .services {
+    padding-bottom: 0;
+  }
 }
 
 .section__services .double-triangle {
@@ -1140,6 +1152,11 @@
   flex-direction: column;
   position: relative;
 }
+@media screen and (max-width: 430px) {
+  .ourInsightWrap {
+    margin-bottom: 8vh;
+  }
+}
 
 .ourInsightWrap .double-circle {
   position: absolute;
@@ -1152,6 +1169,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 150px;
+}
+@media screen and (max-width: 430px) {
+  .ourInsightCards_wrap {
+    margin-bottom: 0;
+  }
 }
 
 .ourInsightCards_wrap .card_item {
@@ -1240,6 +1262,11 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 430px) {
+  .info {
+    margin-bottom: 8vh;
+  }
+}
 .info-title {
   font-style: normal;
   font-weight: 700;
@@ -1250,6 +1277,7 @@
 @media screen and (max-width: 430px) {
   .info-title {
     font-size: 40px;
+    margin-bottom: 30px;
   }
 }
 .info-form {
@@ -1266,16 +1294,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 50px;
   gap: 20px;
 }
 @media screen and (max-width: 960px) {
   .info-form .info-details {
-    padding: 8vh 5vw 0;
+    padding: 5vh 5vw 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .info-form .info-details {
+    padding-top: 30px;
   }
 }
 .info-form .info-details input {
-  width: 100%;
+  width: 20vw;
   height: 58px;
   border-radius: 8px;
   background-color: #6c6c6d;
@@ -1284,6 +1316,16 @@
   color: white;
   font-size: 18px;
   padding-left: 30px;
+}
+@media screen and (max-width: 960px) {
+  .info-form .info-details input {
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 430px) {
+  .info-form .info-details input {
+    width: 70vw;
+  }
 }
 .info-form .info-details input::placeholder {
   color: white;
@@ -1313,11 +1355,6 @@
   font-size: 18px;
   font-weight: normal;
   padding: 20px 30px;
-}
-@media screen and (max-width: 960px) {
-  .info-form .info-content textarea {
-    margin-bottom: 6vh;
-  }
 }
 .info-form .info-content textarea::placeholder {
   color: white;
@@ -1407,6 +1444,7 @@
 }
 @media screen and (max-width: 430px) {
   .footer {
+    margin-top: 0;
     align-items: center;
   }
   .footer-nav {

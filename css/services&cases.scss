@@ -36,12 +36,19 @@ $secondary-font-color:#FFFFFFB2;
   background-color: $background-color;
   // height: 56.25rem;
   position: relative;
-
+  box-sizing: border-box;
+  @media screen and (max-width: 430px) {
+    padding-bottom: 0;
+  }
 }
 
 
 .services{
   padding: 100px 200px;
+  box-sizing: border-box;
+  @media screen and (max-width: 430px) {
+    padding-bottom: 0;
+  }
 }
 
 .section__services .double-triangle{
