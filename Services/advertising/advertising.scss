@@ -138,7 +138,7 @@ a {
 
     &--title{
         h2{
-           
+            line-height: 1;
             font-weight: 600;
             font-size: 50px;
             font-style: italic;
@@ -157,11 +157,13 @@ a {
 
     &--description{
         text-align: center;
+       
 
         &-title{
             margin-bottom: 40px;
 
             h3{
+                 line-height: 1;
                 font-size: 30px;
                 font-weight: 600;
             }
@@ -169,14 +171,108 @@ a {
         &-paragraph{
 
             p{
+         line-height: 1.2;
          font-size: 20px;
          font-weight: 400;
            }
          }
     }
+  }
+
+  /**********************************************************************************/
+/*media below 962px(tablet)*/
+/**********************************************************************************/
+
+@media (max-width: 1200px){
+    .advertising--video{
+        img{
+          height: 500px;
+        }
     
+      }
+ 
   
   }
+
+
+
+
+
+@media (max-width: 962px){
+    .blur{
+      display: none;
+    }
+  
+  
+    .section__advertising .double-triangle{
+      position: absolute;
+      top: 0;
+      left: 30px;
+    }
+  
+  
+   
+    .advertising{
+      padding: 100px 10px;
+    }
+  
+    .advertising--video{
+      img{
+        height: 300px;
+      }
+  
+    }
+  
+  
+    .advertising--description{
+      font-size: 16px;
+      color: $secondary-font-color;
+      margin-top: 10px;
+      line-height: 20px;
+    }
+  
+  
+  
+    .advertising--title{
+      h2{
+        font-size: 40px;
+      }
+    }
+   
+  
+    
+
+  }
+  
+  
+  
+  /**********************************************************************************/
+  /*media below 600px(phone)*/
+  /**********************************************************************************/
+  
+  
+  @media (max-width: 600px){
+  
+    .advertising{
+      padding-top: 100px;
+    }
+  
+  
+    .section__advertising .double-triangle{
+      left: 24px;
+      top: 24px;
+    }
+    .advertising--video{
+        img{
+          height: 175px;
+        }
+    
+      }
+    
+  
+  
+  }
+  
 
   /////////////////////////////////////////////////////
 /// ///////// FOOTER ////////////////////
