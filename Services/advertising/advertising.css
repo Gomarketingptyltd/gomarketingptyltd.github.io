@@ -253,7 +253,6 @@ a {
     font-size: 14px;
   }
 }
-
 /* other services */
 .services {
   padding: 100px 200px;
@@ -262,6 +261,7 @@ a {
 .services__title {
   text-align: start;
 }
+
 .otherServices__title h2 {
   font-family: "Inter", sans-serif;
   font-size: 50px;
@@ -296,6 +296,7 @@ a {
   align-items: center;
   text-align: center;
 }
+
 .card__wrapper h3 {
   font-weight: 600;
   font-size: 28px;
@@ -312,10 +313,12 @@ a {
   margin-top: 20px;
   font-weight: 400;
 }
+
 @media screen and (min-width: 1600px) {
   .services {
     width: 1600px;
     margin: auto;
   }
 }
+
 /*# sourceMappingURL=advertising.css.map */
