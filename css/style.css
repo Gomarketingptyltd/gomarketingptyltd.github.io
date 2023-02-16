@@ -1145,17 +1145,18 @@
     font-size: 16px;
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #19191b;
+}
+
 .ourInsightWrap {
   width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-@media screen and (max-width: 430px) {
-  .ourInsightWrap {
-    margin-bottom: 8vh;
-  }
 }
 
 .ourInsightWrap .double-circle {
@@ -1169,11 +1170,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 150px;
-}
-@media screen and (max-width: 430px) {
-  .ourInsightCards_wrap {
-    margin-bottom: 0;
-  }
 }
 
 .ourInsightCards_wrap .card_item {
@@ -1212,15 +1208,18 @@
   margin: 15px 15px;
 }
 
-.ourInsightCard_inner .cardHeader {
+.ourInsightCard_inner .ourInsightCardHeader {
   font-size: 28px;
+  line-height: 32px;
   margin: 1rem 0;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: white;
 }
 
 .ourInsightCard_inner .date {
   font-size: 20px;
+  font-family: "Inter", sans-serif;
   color: #888888;
   letter-spacing: 0.2rem;
   font-weight: 700;
@@ -1229,19 +1228,22 @@
 
 .ourInsightCard_inner .insightsText {
   font-size: 20px;
+  font-family: "Inter", sans-serif;
   color: #888888;
   font-weight: 200;
   line-height: 28px;
 }
 
-.ourInsightWrap h2 {
+.ourInsightWrap .insightH2 {
   margin-top: 80px;
   padding-left: 25px;
   font-size: 50px;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-style: italic;
   color: #f69306;
   margin-bottom: 30px;
+  line-height: 50px;
 }
 
 /* web sizes & above */
@@ -1255,6 +1257,23 @@
     justify-content: center;
   }
 }
+@media screen and (max-width: 960px) {
+  .double-circle {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    width: 80vw;
+  }
+  .double-circle {
+    display: none;
+  }
+  .ourInsightWrap .insightH2 {
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=ourInsights.css.map */
 .info {
   padding: 20px;
   display: flex;

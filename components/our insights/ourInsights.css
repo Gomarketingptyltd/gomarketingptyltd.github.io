@@ -86,7 +86,7 @@ body {
   line-height: 28px;
 }
 
-.ourInsightWrap h2 {
+.ourInsightWrap .insightH2 {
   margin-top: 80px;
   padding-left: 25px;
   font-size: 50px;
@@ -113,6 +113,3 @@ body {
     width: 80vw;
   }
 }
-/*# sourceMappingURL=ourInsights.css.map */
-
-/*# sourceMappingURL=ourInsights.css.map */
