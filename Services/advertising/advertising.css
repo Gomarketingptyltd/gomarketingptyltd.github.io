@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #19191B;
+  background-color: #19191b;
   cursor: url("../images/cursor.gif"), auto;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -58,7 +58,7 @@ a {
 .header-nav .nav-active {
   font-weight: 800;
   letter-spacing: -0.500211px;
-  color: #F69306;
+  color: #f69306;
 }
 .header-nav li a {
   font-weight: 400;
@@ -110,7 +110,7 @@ a {
   font-weight: 600;
   font-size: 50px;
   font-style: italic;
-  color: #F69306;
+  color: #f69306;
   margin-bottom: 49px;
 }
 .advertising--video {
@@ -254,4 +254,68 @@ a {
   }
 }
 
+/* other services */
+.services {
+  padding: 100px 200px;
+}
+
+.services__title {
+  text-align: start;
+}
+.otherServices__title h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  color: #f69306;
+  margin-bottom: 49px;
+  margin-left: 20px;
+}
+
+.otherServices__cards {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.otherServices__card {
+  max-width: 360px;
+  width: 100%;
+  height: 298px;
+  background-color: #19191b;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.card__wrapper {
+  margin: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card__wrapper h3 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.icon {
+  font-size: 69px;
+  margin-bottom: 20px;
+}
+
+.card__text {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6980392157);
+  margin-top: 20px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1600px) {
+  .services {
+    width: 1600px;
+    margin: auto;
+  }
+}
 /*# sourceMappingURL=advertising.css.map */

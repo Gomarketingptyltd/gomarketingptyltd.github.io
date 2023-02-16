@@ -1,14 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="web.css">
-    <link rel="icon" type="image/png" href="">
-    <meta name="description" content="">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="web.css" />
+    <link rel="icon" type="image/png" href="" />
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <!--header-->
+    <header class="header">
+      <img draggable="false" class="blur" src="./images/blur.png" alt="" />
+      <div class="header-logo">
+        <img draggable="false" src="images/logo.png" alt="logo" />
+      </div>
+      <div class="header-hamburger_icon">
+        <img draggable="false" src="images/header/hamburger_icon.svg" alt="" />
+      </div>
+      <ul class="header-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="nav-active">Services</a></li>
+        <li><a href="#">Our Project</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">简体中文</a></li>
+      </ul>
+    </header>
 
-</body>
+    <!-- Our Advertising Service -->
+    <section class="section__advertising">
+      <div class="double-triangle">
+        <img
+          class="thick-triangle"
+          draggable="false"
+          src="images/thick-triangle.svg"
+          alt="thick-triangle"
+        />
+        <img
+          class="thin-triangle"
+          draggable="false"
+          src="images/thin-triangle.svg"
+          alt="thin-triangle"
+        />
+      </div>
+      <div class="advertising">
+        <div class="advertising--title">
+          <h2>Our Web Design Service</h2>
+        </div>
+        <div class="advertising--video">
+          <img src="./images/webDesign.png" alt="" />
+        </div>
+        <div class="advertising--description">
+          <div class="advertising--description-title">
+            <a href="webDetails.html">
+              <h3>Web Design</h3>
+            </a>
+          </div>
+          <div class="advertising--description-paragraph">
+            <p>
+              We provide a simple website for review, that includes 3-5 pages to
+              introduce your company background and services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--   other services-->
+    <div class="services">
+      <div class="otherServices__title">
+        <h2 class="title--short">Other Services</h2>
+      </div>
+      <div class="otherServices__cards">
+        <div class="otherServices__card">
+          <div class="card__wrapper">
+            <div class="card__icon">
+              <img
+                draggable="false"
+                class="icon"
+                src="./images/otherServices.png"
+                alt=""
+              />
+            </div>
+            <h3>Graphic Design</h3>
+          </div>
+        </div>
+        <div class="otherServices__card">
+          <div class="card__wrapper">
+            <div class="card__icon">
+              <img
+                draggable="false"
+                class="icon"
+                src="./images/otherServices.png"
+                alt=""
+              />
+            </div>
+            <h3>Digital Marketing</h3>
+          </div>
+        </div>
+        <div class="otherServices__card">
+          <div class="card__wrapper">
+            <div class="card__icon">
+              <img
+                draggable="false"
+                class="icon"
+                src="./images/otherServices.png"
+                alt=""
+              />
+            </div>
+            <h3>Advertising</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--        footer-->
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+      </ul>
+      <div class="footer-copyright">
+        <a href="#">© 2023 GO MARKETING, All Rights Reserved</a>
+      </div>
+    </footer>
+  </body>
 </html>
