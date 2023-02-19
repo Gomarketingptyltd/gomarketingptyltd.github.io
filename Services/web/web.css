@@ -276,6 +276,7 @@ a {
     font-size: 14px;
   }
 }
+
 /* web design details */
 .webDesign_details_para p {
   font-size: 20px;
@@ -297,11 +298,9 @@ a {
 
 /* other services */
 .services {
-  padding: 100px 200px;
-}
-
-.services__title {
-  text-align: start;
+  width: 80%;
+  padding-top: 100px;
+  margin: auto;
 }
 
 .otherServices__title h2 {
@@ -310,7 +309,8 @@ a {
   font-style: italic;
   color: #f69306;
   margin-bottom: 49px;
-  margin-left: 20px;
+  margin-left: 8vw;
+  line-height: 52px;
 }
 
 .otherServices__cards {
@@ -326,9 +326,7 @@ a {
   max-width: 360px;
   width: 100%;
   height: 298px;
-  background-color: #19191b;
   border-radius: 5px;
-  transition: all 0.3s;
 }
 
 .card__wrapper {
@@ -349,19 +347,37 @@ a {
   margin-bottom: 20px;
 }
 
-.card__text {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.6980392157);
-  margin-top: 20px;
-  font-weight: 400;
-}
-
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1440px) {
   .services {
-    width: 1600px;
+    width: 1440px;
     margin: auto;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .services {
+    padding-top: 50px;
+  }
+  .otherServices__card {
+    /* max-width: 80vw; */
+    max-width: 300px;
+    height: 268px;
+  }
+  .otherServices__cards {
+    margin-bottom: 140px;
+    gap: 1.8rem;
+  }
+  .services {
+    padding: 100px 10px;
+  }
+  .otherServices__card {
+    margin-bottom: 20px;
+  }
+  .otherServices__title h2 {
+    margin-left: 3vw;
+  }
+}
+
 /*# sourceMappingURL=advertising.css.map */
 
 /*# sourceMappingURL=web.css.map */
