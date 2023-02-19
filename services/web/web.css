@@ -276,7 +276,6 @@ a {
     font-size: 14px;
   }
 }
-
 /* web design details */
 .webDesign_details_para p {
   font-size: 20px;
@@ -353,7 +352,6 @@ a {
     margin: auto;
   }
 }
-
 @media screen and (max-width: 550px) {
   .services {
     padding-top: 50px;
@@ -377,7 +375,6 @@ a {
     margin-left: 3vw;
   }
 }
-
 /*# sourceMappingURL=advertising.css.map */
 
 /*# sourceMappingURL=web.css.map */
