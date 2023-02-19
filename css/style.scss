@@ -9,12 +9,15 @@
 @import "ourInsights";
 @import "info";
 @import "footer";
+@import "menu";
 
+:root {
+  $background-color: #19191b;
+  $title-color:#F69306;
+  $primary-font-color:#ffffff;
+  $secondary-font-color:#FFFFFFB2;
+}
 
-$background-color: #19191b;
-$title-color:#F69306;
-$primary-font-color:#ffffff;
-$secondary-font-color:#FFFFFFB2;
 
 *{
   margin: 0;

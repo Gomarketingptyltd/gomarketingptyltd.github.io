@@ -8,7 +8,6 @@
 
     &-text {
       box-sizing: border-box;
-      //border: 1px solid red;
       position: relative;
       flex: 1;
       height: 500px;
@@ -22,6 +21,7 @@
         filter: blur(150px);
         border-radius: 233.5px;
         transform: rotate(-28.02deg);
+        z-index: -1;
       }
       & .banner-title {
         width: 80%;
