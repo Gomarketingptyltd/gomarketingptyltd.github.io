@@ -1,7 +1,16 @@
-
+@import "graphic";
 @import "header";
 @import "footer";
-@import "graphic";
+
+:root {
+  font-size: 0.0625vw;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 0.2336vw;
+  }
+}
 
 $background-color: #19191b;
 $title-color:#F69306;
