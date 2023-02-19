@@ -1174,11 +1174,9 @@ body {
 
 .ourInsightCards_wrap .card_item {
   flex-basis: 35%;
-  max-width: 400px;
+  max-width: 360px;
   width: 100%;
-  background-color: #19191b;
   border-radius: 5px;
-  transition: all 0.3s;
 }
 
 .ourInsightCards_wrap .ourInsightCard_inner {
@@ -1257,9 +1255,38 @@ body {
     justify-content: center;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1442px) and (min-width: 960px) {
+  .ourInsightWrap {
+    width: 100%;
+  }
+  .ourInsightCards_wrap {
+    gap: 2.8rem;
+  }
+  .ourInsightCards_wrap .card_item {
+    flex-basis: 35%;
+    max-width: 28vw;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 960px) and (min-width: 600px) {
   .double-circle {
     display: none;
+  }
+  .ourInsightWrap {
+    width: 100%;
+  }
+  .ourInsightCards_wrap {
+    gap: 2.8rem;
+  }
+  .ourInsightCards_wrap .card_item {
+    flex-basis: 35%;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 5px;
   }
 }
 @media screen and (max-width: 400px) {
