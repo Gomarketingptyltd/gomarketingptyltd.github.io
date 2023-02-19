@@ -1,13 +1,3 @@
-@media (min-width: 2560px) {
-  html {
-    zoom: 1.7;
-  }
-}
-@media (min-width: 3860px) {
-  html {
-    zoom: 2.5;
-  }
-}
 ::-webkit-scrollbar {
   width: 20.8rem;
 }
@@ -121,6 +111,73 @@
     margin-bottom: 60rem;
   }
 }
+.graphic {
+  margin-bottom: 40rem;
+}
+
+.other {
+  width: 100vw;
+  margin-bottom: 140rem;
+}
+@media screen and (max-width: 500px) {
+  .other {
+    margin-bottom: 60rem;
+  }
+}
+
+.other-title {
+  font-size: 48rem;
+  color: #F69306;
+  padding: 64rem 80rem 64rem;
+}
+@media screen and (max-width: 500px) {
+  .other-title {
+    font-size: 20rem;
+    padding: 0 0 30rem 30rem;
+  }
+}
+
+.other-content {
+  display: flex;
+  justify-content: center;
+}
+
+.other-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 100rem;
+  width: 1400rem;
+}
+@media screen and (max-width: 500px) {
+  .other-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40rem;
+  }
+}
+
+.other-card {
+  width: 333rem;
+}
+
+.other-card img {
+  width: 333rem;
+  margin-bottom: 20rem;
+}
+@media screen and (max-width: 500px) {
+  .other-card img {
+    margin-bottom: 10rem;
+  }
+}
+.other-card p {
+  font-size: 28.8rem;
+}
+@media screen and (max-width: 500px) {
+  .other-card p {
+    font-size: 16rem;
+  }
+}
+
 .header {
   box-sizing: border-box;
   padding: 0 5%;
