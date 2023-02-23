@@ -1,0 +1,328 @@
+/////////////////////////////////////////////////////
+/// ///////// GLOBAL///////////////////////////////
+/// /////////////////////////////////////////////
+
+$background-color: #19191b;
+$title-color: #f69306;
+$primary-font-color: #ffffff;
+$secondary-font-color: #ffffffb2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #19191b;
+  cursor: url("../images/cursor.gif"), auto;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: $primary-font-color;
+}
+
+/////////////////////////////////////////////////////
+/// ///////// HEADER///////////////////////////////
+/// /////////////////////////////////////////////
+header {
+  margin-bottom: 5%;
+}
+.blur {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: inline;
+  z-index: 1;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-container {
+  overflow-x: hidden;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 5% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+
+  &-logo {
+    & img {
+      width: 110px;
+      height: 50px;
+    }
+  }
+
+  &-hamburger_icon {
+    display: none;
+  }
+
+  &-nav {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    & .nav-active {
+      font-weight: 800;
+      letter-spacing: -0.500211px;
+      color: #f69306;
+    }
+    & li a {
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 25px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    & li:nth-child(4) {
+      margin-right: 14px;
+    }
+  }
+
+  @media screen and (max-width: 962px) {
+    &-nav {
+      gap: 20px;
+      & li:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 6%;
+    &-logo {
+      & img {
+        width: 90px;
+        height: 40px;
+      }
+    }
+    &-nav {
+      display: none;
+    }
+    &-hamburger_icon {
+      display: block;
+    }
+  }
+}
+.QnAContactUs {
+  padding: 15px;
+  background: #f2994a;
+  border-radius: 4px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+//////////////////////////////////////////////////////
+//////////////////////double-triangle/////////////////
+/// //////////////////////////////////////////////////
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  20% {
+    transform: rotate(288deg);
+  }
+  40% {
+    transform: rotate(216deg);
+  }
+  60% {
+    transform: rotate(144deg);
+  }
+  80% {
+    transform: rotate(72deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+//////////////////////////////////////////////////////
+///////////////////////////Q&A////////////////////////
+/// //////////////////////////////////////////////////
+.QnA__title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 140%;
+  color: #f69306;
+  .double-triangle .thin-triangle {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    animation: spin-reverse 5s infinite linear;
+  }
+  .double-triangle .thick-triangle {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    animation: spin 5s infinite linear;
+  }
+  .title--short {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+}
+.QnA__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5vh 10vw 10vh 10vw;
+  gap: 16px;
+}
+.QnA__content .content__details--first {
+  padding: 20px;
+  background: #f69306;
+  box-shadow: 0px 0px 1px rgba(29, 33, 45, 0.2),
+    0px 0px 2px rgba(29, 33, 45, 0.08), 0px 2px 4px rgba(29, 33, 45, 0.08);
+  border-radius: 8px;
+  align-self: stretch;
+}
+.QnA__content .content__details--rest {
+  padding: 20px;
+  h4 {
+    color: #f69036;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+    letter-spacing: -0.006em;
+    color: #ffffff;
+  }
+  background: rgba(186, 186, 186, 0.5);
+  box-shadow: 0px 0px 1px rgba(29, 33, 45, 0.2),
+    0px 0px 2px rgba(29, 33, 45, 0.08), 0px 2px 4px rgba(29, 33, 45, 0.08);
+  border-radius: 8px;
+  align-self: stretch;
+}
+
+/**********************************************************************************/
+/*media below 962px(tablet)*/
+/**********************************************************************************/
+
+@media (max-width: 962px) {
+  .blur {
+    display: none;
+  }
+  .QnA {
+    margin: 15% 1%;
+  }
+  .QnA__title h2 {
+    font-size: 40px;
+    line-height: 35px;
+    margin-left: 10px;
+  }
+}
+
+/////////////////////////////////////////////////////
+/// ///////// FOOTER ////////////////////
+/// /////////////////////////////////////////////////
+
+.footer {
+  margin: 100px 0 50px;
+  width: 100%;
+  padding: 0 7%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-logo {
+    & img {
+      width: 110px;
+      height: 50px;
+    }
+  }
+  &-nav {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    & li a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    & li:nth-child(3) {
+      margin-right: 14px;
+    }
+  }
+  &-copyright a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .footer-nav {
+    //& li a {
+    //  font-size: 14px;
+    //}
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    gap: 20px;
+    flex-direction: column;
+    &-nav {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footer {
+    margin-top: 0;
+    align-items: center;
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-copyright a {
+      font-size: 14px;
+    }
+  }
+}
