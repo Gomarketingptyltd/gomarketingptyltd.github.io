@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Go Marketing Pty Ltd – marketing service</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
             rel="stylesheet"
@@ -20,21 +20,52 @@
         <div class="header-logo">
             <img draggable="false" src="../images/header/logo.png" alt="logo"/>
         </div>
-        <div class="header-hamburger_icon">
+        <div class="header-menu">
             <img
+                    id="hamburger"
                     draggable="false"
                     src="../images/header/hamburger_icon.svg"
                     alt=""
             />
+            <img
+                    id="cancel"
+                    draggable="false"
+                    src="../images/header/cancel.svg"
+                    alt=""
+            />
         </div>
         <ul class="header-nav">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#" class="nav-active">Services</a></li>
+            <li><a href="../index.html" class="nav-active">Home</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Our Project</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">简体中文</a></li>
         </ul>
     </header>
+
+    <!--     menu-->
+    <div id="extended-menu">
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li class="services-child-menu">
+                <span>Our Services</span>
+                <img id="drop-down" src="../images/chevron-small-down-svgrepo-com.svg" alt="down">
+                <img id="drop-up" src="../images/chevron-small-up-svgrepo-com.svg" alt="up">
+            </li>
+            <li id="menu-services">
+                <p><a href="#">Graphic Design</a></p>
+                <p><a href="#">Digital Marketing</a></p>
+                <p><a href="#">Advertising</a></p>
+                <p><a href="#">Web Design</a></p>
+            </li>
+            <li>Our Cases</li>
+            <li>About Us</li>
+            <li>简体中文</li>
+            <li>
+                <a href="#"><button class="menu-btn">Contact Us</button></a>
+            </li>
+        </ul>
+    </div>
 
     <!--        graphic design services-->
     <div class="graphic">
@@ -151,6 +182,24 @@
         }
     });
 </script>
-
+<script src="../js/drop-down-up.js"></script>
+<script>
+    const hamburger = document.getElementById("hamburger")
+    const cancel = document.getElementById("cancel")
+    const banner = document.getElementById("banner")
+    const extended_menu = document.getElementById("extended-menu")
+    hamburger.addEventListener("click", () => {
+        hamburger.style.display = "none";
+        cancel.style.display = "block";
+        extended_menu.style.display="block";
+        extended_menu.classList.add("active");
+    })
+    cancel.addEventListener("click", () => {
+        hamburger.style.display = "block";
+        cancel.style.display = "none";
+        extended_menu.classList.remove("active");
+        extended_menu.style.display = "none";
+    })
+</script>
 </body>
 </html>
