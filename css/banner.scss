@@ -57,33 +57,9 @@
           background: #F69306;
           border-radius: 4px;
         }
-        & .icon-goMarket {
-          z-index: -2;
-          position: absolute;
-          left: 140px;
-          top: 0;
-          animation: spin infinite 10s linear ;
-        }
-      }
 
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
       }
     }
-    & .btn-arrow {
-      width: 12px;
-      height: 12px;
-    }
-    & .icon-goMarket {
-      width: 146px;
-      height: 145px;
-    }
-
 
     &-image {
       //border: 1px solid red;
@@ -99,11 +75,21 @@
       @media screen and (max-width: 1430px){
         flex: 0.8;
       }
-
-      & .double-triangle {
+      & .icon-goMarket {
+        z-index: -2;
         position: absolute;
         bottom: 0;
         left: 0;
+        width: 120px;
+        animation: spin infinite 10s linear ;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
       & .double-circle {
         position: absolute;

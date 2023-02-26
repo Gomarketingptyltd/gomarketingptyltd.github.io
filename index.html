@@ -72,7 +72,9 @@
             <li>About Us</li>
             <li>简体中文</li>
             <li>
-                <a href="#info"><button class="menu-btn">Contact Us</button></a>
+                <a href="#info">
+                    <button class="menu-btn">Contact Us</button>
+                </a>
             </li>
         </ul>
     </div>
@@ -86,21 +88,6 @@
                     Go Marketing <span>is a</span> digital marketing agency
                     <span>that helps you</span> succeed in the global market.
                 </p>
-                <div class="banner-btn">
-                    <a href="#">
-                        Contact Us&nbsp;
-                        <img
-                                src="images/banner/arrow.svg"
-                                alt="btn-arrow"
-                                class="btn-arrow"
-                        />
-                    </a>
-                    <img
-                            src="images/banner/icon-gomarket.svg"
-                            alt="icon-goMarket"
-                            class="icon-goMarket"
-                    />
-                </div>
             </div>
             <div class="banner__content-image">
                 <div class="double-circle">
@@ -117,18 +104,11 @@
                             alt="thin-circle"
                     />
                 </div>
-                <div class="double-triangle">
+                <div class="icon-gomarket">
                     <img
-                            class="thick-triangle"
-                            draggable="false"
-                            src="images/banner/thick-triangle.svg"
-                            alt="thick-triangle"
-                    />
-                    <img
-                            class="thin-triangle"
-                            draggable="false"
-                            src="images/banner/thin-triangle.svg"
-                            alt="thin-triangle"
+                            src="images/banner/icon-gomarket.svg"
+                            alt="icon-goMarket"
+                            class="icon-goMarket"
                     />
                 </div>
                 <img
@@ -897,7 +877,7 @@
         banner.style.display = "none";
         hamburger.style.display = "none";
         cancel.style.display = "block";
-        extended_menu.style.display="block";
+        extended_menu.style.display = "block";
         extended_menu.classList.add("active");
     })
     cancel.addEventListener("click", () => {

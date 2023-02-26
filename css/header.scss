@@ -8,6 +8,7 @@
 
   &-logo {
     height: 100%;
+
     & img {
       height: 100%;
     }
@@ -21,6 +22,7 @@
     margin: 0;
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 30px;
 
     & .nav-active {
@@ -35,9 +37,26 @@
       line-height: 25px;
       color: rgba(255, 255, 255, 0.7);
     }
+
+    & li:last-child {
+      padding: 22px 40px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      background: #F69306;
+      border-radius: 4px;
+      & a {
+        color: white;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .header-nav {
+      gap: 20px;
+    }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1140px) {
     .header-menu {
       display: block;
     }
