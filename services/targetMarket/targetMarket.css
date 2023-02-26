@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #19191b;
+}
+
+.ourInsightWrap {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ourInsightWrap .double-circle {
+  position: absolute;
+  left: -30px;
+}
+
+.ourInsightCards_wrap {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.marketH2 {
+  margin-top: 80px;
+  /* padding-left: 25px; */
+  font-size: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #f69306;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+
+.domainOurInsightCardHeader {
+  font-size: 48px;
+  line-height: 58px;
+  margin: 1rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+/* web sizes & above */
+@media screen and (min-width: 1442px) {
+  .ourInsightWrap {
+    width: 1442px;
+  }
+}
+/* @media screen and (max-width: 1442px) {
+  .ourInsightCards_wrap {
+    justify-content: center;
+  }
+  .ourInsightWrap {
+    width: 80%;
+  }
+} */
+@media screen and (max-width: 1442px) and (min-width: 960px) {
+  .ourInsightWrap {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 720px) {
+  .double-circle {
+    display: none;
+  }
+  .ourInsightCards_wrap {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 3.5rem; */
+  }
+  .ourInsightCards_wrap .card_item {
+    width: 28vw;
+    border-radius: 5px;
+  }
+  .ourInsightCard_inner {
+    width: 28vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .domainInsightWrap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900) {
+  .domainInsightWrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    width: 80vw;
+  }
+  .double-circle {
+    display: none;
+  }
+  .marketH2 {
+    margin-top: 30px;
+  }
+  .domainInsightWrap {
+    display: none;
+  }
+}
+
+/* 
+header */
+.header {
+  box-sizing: border-box;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.header-logo img {
+  width: 110px;
+  height: 50px;
+}
+
+.header-hamburger_icon {
+  display: none;
+}
+
+.header-nav {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.header-nav .nav-active {
+  font-weight: 800;
+  letter-spacing: -0.500211px;
+  color: #f69306;
+}
+
+.header-nav li a {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-nav li:nth-child(4) {
+  margin-right: 14px;
+}
+
+.marketHero {
+  width: 80%;
+}
+
+.marketTextWrap {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.marketTextBold {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.marketText {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+.marketTextY {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  color: #f69306;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 962px) {
+  .header-nav {
+    gap: 20px;
+  }
+  .header-nav li:nth-child(4) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0 6%;
+  }
+  .header-logo img {
+    width: 90px;
+    height: 40px;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header-hamburger_icon {
+    display: block;
+  }
+}
+
+.marketImg {
+  margin-right: 2.5vw;
+  margin-bottom: 5vw;
+  width: 40vw;
+}
+.marketWrap {
+  /* width: 80%; */
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1440px) {
+  .marketWrap {
+    width: 1440px;
+    flex-wrap: none;
+  }
+  .marketImg {
+    margin-right: 45px;
+    margin-bottom: 5vw;
+    width: 45vw;
+  }
+  .marketTextWrap {
+    width: 1440px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 750px) {
+  .marketWrap {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .marketImg {
+    width: 80vw;
+  }
+  .marketWrap {
+    flex-wrap: wrap;
+  }
+}
