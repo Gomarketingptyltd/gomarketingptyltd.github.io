@@ -5,12 +5,14 @@
   &__content {
     display: flex;
     justify-content: space-between;
-
     &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       box-sizing: border-box;
       position: relative;
       flex: 1;
-      height: 500px;
+      height: 450px;
       & .banner-shadow {
         position: absolute;
         width: 500px;
@@ -62,7 +64,6 @@
     }
 
     &-image {
-      //border: 1px solid red;
       box-sizing: border-box;
       position: relative;
       flex: 0.5;
@@ -74,6 +75,9 @@
       }
       @media screen and (max-width: 1430px){
         flex: 0.8;
+      }
+      @media screen and (max-width: 1430px){
+        flex: 0.9;
       }
       & .icon-goMarket {
         z-index: -2;
@@ -98,8 +102,8 @@
       }
       & .double-square {
         position: absolute;
-        width: 560px;
-        right: -2vw;
+        width: 480px;
+        right: -1vw;
       }
 
     }
@@ -161,9 +165,17 @@
   .banner__content-image .double-triangle {
     display: none;
   }
+  .banner__content-image .icon-goMarket {
+    display: none;
+  }
+  .banner__content-text {
+    margin-top: 40px;
+    justify-content: flex-start;
+    height: 280px;
+  }
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1030px){
   .banner__content-text .banner-title {
     font-size: 42px;
     line-height: 54px;
@@ -270,7 +282,7 @@
 
   .banner {
     margin: 0 5px 40px;
-    height: 400px;
+    height: 280px;
     &__content {
       display: flex;
       flex-direction: column;
