@@ -40,11 +40,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 14vh;
+}
+.header-logo {
+  height: 100%;
 }
 .header-logo img {
-  width: 110px;
-  height: 50px;
+  height: 100%;
 }
 .header-menu {
   display: none;
