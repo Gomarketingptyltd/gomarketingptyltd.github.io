@@ -9,12 +9,13 @@
 }
 
 .menu-items {
+  margin-left: 22px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 3vh;
   & li {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
