@@ -236,7 +236,8 @@ header */
   .marketImg {
     margin-right: 45px;
     margin-bottom: 5vw;
-    width: 45vw;
+    /* width: 40vw; */
+    width: 700px;
   }
   .marketTextWrap {
     width: 1440px;
