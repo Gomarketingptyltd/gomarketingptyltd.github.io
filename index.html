@@ -125,64 +125,28 @@
         <!--                    <img draggable="false" src="advertising/banner/streamer.gif" alt="streamer" id="streamer">-->
         <!--                </div>-->
     </div>
-    <svg
-            class="piao"
-            width="100%"
-            height="100%"
-            viewBox="0 0 1000 200"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-        <defs>
-            <path
-                    id="MyPath"
-                    d="M 0 100
-       C 200 100 400   0 600 100
-       C 800 180 800 40 1200 100
-       "
-            />
-            <path
-                    id="MyPath_01"
-                    d="M 0 130
-       C 200 130 400   30 600 130
-       C 800 210 800 70 1200 130
-       "
-            />
-        </defs>
 
-        <use xlink:href="#MyPath" fill="none" stroke="none"/>
-        <use xlink:href="#MyPath_01" fill="none" stroke="none"/>
+<!--    <div class="marquee">-->
+<!--        10+ year experience in digital marketing 10+ year experience in digital marketing-->
+<!--    </div>-->
 
-        <text font-family="Verdana" font-size="18" stroke="white">
-            <textPath xlink:href="#MyPath">
-                10+ year experience in digital marketing 10+ year experience in
-                digital marketing
-                <animate
-                        attributeName="startOffset"
-                        from="-1000"
-                        to="930"
-                        begin="0s"
-                        dur="8s"
-                        repeatCount="indefinite"
-                />
-            </textPath>
-        </text>
+<!--    <div class="marquee">-->
+<!--        Graphic Design/ Web Design/ Advertising/ Digital Marketing/ Marketing Strategy/ Marketing Research/ Social Media-->
+<!--    </div>-->
 
-        <text font-family="Verdana" font-size="18" stroke="orange">
-            <textPath xlink:href="#MyPath_01">
-                Graphic Design/ Web Design/ Advertising/ Digital Marketing/
-                Marketing Strategy/ Marketing Research/ Social Media
-                <animate
-                        attributeName="startOffset"
-                        from="-1500"
-                        to="830"
-                        begin="0s"
-                        dur="12s"
-                        repeatCount="indefinite"
-                />
-            </textPath>
-        </text>
-    </svg>
+    <Marquee direction="right" scrollamount="16" id="marquee-title">
+        <span class="marquee_span">10+ year experience</span>
+        in digital marketing
+        <span class="marquee_span">10+ year experience</span>
+        in digital marketing</Marquee>
+    <Marquee scrollamount="8" id="marquee-content">Graphic Design/
+        <span class="marquee_span">Web Design</span>
+        / Advertising/
+        <span class="marquee_span">Digital Marketing</span>
+        / Marketing Strategy/
+        <span class="marquee_span">Marketing Research</span>
+        / Social Media
+    </Marquee>
 
     <!-- services section -->
     <section class="section__services">

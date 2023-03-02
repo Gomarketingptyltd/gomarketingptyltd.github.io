@@ -176,6 +176,21 @@
   }
 }
 
+#marquee-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+#marquee-content {
+  font-size: 22px;
+  margin-bottom: 80px;
+}
+
+.marquee_span {
+  color: #F69306;
+}
+
 .banner {
   margin: 40px 0 50px;
   padding: 0 5%;
@@ -1524,7 +1539,7 @@ body {
 }
 #extended-menu {
   width: 100vw;
-  padding: 2vh 5vw 10vh;
+  padding: 0 6vw 8vh;
   height: auto;
   z-index: 99;
   position: relative;
@@ -1537,15 +1552,15 @@ body {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 2vh;
 }
 .menu-items li {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #menu-services {
-  padding-left: 2vw;
-  gap: 3vh;
+  padding-left: 4vw;
+  gap: 2vh;
   display: none;
   flex-direction: column;
 }
