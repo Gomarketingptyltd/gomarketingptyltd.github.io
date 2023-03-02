@@ -167,8 +167,14 @@ a {
 }
 
 .graphic__content .graphic-slide h6 {
-  font-size: 22rem;
-  padding-bottom: 15rem;
+  font-size: 34rem;
+  padding-bottom: 10rem;
+}
+@media screen and (max-width: 500px) {
+  .graphic__content .graphic-slide h6 {
+    font-size: 20rem;
+    padding-bottom: 0;
+  }
 }
 
 .graphic-slide {
@@ -199,16 +205,12 @@ a {
 
 @media screen and (max-width: 500px) {
   .graphic .graphic-heading {
-    font-size: 20rem;
+    font-size: 24rem;
     padding: 0 0 30rem 30rem;
   }
   .graphic-slide {
     width: 390rem;
     height: 300rem;
-  }
-  .graphic-slide h6 {
-    font-size: 18rem;
-    margin-bottom: 0;
   }
   .graphic-img {
     width: 350rem;
@@ -242,7 +244,7 @@ a {
 }
 @media screen and (max-width: 500px) {
   .other-title {
-    font-size: 20rem;
+    font-size: 24rem;
     padding: 0 0 30rem 30rem;
   }
 }
@@ -280,11 +282,11 @@ a {
   }
 }
 .other-card p {
-  font-size: 28.8rem;
+  font-size: 34rem;
 }
 @media screen and (max-width: 500px) {
   .other-card p {
-    font-size: 16rem;
+    font-size: 20rem;
   }
 }
 
@@ -358,7 +360,7 @@ a {
 }
 #extended-menu {
   width: 100vw;
-  padding: 2vh 5vw 10vh;
+  padding: 0 6vw 8vh;
   height: auto;
   z-index: 99;
   position: relative;
@@ -367,18 +369,19 @@ a {
 }
 
 .menu-items {
+  margin-left: 22px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 2vh;
 }
 .menu-items li {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #menu-services {
-  padding-left: 2vw;
-  gap: 3vh;
+  padding-left: 4vw;
+  gap: 2vh;
   display: none;
   flex-direction: column;
 }
