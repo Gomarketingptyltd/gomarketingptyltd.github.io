@@ -411,7 +411,7 @@ a {
 }
 
 .collapsible button:focus{
-  background:#F69036;
+  background:#F2994A;
   color:white;
   background-image: url(../images/web/icong.svg); 
   background-repeat: no-repeat; 
@@ -422,7 +422,7 @@ a {
   display: none;
   overflow: hidden;
   padding: 10px;
-  background-color: #f69306;
+  /* background-color: #f69306; */
   border-radius: 5px;
   
 }
