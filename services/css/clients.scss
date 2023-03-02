@@ -199,6 +199,13 @@ a {
 /*media below 962px(tablet)*/
 /**********************************************************************************/
 
+@media (max-width: 1800px) {
+
+  .gallery img {
+    height: 23rem;
+  }
+}
+
 @media (max-width: 1330px) {
   .clients--img {
     img {
