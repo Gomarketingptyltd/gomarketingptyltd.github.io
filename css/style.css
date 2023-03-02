@@ -176,6 +176,21 @@
   }
 }
 
+#marquee-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+#marquee-content {
+  font-size: 22px;
+  margin-bottom: 80px;
+}
+
+.marquee_span {
+  color: #F69306;
+}
+
 .banner {
   margin: 40px 0 50px;
   padding: 0 5%;
