@@ -63,7 +63,7 @@ a {
     & .nav-active {
       font-weight: 800;
       letter-spacing: -0.500211px;
-      color: #F69306;
+      color: #f69306;
     }
 
     & li a {
@@ -78,7 +78,7 @@ a {
       font-weight: 700;
       font-size: 20px;
       line-height: 27px;
-      background: #F69306;
+      background: #f69306;
       border-radius: 4px;
       & a {
         color: white;
@@ -147,7 +147,7 @@ a {
   width: 160px;
   border-radius: 8px;
   border: none;
-  background-color: #F69306;
+  background-color: #f69306;
   padding: 16px 0;
 }
 
@@ -259,7 +259,7 @@ a {
   }
   .title--short {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 10%;
   }
 }
@@ -318,11 +318,11 @@ a {
   background: #f69306;
   box-shadow: 0px 0px 1px rgba(29, 33, 45, 0.2),
     0px 0px 2px rgba(29, 33, 45, 0.08), 0px 2px 4px rgba(29, 33, 45, 0.08);
-    .QnA--heading {
-      flex: 1;
-      color: #F69306;
-      color: $primary-font-color;
-    }
+  .QnA--heading {
+    flex: 1;
+    color: #f69306;
+    color: $primary-font-color;
+  }
 }
 /**********************************************************************************/
 /*media below 962px(tablet)*/
