@@ -236,6 +236,7 @@ a {
 }
 
 .QnA__title {
+  position: relative;
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
@@ -247,19 +248,19 @@ a {
   color: #f69306;
   .double-triangle .thin-triangle {
     position: absolute;
-    top: 15%;
+    top: -5%;
     left: 5%;
     animation: spin-reverse 5s infinite linear;
   }
   .double-triangle .thick-triangle {
     position: absolute;
-    top: 15%;
+    top: -5%;
     left: 5%;
     animation: spin 5s infinite linear;
   }
   .title--short {
     position: absolute;
-    top: 10%;
+    top: -5%;
     left: 10%;
   }
 }
