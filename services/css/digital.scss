@@ -173,6 +173,7 @@ a {
   position: relative;
   width: 240rem;
   top: 20rem;
+  text-align: center;
 }
 
 .graphic-slider-control .swiper-pagination .swiper-pagination-bullet {
@@ -183,13 +184,38 @@ a {
   background: #fff;
 }
 
+// other services
+.graphic-slider-control1 {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graphic-slider-control1 .swiper-pagination1 {
+  position: relative;
+  width: 240rem;
+  top: 20rem;
+  text-align: center;
+}
+
+.graphic-slider-control1 .swiper-pagination1 .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.graphic-slider-control1 .swiper-pagination1 .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
 // card title
-.graphic__content .graphic-slide h6 {
+.graphic-slide-title {
+  text-align: center;
   font-size: 34rem;
-  padding-bottom: 10rem;
+  padding-bottom: 25rem;
   @media screen and (max-width: 500px){
-    font-size: 20rem;
-    padding-bottom: 0;
+    font-size: 28rem;
+    padding-bottom: 16rem;
   }
 }
 
@@ -233,6 +259,9 @@ a {
     height: 190rem;
   }
   .graphic-slider-control .swiper-pagination {
+    top: 5rem;
+  }
+  .graphic-slider-control1 .swiper-pagination1 {
     top: 5rem;
   }
   .graphic {
@@ -309,10 +338,25 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     & img {
       width: 110px;
       height: 50px;
+    }
+  }
+  &__socialMedia {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    & img {
+      width: 34px;
+      height: 34px;
     }
   }
   &-nav {
