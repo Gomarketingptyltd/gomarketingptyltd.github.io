@@ -1503,9 +1503,25 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 .footer-logo img {
   width: 110px;
   height: 50px;
+}
+.footer__socialMedia {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+.footer__socialMedia img {
+  width: 34px;
+  height: 34px;
 }
 .footer-nav {
   margin: 0;

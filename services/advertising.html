@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Go Marketing Pty Ltd – marketing service</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/advertise.css"/>
   <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
@@ -56,7 +56,7 @@
         <img id="drop-up" src="../images/chevron-small-up-svgrepo-com.svg" alt="up">
       </li>
       <li id="menu-services">
-        <p><a href="#">Graphic Design</a></p>
+        <p><a href="../services">Graphic Design</a></p>
         <p><a href="../services/digital.html">Digital Marketing</a></p>
         <p><a href="../services/advertising.html">Advertising</a></p>
         <p><a href="../services/web.html">Web Design</a></p>
@@ -74,73 +74,62 @@
     </ul>
   </div>
 
-  <!--        graphic design services-->
   <div class="graphic">
-    <h1 class="graphic-heading">Our Graphic Design Services</h1>
-    <div class="graphic__content">
-      <div class="swiper graphic-slider">
-        <div class="swiper-wrapper">
-          <!-- Slide-start -->
-          <div class="swiper-slide graphic-slide">
-            <div class="graphic-slide-title">
-              <h6>Visual identity</h6>
-            </div>
-            <img draggable="false" class="graphic-img" src="images/index/image%2034.png"/>
-          </div>
-          <div class="swiper-slide graphic-slide">
-            <div class="graphic-slide-title">
-              <h6>Marketing & advertising</h6>
-            </div>
-            <img draggable="false" class="graphic-img" src="images/index/image%2035.png" alt="advertising"/>
-          </div>
-          <div class="swiper-slide graphic-slide">
-            <div class="graphic-slide-title">
-              <h6>User interface</h6>
-            </div>
-            <img draggable="false" class="graphic-img" src="images/index/image%2036.png"/>
-          </div>
-          <div class="swiper-slide graphic-slide">
-            <div class="graphic-slide-title">
-              <h6>Publication</h6>
-            </div>
-            <img draggable="false" class="graphic-img" src="images/index/image%2037.png"/>
-          </div>
-          <div class="swiper-slide graphic-slide">
-            <div class="graphic-slide-title">
-              <h6>Packaging</h6>
-            </div>
-            <img draggable="false" class="graphic-img" src="images/index/image%2038.png"/>
-          </div>
-          <div class="swiper-slide graphic-slide">
-            <div class="graphic-slide-title">
-              <h6>Art & illustration</h6>
-            </div>
-            <img draggable="false" class="graphic-img" src="images/index/image%2039.png"/>
-          </div>
-          <!-- Slide-end -->
+    <div class="graphic__head">
+      <div class="graphic__head-wrapper">
+        <div class="double-triangle">
+          <img
+                  class="thick-triangle"
+                  draggable="false"
+                  src="../images/services&cases/thick-triangle.svg"
+                  alt="thick-triangle"
+          />
+          <img
+                  class="thin-triangle"
+                  draggable="false"
+                  src="../images/services&cases/thin-triangle.svg"
+                  alt="thin-triangle"
+          />
         </div>
+        <h1 class="graphic-heading">Our Advertising Service</h1>
       </div>
     </div>
-    <div class="graphic-slider-control">
-      <div class="swiper-pagination"></div>
-    </div>
+
   </div>
 
   <div class="other">
-    <h2 class="other-title">Other Services</h2>
+    <div class="graphic__head">
+      <div class="graphic__head-wrapper">
+        <div class="double-triangle">
+          <img
+                  class="thick-triangle"
+                  draggable="false"
+                  src="../images/services&cases/thick-triangle.svg"
+                  alt="thick-triangle"
+          />
+          <img
+                  class="thin-triangle"
+                  draggable="false"
+                  src="../images/services&cases/thin-triangle.svg"
+                  alt="thin-triangle"
+          />
+        </div>
+        <h2 class="graphic-heading">Other services</h2>
+      </div>
+    </div>
     <div class="other-content">
       <div class="other-wrapper">
         <div class="other-card">
           <a href="../services/digital.html">
             <img draggable="false" src="./images/1.png" alt="">
-            <p>Graphic Design</p>
+            <p>Digital Marketing</p>
           </a>
 
         </div>
         <div class="other-card">
           <a href="../services/advertising.html">
             <img draggable="false" src="./images/2.png" alt="">
-            <p>Digital Marketing</p>
+            <p>Advertising</p>
           </a>
         </div>
         <div class="other-card">
@@ -169,38 +158,6 @@
   </footer>
 </div>
 
-
-</div>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script>
-  var graphicSlider = new Swiper('.graphic-slider', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    // },
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2.5,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
-</script>
 <script src="../js/drop-down-up.js"></script>
 <script src="../js/menu.js"></script>
 </body>
