@@ -1,140 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Advertising service</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="icon" type="image/png" href="" />
-    <meta name="description" content="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!--header-->
-    <header class="header">
-      <img draggable="false" class="blur" src="images/advertising/blur.png" alt="" />
-      <div class="header-logo">
-        <img draggable="false" src="images/advertising/logo.png" alt="logo" />
-      </div>
-      <div class="header-hamburger_icon">
-        <img draggable="false" src="images/advertising/hamburger_icon.svg" alt="" />
-      </div>
-      <ul class="header-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#" class="nav-active">Services</a></li>
-        <li><a href="#">Our Project</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">简体中文</a></li>
-      </ul>
-    </header>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Go Marketing Pty Ltd – marketing service</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet"
+  />
+  <link rel="icon" type="image/png" href="../images/logo.png"/>
+  <meta name="description" content=""/>
+</head>
+<body>
+<div class="main-container">
+  <!--        header-->
+  <header class="header">
+    <div class="header-logo">
+      <img draggable="false" src="../images/header/logo.svg" alt="logo"/>
+    </div>
+    <div class="header-menu">
+      <img
+              id="hamburger"
+              draggable="false"
+              src="../images/header/hamburger_icon.svg"
+              alt=""
+      />
+      <img
+              id="cancel"
+              draggable="false"
+              src="../images/header/cancel.svg"
+              alt=""
+      />
+    </div>
+    <ul class="header-nav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#" class="nav-active">Services</a></li>
+      <li><a href="../services/clients.html">Projects</a></li>
+      <li><a href="../services/targetMarket/targetMarket.html">Target Market</a></li>
+      <li><a href="../services/insightsPage/insightsPage.html">Insights</a></li>
+      <li><a href="../services/QnA.html">Q&A</a></li>
+      <li><a href="#">简体中文</a></li>
+      <li><a href="../#info">Contact US</a></li>
+    </ul>
+  </header>
 
-    <!-- Our Advertising Service -->
-    <section class="section__advertising">
-      <div class="double-triangle">
-        <img
-          class="thick-triangle"
-          draggable="false"
-          src="images/advertising/thick-triangle.svg"
-          alt="thick-triangle"
-        />
-        <img
-          class="thin-triangle"
-          draggable="false"
-          src="images/advertising/thin-triangle.svg"
-          alt="thin-triangle"
-        />
-      </div>
-      <div class="advertising">
-        <div class="advertising--title">
-          <h2>Our Advertising Service</h2>
-        </div>
-        <div class="advertising--video">
-          <img src="images/advertising/videoPlaceholder.png" alt="" />
-        </div>
-        <div class="advertising--description">
-          <div class="advertising--description-title">
-            <h3>Photography & Videography</h3>
-          </div>
-          <div class="advertising--description-paragraph">
-            <p>
-              We have more experience to provide the most professional
-              advertising photography and production, commercial and individual,
-              events and family photography
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!--     menu-->
+  <div id="extended-menu">
+    <ul class="menu-items">
+      <li><a href="../index.html">Home</a></li>
+      <li class="services-child-menu">
+        <span>Our Services</span>
+        <img id="drop-down" src="../images/chevron-small-down-svgrepo-com.svg" alt="down">
+        <img id="drop-up" src="../images/chevron-small-up-svgrepo-com.svg" alt="up">
+      </li>
+      <li id="menu-services">
+        <p><a href="#">Graphic Design</a></p>
+        <p><a href="../services/digital.html">Digital Marketing</a></p>
+        <p><a href="../services/advertising.html">Advertising</a></p>
+        <p><a href="../services/web.html">Web Design</a></p>
+      </li>
+      <li><a href="../services/clients.html">Our Projects</a></li>
+      <li><a href="../services/targetMarket/targetMarket.html">Target Market</a></li>
+      <li><a href="../services/insightsPage/insightsPage.html">Insights</a></li>
+      <li><a href="../services/QnA.html">Q&A</a></li>
+      <li><a href="#">简体中文</a></li>
+      <li>
+        <a href="../#info">
+          <button class="menu-btn">Contact Us</button>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-    <!--   other services-->
-    <div class="services">
-      <div class="otherServices__title">
-        <h2 class="title--short">Other Services</h2>
-      </div>
-      <div class="otherServices__cards">
-        <div class="otherServices__card">
-          <div class="card__wrapper">
-            <div class="card__icon">
-              <a href="index.html"
-                ><img
-                  draggable="false"
-                  class="icon"
-                  src="images/advertising/otherServices.png"
-                  alt=""
-              /></a>
+  <!--        graphic design services-->
+  <div class="graphic">
+    <h1 class="graphic-heading">Our Graphic Design Services</h1>
+    <div class="graphic__content">
+      <div class="swiper graphic-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide-start -->
+          <div class="swiper-slide graphic-slide">
+            <div class="graphic-slide-title">
+              <h6>Visual identity</h6>
             </div>
-            <h3><a href="index.html">Graphic Design</a></h3>
+            <img draggable="false" class="graphic-img" src="images/index/image%2034.png"/>
           </div>
-        </div>
-        <div class="otherServices__card">
-          <div class="card__wrapper">
-            <div class="card__icon">
-              <a href="digital/digital.html"
-                ><img
-                  draggable="false"
-                  class="icon"
-                  src="images/advertising/otherServices.png"
-                  alt=""
-              /></a>
+          <div class="swiper-slide graphic-slide">
+            <div class="graphic-slide-title">
+              <h6>Marketing & advertising</h6>
             </div>
-            <h3><a href="digital/digital.html">Digital Marketing</a></h3>
+            <img draggable="false" class="graphic-img" src="images/index/image%2035.png" alt="advertising"/>
           </div>
-        </div>
-        <div class="otherServices__card">
-          <div class="card__wrapper">
-            <div class="card__icon">
-              <a href="web/web.html"
-                ><img
-                  draggable="false"
-                  class="icon"
-                  src="images/advertising/otherServices.png"
-                  alt=""
-              /></a>
+          <div class="swiper-slide graphic-slide">
+            <div class="graphic-slide-title">
+              <h6>User interface</h6>
             </div>
-            <h3><a href="web/web.html">Web design</a></h3>
+            <img draggable="false" class="graphic-img" src="images/index/image%2036.png"/>
           </div>
+          <div class="swiper-slide graphic-slide">
+            <div class="graphic-slide-title">
+              <h6>Publication</h6>
+            </div>
+            <img draggable="false" class="graphic-img" src="images/index/image%2037.png"/>
+          </div>
+          <div class="swiper-slide graphic-slide">
+            <div class="graphic-slide-title">
+              <h6>Packaging</h6>
+            </div>
+            <img draggable="false" class="graphic-img" src="images/index/image%2038.png"/>
+          </div>
+          <div class="swiper-slide graphic-slide">
+            <div class="graphic-slide-title">
+              <h6>Art & illustration</h6>
+            </div>
+            <img draggable="false" class="graphic-img" src="images/index/image%2039.png"/>
+          </div>
+          <!-- Slide-end -->
         </div>
       </div>
     </div>
+    <div class="graphic-slider-control">
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
 
-    <!--        footer-->
-    <footer class="footer">
-      <div class="footer-logo">
-        <img src="images/advertising/logo.png" alt="logo" />
+  <div class="other">
+    <h2 class="other-title">Other Services</h2>
+    <div class="other-content">
+      <div class="other-wrapper">
+        <div class="other-card">
+          <a href="../services/digital.html">
+            <img draggable="false" src="./images/1.png" alt="">
+            <p>Graphic Design</p>
+          </a>
+
+        </div>
+        <div class="other-card">
+          <a href="../services/advertising.html">
+            <img draggable="false" src="./images/2.png" alt="">
+            <p>Digital Marketing</p>
+          </a>
+        </div>
+        <div class="other-card">
+          <a href="../services/web.html">
+            <img draggable="false" src="./images/3.png" alt="">
+            <p>Web Design</p>
+          </a>
+        </div>
       </div>
-      <ul class="footer-nav">
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms and Conditions</a></li>
-      </ul>
-      <div class="footer-copyright">
-        <a href="#">© 2023 GO MARKETING, All Rights Reserved</a>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </div>
+
+  <!--        footer-->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../images/footer/logo.png" alt="logo"/>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
+    </ul>
+    <div class="footer-copyright">
+      <a href="#">© 2023 GO MARKETING, All Rights Reserved</a>
+    </div>
+  </footer>
+</div>
+
+
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  var graphicSlider = new Swiper('.graphic-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    // autoplay: {
+    //     delay: 2000,
+    //     disableOnInteraction: false,
+    // },
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+</script>
+<script src="../js/drop-down-up.js"></script>
+<script src="../js/menu.js"></script>
+</body>
 </html>

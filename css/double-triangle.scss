@@ -1,5 +1,5 @@
 //double triangle
-.triangle {
+.double-triangle {
   position: relative;
 }
 
@@ -22,30 +22,20 @@
 }
 
 .thick-triangle {
-  width: 80px;
-  height: 80px;
-  transform-origin: 30px 40px;
+  width: 60px;
+  height: 60px;
+  transform-origin: 22px 30px;
   animation: thick-triangle infinite 10s linear ;
-  @media screen and (max-width: 430px){
-    width: 40px;
-    height: 40px;
-    transform-origin: 15px 20px;
-  }
 }
 
 .thin-triangle {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   left: 0;
   top: 0;
-  transform-origin: 30px 40px;
+  transform-origin: 22px 30px;
   animation: thin-triangle infinite 6s linear ;
-  @media screen and (max-width: 430px){
-    width: 40px;
-    height: 40px;
-    transform-origin: 15px 20px;
-  }
 }
 
 

@@ -215,17 +215,15 @@ a {
 }
 
 // title
-.graphic .graphic-heading {
-  font-size: 48rem;
+.graphic-heading {
+  font-size: 32px;
   color: #F69306;
-  padding: 64rem 80rem 64rem;
+  @media screen and (max-width: 500px) {
+    font-size: 24rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .graphic .graphic-heading {
-    font-size: 24rem;
-    padding: 0 0 30rem 30rem;
-  }
   .graphic-slide {
     width: 390rem;
     height: 300rem;
@@ -258,10 +256,10 @@ a {
 .other-title {
   font-size: 48rem;
   color: #F69306;
-  padding: 64rem 80rem 64rem;
+  padding: 64rem 160rem 64rem;
   @media screen and (max-width: 500px) {
     font-size: 24rem;
-    padding: 0 0 30rem 30rem;
+    padding: 0 0 30rem 42rem;
   }
 }
 
@@ -436,3 +434,62 @@ a {
 .active {
   transform: translateX(-100vw);
 }
+
+
+.graphic__head {
+  margin: 8vh 10vw;
+  @media screen and (max-width: 1140px) {
+    margin: 0 8vw 4vh 8vw;
+  }
+}
+
+.graphic__head-wrapper {
+  position: relative;
+}
+
+//double triangle
+.double-triangle {
+  position: absolute;
+  left: -60px;
+  bottom: -20px;
+  @media screen and (max-width: 1140px) {
+    display: none;
+  }
+}
+
+@keyframes thick-triangle {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes thin-triangle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thick-triangle {
+  width: 60px;
+  height: 60px;
+  transform-origin: 22px 30px;
+  animation: thick-triangle infinite 10s linear ;
+}
+
+.thin-triangle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 22px 30px;
+  animation: thin-triangle infinite 6s linear ;
+}
+
+
