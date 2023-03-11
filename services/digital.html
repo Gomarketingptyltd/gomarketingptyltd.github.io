@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Go Marketing Pty Ltd – marketing service</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/digital.css"/>
     <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
             rel="stylesheet"
@@ -18,23 +18,61 @@
     <!--        header-->
     <header class="header">
         <div class="header-logo">
-            <img draggable="false" src="../images/header/logo.png" alt="logo"/>
+            <img draggable="false" src="../images/header/logo.svg" alt="logo"/>
         </div>
-        <div class="header-hamburger_icon">
+        <div class="header-menu">
             <img
+                    id="hamburger"
                     draggable="false"
                     src="../images/header/hamburger_icon.svg"
+                    alt=""
+            />
+            <img
+                    id="cancel"
+                    draggable="false"
+                    src="../images/header/cancel.svg"
                     alt=""
             />
         </div>
         <ul class="header-nav">
             <li><a href="../index.html">Home</a></li>
             <li><a href="#" class="nav-active">Services</a></li>
-            <li><a href="#">Our Project</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="../services/clients.html" >Projects</a></li>
+            <li><a href="../services/targetMarket/targetMarket.html">Target Market</a></li>
+            <li><a href="../services/insightsPage/insightsPage.html">Insights</a></li>
+            <li><a href="../services/QnA.html">Q&A</a></li>
             <li><a href="#">简体中文</a></li>
+            <li><a href="../#info">Contact US</a></li>
         </ul>
     </header>
+
+    <!--     menu-->
+    <div id="extended-menu">
+        <ul class="menu-items">
+            <li><a href="../index.html">Home</a></li>
+            <li class="services-child-menu">
+                <span>Our Services</span>
+                <img id="drop-down" src="../images/chevron-small-down-svgrepo-com.svg" alt="down">
+                <img id="drop-up" src="../images/chevron-small-up-svgrepo-com.svg" alt="up">
+            </li>
+            <li id="menu-services">
+                <p><a href="#">Graphic Design</a></p>
+                <p><a href="../services/digital.html">Digital Marketing</a></p>
+                <p><a href="../services/advertising.html">Advertising</a></p>
+                <p><a href="../services/web.html">Web Design</a></p>
+            </li>
+            <li><a href="../services/clients.html">Our Projects</a></li>
+            <li><a href="../services/targetMarket/targetMarket.html">Target Market</a></li>
+            <li><a href="../services/insightsPage/insightsPage.html">Insights</a></li>
+            <li><a href="../services/QnA.html">Q&A</a></li>
+            <li><a href="#">简体中文</a></li>
+            <li>
+                <a href="../#info">
+                    <button class="menu-btn">Contact Us</button>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!--        graphic design services-->
     <div class="graphic">
@@ -154,6 +192,7 @@
         }
     });
 </script>
-
+<script src="../js/drop-down-up.js"></script>
+<script src="../js/menu.js"></script>
 </body>
 </html>
