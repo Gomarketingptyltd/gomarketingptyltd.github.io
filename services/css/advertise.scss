@@ -9,11 +9,11 @@
 }
 
 $background-color: #19191b;
-$title-color:#F69306;
-$primary-font-color:#ffffff;
-$secondary-font-color:#FFFFFFB2;
+$title-color: #F69306;
+$primary-font-color: #ffffff;
+$secondary-font-color: #FFFFFFB2;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -213,7 +213,7 @@ a {
   text-align: center;
   font-size: 34rem;
   padding-bottom: 25rem;
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     font-size: 28rem;
     padding-bottom: 16rem;
   }
@@ -280,6 +280,7 @@ a {
   @media screen and (max-width: 500px) {
     padding-bottom: 4vh;
   }
+
   & img {
     width: 100%;
   }
@@ -333,6 +334,7 @@ a {
       margin-bottom: 10rem;
     }
   }
+
   & p {
     font-size: 34rem;
     @media screen and (max-width: 500px) {
@@ -357,25 +359,30 @@ a {
     align-items: center;
     justify-content: center;
     gap: 10px;
+
     & img {
       width: 110px;
       height: 50px;
     }
   }
+
   &__socialMedia {
     display: flex;
     list-style: none;
     gap: 10px;
+
     & img {
       width: 34px;
       height: 34px;
     }
   }
+
   &-nav {
     margin: 0;
     list-style: none;
     display: flex;
     gap: 40px;
+
     & li a {
       font-style: normal;
       font-weight: 400;
@@ -384,11 +391,13 @@ a {
       text-align: center;
       color: rgba(255, 255, 255, 0.7);
     }
+
     & li:nth-child(3) {
       margin-right: 14px;
     }
   }
-  &-copyright a{
+
+  &-copyright a {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -398,7 +407,7 @@ a {
   }
 }
 
-@media screen and (max-width: 1460px){
+@media screen and (max-width: 1460px) {
   .footer-nav {
     //& li a {
     //  font-size: 14px;
@@ -408,10 +417,11 @@ a {
 
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .footer {
     gap: 20px;
     flex-direction: column;
+
     &-nav {
       justify-content: center;
       flex-wrap: wrap;
@@ -420,15 +430,17 @@ a {
   }
 }
 
-@media screen and (max-width: 430px){
+@media screen and (max-width: 430px) {
   .footer {
     margin-top: 0;
     align-items: center;
+
     &-nav {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     &-copyright a {
       font-size: 14px;
     }
@@ -452,6 +464,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2vh;
+
   & li {
     font-size: 20px;
   }
@@ -481,6 +494,7 @@ a {
   & #drop-down {
     width: 32px;
   }
+
   & #drop-up {
     width: 32px;
     display: none;
@@ -535,7 +549,7 @@ a {
   width: 60px;
   height: 60px;
   transform-origin: 22px 30px;
-  animation: thick-triangle infinite 10s linear ;
+  animation: thick-triangle infinite 10s linear;
 }
 
 .thin-triangle {
@@ -545,7 +559,7 @@ a {
   left: 0;
   top: 0;
   transform-origin: 22px 30px;
-  animation: thin-triangle infinite 6s linear ;
+  animation: thin-triangle infinite 6s linear;
 }
 
 .plus-minus:hover {
@@ -570,24 +584,28 @@ a {
   font-size: 50px;
   line-height: 140%;
   color: #f69306;
+
   .double-triangle .thin-triangle {
     position: absolute;
     top: -5%;
     left: 5%;
     animation: spin-reverse 5s infinite linear;
   }
+
   .double-triangle .thick-triangle {
     position: absolute;
     top: -5%;
     left: 5%;
     animation: spin 5s infinite linear;
   }
+
   .title--short {
     position: absolute;
     top: -5%;
     left: 10%;
   }
 }
+
 .QnA__content {
   display: flex;
   flex-direction: column;
@@ -607,29 +625,35 @@ a {
   0 0 2px rgba(29, 33, 45, 0.08), 0 2px 4px rgba(29, 33, 45, 0.08);
   border-radius: 8px;
   align-self: stretch;
+
   .QnA--heading {
     flex: 1;
     color: $title-color;
   }
+
   .content__details--heading {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
     .plus-minus {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
       margin-left: 10px;
+
       img {
         margin-left: 10px;
       }
     }
   }
+
   .QnA--normal {
     margin-top: 10px;
+
     p {
       font-weight: 400;
       font-size: 18px;
@@ -637,4 +661,33 @@ a {
       letter-spacing: -0.006em;
     }
   }
+}
+
+/* our projects */
+.projects {
+  margin: 80px 10vw;
+  @media screen and (max-width: 500px) {
+    margin-top: 10px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @media screen and (max-width: 500px) {
+    gap: 20px;
+  }
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.item-normal {
+  width: 38vw;
+  border-radius: 8px;
 }

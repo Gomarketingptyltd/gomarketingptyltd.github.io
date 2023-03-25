@@ -618,4 +618,37 @@ a {
   letter-spacing: -0.006em;
 }
 
+/* our projects */
+.projects {
+  margin: 80px 10vw;
+}
+@media screen and (max-width: 500px) {
+  .projects {
+    margin-top: 10px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 500px) {
+  .gallery {
+    gap: 20px;
+  }
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.item-normal {
+  width: 38vw;
+  border-radius: 8px;
+}
+
 /*# sourceMappingURL=advertise.css.map */
