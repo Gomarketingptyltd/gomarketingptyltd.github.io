@@ -269,6 +269,66 @@ a {
   width: 100%;
 }
 
+.my-blog {
+  display: flex;
+  gap: 40rem;
+  justify-content: center;
+  margin: 0 8vw;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .my-blog {
+    flex-direction: column;
+  }
+}
+
+.my-blog-img {
+  width: 700rem;
+}
+@media screen and (max-width: 500px) {
+  .my-blog-img {
+    width: 350rem;
+  }
+}
+
+.my-blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.my-blog-card .date {
+  color: #888888;
+  font-size: 20rem;
+}
+@media screen and (max-width: 500px) {
+  .my-blog-card .date {
+    font-size: 14rem;
+  }
+}
+
+.my-blog-card .ourInsightCardHeader {
+  color: #FFFFFF;
+  font-size: 40rem;
+  line-height: 60rem;
+}
+@media screen and (max-width: 500px) {
+  .my-blog-card .ourInsightCardHeader {
+    font-size: 24rem;
+    line-height: 32rem;
+  }
+}
+
+.my-blog-card .insightsText {
+  color: #888888;
+  font-size: 20rem;
+}
+@media screen and (max-width: 500px) {
+  .my-blog-card .insightsText {
+    font-size: 14rem;
+  }
+}
+
 .other {
   width: 100vw;
   margin-bottom: 140rem;
@@ -649,6 +709,156 @@ a {
 .item-normal {
   width: 38vw;
   border-radius: 8px;
+}
+
+.ourInsightWrap {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ourInsightWrap .double-circle {
+  position: absolute;
+  left: -30px;
+}
+
+.ourInsightCards_wrap {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.ourInsightCards_wrap .card_item {
+  flex-basis: 35%;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.ourInsightCards_wrap .ourInsightCard_inner {
+  flex-basis: 35%;
+  border-radius: 6px;
+  padding: 20px 5px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourInsightCards_wrap .ourInsightCard_inner:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ourInsightCard_inner .imgDiv {
+  width: 85%;
+  margin: auto;
+}
+
+.ourInsightCard_inner img {
+  width: 100%;
+}
+
+.ourInsightCard_inner.content {
+  margin: 15px 15px;
+}
+
+.ourInsightCard_inner .ourInsightCardHeader {
+  font-size: 28px;
+  line-height: 32px;
+  margin: 1rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.ourInsightCard_inner .date {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  color: #888888;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.ourInsightCard_inner .insightsText {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  color: #888888;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+.ourInsightWrap .insightH2 {
+  margin-top: 80px;
+  padding-left: 25px;
+  font-size: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #f69306;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+
+/* web sizes & above */
+@media screen and (min-width: 1442px) {
+  .ourInsightWrap {
+    width: 1442px;
+  }
+}
+@media screen and (max-width: 1442px) {
+  .ourInsightCards_wrap {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1442px) and (min-width: 960px) {
+  .ourInsightWrap {
+    width: 100%;
+  }
+  .ourInsightCards_wrap {
+    gap: 2.8rem;
+  }
+  .ourInsightCards_wrap .card_item {
+    flex-basis: 35%;
+    max-width: 28vw;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 960px) and (min-width: 600px) {
+  .double-circle {
+    display: none;
+  }
+  .ourInsightWrap {
+    width: 100%;
+  }
+  .ourInsightCards_wrap {
+    gap: 2.8rem;
+  }
+  .ourInsightCards_wrap .card_item {
+    flex-basis: 35%;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    width: 80vw;
+  }
+  .double-circle {
+    display: none;
+  }
+  .ourInsightWrap .insightH2 {
+    margin-top: 30px;
+  }
 }
 
 /*# sourceMappingURL=advertise.css.map */
