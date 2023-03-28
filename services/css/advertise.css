@@ -282,6 +282,10 @@ a {
   }
 }
 
+.my-blog:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .my-blog-img {
   width: 700rem;
 }
