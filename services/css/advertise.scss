@@ -314,7 +314,7 @@ a {
   color: #888888;
   font-size: 20rem;
   @media screen and (max-width: 500px) {
-    font-size: 14rem;
+    font-size: 18rem;
   }
 }
 
@@ -332,7 +332,7 @@ a {
   color: #888888;
   font-size: 20rem;
   @media screen and (max-width: 500px) {
-    font-size: 14rem;
+    font-size: 18rem;
   }
 }
 
@@ -760,7 +760,7 @@ a {
   gap: 3.5rem;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 150px;
+  margin: 40px 0;
 }
 
 .ourInsightCards_wrap .card_item {
@@ -777,6 +777,7 @@ a {
   width: 350px;
   display: flex;
   flex-direction: column;
+  gap: 15px;
   align-items: center;
 }
 
@@ -785,6 +786,9 @@ a {
 }
 
 .ourInsightCard_inner .imgDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 85%;
   margin: auto;
 }
@@ -798,29 +802,39 @@ a {
 }
 
 .ourInsightCard_inner .ourInsightCardHeader {
-  font-size: 28px;
-  line-height: 32px;
   margin: 1rem 0;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: white;
+  font-size: 20rem;
+  line-height: 24rem;
+  @media screen and (max-width: 500px) {
+    font-size: 24rem;
+    line-height: 32rem;
+  }
 }
 
 .ourInsightCard_inner .date {
-  font-size: 20px;
+  font-size: 20rem;
   font-family: "Inter", sans-serif;
   color: #888888;
   letter-spacing: 0.2rem;
   font-weight: 700;
   margin: 0.5rem 0;
+  @media screen and (max-width: 500px) {
+    font-size: 18rem;
+  }
 }
 
 .ourInsightCard_inner .insightsText {
-  font-size: 20px;
   font-family: "Inter", sans-serif;
   color: #888888;
   font-weight: 200;
   line-height: 28px;
+  font-size: 20rem;
+  @media screen and (max-width: 500px) {
+    font-size: 18rem;
+  }
 }
 
 .ourInsightWrap .insightH2 {
