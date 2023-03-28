@@ -1492,6 +1492,7 @@ body {
   font-weight: 700;
   font-size: 21px;
   line-height: 29px;
+  border: none;
 }
 
 @media screen and (max-width: 960px) {
