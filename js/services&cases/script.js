@@ -9,58 +9,58 @@ let curSlide = 0;
 const maxSlide = slides.length;
 
 const createDots = function () {
-  slides.forEach(function (_, i) {
-    dotContainer.insertAdjacentHTML(
-      "beforeend",
-      `<button class="dots__dot" data-slide="${i}"></button>`
-    );
-  });
+	slides.forEach(function (_, i) {
+		dotContainer.insertAdjacentHTML(
+			"beforeend",
+			`<button class="dots__dot" data-slide="${i}"></button>`
+		);
+	});
 };
 
 const activatedDot = function (slide) {
-  document
-    .querySelectorAll(".dots__dot")
-    .forEach((dot) => dot.classList.remove("dots__dot--active"));
+	document
+		.querySelectorAll(".dots__dot")
+		.forEach((dot) => dot.classList.remove("dots__dot--active"));
 
-  document
-    .querySelector(`.dots__dot[data-slide="${slide}"]`)
-    .classList.add("dots__dot--active");
+	document
+		.querySelector(`.dots__dot[data-slide="${slide}"]`)
+		.classList.add("dots__dot--active");
 };
 
 slider.style.transform = "scale(1)";
 // slider.style.overflow = "visible";
 
 const goToSlide = function (slide) {
-  slides.forEach((s, i) => {
-    s.style.transform = `translateX(${100 * (i - slide)}%)`;
-  });
+	slides.forEach((s, i) => {
+		s.style.transform = `translateX(${100 * (i - slide)}%)`;
+	});
 };
 
 // next slide
 const nextSlide = function () {
-  if (curSlide === maxSlide - 1) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
-  goToSlide(curSlide);
-  activatedDot(curSlide);
+	if (curSlide === maxSlide - 1) {
+		curSlide = 0;
+	} else {
+		curSlide++;
+	}
+	goToSlide(curSlide);
+	activatedDot(curSlide);
 };
 
 const prevSlide = function () {
-  if (curSlide === 0) {
-    curSlide = maxSlide - 1;
-  } else {
-    curSlide--;
-  }
-  goToSlide(curSlide);
-  activatedDot(curSlide);
+	if (curSlide === 0) {
+		curSlide = maxSlide - 1;
+	} else {
+		curSlide--;
+	}
+	goToSlide(curSlide);
+	activatedDot(curSlide);
 };
 
 const init = function () {
-  goToSlide(0);
-  createDots();
-  activatedDot(0);
+	goToSlide(0);
+	createDots();
+	activatedDot(0);
 };
 
 init();
@@ -68,34 +68,46 @@ init();
 // Touch events on touch devices
 let start;
 let change;
+let startY;
+let verticalChange;
+
 slider.addEventListener("touchstart", (e) => {
-  start = e.changedTouches[0].clientX;
+	start = e.changedTouches[0].clientX;
+	startY = e.changedTouches[0].clientY;
 });
+
 slider.addEventListener("touchmove", (e) => {
-  e.preventDefault();
-  let touch = e.changedTouches[0].clientX;
-  change = start - touch;
+	let touch = e.changedTouches[0].clientX;
+	let touchY = e.changedTouches[0].clientY;
+	change = start - touch;
+	verticalChange = startY - touchY;
+
+	// 阻止在水平滑动距离较大时触发垂直滚动
+	if (Math.abs(change) > Math.abs(verticalChange)) {
+		e.preventDefault();
+	}
 });
+
 const slideHandler = function () {
-  if (change > 0) {
-    nextSlide();
-  } else {
-    prevSlide();
-  }
+	if (change > 0) {
+		nextSlide();
+	} else {
+		prevSlide();
+	}
 };
 slider.addEventListener("touchend", slideHandler);
 
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
 document.addEventListener("keydown", function (e) {
-  e.key === "ArrowLeft" && prevSlide();
-  e.key === "ArrowRight" && nextSlide();
+	e.key === "ArrowLeft" && prevSlide();
+	e.key === "ArrowRight" && nextSlide();
 });
 
 dotContainer.addEventListener("click", function (e) {
-  if (e.target.classList.contains("dots__dot")) {
-    const { slide } = e.target.dataset;
-    goToSlide(slide);
-    activatedDot(slide);
-  }
+	if (e.target.classList.contains("dots__dot")) {
+		const {slide} = e.target.dataset;
+		goToSlide(slide);
+		activatedDot(slide);
+	}
 });
