@@ -111,3 +111,9 @@ dotContainer.addEventListener("click", function (e) {
 		activatedDot(slide);
 	}
 });
+
+const autoSlide = function () {
+	nextSlide();
+};
+
+const interval = setInterval(autoSlide, 5000);
