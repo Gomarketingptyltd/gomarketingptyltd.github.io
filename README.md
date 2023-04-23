@@ -1,2 +1,2 @@
 # GOM
-#### URL: https://gomarketingptyltd.github.io/GOM/
+#### URL: https://gomarketingptyltd.github.io
