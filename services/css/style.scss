@@ -15,11 +15,11 @@
 }
 
 $background-color: #19191b;
-$title-color:#F69306;
-$primary-font-color:#ffffff;
-$secondary-font-color:#FFFFFFB2;
+$title-color: #f69306;
+$primary-font-color: #ffffff;
+$secondary-font-color: #ffffffb2;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,9 +28,9 @@ $secondary-font-color:#FFFFFFB2;
 body {
   margin: 0;
   padding: 0;
-  background-color: #19191B;
+  background-color: #19191b;
   cursor: url("../../images/cursor.gif"), auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
