@@ -40,7 +40,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 14vh;
+  height: 18vh;
 }
 .header-logo {
   height: 100%;
@@ -332,11 +332,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 .footer-logo img {
-  width: 110px;
-  height: 50px;
+  width: 120px;
+  height: 120px;
 }
 .footer__socialMedia {
   display: flex;
