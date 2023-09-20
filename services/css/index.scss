@@ -391,6 +391,25 @@ a {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
   }
+
+  //新增
+  &-email a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  //新增
+  &-nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 1460px) {
@@ -427,8 +446,10 @@ a {
       align-items: center;
     }
 
-    &-copyright a {
-      font-size: 14px;
+    &-copyright {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }
