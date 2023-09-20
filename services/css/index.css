@@ -371,6 +371,21 @@ a {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
 }
+.footer-email a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 1460px) {
   .footer-nav {
@@ -397,8 +412,10 @@ a {
     flex-direction: column;
     align-items: center;
   }
-  .footer-copyright a {
-    font-size: 14px;
+  .footer-copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 #extended-menu {
