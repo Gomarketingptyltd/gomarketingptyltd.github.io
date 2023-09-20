@@ -1507,7 +1507,7 @@ body {
   padding: 0 7%;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .footer-logo {
@@ -1546,6 +1546,21 @@ body {
 .footer-nav li:nth-child(3) {
   margin-right: 14px;
 }
+.footer-email a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 .footer-copyright a {
   font-style: normal;
   font-weight: 400;
@@ -1580,8 +1595,10 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .footer-copyright a {
-    font-size: 14px;
+  .footer-copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 #extended-menu {
