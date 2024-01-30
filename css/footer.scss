@@ -12,10 +12,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 
     & img {
-      width: 120px;
-      height: 120px;
+      width: 100px;
     }
   }
 
@@ -104,6 +104,10 @@
     margin-top: 0;
     align-items: center;
 
+    &-logo {
+      gap: 30px;
+    }
+
     &-nav {
       display: flex;
       flex-direction: column;
@@ -115,9 +119,5 @@
       flex-direction: column;
       gap: 20px;
     }
-
-    //&-copyright a {
-    //  font-size: 14px;
-    //}
   }
 }

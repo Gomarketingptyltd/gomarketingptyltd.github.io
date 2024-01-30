@@ -43,7 +43,7 @@ a {
   height: 18vh;
 }
 .header-logo {
-  height: 100%;
+  height: 60%;
 }
 .header-logo img {
   height: 100%;
@@ -105,6 +105,11 @@ a {
   .header #cancel {
     width: 28px;
     display: none;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header .header-logo {
+    height: 50%;
   }
 }
 
@@ -332,10 +337,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 .footer-logo img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
 }
 .footer__socialMedia {
   display: flex;
@@ -406,6 +411,9 @@ a {
   .footer {
     margin-top: 0;
     align-items: center;
+  }
+  .footer-logo {
+    gap: 30px;
   }
   .footer-nav {
     display: flex;
