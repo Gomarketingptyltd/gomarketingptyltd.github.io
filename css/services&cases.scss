@@ -92,7 +92,7 @@ $secondary-font-color: #FFFFFFB2;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .services__card {
@@ -335,7 +335,6 @@ $secondary-font-color: #FFFFFFB2;
 
 
   .services__cards {
-    margin-bottom: 150px;
     gap: 1.5rem;
 
   }
@@ -379,7 +378,6 @@ $secondary-font-color: #FFFFFFB2;
 
 @media (max-width: 1300px) {
   .services__cards {
-    margin-bottom: 140px;
     gap: .5rem;
 
   }
@@ -437,9 +435,7 @@ $secondary-font-color: #FFFFFFB2;
 
 
   .services__cards {
-    margin-bottom: 140px;
     gap: 1.5rem;
-
   }
 
   .services {
@@ -520,6 +516,7 @@ $secondary-font-color: #FFFFFFB2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
   }
   .section__cases {
     margin-top: 0;
