@@ -51,13 +51,18 @@
   }
 
   //新增
-  &-email a {
+  &-contact a {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
+    //display: block;
+  }
+
+  & .footer-contact-address {
+    text-align: center;
   }
 
   //新增
@@ -118,6 +123,13 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    &-contact a,
+    &-nav li a,
+    &-copyright a {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }

@@ -1530,13 +1530,16 @@ body {
 .footer-nav li:nth-child(3) {
   margin-right: 14px;
 }
-.footer-email a {
+.footer-contact a {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
+}
+.footer .footer-contact-address {
+  text-align: center;
 }
 .footer-nav-container {
   display: flex;
@@ -1586,6 +1589,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  .footer-contact a, .footer-nav li a, .footer-copyright a {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 #extended-menu {
@@ -1668,5 +1675,3 @@ a {
 .main-container {
   overflow-x: hidden;
 }
-
-/*# sourceMappingURL=style.css.map */
