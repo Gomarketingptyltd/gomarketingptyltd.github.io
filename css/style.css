@@ -1812,6 +1812,63 @@ a {
   background: #F69306;
 }
 
+.home-client-cta {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 110px;
+  padding: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.home-client-cta__eyebrow {
+  margin-bottom: 10px;
+  color: #F69306;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-client-cta h2 {
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.home-client-cta p:not(.home-client-cta__eyebrow) {
+  max-width: 760px;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.home-client-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #F69306;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
 @media (max-width: 1300px) {
   .section__cases .cases--experience {
     padding: 80px 50px 100px;
@@ -1840,6 +1897,11 @@ a {
   .experience-card li {
     font-size: 15px;
   }
+  .home-client-cta {
+    grid-template-columns: 1fr;
+    width: min(100% - 48px, 680px);
+    margin-bottom: 88px;
+  }
 }
 @media (max-width: 600px) {
   .section__cases .cases--experience {
@@ -1865,5 +1927,19 @@ a {
   .experience-card__label {
     font-size: 12px;
     margin-bottom: 22px;
+  }
+  .home-client-cta {
+    width: calc(100% - 40px);
+    margin-bottom: 70px;
+    padding: 24px;
+  }
+  .home-client-cta h2 {
+    font-size: 28px;
+  }
+  .home-client-cta p:not(.home-client-cta__eyebrow) {
+    font-size: 16px;
+  }
+  .home-client-cta a {
+    width: 100%;
   }
 }
