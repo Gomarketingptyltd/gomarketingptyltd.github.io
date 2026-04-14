@@ -953,3 +953,379 @@ a {
   letter-spacing: -0.500211px;
   color: #F69306;
 }
+
+/* client showcase */
+.client-showcase-page {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 120px;
+}
+
+.client-hero {
+  position: relative;
+  padding: 42px 0 60px;
+}
+
+.client-hero .double-triangle {
+  left: -64px;
+  bottom: auto;
+  top: 44px;
+}
+
+.showcase-eyebrow {
+  margin-bottom: 16px;
+  color: $title-color;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.client-hero h1 {
+  max-width: 1060px;
+  color: #ffffff;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.showcase-hero-copy {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 28px;
+  max-width: 1060px;
+  margin-top: 32px;
+}
+
+.showcase-hero-copy p,
+.market-panel p,
+.client-section__head p,
+.approach-panel p {
+  color: rgba(255, 255, 255, .76);
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.showcase-hero-copy p[lang],
+.market-panel p[lang],
+.approach-panel p[lang] {
+  color: rgba(255, 255, 255, .58);
+}
+
+.client-section {
+  padding: 58px 0;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+.client-section__head {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(320px, .65fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.client-section h2,
+.market-panel h2,
+.approach-panel h2 {
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.market-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 40px;
+  padding: 38px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .025));
+}
+
+.market-panel__intro p + p {
+  margin-top: 14px;
+}
+
+.market-list,
+.approach-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.market-list li {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 6px 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.market-list li:last-child {
+  border-bottom: none;
+}
+
+.market-list span {
+  grid-row: span 2;
+  color: $title-color;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.market-list strong {
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.market-list em,
+.approach-list span {
+  color: rgba(255, 255, 255, .58);
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.industry-card,
+.work-card {
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .04);
+}
+
+.industry-card {
+  min-height: 196px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.industry-card h3 {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.industry-card p {
+  margin-top: 10px;
+  color: $title-color;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.industry-card span {
+  margin-top: auto;
+  padding-top: 22px;
+  color: rgba(255, 255, 255, .66);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.selected-clients {
+  padding-bottom: 68px;
+}
+
+.client-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.client-chip-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, .78);
+  background: rgba(255, 255, 255, .035);
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.work-card {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-card__number {
+  color: $title-color;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.work-card h3 {
+  margin: 20px 0 18px;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.work-card h3 span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, .54);
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.work-card h4 {
+  margin: 22px 0 8px;
+  color: $title-color;
+  font-size: 15px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.work-card p,
+.work-card li {
+  color: rgba(255, 255, 255, .72);
+  font-size: 16px;
+  line-height: 1.62;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.work-card p[lang] {
+  color: rgba(255, 255, 255, .56);
+}
+
+.work-card p + p {
+  margin-top: 12px;
+}
+
+.work-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.approach-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr);
+  gap: 42px;
+  padding: 38px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 8px;
+  background: rgba(246, 147, 6, .08);
+}
+
+.approach-panel p {
+  margin-top: 18px;
+}
+
+.approach-list li {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 8px;
+  color: #ffffff;
+  background: rgba(25, 25, 27, .58);
+  font-size: 18px;
+  line-height: 1.42;
+  letter-spacing: 0;
+}
+
+.approach-list span {
+  display: block;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 1040px) {
+  .client-hero h1 {
+    font-size: 54px;
+  }
+
+  .showcase-hero-copy,
+  .market-panel,
+  .client-section__head,
+  .approach-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-grid,
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .client-showcase-page {
+    width: min(100% - 32px, 1180px);
+    margin-bottom: 80px;
+  }
+
+  .client-hero {
+    padding: 18px 0 44px;
+  }
+
+  .client-hero h1 {
+    font-size: 38px;
+  }
+
+  .showcase-hero-copy p,
+  .market-panel p,
+  .client-section__head p,
+  .approach-panel p {
+    font-size: 16px;
+  }
+
+  .client-section {
+    padding: 42px 0;
+  }
+
+  .client-section h2,
+  .market-panel h2,
+  .approach-panel h2 {
+    font-size: 30px;
+  }
+
+  .market-panel,
+  .approach-panel {
+    padding: 24px;
+  }
+
+  .industry-grid,
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-list li {
+    grid-template-columns: 34px 1fr;
+  }
+}
