@@ -357,6 +357,9 @@
 	new Swiper(".graphic-slider1", {
 		effect: "coverflow",
 		grabCursor: true,
+		preventClicks: false,
+		preventClicksPropagation: false,
+		touchStartPreventDefault: false,
 		centeredSlides: true,
 		loop: true,
 		autoplay: {
