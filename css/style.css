@@ -2079,3 +2079,128 @@ a {
     width: 100%;
   }
 }
+
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+  #extended-menu {
+    position: fixed;
+    inset: 18vh 0 0;
+    left: 0;
+    width: auto;
+    height: calc(100vh - 18vh);
+    height: calc(100dvh - 18vh);
+    max-height: calc(100vh - 18vh);
+    max-height: calc(100dvh - 18vh);
+    padding: 24px 6vw 42px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #19191B;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-sizing: border-box;
+  }
+  .active {
+    transform: none;
+  }
+  .menu-items {
+    margin-left: 0;
+    gap: 18px;
+  }
+  #menu-services {
+    padding-left: 0;
+    gap: 14px;
+  }
+  .services-child-menu {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    height: auto;
+    margin: 0 0 40px;
+    padding: 0 20px;
+  }
+  .banner__content {
+    gap: 0;
+  }
+  .banner__content-text {
+    width: 100%;
+    height: auto;
+    min-height: 260px;
+    padding: 24px 0 12px;
+  }
+  .banner__content-text .banner-title {
+    width: min(100%, 360px);
+    max-width: 100%;
+    font-size: clamp(38px, 12vw, 46px);
+    line-height: 1.08;
+  }
+  .banner__content-text .banner-description {
+    width: min(100%, 340px);
+    max-width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+  .info {
+    padding: 20px 16px;
+  }
+  .info-title {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.15;
+  }
+  .info-title h3 {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .info-form {
+    width: 100%;
+    max-width: 420px;
+  }
+  .info-form label {
+    width: 100%;
+  }
+  .info-form .info-details {
+    align-items: stretch;
+    padding: 24px 18px 0;
+  }
+  .info-form .info-details input {
+    width: 100%;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  .info-form .info-content {
+    padding: 24px 18px 28px;
+  }
+  .info-form .info-content textarea {
+    box-sizing: border-box;
+    padding: 16px 18px;
+  }
+  .info-form .info-content p {
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 8px 0;
+  }
+  .info-form .info-content .info-btn {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  .home-client-cta a {
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+  }
+}

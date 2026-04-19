@@ -1410,3 +1410,77 @@ a {
     grid-template-columns: 34px 1fr;
   }
 }
+
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+  #extended-menu {
+    position: fixed;
+    inset: 10vh 0 0;
+    left: 0;
+    width: auto;
+    height: calc(100vh - 10vh);
+    height: calc(100dvh - 10vh);
+    max-height: calc(100vh - 10vh);
+    max-height: calc(100dvh - 10vh);
+    padding: 24px 6vw 42px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #19191B;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-sizing: border-box;
+  }
+  .active {
+    transform: none;
+  }
+  .menu-items {
+    margin-left: 0;
+    gap: 18px;
+  }
+  #menu-services {
+    padding-left: 0;
+    gap: 14px;
+  }
+  .services-child-menu {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .graphic-slider1 .swiper-wrapper {
+    width: calc(100% - 32px);
+    max-width: 390rem;
+  }
+  .graphic-slider1 .graphic-slide,
+  .graphic-slider1 .graphic-slide > a {
+    min-height: 0;
+  }
+  .graphic-slider1 .graphic-slide > a {
+    padding: 24rem 18rem;
+    gap: 18rem;
+  }
+  .graphic-slider1 .graphic-slide-title {
+    font-size: 20rem;
+    line-height: 1.25;
+  }
+  .graphic-slider1 .graphic-img {
+    max-width: 280rem;
+    height: 150rem;
+  }
+  .client-hero h1 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+  .market-list li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
