@@ -95,19 +95,45 @@
 @media only screen and (max-width: 710px) {
   .ourTeamWrap {
     padding: 0;
+    width: calc(100% - 40px);
     margin-bottom: 60px;
   }
+  .ourTeamWrap h2 {
+    margin-top: 44px;
+    margin-bottom: 24px;
+    width: 100%;
+    font-size: clamp(28px, 8.5vw, 34px);
+    line-height: 1.08;
+    letter-spacing: 0;
+    overflow-wrap: break-word;
+  }
+  .ourTeamRowBox {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+  .ourTeamImgBox {
+    width: 100%;
+    margin-bottom: 18px;
+  }
   .ourTeamImg {
-    width: 70vw;
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
   }
   .ourTeamContent {
-    width: 80vw;
+    width: 100%;
   }
   .ourTeamSubHeader {
-    font-size: 28px;
+    font-size: 22px;
+    line-height: 1.22;
+    margin-bottom: 12px;
   }
   .ourTeamContent p {
     margin: 1rem 0;
     font-size: 16px;
+    line-height: 1.58;
+    margin-bottom: 0;
   }
 }
