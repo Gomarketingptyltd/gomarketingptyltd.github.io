@@ -261,6 +261,8 @@ Completed:
 
 - `services/bilingualMarketingNotTranslation.html`
 - `cn/bilingualMarketingNotTranslation.html`
+- `services/chineseAustralianAudiencesDiscoverLocalBusinesses.html`
+- `cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html`
 
 ### Phase 2: Strengthen Industry Pages
 
