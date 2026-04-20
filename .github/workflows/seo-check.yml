@@ -1,0 +1,22 @@
+name: SEO Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monday morning in Sydney for most of the year. GitHub cron uses UTC.
+    - cron: "0 22 * * 0"
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run SEO check
+        run: node scripts/seo-check.js
