@@ -58,6 +58,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/digital.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/cn/digitalCredibilityChecklist.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/digitalCredibilityChecklist.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/digitalCredibilityChecklist.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/digitalCredibilityChecklist.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/cn/emailMarketing.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/emailMarketing.html" />
@@ -301,6 +308,13 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/digital.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/digital.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/digital.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/digitalCredibilityChecklist.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/digitalCredibilityChecklist.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/digitalCredibilityChecklist.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/digitalCredibilityChecklist.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/services/emailMarketing.html</loc>

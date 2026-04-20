@@ -265,6 +265,8 @@ Completed:
 - `cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html`
 - `services/xiaohongshuVsInstagramHospitality.html`
 - `cn/xiaohongshuVsInstagramHospitality.html`
+- `services/digitalCredibilityChecklist.html`
+- `cn/digitalCredibilityChecklist.html`
 
 ### Phase 2: Strengthen Industry Pages
 
