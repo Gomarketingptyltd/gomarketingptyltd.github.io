@@ -149,6 +149,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/project.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/cn/propertyCommunicationChineseAudiences.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/propertyCommunicationChineseAudiences.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/propertyCommunicationChineseAudiences.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/propertyCommunicationChineseAudiences.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/cn/publication.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/publication.html" />
@@ -161,6 +168,13 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/QnA.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/QnA.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/QnA.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/cn/restaurantTrustChineseCustomers.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/restaurantTrustChineseCustomers.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/restaurantTrustChineseCustomers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/restaurantTrustChineseCustomers.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/cn/seo.html</loc>
@@ -217,6 +231,20 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/web.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/web.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/web.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/cn/websiteMessagingMistakes.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/websiteMessagingMistakes.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/websiteMessagingMistakes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/websiteMessagingMistakes.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/cn/wechatXiaohongshuPlatformFit.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/wechatXiaohongshuPlatformFit.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/wechatXiaohongshuPlatformFit.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/wechatXiaohongshuPlatformFit.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/cn/whatIsAgileMarketing.html</loc>
@@ -394,6 +422,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/project.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/services/propertyCommunicationChineseAudiences.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/propertyCommunicationChineseAudiences.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/propertyCommunicationChineseAudiences.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/propertyCommunicationChineseAudiences.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/services/publication.html</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/publication.html" />
@@ -406,6 +441,13 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/QnA.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/QnA.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/QnA.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/restaurantTrustChineseCustomers.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/restaurantTrustChineseCustomers.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/restaurantTrustChineseCustomers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/restaurantTrustChineseCustomers.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/services/seo.html</loc>
@@ -462,6 +504,20 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/web.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/web.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/web.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/websiteMessagingMistakes.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/websiteMessagingMistakes.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/websiteMessagingMistakes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/websiteMessagingMistakes.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/wechatXiaohongshuPlatformFit.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/wechatXiaohongshuPlatformFit.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/wechatXiaohongshuPlatformFit.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/wechatXiaohongshuPlatformFit.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/services/whatIsAgileMarketing.html</loc>

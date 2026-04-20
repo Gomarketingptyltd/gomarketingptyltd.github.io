@@ -267,6 +267,16 @@ Completed:
 - `cn/xiaohongshuVsInstagramHospitality.html`
 - `services/digitalCredibilityChecklist.html`
 - `cn/digitalCredibilityChecklist.html`
+- `services/restaurantTrustChineseCustomers.html`
+- `cn/restaurantTrustChineseCustomers.html`
+- `services/websiteMessagingMistakes.html`
+- `cn/websiteMessagingMistakes.html`
+- `services/wechatXiaohongshuPlatformFit.html`
+- `cn/wechatXiaohongshuPlatformFit.html`
+- `services/propertyCommunicationChineseAudiences.html`
+- `cn/propertyCommunicationChineseAudiences.html`
+
+Phase 1 article roadmap is now implemented as a bilingual insight cluster.
 
 ### Phase 2: Strengthen Industry Pages
 
