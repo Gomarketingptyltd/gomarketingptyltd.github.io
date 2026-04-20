@@ -22,4 +22,4 @@ jobs:
           node-version: "20"
 
       - name: Run SEO check
-        run: node scripts/seo-check.js
+        run: npm run seo:check

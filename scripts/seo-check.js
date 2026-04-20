@@ -77,6 +77,11 @@ function getAttr(tag, attr) {
   return match ? match[1] : "";
 }
 
+function hasMeta(html, attr, name) {
+  const re = new RegExp(`<meta\\b[^>]*\\b${attr}=["']${escapeRegExp(name)}["'][^>]*\\bcontent=["'][^"']+["'][^>]*>`, "i");
+  return re.test(html);
+}
+
 function getIds(html) {
   return new Set([...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]));
 }
@@ -252,6 +257,36 @@ for (const file of files) {
       );
       if (!re.test(scanHtml)) {
         reportIssue(issues, relative, `missing hreflang ${alternate.hreflang} -> ${alternate.href}`);
+      }
+    }
+
+    const requiredSocialMeta = [
+      { attr: "property", name: "og:title" },
+      { attr: "property", name: "og:description" },
+      { attr: "property", name: "og:type" },
+      { attr: "property", name: "og:url" },
+      { attr: "property", name: "og:image" },
+      { attr: "name", name: "twitter:card" },
+      { attr: "name", name: "twitter:title" },
+      { attr: "name", name: "twitter:description" },
+      { attr: "name", name: "twitter:image" },
+    ];
+
+    for (const meta of requiredSocialMeta) {
+      if (!hasMeta(scanHtml, meta.attr, meta.name)) {
+        reportIssue(issues, relative, `missing social metadata ${meta.name}`);
+      }
+    }
+
+    const jsonLdBlocks = [...scanHtml.matchAll(/<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+    if (!jsonLdBlocks.length) {
+      reportIssue(issues, relative, "missing JSON-LD structured data");
+    }
+    for (const [, json] of jsonLdBlocks) {
+      try {
+        JSON.parse(json.trim());
+      } catch (error) {
+        reportIssue(issues, relative, `invalid JSON-LD structured data: ${error.message}`);
       }
     }
   }

@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "seo:metadata": "node scripts/update-seo-metadata.js",
     "seo:check": "node scripts/seo-check.js"
   },
   "devDependencies": {}
