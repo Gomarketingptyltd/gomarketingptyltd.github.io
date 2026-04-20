@@ -10,6 +10,7 @@ const LEGAL_NAME = "Go Marketing Pty Ltd";
 const SOCIAL_IMAGE = `${SITE_URL}/images/logo.png`;
 const LOGO_IMAGE = `${SITE_URL}/images/newlogoblack.jpeg`;
 const EMAIL = "info@gomarketing.net.au";
+const TELEPHONE = "+61299096785";
 
 const SOCIAL_BLOCK_RE =
   /\n?\s*<!-- Managed social metadata -->[\s\S]*?<!-- End managed social metadata -->\s*/i;
@@ -117,6 +118,7 @@ function agencyNode(description) {
     logo: LOGO_IMAGE,
     image: SOCIAL_IMAGE,
     email: EMAIL,
+    telephone: TELEPHONE,
     address: {
       "@type": "PostalAddress",
       streetAddress: "100 Barangaroo Ave",
