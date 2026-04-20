@@ -1,6 +1,9 @@
 name: SEO Check
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     # Monday morning in Sydney for most of the year. GitHub cron uses UTC.
