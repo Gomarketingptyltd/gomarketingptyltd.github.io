@@ -16,6 +16,12 @@ Regenerate managed social metadata and structured data after changing page title
 npm run seo:metadata
 ```
 
+Regenerate `sitemap.xml` and `robots.txt` after adding or removing primary HTML pages:
+
+```bash
+npm run seo:sitemap
+```
+
 The SEO content roadmap is maintained in:
 
 - `docs/seo-content-map.md`

@@ -237,9 +237,9 @@ Turn the blog area from general marketing definitions into specialist, search-re
 
 Recommended first articles:
 
-1. How Chinese-Australian audiences discover local businesses in Sydney
-2. Xiaohongshu vs Instagram for Sydney hospitality brands
-3. Why bilingual marketing is not just translation
+1. Why bilingual marketing is not just translation
+2. How Chinese-Australian audiences discover local businesses in Sydney
+3. Xiaohongshu vs Instagram for Sydney hospitality brands
 4. Digital credibility checklist for service businesses
 5. How restaurants can build trust with Chinese-speaking customers in Sydney
 6. Website messaging mistakes that make service businesses look less credible
@@ -248,14 +248,19 @@ Recommended first articles:
 
 Chinese versions should be adapted, not directly translated:
 
-1. 悉尼华人受众如何发现本地商家
-2. 小红书和 Instagram：悉尼餐饮品牌应该如何选择
-3. 为什么双语营销不只是翻译
+1. 为什么双语营销不只是翻译
+2. 悉尼华人受众如何发现本地商家
+3. 小红书和 Instagram：悉尼餐饮品牌应该如何选择
 4. 服务型企业网站可信度检查清单
 5. 餐饮品牌如何在悉尼华人社区建立信任
 6. 让服务型企业显得不够可信的网站表达问题
 7. 微信与小红书分别适合什么营销场景
 8. 地产相关业务如何更清楚地与中文受众沟通
+
+Completed:
+
+- `services/bilingualMarketingNotTranslation.html`
+- `cn/bilingualMarketingNotTranslation.html`
 
 ### Phase 2: Strengthen Industry Pages
 
@@ -391,4 +396,3 @@ Before publishing new proof or case-study content, confirm:
 - Any industry-specific claim is accurate.
 - Phone, address and contact details are consistent across the website, Google Business Profile and social profiles.
 - No medical, financial or legal result claims are implied without evidence.
-
