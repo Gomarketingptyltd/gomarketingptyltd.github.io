@@ -263,6 +263,8 @@ Completed:
 - `cn/bilingualMarketingNotTranslation.html`
 - `services/chineseAustralianAudiencesDiscoverLocalBusinesses.html`
 - `cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html`
+- `services/xiaohongshuVsInstagramHospitality.html`
+- `cn/xiaohongshuVsInstagramHospitality.html`
 
 ### Phase 2: Strengthen Industry Pages
 

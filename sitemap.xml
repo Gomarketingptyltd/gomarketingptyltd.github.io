@@ -247,6 +247,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/whatIsMarketingAutomation.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/cn/xiaohongshuVsInstagramHospitality.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/xiaohongshuVsInstagramHospitality.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/xiaohongshuVsInstagramHospitality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/xiaohongshuVsInstagramHospitality.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/services/</loc>
     <lastmod>2026-04-20</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/" />
@@ -476,5 +483,12 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/whatIsMarketingAutomation.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/whatIsMarketingAutomation.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/whatIsMarketingAutomation.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/xiaohongshuVsInstagramHospitality.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/xiaohongshuVsInstagramHospitality.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/xiaohongshuVsInstagramHospitality.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/xiaohongshuVsInstagramHospitality.html" />
   </url>
 </urlset>
