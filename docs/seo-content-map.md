@@ -298,6 +298,13 @@ Each industry section should include:
 - What Go Marketing helps clarify.
 - Related services.
 
+Completed:
+
+- `services/targetMarket.html`
+- `cn/targetMarket.html`
+
+Phase 2 industry positioning is now implemented with primary sectors, supporting sectors, service-fit links and related insight links.
+
 ### Phase 3: Add Focused Service Landing Pages
 
 Goal:
@@ -320,6 +327,21 @@ Each page should include:
 - What work may be included.
 - What is intentionally not promised.
 - Link to relevant industries and insights.
+
+Completed:
+
+- `services/index.html`
+- `cn/graphicDesign.html`
+- `services/chineseCommunityGrowth.html`
+- `cn/chineseCommunityGrowth.html`
+- `services/bilingualBrandContentStrategy.html`
+- `cn/bilingualBrandContentStrategy.html`
+- `services/web.html`
+- `cn/web.html`
+- `services/xiaohongshuWeChatContentSupport.html`
+- `cn/xiaohongshuWeChatContentSupport.html`
+
+Phase 3 service structure is now in place, with the overview pages routing into focused service landing pages rather than a generic capability list.
 
 ## Internal Linking Rules
 

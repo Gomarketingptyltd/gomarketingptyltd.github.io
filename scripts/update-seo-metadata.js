@@ -65,8 +65,8 @@ function getTitle(html) {
 }
 
 function getDescription(html) {
-  const match = html.match(/<meta\s+name=["']description["'][\s\S]*?\bcontent=["']([^"']*)["'][^>]*>/i);
-  return match ? htmlDecode(match[1].trim()) : "";
+  const match = html.match(/<meta\s+name=["']description["'][\s\S]*?\bcontent=(["'])([\s\S]*?)\1[^>]*>/i);
+  return match ? htmlDecode(match[2].trim()) : "";
 }
 
 function getCanonical(html) {
