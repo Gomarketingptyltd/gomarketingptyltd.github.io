@@ -11,6 +11,44 @@ const SOCIAL_IMAGE = `${SITE_URL}/images/logo.png`;
 const LOGO_IMAGE = `${SITE_URL}/images/newlogoblack.jpeg`;
 const EMAIL = "info@gomarketing.net.au";
 const TELEPHONE = "+61299096785";
+const CUSTOM_SOCIAL_IMAGES = {
+  "services/insights.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?cs=srgb&dl=pexels-edmond-dantes-4344340.jpg&fm=jpg",
+  "cn/insights.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?cs=srgb&dl=pexels-edmond-dantes-4344340.jpg&fm=jpg",
+  "services/bilingualMarketingNotTranslation.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?cs=srgb&dl=pexels-edmond-dantes-4344340.jpg&fm=jpg",
+  "cn/bilingualMarketingNotTranslation.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?cs=srgb&dl=pexels-edmond-dantes-4344340.jpg&fm=jpg",
+  "services/restaurantTrustChineseCustomers.html":
+    "https://images.pexels.com/photos/29394567/pexels-photo-29394567.jpeg?cs=srgb&dl=pexels-urfriendlyphotog-29394567.jpg&fm=jpg",
+  "cn/restaurantTrustChineseCustomers.html":
+    "https://images.pexels.com/photos/29394567/pexels-photo-29394567.jpeg?cs=srgb&dl=pexels-urfriendlyphotog-29394567.jpg&fm=jpg",
+  "services/websiteMessagingMistakes.html":
+    "https://images.pexels.com/photos/5483188/pexels-photo-5483188.jpeg?cs=srgb&dl=pexels-cottonbro-5483188.jpg&fm=jpg",
+  "cn/websiteMessagingMistakes.html":
+    "https://images.pexels.com/photos/5483188/pexels-photo-5483188.jpeg?cs=srgb&dl=pexels-cottonbro-5483188.jpg&fm=jpg",
+  "services/wechatXiaohongshuPlatformFit.html":
+    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?cs=srgb&dl=pexels-esra-afsar-123882149-30470951.jpg&fm=jpg",
+  "cn/wechatXiaohongshuPlatformFit.html":
+    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?cs=srgb&dl=pexels-esra-afsar-123882149-30470951.jpg&fm=jpg",
+  "services/propertyCommunicationChineseAudiences.html":
+    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?cs=srgb&dl=pexels-ahmet-polat-4185245-17082224.jpg&fm=jpg",
+  "cn/propertyCommunicationChineseAudiences.html":
+    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?cs=srgb&dl=pexels-ahmet-polat-4185245-17082224.jpg&fm=jpg",
+  "services/digitalCredibilityChecklist.html":
+    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?cs=srgb&dl=pexels-ron-lach-10347149.jpg&fm=jpg",
+  "cn/digitalCredibilityChecklist.html":
+    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?cs=srgb&dl=pexels-ron-lach-10347149.jpg&fm=jpg",
+  "services/xiaohongshuVsInstagramHospitality.html":
+    "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?cs=srgb&dl=pexels-mutecevvil-17564425.jpg&fm=jpg",
+  "cn/xiaohongshuVsInstagramHospitality.html":
+    "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?cs=srgb&dl=pexels-mutecevvil-17564425.jpg&fm=jpg",
+  "services/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
+    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?cs=srgb&dl=pexels-esra-afsar-123882149-30470951.jpg&fm=jpg",
+  "cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
+    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?cs=srgb&dl=pexels-esra-afsar-123882149-30470951.jpg&fm=jpg",
+};
 
 const SOCIAL_BLOCK_RE =
   /\n?\s*<!-- Managed social metadata -->[\s\S]*?<!-- End managed social metadata -->\s*/i;
@@ -90,7 +128,12 @@ function ogLocale(relative) {
   return isChinese(relative) ? "zh_CN" : "en_AU";
 }
 
+function socialImageFor(relative) {
+  return CUSTOM_SOCIAL_IMAGES[relative] || SOCIAL_IMAGE;
+}
+
 function socialMetadata({ title, description, canonical, relative }) {
+  const image = socialImageFor(relative);
   return [
     "\t<!-- Managed social metadata -->",
     `\t<meta property="og:site_name" content="${escapeAttr(SITE_NAME)}">`,
@@ -98,12 +141,12 @@ function socialMetadata({ title, description, canonical, relative }) {
     `\t<meta property="og:description" content="${escapeAttr(description)}">`,
     `\t<meta property="og:type" content="website">`,
     `\t<meta property="og:url" content="${escapeAttr(canonical)}">`,
-    `\t<meta property="og:image" content="${escapeAttr(SOCIAL_IMAGE)}">`,
+    `\t<meta property="og:image" content="${escapeAttr(image)}">`,
     `\t<meta property="og:locale" content="${ogLocale(relative)}">`,
     `\t<meta name="twitter:card" content="summary_large_image">`,
     `\t<meta name="twitter:title" content="${escapeAttr(title)}">`,
     `\t<meta name="twitter:description" content="${escapeAttr(description)}">`,
-    `\t<meta name="twitter:image" content="${escapeAttr(SOCIAL_IMAGE)}">`,
+    `\t<meta name="twitter:image" content="${escapeAttr(image)}">`,
     "\t<!-- End managed social metadata -->",
   ].join("\n");
 }

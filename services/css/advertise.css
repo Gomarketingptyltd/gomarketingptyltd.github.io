@@ -359,6 +359,39 @@ a {
 }
 .image-wrapper img {
   width: 85%;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  display: block;
+}
+@media screen and (max-width: 500px) {
+  .image-wrapper img {
+    width: 100%;
+    max-height: 320px;
+  }
+}
+
+.article-meta {
+  padding: 0 10vw 3vh 10vw;
+  text-align: center;
+}
+
+.article-meta .date {
+  display: inline-block;
+  color: #888888;
+  font-size: 18rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 500px) {
+  .article-meta {
+    padding-bottom: 2vh;
+  }
+
+  .article-meta .date {
+    font-size: 16rem;
+  }
 }
 
 .my-blog {
@@ -380,6 +413,10 @@ a {
 
 .my-blog-img {
   width: 700rem;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
 }
 @media screen and (max-width: 500px) {
   .my-blog-img {
@@ -959,6 +996,10 @@ a {
 
 .ourInsightCard_inner img {
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
 }
 
 .ourInsightCard_inner.content {
