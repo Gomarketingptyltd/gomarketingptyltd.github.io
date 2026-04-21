@@ -725,24 +725,54 @@ a {
     color: rgba(255, 255, 255, 0.7);
   }
 
-  //新增
-  &-email a {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  //新增
   &-nav-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    width: min(100%, 760px);
   }
+}
+
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.footer-contact-item {
+  min-height: 100%;
+  padding: 18px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+
+  a,
+  address {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  address {
+    text-align: left;
+  }
+}
+
+.footer-contact-label {
+  color: #F69306;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1460px) {
@@ -766,6 +796,10 @@ a {
 
     }
   }
+
+  .footer-contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -786,7 +820,24 @@ a {
     &-copyright {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 8px;
+      text-align: center;
+    }
+  }
+
+  .footer-nav-container {
+    width: 100%;
+  }
+
+  .footer-contact-item {
+    padding: 18px 16px;
+    align-items: center;
+    text-align: center;
+
+    a,
+    address {
+      font-size: 18px;
+      text-align: center;
     }
   }
 }
