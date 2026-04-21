@@ -557,48 +557,62 @@
 		<div class="info-title">
 			<h3>从更清晰的市场沟通开始</h3>
 		</div>
-		<form
-			class="info-form"
-			action="https://formspree.io/f/xknavdvn"
-			method="POST"
-		>
-			<div class="info-details">
-				<label>
-					<input
-						type="text"
-						name="username"
-						placeholder="姓名"
-						required
-					/>
-				</label>
-				<label>
-					<input
-						type="email"
-						name="email"
-						placeholder="电子邮件"
-						required
-					/>
-				</label>
-				<label>
-					<input type="text" name="phone" placeholder="电话" required/>
-				</label>
-				<label>
-					<input type="text" name="services" placeholder="需要支持的方向" required/>
-				</label>
-			</div>
-			<div class="info-content">
-				<label>
-					<textarea name="message" placeholder="请简单说明您的业务、目标市场和沟通挑战"></textarea>
-				</label>
-				<p>
-					提交此表格，即表示您同意我们的
-					<a href="termAndCondition.html">条款和条件</a>
-					以及
-					<a href="privatePolicy.html">隐私政策</a> *
-				</p>
-				<button type="submit" class="info-btn">预约咨询</button>
-			</div>
-		</form>
+		<div class="info-layout">
+			<form
+				class="info-form"
+				action="https://formspree.io/f/xknavdvn"
+				method="POST"
+			>
+				<div class="info-details">
+					<label>
+						<input
+							type="text"
+							name="username"
+							placeholder="姓名"
+							required
+						/>
+					</label>
+					<label>
+						<input
+							type="email"
+							name="email"
+							placeholder="电子邮件"
+							required
+						/>
+					</label>
+					<label>
+						<input type="text" name="phone" placeholder="电话" required/>
+					</label>
+					<label>
+						<input type="text" name="services" placeholder="需要支持的方向" required/>
+					</label>
+				</div>
+				<div class="info-content">
+					<label>
+						<textarea name="message" placeholder="请简单说明您的业务、目标市场和沟通挑战"></textarea>
+					</label>
+					<p>
+						提交此表格，即表示您同意我们的
+						<a href="termAndCondition.html">条款和条件</a>
+						以及
+						<a href="privatePolicy.html">隐私政策</a> *
+					</p>
+					<button type="submit" class="info-btn">预约咨询</button>
+				</div>
+			</form>
+			<aside class="info-whatsapp" aria-label="WhatsApp 联系方式">
+				<div class="info-whatsapp__copy">
+					<span class="info-whatsapp__eyebrow">WhatsApp</span>
+					<h4>扫码联系</h4>
+					<p>扫描官方 WhatsApp 二维码，可直接联系 Go Marketing，适合快速咨询与初步沟通。</p>
+				</div>
+				<img
+					src="../images/contact/whatsapp-official-account.jpg"
+					alt="Go Marketing WhatsApp 二维码"
+					loading="lazy"
+				/>
+			</aside>
+		</div>
 	</div>
 
 	<!--        footer-->

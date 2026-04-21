@@ -122,6 +122,11 @@ a {
   .info {
     padding: 20px 16px;
   }
+  .info-layout {
+    width: 100%;
+    max-width: 420px;
+    gap: 18px;
+  }
   .info-title {
     width: 100%;
     text-align: center;
@@ -163,6 +168,20 @@ a {
   .info-form .info-content .info-btn {
     font-size: 17px;
     line-height: 1.35;
+  }
+  .info-whatsapp {
+    padding: 22px 18px;
+  }
+  .info-whatsapp h4 {
+    font-size: 22px;
+  }
+  .info-whatsapp p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .info-whatsapp img {
+    width: min(100%, 240px);
   }
   .home-client-cta a {
     box-sizing: border-box;
