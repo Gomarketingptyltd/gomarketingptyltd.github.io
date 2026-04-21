@@ -45,6 +45,11 @@ a {
 .header-logo {
   height: 60%;
 }
+.header-logo a {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
 .header-logo img {
   height: 100%;
 }
@@ -540,6 +545,9 @@ a {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+.footer-logo > a {
+  display: inline-flex;
 }
 .footer-logo img {
   width: 100px;

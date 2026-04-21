@@ -42,6 +42,11 @@ a {
   justify-content: space-between;
   height: 10vh;
 }
+.header-logo a {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
 .header-logo img {
   width: 110px;
   height: 50px;
@@ -238,6 +243,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer-logo > a {
+  display: inline-flex;
 }
 .footer-logo img {
   width: 110px;
