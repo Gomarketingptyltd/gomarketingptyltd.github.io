@@ -830,6 +830,121 @@ a {
   letter-spacing: -0.006em;
 }
 
+.support-contact {
+  margin: 48px 10vw 0;
+}
+
+.support-contact__intro {
+  max-width: 920px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+.support-contact__intro h2 {
+  margin-bottom: 14px;
+  color: #FFFFFF;
+  font-size: 38px;
+  line-height: 1.15;
+}
+.support-contact__intro p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.support-contact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.support-contact__card {
+  min-height: 100%;
+  padding: 28px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.support-contact__card--qr {
+  align-items: center;
+  text-align: center;
+}
+
+.support-contact__eyebrow {
+  color: #F69306;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.support-contact h3 {
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.support-contact__detail {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.support-contact__note {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.support-contact__qr {
+  display: block;
+  width: min(100%, 240px);
+  height: auto;
+  border-radius: 22px;
+  background: #FFFFFF;
+}
+
+@media screen and (max-width: 960px) {
+  .support-contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .support-contact {
+    margin: 32px 8vw 0;
+  }
+  .support-contact__intro {
+    margin-bottom: 20px;
+  }
+  .support-contact__intro h2 {
+    font-size: 28px;
+  }
+  .support-contact__intro p {
+    font-size: 16px;
+  }
+  .support-contact__card {
+    padding: 22px 18px;
+  }
+  .support-contact h3 {
+    font-size: 22px;
+  }
+  .support-contact__detail {
+    font-size: 18px;
+  }
+  .support-contact__note {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+}
+
 /* our projects */
 .projects {
   margin: 80px 10vw;

@@ -831,6 +831,130 @@ a {
   }
 }
 
+.support-contact {
+  margin: 48px 10vw 0;
+
+  &__intro {
+    max-width: 920px;
+    margin: 0 auto 28px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 14px;
+      color: #FFFFFF;
+      font-size: 38px;
+      line-height: 1.15;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.65;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  &__card {
+    min-height: 100%;
+    padding: 28px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+
+    &--qr {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__eyebrow {
+    color: #F69306;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: #FFFFFF;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  &__detail {
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  &__note {
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  &__qr {
+    display: block;
+    width: min(100%, 240px);
+    height: auto;
+    border-radius: 22px;
+    background: #FFFFFF;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .support-contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .support-contact {
+    margin: 32px 8vw 0;
+
+    &__intro {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &__card {
+      padding: 22px 18px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    &__detail {
+      font-size: 18px;
+    }
+
+    &__note {
+      font-size: 15px;
+      line-height: 1.55;
+    }
+  }
+}
+
 /* our projects */
 .projects {
   margin: 80px 10vw;
