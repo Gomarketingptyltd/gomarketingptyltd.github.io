@@ -152,6 +152,7 @@ a {
     width: 100%;
     padding: 0 18px;
     box-sizing: border-box;
+    font-size: 18px;
   }
   .info-form .info-content {
     padding: 24px 18px 28px;
@@ -160,19 +161,22 @@ a {
     gap: 10px;
   }
   .info-form .info-content .info-field-label {
-    font-size: 14px;
+    font-size: 15px;
   }
   .info-form .info-content textarea {
     box-sizing: border-box;
     padding: 16px 18px;
+    min-height: 132px;
   }
   .info-form .info-content p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.55;
     margin: 8px 0;
   }
   .info-form .info-content .info-btn {
-    font-size: 17px;
+    width: 100%;
+    min-height: 62px;
+    font-size: 18px;
     line-height: 1.35;
   }
   .info-whatsapp {

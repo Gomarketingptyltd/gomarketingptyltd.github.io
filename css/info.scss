@@ -26,17 +26,18 @@
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 2px 2px 75px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.18fr);
     min-width: 0;
+    align-items: start;
 
     & .info-details {
       box-sizing: border-box;
-      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: stretch;
-      padding: 42px 32px;
+      padding: 34px 28px;
       @media screen and (max-width: 960px) {
         padding: 5vh 5vw 0;
       }
@@ -47,21 +48,20 @@
 
       & label {
         width: 100%;
-        max-width: 340px;
         display: block;
       }
 
       & input {
         width: 100%;
-        max-width: 340px;
-        height: 58px;
+        max-width: none;
+        height: 64px;
         border-radius: 8px;
         background-color: #6c6c6d;
         border: none;
         outline: none;
         color: white;
-        font-size: 18px;
-        padding: 0 20px;
+        font-size: 20px;
+        padding: 0 22px;
         box-sizing: border-box;
         @media screen and (max-width: 960px) {
           max-width: none;
@@ -73,7 +73,7 @@
 
         &::placeholder {
           color: white;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: normal;
         }
       }
@@ -82,10 +82,9 @@
     & .info-content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 18px;
-      padding: 42px 40px 44px;
-      flex: 2;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 34px 30px 34px 12px;
       @media screen and (max-width: 960px) {
         padding: 5vh 5vw 8vh;
       }
@@ -99,28 +98,28 @@
 
       & .info-field-label {
         color: rgba(255, 255, 255, 0.92);
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 1.4;
       }
 
       & textarea {
         width: 100%;
-        height: 120px;
+        min-height: 168px;
         border-radius: 8px;
         background-color: #6c6c6d;
         resize: none;
         outline: none;
         color: white;
-        font-size: 18px;
+        font-size: 19px;
         font-weight: normal;
-        padding: 16px 18px;
+        padding: 18px 20px;
         box-sizing: border-box;
         border: none;
 
         &::placeholder {
           color: rgba(255, 255, 255, 0.62);
-          font-size: 16px;
+          font-size: 19px;
           font-weight: normal;
         }
       }
@@ -128,9 +127,9 @@
       & p {
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.55;
-        margin: 4px 0 0;
+        margin: 0;
 
         & a {
           text-decoration: underline;
@@ -138,16 +137,18 @@
       }
 
       & .info-btn {
-        width: 100%;
-        padding: 20px;
+        width: min(100%, 420px);
+        min-height: 74px;
+        padding: 18px 24px;
         background: #FE9701;
         border-radius: 5px;
         color: white;
         font-style: normal;
         font-weight: 700;
-        font-size: 21px;
-        line-height: 29px;
+        font-size: 22px;
+        line-height: 1.25;
         border: none;
+        align-self: flex-start;
       }
     }
   }
@@ -158,7 +159,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
   gap: 24px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .info-whatsapp {
@@ -222,7 +223,7 @@
   }
 
   .info .info-form {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .info-whatsapp {
