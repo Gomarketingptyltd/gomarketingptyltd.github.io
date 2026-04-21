@@ -35,7 +35,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: stretch;
+      padding: 42px 32px;
       @media screen and (max-width: 960px) {
         padding: 5vh 5vw 0;
       }
@@ -44,8 +45,15 @@
       }
       gap: 20px;
 
+      & label {
+        width: 100%;
+        max-width: 340px;
+        display: block;
+      }
+
       & input {
-        width: 20vw;
+        width: 100%;
+        max-width: 340px;
         height: 58px;
         border-radius: 8px;
         background-color: #6c6c6d;
@@ -53,12 +61,14 @@
         outline: none;
         color: white;
         font-size: 18px;
-        padding-left: 30px;
+        padding: 0 20px;
+        box-sizing: border-box;
         @media screen and (max-width: 960px) {
-          width: 75vw;
+          max-width: none;
+          width: 100%;
         }
         @media screen and (max-width: 430px) {
-          width: 70vw;
+          width: 100%;
         }
 
         &::placeholder {
@@ -72,16 +82,31 @@
     & .info-content {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      padding: 80px 50px;
+      justify-content: center;
+      gap: 18px;
+      padding: 42px 40px 44px;
       flex: 2;
       @media screen and (max-width: 960px) {
         padding: 5vh 5vw 8vh;
       }
 
+      & .info-message-field {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+
+      & .info-field-label {
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
       & textarea {
         width: 100%;
-        height: 116px;
+        height: 120px;
         border-radius: 8px;
         background-color: #6c6c6d;
         resize: none;
@@ -89,11 +114,13 @@
         color: white;
         font-size: 18px;
         font-weight: normal;
-        padding: 20px 30px;
+        padding: 16px 18px;
+        box-sizing: border-box;
+        border: none;
 
         &::placeholder {
-          color: white;
-          font-size: 18px;
+          color: rgba(255, 255, 255, 0.62);
+          font-size: 16px;
           font-weight: normal;
         }
       }
@@ -101,9 +128,9 @@
       & p {
         font-style: normal;
         font-weight: 300;
-        font-size: 21px;
-        line-height: 30px;
-        margin: 20px 0;
+        font-size: 18px;
+        line-height: 1.55;
+        margin: 4px 0 0;
 
         & a {
           text-decoration: underline;

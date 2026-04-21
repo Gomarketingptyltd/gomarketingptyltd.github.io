@@ -5,7 +5,9 @@ body {
 }
 
 .ourInsightWrap {
-  width: 80%;
+  width: min(100%, 1442px);
+  padding: 0 24px;
+  box-sizing: border-box;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -18,41 +20,60 @@ body {
 }
 
 .ourInsightCards_wrap {
-  display: flex;
-  gap: 3.5rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
   margin-bottom: 150px;
 }
 
+.ourInsightCards_wrap > a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
 .ourInsightCards_wrap .card_item {
-  flex-basis: 35%;
-  max-width: 360px;
   width: 100%;
-  border-radius: 5px;
+  max-width: none;
+  height: 100%;
+  border-radius: 8px;
 }
 
 .ourInsightCards_wrap .ourInsightCard_inner {
-  flex-basis: 35%;
-  border-radius: 6px;
-  padding: 20px 5px;
-  width: 350px;
+  border-radius: 8px;
+  padding: 22px;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
 .ourInsightCards_wrap .ourInsightCard_inner:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(246, 147, 6, 0.5);
+  transform: translateY(-2px);
 }
 
 .ourInsightCard_inner .imgDiv {
-  width: 85%;
-  margin: auto;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 14px;
+  height: 100%;
 }
 
 .ourInsightCard_inner img {
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
 }
 
 .ourInsightCard_inner.content {
@@ -60,29 +81,29 @@ body {
 }
 
 .ourInsightCard_inner .ourInsightCardHeader {
-  font-size: 28px;
-  line-height: 32px;
-  margin: 1rem 0;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: white;
 }
 
 .ourInsightCard_inner .date {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Inter", sans-serif;
   color: #888888;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.14rem;
   font-weight: 700;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 .ourInsightCard_inner .insightsText {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Inter", sans-serif;
   color: #888888;
-  font-weight: 200;
-  line-height: 28px;
+  font-weight: 300;
+  line-height: 1.55;
 }
 
 .ourInsightWrap .insightH2 {
@@ -104,32 +125,18 @@ body {
   }
 }
 @media screen and (max-width: 1442px) {
-  .ourInsightCards_wrap {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 1442px) and (min-width: 960px) {
   .ourInsightWrap {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 1200px) {
   .ourInsightCards_wrap {
-    gap: 2.8rem;
-  }
-
-  .ourInsightCards_wrap .card_item {
-    flex-basis: 35%;
-    max-width: 28vw;
-    width: 100%;
-    border-radius: 5px;
-  }
-
-  .ourInsightCards_wrap .ourInsightCard_inner {
-    width: 30vw;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media screen and (max-width: 960px) and (min-width: 600px) {
+@media screen and (max-width: 960px) {
   .double-circle {
     display: none;
   }
@@ -137,26 +144,44 @@ body {
     width: 100%;
   }
   .ourInsightCards_wrap {
-    gap: 2.8rem;
+    gap: 22px;
   }
-
-  .ourInsightCards_wrap .card_item {
-    flex-basis: 35%;
-    max-width: 300px;
-    width: 100%;
-    border-radius: 5px;
+  .ourInsightWrap .insightH2 {
+    margin-top: 48px;
+    padding-left: 0;
+    font-size: 42px;
+    line-height: 1.05;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .ourInsightCards_wrap .ourInsightCard_inner {
-    width: 80vw;
+@media screen and (max-width: 720px) {
+  .ourInsightCards_wrap {
+    grid-template-columns: 1fr;
+    margin-bottom: 90px;
   }
-  .double-circle {
-    display: none;
+}
+
+@media screen and (max-width: 430px) {
+  .ourInsightWrap {
+    padding: 0 18px;
+  }
+  .ourInsightCards_wrap .ourInsightCard_inner {
+    padding: 18px;
   }
   .ourInsightWrap .insightH2 {
     margin-top: 30px;
+    font-size: 34px;
+    line-height: 1.08;
+    margin-bottom: 24px;
+  }
+  .ourInsightCard_inner .ourInsightCardHeader {
+    font-size: 18px;
+  }
+  .ourInsightCard_inner .date {
+    font-size: 14px;
+  }
+  .ourInsightCard_inner .insightsText {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=ourInsights.css.map */

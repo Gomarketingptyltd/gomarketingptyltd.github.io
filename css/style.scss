@@ -156,6 +156,12 @@ a {
   .info-form .info-content {
     padding: 24px 18px 28px;
   }
+  .info-form .info-content .info-message-field {
+    gap: 10px;
+  }
+  .info-form .info-content .info-field-label {
+    font-size: 14px;
+  }
   .info-form .info-content textarea {
     box-sizing: border-box;
     padding: 16px 18px;
