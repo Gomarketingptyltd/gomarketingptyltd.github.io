@@ -1431,6 +1431,7 @@ body {
   height: 100%;
   display: flex;
   align-items: stretch;
+  min-width: 0;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.04);
@@ -1450,6 +1451,7 @@ body {
   grid-template-rows: auto auto auto 1fr;
   gap: 14px;
   height: 100%;
+  min-width: 0;
 }
 
 .ourInsightCard_inner img {
@@ -1471,6 +1473,8 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: white;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .ourInsightCard_inner .date {
@@ -1488,6 +1492,8 @@ body {
   color: #888888;
   font-weight: 300;
   line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .ourInsightWrap .insightH2 {
