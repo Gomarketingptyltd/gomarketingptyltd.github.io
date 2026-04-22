@@ -390,13 +390,21 @@ function breadcrumbNode({ title, canonical, relative }) {
 }
 
 function faqNode({ html, canonical, relative }) {
-  if (!/QnA\.html$/i.test(relative)) return null;
-  const entries = [...html.matchAll(/<div class=["']content__details["'][\s\S]*?<h4 class=["']QnA--heading["']>([\s\S]*?)<\/h4>[\s\S]*?<div class=["']QnA--normal["'][^>]*>([\s\S]*?)<\/div>/gi)]
+  const qnaEntries = /QnA\.html$/i.test(relative)
+    ? [...html.matchAll(/<div class=["']content__details["'][\s\S]*?<h4 class=["']QnA--heading["']>([\s\S]*?)<\/h4>[\s\S]*?<div class=["']QnA--normal["'][^>]*>([\s\S]*?)<\/div>/gi)]
+        .map((match) => ({
+          question: cleanText(match[1]),
+          answer: cleanText(match[2]),
+        }))
+    : [];
+
+  const seoFaqEntries = [...html.matchAll(/<article class=["']seo-faq__item["'][\s\S]*?<h3>([\s\S]*?)<\/h3>[\s\S]*?<p>([\s\S]*?)<\/p>[\s\S]*?<\/article>/gi)]
     .map((match) => ({
       question: cleanText(match[1]),
       answer: cleanText(match[2]),
-    }))
-    .filter((entry) => entry.question && entry.answer);
+    }));
+
+  const entries = [...qnaEntries, ...seoFaqEntries].filter((entry) => entry.question && entry.answer);
 
   if (!entries.length) return null;
 
@@ -511,7 +519,7 @@ function structuredData({ title, description, canonical, relative, html, filePat
 
   const faq = faqNode({ html, canonical, relative });
   if (faq) {
-    page["@type"] = "FAQPage";
+    page["@type"] = ["WebPage", "FAQPage"];
     page.mainEntity = faq.mainEntity;
   }
 
