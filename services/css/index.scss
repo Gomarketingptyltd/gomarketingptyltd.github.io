@@ -535,6 +535,56 @@ a {
   background: rgba(246, 147, 6, 0.08);
 }
 
+.service-overview__pathways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-overview__pathway {
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.service-overview__pathway h3 {
+  margin-bottom: 14px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.service-overview__pathway p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+.service-overview__pathway-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.service-overview__pathway-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid rgba(246, 147, 6, 0.34);
+  border-radius: 8px;
+  background: rgba(246, 147, 6, 0.08);
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
 .service-overview__cta {
   max-width: 980px;
   padding: 34px;
@@ -556,12 +606,14 @@ a {
 @media screen and (max-width: 1100px) {
   .service-overview__grid--core,
   .service-overview__grid--support,
-  .service-overview__section--split {
+  .service-overview__section--split,
+  .service-overview__pathways {
     grid-template-columns: 1fr;
   }
 
   .service-overview__card,
-  .service-overview__card--feature {
+  .service-overview__card--feature,
+  .service-overview__pathway {
     min-height: auto;
   }
 }
@@ -596,12 +648,14 @@ a {
   }
 
   .service-overview__card,
-  .service-overview__cta {
+  .service-overview__cta,
+  .service-overview__pathway {
     padding: 22px;
   }
 
   .service-overview__card h3,
-  .service-overview__notes h3 {
+  .service-overview__notes h3,
+  .service-overview__pathway h3 {
     font-size: 21px;
   }
 }
