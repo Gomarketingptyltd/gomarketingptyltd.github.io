@@ -13,3 +13,36 @@ if (down && up && services) {
         services.style.display = "none";
     })
 }
+
+function optimizeImages() {
+    const images = document.querySelectorAll("img");
+
+    images.forEach((img) => {
+        if (!img.hasAttribute("decoding")) {
+            img.decoding = "async";
+        }
+
+        const isCriticalImage = Boolean(
+            img.closest(".header") ||
+            img.closest("#banner") ||
+            img.closest(".banner") ||
+            img.closest(".graphic__head") ||
+            img.closest(".image-wrapper") ||
+            img.closest(".my-blog")
+        );
+
+        if (!img.hasAttribute("loading")) {
+            img.loading = isCriticalImage ? "eager" : "lazy";
+        }
+
+        if (isCriticalImage && !img.hasAttribute("fetchpriority")) {
+            img.fetchPriority = "high";
+        }
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", optimizeImages, { once: true });
+} else {
+    optimizeImages();
+}

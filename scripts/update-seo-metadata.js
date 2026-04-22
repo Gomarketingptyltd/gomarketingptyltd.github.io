@@ -23,6 +23,30 @@ const SOCIAL_PROFILES = [
   "https://www.youtube.com/channel/UCENkRPv-bwIm1n_2zygeKag",
 ];
 const CUSTOM_SOCIAL_IMAGES = {
+  "index.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/index.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/index.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/graphicDesign.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/chineseCommunityGrowth.html":
+    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/chineseCommunityGrowth.html":
+    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/bilingualBrandContentStrategy.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/bilingualBrandContentStrategy.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/web.html":
+    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/web.html":
+    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/targetMarket.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/targetMarket.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "services/insights.html":
     "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/insights.html":
@@ -487,6 +511,7 @@ function structuredData({ title, description, canonical, relative, html, filePat
     url: canonical,
     name: pageNameFromTitle(title),
     description,
+    image: socialImageFor(relative),
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#agency` },
     inLanguage: inLanguage(relative),
