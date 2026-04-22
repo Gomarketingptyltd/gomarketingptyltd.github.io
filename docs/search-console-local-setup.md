@@ -25,7 +25,7 @@ Then edit `.search-console/config.json`:
 
 - `clientId`: your Google OAuth client ID
 - `clientSecret`: your Google OAuth client secret
-- `redirectUri`: keep `http://127.0.0.1:8788/oauth2callback` unless you have a reason to change it
+- `redirectUri`: keep `http://127.0.0.1:8788` unless you have a reason to change it
 - `siteUrl`: use the exact property identifier from Search Console
 
 Examples:
@@ -93,6 +93,12 @@ List submitted sitemaps:
 npm run search-console:sitemaps
 ```
 
+Submit the current sitemap:
+
+```bash
+npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml
+```
+
 Fetch a default performance bundle:
 
 ```bash
@@ -117,7 +123,7 @@ Reports are written to:
 ## Notes
 
 - The scripts use the official Search Console API with OAuth 2.0.
-- The default scope is read-only: `https://www.googleapis.com/auth/webmasters.readonly`
+- The local auth flow requests Search Console scope: `https://www.googleapis.com/auth/webmasters`
 - The default report range skips the most recent few days because Search Console data can lag behind the current date.
 - The Google account you authorize must already have access to the Search Console property.
 
@@ -126,4 +132,5 @@ Reports are written to:
 - [Authorize Requests | Search Console API](https://developers.google.com/webmaster-tools/v1/how-tos/authorizing)
 - [Search Analytics: query](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)
 - [Sites: list](https://developers.google.com/webmaster-tools/v1/sites/list)
+- [Sitemaps: submit](https://developers.google.com/webmaster-tools/v1/sitemaps/submit)
 - [Sitemaps: list](https://developers.google.com/webmaster-tools/v1/sitemaps/list)

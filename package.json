@@ -8,6 +8,7 @@
     "search-console:doctor": "node scripts/search-console.js doctor",
     "search-console:sites": "node scripts/search-console.js sites",
     "search-console:sitemaps": "node scripts/search-console.js sitemaps",
+    "search-console:submit-sitemap": "node scripts/search-console.js submit-sitemap",
     "search-console:report": "node scripts/search-console.js report"
   },
   "devDependencies": {}

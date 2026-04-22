@@ -47,6 +47,7 @@ npm run search-console:import-client -- /path/to/client_secret_xxx.json
 npm run search-console:doctor
 npm run search-console:sites
 npm run search-console:sitemaps
+npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml
 npm run search-console:report -- --days=28
 ```
 

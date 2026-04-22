@@ -7,6 +7,7 @@ const SEARCH_CONSOLE_DIR = path.join(ROOT, ".search-console");
 const CONFIG_PATH = path.join(SEARCH_CONSOLE_DIR, "config.json");
 const TOKEN_PATH = path.join(SEARCH_CONSOLE_DIR, "token.json");
 const REPORTS_DIR = path.join(SEARCH_CONSOLE_DIR, "reports");
+const WEBMASTERS_SCOPE = "https://www.googleapis.com/auth/webmasters";
 const WEBMASTERS_READONLY_SCOPE = "https://www.googleapis.com/auth/webmasters.readonly";
 
 function ensureDir(dir) {
@@ -80,7 +81,7 @@ function importGoogleClientFile(inputPath) {
   const imported = {
     clientId: installed.client_id,
     clientSecret: installed.client_secret || "",
-    redirectUri: (installed.redirect_uris && installed.redirect_uris[0]) || existing.redirectUri || "http://127.0.0.1:8788/oauth2callback",
+    redirectUri: existing.redirectUri || "http://127.0.0.1:8788",
     siteUrl: existing.siteUrl || "sc-domain:gomarketing.net.au",
     defaultDateRangeDays: existing.defaultDateRangeDays || 28,
     dataLagDays: existing.dataLagDays || 3,
@@ -112,12 +113,24 @@ function createAuthUrl(config) {
   url.searchParams.set("client_id", config.clientId);
   url.searchParams.set("redirect_uri", config.redirectUri);
   url.searchParams.set("response_type", "code");
-  url.searchParams.set("scope", WEBMASTERS_READONLY_SCOPE);
+  url.searchParams.set("scope", WEBMASTERS_SCOPE);
   url.searchParams.set("access_type", "offline");
   url.searchParams.set("prompt", "consent");
   url.searchParams.set("include_granted_scopes", "true");
   url.searchParams.set("state", state);
   return { url: url.toString(), state };
+}
+
+function tokenHasScope(token, scope) {
+  return String(token.scope || "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .includes(scope);
+}
+
+function requireScope(token, scope) {
+  if (tokenHasScope(token, scope)) return;
+  throw new Error(`Saved token is missing required scope: ${scope}. Run "npm run search-console:auth" again to upgrade access.`);
 }
 
 async function exchangeAuthorizationCode(config, code) {
@@ -208,7 +221,8 @@ async function callSearchConsole({ accessToken, pathname, method = "GET", body =
     body: body ? JSON.stringify(body) : undefined,
   });
 
-  const json = await response.json();
+  const rawText = await response.text();
+  const json = rawText ? JSON.parse(rawText) : {};
   if (!response.ok) {
     const message = json.error?.message || json.error_description || "Search Console API request failed";
     throw new Error(message);
@@ -285,6 +299,19 @@ function doctor() {
     message: tokenExists ? TOKEN_PATH : `Missing ${TOKEN_PATH}`,
   });
 
+  if (tokenExists) {
+    const token = readJson(TOKEN_PATH);
+    const canManage = tokenHasScope(token, WEBMASTERS_SCOPE);
+    checks.push({
+      label: "Token scope",
+      ok: canManage,
+      message: canManage ? token.scope : `Current token scope is ${token.scope || "missing"}`,
+    });
+    if (!canManage) {
+      nextSteps.push("Re-run local authorization to upgrade from read-only access: npm run search-console:auth");
+    }
+  }
+
   if (placeholder) {
     nextSteps.push("Import your downloaded Google OAuth client JSON: npm run search-console:import-client -- /path/to/client_secret_xxx.json");
   }
@@ -296,6 +323,7 @@ function doctor() {
   if (tokenExists) {
     nextSteps.push("List accessible Search Console properties: npm run search-console:sites");
     nextSteps.push("Pull the latest performance bundle: npm run search-console:report -- --days=28");
+    nextSteps.push("Submit the current sitemap: npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml");
   }
 
   return { checks, nextSteps };
@@ -343,6 +371,7 @@ function formatRowsForCsv(rows, dimensions) {
 module.exports = {
   CONFIG_PATH,
   TOKEN_PATH,
+  WEBMASTERS_SCOPE,
   WEBMASTERS_READONLY_SCOPE,
   loadConfig,
   loadToken,
@@ -360,4 +389,5 @@ module.exports = {
   formatRowsForCsv,
   importGoogleClientFile,
   doctor,
+  requireScope,
 };

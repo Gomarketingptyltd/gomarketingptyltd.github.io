@@ -4,13 +4,14 @@ const { createServer } = require("http");
 const {
   CONFIG_PATH,
   TOKEN_PATH,
-  WEBMASTERS_READONLY_SCOPE,
+  WEBMASTERS_SCOPE,
   loadConfig,
   loadToken,
   saveToken,
   createAuthUrl,
   exchangeAuthorizationCode,
   getAccessToken,
+  requireScope,
   callSearchConsole,
   ensureDir,
   reportsDirForRange,
@@ -28,6 +29,7 @@ function usage() {
   node scripts/search-console.js doctor
   node scripts/search-console.js sites
   node scripts/search-console.js sitemaps [--siteUrl=sc-domain:gomarketing.net.au]
+  node scripts/search-console.js submit-sitemap [--siteUrl=sc-domain:gomarketing.net.au] --feedpath=https://gomarketing.net.au/sitemap.xml
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] [--days=28]
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] --start=YYYY-MM-DD --end=YYYY-MM-DD
 
@@ -38,7 +40,7 @@ Config:
 Stored locally:
   Config: ${CONFIG_PATH}
   Token:  ${TOKEN_PATH}
-  Scope:  ${WEBMASTERS_READONLY_SCOPE}`);
+  Scope:  ${WEBMASTERS_SCOPE}`);
 }
 
 function runImportClient(args) {
@@ -145,7 +147,8 @@ async function runAuth() {
 
 async function runSites() {
   const config = loadConfig();
-  const accessToken = await getAccessToken(config, loadToken());
+  const token = loadToken();
+  const accessToken = await getAccessToken(config, token);
   const response = await callSearchConsole({
     accessToken,
     pathname: "/sites",
@@ -170,7 +173,8 @@ async function runSitemaps(args) {
     throw new Error("Missing siteUrl. Add it to .search-console/config.json or pass --siteUrl=...");
   }
 
-  const accessToken = await getAccessToken(config, loadToken());
+  const token = loadToken();
+  const accessToken = await getAccessToken(config, token);
   const response = await callSearchConsole({
     accessToken,
     pathname: `/sites/${encodeURIComponent(siteUrl)}/sitemaps`,
@@ -183,6 +187,31 @@ async function runSitemaps(args) {
 
   const sitemaps = response.sitemap || [];
   console.log(`Saved ${sitemaps.length} sitemap entries to ${outputPath}`);
+}
+
+async function runSubmitSitemap(args) {
+  const config = loadConfig();
+  const siteUrl = args.siteUrl || config.siteUrl;
+  const feedpath = args.feedpath;
+
+  if (!siteUrl) {
+    throw new Error("Missing siteUrl. Add it to .search-console/config.json or pass --siteUrl=...");
+  }
+  if (!feedpath) {
+    throw new Error("Missing --feedpath. Example: --feedpath=https://gomarketing.net.au/sitemap.xml");
+  }
+
+  const token = loadToken();
+  requireScope(token, WEBMASTERS_SCOPE);
+  const accessToken = await getAccessToken(config, token);
+
+  await callSearchConsole({
+    accessToken,
+    pathname: `/sites/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(feedpath)}`,
+    method: "PUT",
+  });
+
+  console.log(`Submitted sitemap for ${siteUrl}: ${feedpath}`);
 }
 
 async function fetchDimensionReport({ accessToken, siteUrl, startDate, endDate, dimensions, rowLimit }) {
@@ -297,6 +326,11 @@ async function main() {
 
   if (command === "sitemaps") {
     await runSitemaps(args);
+    return;
+  }
+
+  if (command === "submit-sitemap") {
+    await runSubmitSitemap(args);
     return;
   }
 

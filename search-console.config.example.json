@@ -1,7 +1,7 @@
 {
   "clientId": "YOUR_GOOGLE_OAUTH_CLIENT_ID",
   "clientSecret": "YOUR_GOOGLE_OAUTH_CLIENT_SECRET",
-  "redirectUri": "http://127.0.0.1:8788/oauth2callback",
+  "redirectUri": "http://127.0.0.1:8788",
   "siteUrl": "sc-domain:gomarketing.net.au",
   "defaultDateRangeDays": 28,
   "dataLagDays": 3
