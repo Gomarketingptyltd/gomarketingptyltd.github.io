@@ -99,6 +99,12 @@ Submit the current sitemap:
 npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml
 ```
 
+Delete an old sitemap entry:
+
+```bash
+npm run search-console:delete-sitemap -- --feedpath=https://gomarketing.net.au/
+```
+
 Fetch a default performance bundle:
 
 ```bash
@@ -133,4 +139,5 @@ Reports are written to:
 - [Search Analytics: query](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)
 - [Sites: list](https://developers.google.com/webmaster-tools/v1/sites/list)
 - [Sitemaps: submit](https://developers.google.com/webmaster-tools/v1/sitemaps/submit)
+- [Sitemaps: delete](https://developers.google.com/webmaster-tools/v1/sitemaps/delete)
 - [Sitemaps: list](https://developers.google.com/webmaster-tools/v1/sitemaps/list)

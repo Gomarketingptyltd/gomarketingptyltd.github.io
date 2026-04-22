@@ -48,6 +48,7 @@ npm run search-console:doctor
 npm run search-console:sites
 npm run search-console:sitemaps
 npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml
+npm run search-console:delete-sitemap -- --feedpath=https://gomarketing.net.au/
 npm run search-console:report -- --days=28
 ```
 

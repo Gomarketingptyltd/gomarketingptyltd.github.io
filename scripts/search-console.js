@@ -30,6 +30,7 @@ function usage() {
   node scripts/search-console.js sites
   node scripts/search-console.js sitemaps [--siteUrl=sc-domain:gomarketing.net.au]
   node scripts/search-console.js submit-sitemap [--siteUrl=sc-domain:gomarketing.net.au] --feedpath=https://gomarketing.net.au/sitemap.xml
+  node scripts/search-console.js delete-sitemap [--siteUrl=sc-domain:gomarketing.net.au] --feedpath=https://gomarketing.net.au/
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] [--days=28]
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] --start=YYYY-MM-DD --end=YYYY-MM-DD
 
@@ -214,6 +215,31 @@ async function runSubmitSitemap(args) {
   console.log(`Submitted sitemap for ${siteUrl}: ${feedpath}`);
 }
 
+async function runDeleteSitemap(args) {
+  const config = loadConfig();
+  const siteUrl = args.siteUrl || config.siteUrl;
+  const feedpath = args.feedpath;
+
+  if (!siteUrl) {
+    throw new Error("Missing siteUrl. Add it to .search-console/config.json or pass --siteUrl=...");
+  }
+  if (!feedpath) {
+    throw new Error("Missing --feedpath. Example: --feedpath=https://gomarketing.net.au/");
+  }
+
+  const token = loadToken();
+  requireScope(token, WEBMASTERS_SCOPE);
+  const accessToken = await getAccessToken(config, token);
+
+  await callSearchConsole({
+    accessToken,
+    pathname: `/sites/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(feedpath)}`,
+    method: "DELETE",
+  });
+
+  console.log(`Deleted sitemap for ${siteUrl}: ${feedpath}`);
+}
+
 async function fetchDimensionReport({ accessToken, siteUrl, startDate, endDate, dimensions, rowLimit }) {
   const response = await callSearchConsole({
     accessToken,
@@ -331,6 +357,11 @@ async function main() {
 
   if (command === "submit-sitemap") {
     await runSubmitSitemap(args);
+    return;
+  }
+
+  if (command === "delete-sitemap") {
+    await runDeleteSitemap(args);
     return;
   }
 
