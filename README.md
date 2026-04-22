@@ -51,8 +51,10 @@ npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/s
 npm run search-console:delete-sitemap -- --feedpath=https://gomarketing.net.au/
 npm run search-console:snapshot -- --days=28
 npm run search-console:report -- --days=28
+npm run search-console:install-weekly
 ```
 
 Detailed setup steps are documented in:
 
 - `docs/search-console-local-setup.md`
+- `docs/search-console-priority-urls.md`

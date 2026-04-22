@@ -11,7 +11,9 @@
     "search-console:submit-sitemap": "node scripts/search-console.js submit-sitemap",
     "search-console:delete-sitemap": "node scripts/search-console.js delete-sitemap",
     "search-console:snapshot": "node scripts/search-console.js snapshot",
-    "search-console:report": "node scripts/search-console.js report"
+    "search-console:report": "node scripts/search-console.js report",
+    "search-console:install-weekly": "zsh scripts/install-search-console-weekly.sh",
+    "search-console:uninstall-weekly": "zsh scripts/uninstall-search-console-weekly.sh"
   },
   "devDependencies": {}
 }

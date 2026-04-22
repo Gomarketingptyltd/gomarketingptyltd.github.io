@@ -111,6 +111,18 @@ Generate a one-command local SEO snapshot:
 npm run search-console:snapshot -- --days=28
 ```
 
+Install a weekly local snapshot on this Mac:
+
+```bash
+npm run search-console:install-weekly
+```
+
+Remove it later if needed:
+
+```bash
+npm run search-console:uninstall-weekly
+```
+
 Fetch a default performance bundle:
 
 ```bash
@@ -133,12 +145,18 @@ Reports are written to:
 - `.search-console/reports/<start>_to_<end>/devices.csv`
 - `.search-console/reports/<start>_to_<end>/dates.csv`
 
+Weekly automation logs are written to:
+
+- `.search-console/logs/weekly.out.log`
+- `.search-console/logs/weekly.err.log`
+
 ## Notes
 
 - The scripts use the official Search Console API with OAuth 2.0.
 - The local auth flow requests Search Console scope: `https://www.googleapis.com/auth/webmasters`
 - The default report range skips the most recent few days because Search Console data can lag behind the current date.
 - The Google account you authorize must already have access to the Search Console property.
+- The weekly launch agent runs every Monday at 09:00 using the local timezone on this Mac.
 
 ## Official references
 
