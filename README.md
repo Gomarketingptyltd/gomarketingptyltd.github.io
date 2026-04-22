@@ -27,3 +27,27 @@ The SEO content roadmap is maintained in:
 - `docs/seo-content-map.md`
 
 GitHub Actions also runs the SEO check on pushes to `main` and on a weekly schedule.
+
+## Search Console API
+
+Local Search Console tooling is available for authenticated reporting.
+
+1. Copy `search-console.config.example.json` to `.search-console/config.json`
+2. Add your Google OAuth desktop-app credentials
+3. Run local auth:
+
+```bash
+npm run search-console:auth
+```
+
+Useful follow-up commands:
+
+```bash
+npm run search-console:sites
+npm run search-console:sitemaps
+npm run search-console:report -- --days=28
+```
+
+Detailed setup steps are documented in:
+
+- `docs/search-console-local-setup.md`
