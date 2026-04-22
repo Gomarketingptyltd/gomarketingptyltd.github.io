@@ -24,6 +24,11 @@ function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+function writeText(filePath, value) {
+  ensureDir(path.dirname(filePath));
+  fs.writeFileSync(filePath, value.endsWith("\n") ? value : `${value}\n`);
+}
+
 function loadConfig() {
   const config = readJson(CONFIG_PATH);
   if (!config) {
@@ -384,6 +389,7 @@ module.exports = {
   reportsDirForRange,
   resolveDateRange,
   writeJson,
+  writeText,
   writeCsv,
   parseArgs,
   formatRowsForCsv,

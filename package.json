@@ -10,6 +10,7 @@
     "search-console:sitemaps": "node scripts/search-console.js sitemaps",
     "search-console:submit-sitemap": "node scripts/search-console.js submit-sitemap",
     "search-console:delete-sitemap": "node scripts/search-console.js delete-sitemap",
+    "search-console:snapshot": "node scripts/search-console.js snapshot",
     "search-console:report": "node scripts/search-console.js report"
   },
   "devDependencies": {}

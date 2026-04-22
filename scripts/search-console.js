@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const { createServer } = require("http");
+const path = require("path");
 const {
   CONFIG_PATH,
   TOKEN_PATH,
@@ -18,6 +19,7 @@ const {
   resolveDateRange,
   writeJson,
   writeCsv,
+  writeText,
   parseArgs,
   formatRowsForCsv,
 } = require("./search-console-lib");
@@ -31,6 +33,7 @@ function usage() {
   node scripts/search-console.js sitemaps [--siteUrl=sc-domain:gomarketing.net.au]
   node scripts/search-console.js submit-sitemap [--siteUrl=sc-domain:gomarketing.net.au] --feedpath=https://gomarketing.net.au/sitemap.xml
   node scripts/search-console.js delete-sitemap [--siteUrl=sc-domain:gomarketing.net.au] --feedpath=https://gomarketing.net.au/
+  node scripts/search-console.js snapshot [--siteUrl=sc-domain:gomarketing.net.au] [--days=28]
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] [--days=28]
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] --start=YYYY-MM-DD --end=YYYY-MM-DD
 
@@ -150,12 +153,7 @@ async function runSites() {
   const config = loadConfig();
   const token = loadToken();
   const accessToken = await getAccessToken(config, token);
-  const response = await callSearchConsole({
-    accessToken,
-    pathname: "/sites",
-  });
-
-  const sites = response.siteEntry || [];
+  const sites = await fetchSites(accessToken);
   if (!sites.length) {
     console.log("No Search Console properties were returned for this account.");
     return;
@@ -176,10 +174,7 @@ async function runSitemaps(args) {
 
   const token = loadToken();
   const accessToken = await getAccessToken(config, token);
-  const response = await callSearchConsole({
-    accessToken,
-    pathname: `/sites/${encodeURIComponent(siteUrl)}/sitemaps`,
-  });
+  const response = await fetchSitemaps(accessToken, siteUrl);
 
   const outputDir = reportsDirForRange("sitemaps");
   ensureDir(outputDir);
@@ -188,6 +183,21 @@ async function runSitemaps(args) {
 
   const sitemaps = response.sitemap || [];
   console.log(`Saved ${sitemaps.length} sitemap entries to ${outputPath}`);
+}
+
+async function fetchSites(accessToken) {
+  const response = await callSearchConsole({
+    accessToken,
+    pathname: "/sites",
+  });
+  return response.siteEntry || [];
+}
+
+async function fetchSitemaps(accessToken, siteUrl) {
+  return callSearchConsole({
+    accessToken,
+    pathname: `/sites/${encodeURIComponent(siteUrl)}/sitemaps`,
+  });
 }
 
 async function runSubmitSitemap(args) {
@@ -257,6 +267,46 @@ async function fetchDimensionReport({ accessToken, siteUrl, startDate, endDate, 
   return response.rows || [];
 }
 
+function totalMetric(rows, metricName) {
+  return rows.reduce((sum, row) => sum + Number(row[metricName] || 0), 0);
+}
+
+function weightedAveragePosition(rows) {
+  let weighted = 0;
+  let impressions = 0;
+  for (const row of rows) {
+    const rowImpressions = Number(row.impressions || 0);
+    const position = Number(row.position || 0);
+    weighted += position * rowImpressions;
+    impressions += rowImpressions;
+  }
+  return impressions ? weighted / impressions : 0;
+}
+
+function buildReportSummary(results, metadata) {
+  const dateRows = results.dates || [];
+  const totalClicks = totalMetric(dateRows, "clicks");
+  const totalImpressions = totalMetric(dateRows, "impressions");
+  const averageCtr = totalImpressions ? totalClicks / totalImpressions : 0;
+  const averagePosition = weightedAveragePosition(dateRows);
+
+  return {
+    generatedAt: new Date().toISOString(),
+    ...metadata,
+    counts: Object.fromEntries(
+      Object.entries(results).map(([name, rows]) => [name, rows.length]),
+    ),
+    totals: {
+      clicks: totalClicks,
+      impressions: totalImpressions,
+      ctr: averageCtr,
+      position: averagePosition,
+    },
+    topQuery: results.queries[0] || null,
+    topPage: results.pages[0] || null,
+  };
+}
+
 async function runReport(args) {
   const config = loadConfig();
   const siteUrl = args.siteUrl || config.siteUrl;
@@ -298,18 +348,12 @@ async function runReport(args) {
     writeCsv(`${outputDir}/${name}.csv`, formatRowsForCsv(results[name], dims));
   }
 
-  const summary = {
-    generatedAt: new Date().toISOString(),
+  const summary = buildReportSummary(results, {
     siteUrl,
     startDate,
     endDate,
     rowLimit,
-    counts: Object.fromEntries(
-      Object.entries(results).map(([name, rows]) => [name, rows.length]),
-    ),
-    topQuery: results.queries[0] || null,
-    topPage: results.pages[0] || null,
-  };
+  });
 
   writeJson(`${outputDir}/summary.json`, summary);
 
@@ -319,6 +363,128 @@ async function runReport(args) {
   console.log(`- Countries: ${results.countries.length}`);
   console.log(`- Devices: ${results.devices.length}`);
   console.log(`- Dates: ${results.dates.length}`);
+}
+
+function formatPercent(value) {
+  return `${(Number(value || 0) * 100).toFixed(2)}%`;
+}
+
+function formatNumber(value) {
+  return Number(value || 0).toLocaleString("en-AU");
+}
+
+function buildSnapshotMarkdown({ siteUrl, sites, sitemaps, summary, outputDir }) {
+  const matchedSite = sites.find((site) => site.siteUrl === siteUrl) || null;
+  const activeSitemaps = sitemaps.sitemap || [];
+  const topQuery = summary.topQuery?.keys?.[0] || "None yet";
+  const topPage = summary.topPage?.keys?.[0] || "None yet";
+
+  const sitemapLines = activeSitemaps.length
+    ? activeSitemaps.map((item) => {
+        const submitted = item.contents?.[0]?.submitted || "0";
+        const indexed = item.contents?.[0]?.indexed || "0";
+        return `- ${item.path} | submitted: ${submitted} | indexed: ${indexed} | warnings: ${item.warnings} | errors: ${item.errors}`;
+      }).join("\n")
+    : "- No sitemap entries returned";
+
+  return `# Search Console Snapshot
+
+- Generated: ${summary.generatedAt}
+- Site property: ${siteUrl}
+- Permission level: ${matchedSite ? matchedSite.permissionLevel : "Unknown"}
+- Report range: ${summary.startDate} to ${summary.endDate}
+
+## Sitemaps
+
+${sitemapLines}
+
+## Performance Summary
+
+- Clicks: ${formatNumber(summary.totals.clicks)}
+- Impressions: ${formatNumber(summary.totals.impressions)}
+- CTR: ${formatPercent(summary.totals.ctr)}
+- Avg position: ${Number(summary.totals.position || 0).toFixed(2)}
+- Query rows: ${summary.counts.queries}
+- Page rows: ${summary.counts.pages}
+
+## Current Leaders
+
+- Top query: ${topQuery}
+- Top page: ${topPage}
+
+## Files
+
+- Summary JSON: ${path.join(outputDir, "summary.json")}
+- Snapshot markdown: ${path.join(outputDir, "snapshot.md")}
+`;
+}
+
+async function runSnapshot(args) {
+  const config = loadConfig();
+  const siteUrl = args.siteUrl || config.siteUrl;
+  if (!siteUrl) {
+    throw new Error("Missing siteUrl. Add it to .search-console/config.json or pass --siteUrl=...");
+  }
+
+  const { startDate, endDate } = resolveDateRange({
+    start: args.start,
+    end: args.end,
+    days: args.days,
+    defaultDays: config.defaultDateRangeDays,
+    lagDays: config.dataLagDays,
+  });
+
+  const token = loadToken();
+  const accessToken = await getAccessToken(config, token);
+  const rowLimit = Number(args.rowLimit || 250);
+  const outputDir = reportsDirForRange(`${startDate}_to_${endDate}`);
+  ensureDir(outputDir);
+
+  const sites = await fetchSites(accessToken);
+  const sitemaps = await fetchSitemaps(accessToken, siteUrl);
+  const dimensions = {
+    queries: ["query"],
+    pages: ["page"],
+    countries: ["country"],
+    devices: ["device"],
+    dates: ["date"],
+  };
+  const results = {};
+  for (const [name, dims] of Object.entries(dimensions)) {
+    results[name] = await fetchDimensionReport({
+      accessToken,
+      siteUrl,
+      startDate,
+      endDate,
+      dimensions: dims,
+      rowLimit,
+    });
+    writeCsv(`${outputDir}/${name}.csv`, formatRowsForCsv(results[name], dims));
+  }
+
+  const summary = buildReportSummary(results, {
+    siteUrl,
+    startDate,
+    endDate,
+    rowLimit,
+  });
+  writeJson(`${outputDir}/summary.json`, summary);
+  writeJson(path.join(reportsDirForRange("sitemaps"), "sitemaps.json"), sitemaps);
+  writeText(
+    `${outputDir}/snapshot.md`,
+    buildSnapshotMarkdown({
+      siteUrl,
+      sites,
+      sitemaps,
+      summary,
+      outputDir,
+    }),
+  );
+
+  console.log(`Saved Search Console snapshot to ${outputDir}`);
+  console.log(`- Snapshot: ${path.join(outputDir, "snapshot.md")}`);
+  console.log(`- Impressions: ${formatNumber(summary.totals.impressions)}`);
+  console.log(`- Indexed from sitemap: ${sitemaps.sitemap?.[0]?.contents?.[0]?.indexed || "0"}`);
 }
 
 async function main() {
@@ -362,6 +528,11 @@ async function main() {
 
   if (command === "delete-sitemap") {
     await runDeleteSitemap(args);
+    return;
+  }
+
+  if (command === "snapshot") {
+    await runSnapshot(args);
     return;
   }
 

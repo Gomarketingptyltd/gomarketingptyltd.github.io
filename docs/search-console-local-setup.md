@@ -105,6 +105,12 @@ Delete an old sitemap entry:
 npm run search-console:delete-sitemap -- --feedpath=https://gomarketing.net.au/
 ```
 
+Generate a one-command local SEO snapshot:
+
+```bash
+npm run search-console:snapshot -- --days=28
+```
+
 Fetch a default performance bundle:
 
 ```bash
@@ -120,6 +126,7 @@ npm run search-console:report -- --start=2026-03-01 --end=2026-03-31
 Reports are written to:
 
 - `.search-console/reports/<start>_to_<end>/summary.json`
+- `.search-console/reports/<start>_to_<end>/snapshot.md`
 - `.search-console/reports/<start>_to_<end>/queries.csv`
 - `.search-console/reports/<start>_to_<end>/pages.csv`
 - `.search-console/reports/<start>_to_<end>/countries.csv`
