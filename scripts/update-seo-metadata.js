@@ -11,6 +11,17 @@ const SOCIAL_IMAGE = `${SITE_URL}/images/logo.png`;
 const LOGO_IMAGE = `${SITE_URL}/images/newlogoblack.jpeg`;
 const EMAIL = "info@gomarketing.net.au";
 const TELEPHONE = "+61299096785";
+const AGENCY_DESCRIPTION =
+  "Go Marketing is a Sydney-based bilingual marketing agency helping hospitality, property, wellness and service-based businesses build stronger trust, clearer communication and better visibility across Chinese-Australian and mainstream Australian markets.";
+const CHINESE_AGENCY_DESCRIPTION =
+  "Go Marketing 是一家位于悉尼的双语营销机构，帮助餐饮、地产、健康养生、牙科及服务型企业在华人社区与澳洲主流市场之间建立更清晰的沟通、更强的信任和更好的可见度。";
+const SOCIAL_PROFILES = [
+  "https://www.linkedin.com/company/go-marketing-pty-ltd/",
+  "https://www.instagram.com/gomarketing22/",
+  "https://twitter.com/GoMarketing18",
+  "https://www.facebook.com/profile.php?id=100078097333826",
+  "https://www.youtube.com/channel/UCENkRPv-bwIm1n_2zygeKag",
+];
 const CUSTOM_SOCIAL_IMAGES = {
   "services/insights.html":
     "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -140,12 +151,82 @@ function getCanonical(html) {
   return match ? htmlDecode(match[1].trim()) : "";
 }
 
+function stripTags(value) {
+  return value
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<[^>]+>/g, " ");
+}
+
+function cleanText(value) {
+  return htmlDecode(stripTags(value))
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+\n/g, "\n")
+    .replace(/\n\s+/g, "\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{2,}/g, "\n")
+    .trim();
+}
+
 function isChinese(relative) {
   return relative.startsWith("cn/");
 }
 
 function pageNameFromTitle(title) {
   return title.replace(/^Go Marketing Pty Ltd\s*-\s*/i, "").trim() || SITE_NAME;
+}
+
+function monthNumber(name) {
+  const months = {
+    jan: "01",
+    january: "01",
+    feb: "02",
+    february: "02",
+    mar: "03",
+    march: "03",
+    apr: "04",
+    april: "04",
+    may: "05",
+    jun: "06",
+    june: "06",
+    jul: "07",
+    july: "07",
+    aug: "08",
+    august: "08",
+    sep: "09",
+    sept: "09",
+    september: "09",
+    oct: "10",
+    october: "10",
+    nov: "11",
+    november: "11",
+    dec: "12",
+    december: "12",
+  };
+  return months[name.toLowerCase()] || null;
+}
+
+function normalizeDate(value) {
+  const text = cleanText(value);
+  const english = text.match(/^([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})$/);
+  if (english) {
+    const month = monthNumber(english[1]);
+    if (!month) return null;
+    const day = String(english[2]).padStart(2, "0");
+    return `${english[3]}-${month}-${day}`;
+  }
+
+  const chinese = text.match(/^(\d{4})年(\d{1,2})月(\d{1,2})日$/);
+  if (chinese) {
+    return `${chinese[1]}-${String(chinese[2]).padStart(2, "0")}-${String(chinese[3]).padStart(2, "0")}`;
+  }
+
+  return null;
+}
+
+function articleDateFromHtml(html) {
+  const match = html.match(/<div class=["']article-meta["'][\s\S]*?<span class=["']date["']>([\s\S]*?)<\/span>/i);
+  return match ? normalizeDate(match[1]) : null;
 }
 
 function inLanguage(relative) {
@@ -156,21 +237,40 @@ function ogLocale(relative) {
   return isChinese(relative) ? "zh_CN" : "en_AU";
 }
 
+function canonicalPathFor(relative) {
+  if (relative === "index.html") return "/";
+  if (relative === "services/index.html") return "/services/";
+  if (relative === "cn/index.html") return "/cn/";
+  return `/${relative}`;
+}
+
+function canonicalUrlFor(relative) {
+  return `${SITE_URL}${encodeURI(canonicalPathFor(relative))}`;
+}
+
 function socialImageFor(relative) {
   return CUSTOM_SOCIAL_IMAGES[relative] || SOCIAL_IMAGE;
 }
 
-function socialMetadata({ title, description, canonical, relative }) {
+function socialMetadata({ title, description, canonical, relative, html }) {
   const image = socialImageFor(relative);
+  const articleDate = articleDateFromHtml(html);
+  const ogType = articleDate ? "article" : "website";
   return [
     "\t<!-- Managed social metadata -->",
     `\t<meta property="og:site_name" content="${escapeAttr(SITE_NAME)}">`,
     `\t<meta property="og:title" content="${escapeAttr(title)}">`,
     `\t<meta property="og:description" content="${escapeAttr(description)}">`,
-    `\t<meta property="og:type" content="website">`,
+    `\t<meta property="og:type" content="${ogType}">`,
     `\t<meta property="og:url" content="${escapeAttr(canonical)}">`,
     `\t<meta property="og:image" content="${escapeAttr(image)}">`,
     `\t<meta property="og:locale" content="${ogLocale(relative)}">`,
+    ...(articleDate
+      ? [
+          `\t<meta property="article:published_time" content="${articleDate}">`,
+          `\t<meta property="article:modified_time" content="${articleDate}">`,
+        ]
+      : []),
     `\t<meta name="twitter:card" content="summary_large_image">`,
     `\t<meta name="twitter:title" content="${escapeAttr(title)}">`,
     `\t<meta name="twitter:description" content="${escapeAttr(description)}">`,
@@ -192,7 +292,7 @@ function agencyNode(description) {
     telephone: TELEPHONE,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "100 Barangaroo Ave",
+      streetAddress: "Level 35, International Tower One, 100 Barangaroo Ave",
       addressLocality: "Barangaroo",
       addressRegion: "NSW",
       postalCode: "2000",
@@ -204,6 +304,17 @@ function agencyNode(description) {
     ],
     availableLanguage: ["English", "Chinese"],
     description,
+    sameAs: SOCIAL_PROFILES,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: EMAIL,
+        telephone: TELEPHONE,
+        availableLanguage: ["English", "Chinese"],
+        areaServed: "AU",
+      },
+    ],
     knowsAbout: [
       "Bilingual marketing",
       "Chinese-Australian audience communication",
@@ -242,8 +353,139 @@ function agencyNode(description) {
   };
 }
 
-function structuredData({ title, description, canonical, relative }) {
+function breadcrumbNode({ title, canonical, relative }) {
+  if (relative === "index.html") return null;
+  const chinese = isChinese(relative);
+  const items = [];
+
+  if (chinese) {
+    items.push({ name: "主页", item: `${SITE_URL}/cn/` });
+    if (relative !== "cn/index.html") {
+      items.push({ name: pageNameFromTitle(title), item: canonical });
+    }
+  } else {
+    items.push({ name: "Home", item: `${SITE_URL}/` });
+    if (relative === "services/index.html") {
+      items.push({ name: "Services", item: canonical });
+    } else if (relative.startsWith("services/")) {
+      items.push({ name: "Services", item: `${SITE_URL}/services/` });
+      items.push({ name: pageNameFromTitle(title), item: canonical });
+    } else {
+      items.push({ name: pageNameFromTitle(title), item: canonical });
+    }
+  }
+
+  if (items.length < 2) return null;
+
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${canonical}#breadcrumb`,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.item,
+    })),
+  };
+}
+
+function faqNode({ html, canonical, relative }) {
+  if (!/QnA\.html$/i.test(relative)) return null;
+  const entries = [...html.matchAll(/<div class=["']content__details["'][\s\S]*?<h4 class=["']QnA--heading["']>([\s\S]*?)<\/h4>[\s\S]*?<div class=["']QnA--normal["'][^>]*>([\s\S]*?)<\/div>/gi)]
+    .map((match) => ({
+      question: cleanText(match[1]),
+      answer: cleanText(match[2]),
+    }))
+    .filter((entry) => entry.question && entry.answer);
+
+  if (!entries.length) return null;
+
+  return {
+    "@type": "FAQPage",
+    "@id": `${canonical}#faq`,
+    url: canonical,
+    inLanguage: inLanguage(relative),
+    mainEntity: entries.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: entry.answer,
+      },
+    })),
+  };
+}
+
+function articleNode({ title, description, canonical, relative, html }) {
+  if (!/class=["']article-meta["']/i.test(html)) return null;
+  const date = articleDateFromHtml(html);
+  return {
+    "@type": "BlogPosting",
+    "@id": `${canonical}#article`,
+    headline: pageNameFromTitle(title),
+    description,
+    image: socialImageFor(relative),
+    datePublished: date || undefined,
+    dateModified: date || undefined,
+    mainEntityOfPage: canonical,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+    publisher: {
+      "@id": `${SITE_URL}/#agency`,
+    },
+    inLanguage: inLanguage(relative),
+  };
+}
+
+function insightsItemListNode({ html, canonical, relative, filePath }) {
+  if (!/\/insights\.html$/i.test(canonical)) return null;
+
+  const items = [...html.matchAll(/<a href=["']([^"']+\.html)["'][^>]*>([\s\S]*?)<\/a>/gi)]
+    .map((match) => {
+      if (!match[1].startsWith("./")) return null;
+      const titleMatch = match[2].match(/<div class=["']ourInsightCardHeader["']>([\s\S]*?)<\/div>/i);
+      if (!titleMatch) return null;
+      const targetPath = path.resolve(path.dirname(filePath), match[1]);
+      const relativeTarget = rel(targetPath);
+      return {
+        name: cleanText(titleMatch[1]),
+        url: canonicalUrlFor(relativeTarget),
+      };
+    })
+    .filter(Boolean)
+    .filter((item, index, arr) => item.name && item.url && arr.findIndex((candidate) => candidate.url === item.url) === index);
+
+  if (!items.length) return null;
+
+  return {
+    "@type": "ItemList",
+    "@id": `${canonical}#itemlist`,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: item.url,
+      name: item.name,
+    })),
+  };
+}
+
+function structuredData({ title, description, canonical, relative, html, filePath }) {
+  const page = {
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage`,
+    url: canonical,
+    name: pageNameFromTitle(title),
+    description,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#agency` },
+    inLanguage: inLanguage(relative),
+  };
+
   const graph = [
+    agencyNode(isChinese(relative) ? CHINESE_AGENCY_DESCRIPTION : AGENCY_DESCRIPTION),
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
@@ -252,20 +494,32 @@ function structuredData({ title, description, canonical, relative }) {
       publisher: { "@id": `${SITE_URL}/#agency` },
       inLanguage: inLanguage(relative),
     },
-    {
-      "@type": "WebPage",
-      "@id": `${canonical}#webpage`,
-      url: canonical,
-      name: pageNameFromTitle(title),
-      description,
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/#agency` },
-      inLanguage: inLanguage(relative),
-    },
+    page,
   ];
 
-  if (relative === "index.html" || relative === "cn/index.html") {
-    graph.unshift(agencyNode(description));
+  const breadcrumb = breadcrumbNode({ title, canonical, relative });
+  if (breadcrumb) {
+    page.breadcrumb = { "@id": breadcrumb["@id"] };
+    graph.push(breadcrumb);
+  }
+
+  const article = articleNode({ title, description, canonical, relative, html });
+  if (article) {
+    page.mainEntity = { "@id": article["@id"] };
+    graph.push(article);
+  }
+
+  const faq = faqNode({ html, canonical, relative });
+  if (faq) {
+    page["@type"] = "FAQPage";
+    page.mainEntity = faq.mainEntity;
+  }
+
+  const itemList = insightsItemListNode({ html, canonical, relative, filePath });
+  if (itemList) {
+    page["@type"] = "CollectionPage";
+    page.mainEntity = { "@id": itemList["@id"] };
+    graph.push(itemList);
   }
 
   const json = JSON.stringify({
@@ -293,11 +547,13 @@ function updateFile(file) {
     throw new Error(`${relative} is missing title, description, or canonical URL`);
   }
 
-  const managed = `${socialMetadata({ title, description, canonical, relative })}\n${structuredData({
+  const managed = `${socialMetadata({ title, description, canonical, relative, html })}\n${structuredData({
     title,
     description,
     canonical,
     relative,
+    html,
+    filePath: file,
   })}\n`;
 
   const cleaned = html.replace(SOCIAL_BLOCK_RE, "\n").replace(STRUCTURED_DATA_BLOCK_RE, "\n").replace(/\n{3,}/g, "\n\n");
