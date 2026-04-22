@@ -4,6 +4,8 @@
     "seo:sitemap": "node scripts/update-sitemap.js",
     "seo:check": "node scripts/seo-check.js",
     "search-console:auth": "node scripts/search-console.js auth",
+    "search-console:import-client": "node scripts/search-console.js import-client",
+    "search-console:doctor": "node scripts/search-console.js doctor",
     "search-console:sites": "node scripts/search-console.js sites",
     "search-console:sitemaps": "node scripts/search-console.js sitemaps",
     "search-console:report": "node scripts/search-console.js report"

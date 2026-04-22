@@ -43,6 +43,13 @@ function loadConfig() {
   };
 }
 
+function configHasPlaceholder(config) {
+  return [
+    config.clientId,
+    config.clientSecret,
+  ].some((value) => !value || String(value).includes("YOUR_GOOGLE_OAUTH"));
+}
+
 function loadToken() {
   const token = readJson(TOKEN_PATH);
   if (!token) {
@@ -55,6 +62,32 @@ function loadToken() {
 
 function saveToken(token) {
   writeJson(TOKEN_PATH, token);
+}
+
+function importGoogleClientFile(inputPath) {
+  const resolvedPath = path.resolve(process.cwd(), inputPath);
+  if (!fs.existsSync(resolvedPath)) {
+    throw new Error(`OAuth client file not found: ${resolvedPath}`);
+  }
+
+  const raw = JSON.parse(fs.readFileSync(resolvedPath, "utf8"));
+  const installed = raw.installed || raw.web;
+  if (!installed || !installed.client_id) {
+    throw new Error("The JSON file does not look like a valid Google OAuth client export.");
+  }
+
+  const existing = fs.existsSync(CONFIG_PATH) ? readJson(CONFIG_PATH) : {};
+  const imported = {
+    clientId: installed.client_id,
+    clientSecret: installed.client_secret || "",
+    redirectUri: (installed.redirect_uris && installed.redirect_uris[0]) || existing.redirectUri || "http://127.0.0.1:8788/oauth2callback",
+    siteUrl: existing.siteUrl || "sc-domain:gomarketing.net.au",
+    defaultDateRangeDays: existing.defaultDateRangeDays || 28,
+    dataLagDays: existing.dataLagDays || 3,
+  };
+
+  writeJson(CONFIG_PATH, imported);
+  return imported;
 }
 
 function parseArgs(argv) {
@@ -209,6 +242,65 @@ function reportsDirForRange(label) {
   return path.join(REPORTS_DIR, label);
 }
 
+function doctor() {
+  const checks = [];
+  const nextSteps = [];
+
+  const configExists = fs.existsSync(CONFIG_PATH);
+  checks.push({
+    label: "Config file",
+    ok: configExists,
+    message: configExists ? CONFIG_PATH : `Missing ${CONFIG_PATH}`,
+  });
+
+  if (!configExists) {
+    nextSteps.push("Create .search-console/config.json or import a downloaded Google OAuth client JSON.");
+    return { checks, nextSteps };
+  }
+
+  const config = readJson(CONFIG_PATH);
+  const placeholder = configHasPlaceholder(config);
+  checks.push({
+    label: "OAuth client values",
+    ok: !placeholder,
+    message: !placeholder ? "Client ID and client secret are present." : "Config still contains placeholder OAuth values.",
+  });
+
+  checks.push({
+    label: "Redirect URI",
+    ok: Boolean(config.redirectUri),
+    message: config.redirectUri || "Missing redirectUri",
+  });
+
+  checks.push({
+    label: "Site URL",
+    ok: Boolean(config.siteUrl),
+    message: config.siteUrl || "Missing siteUrl",
+  });
+
+  const tokenExists = fs.existsSync(TOKEN_PATH);
+  checks.push({
+    label: "OAuth token",
+    ok: tokenExists,
+    message: tokenExists ? TOKEN_PATH : `Missing ${TOKEN_PATH}`,
+  });
+
+  if (placeholder) {
+    nextSteps.push("Import your downloaded Google OAuth client JSON: npm run search-console:import-client -- /path/to/client_secret_xxx.json");
+  }
+
+  if (!tokenExists && !placeholder) {
+    nextSteps.push("Run local authorization: npm run search-console:auth");
+  }
+
+  if (tokenExists) {
+    nextSteps.push("List accessible Search Console properties: npm run search-console:sites");
+    nextSteps.push("Pull the latest performance bundle: npm run search-console:report -- --days=28");
+  }
+
+  return { checks, nextSteps };
+}
+
 function escapeCsvCell(value) {
   const text = value == null ? "" : String(value);
   if (/[",\n]/.test(text)) {
@@ -266,4 +358,6 @@ module.exports = {
   writeCsv,
   parseArgs,
   formatRowsForCsv,
+  importGoogleClientFile,
+  doctor,
 };

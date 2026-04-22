@@ -24,6 +24,8 @@ const {
 function usage() {
   console.log(`Usage:
   node scripts/search-console.js auth
+  node scripts/search-console.js import-client /path/to/client_secret_xxx.json
+  node scripts/search-console.js doctor
   node scripts/search-console.js sites
   node scripts/search-console.js sitemaps [--siteUrl=sc-domain:gomarketing.net.au]
   node scripts/search-console.js report [--siteUrl=sc-domain:gomarketing.net.au] [--days=28]
@@ -37,6 +39,41 @@ Stored locally:
   Config: ${CONFIG_PATH}
   Token:  ${TOKEN_PATH}
   Scope:  ${WEBMASTERS_READONLY_SCOPE}`);
+}
+
+function runImportClient(args) {
+  const jsonPath = args._[1] || args.path;
+  if (!jsonPath) {
+    throw new Error("Missing OAuth client JSON path. Usage: npm run search-console:import-client -- /path/to/client_secret_xxx.json");
+  }
+
+  const imported = require("./search-console-lib").importGoogleClientFile(jsonPath);
+  console.log("Imported Google OAuth client into local Search Console config:");
+  console.log(`- Client ID: ${imported.clientId}`);
+  console.log(`- Redirect URI: ${imported.redirectUri}`);
+  console.log(`- Config: ${CONFIG_PATH}`);
+  console.log("Next step:");
+  console.log("  npm run search-console:auth");
+}
+
+function runDoctor() {
+  const {
+    doctor,
+  } = require("./search-console-lib");
+  const report = doctor();
+
+  console.log("\nSearch Console local status:\n");
+  for (const item of report.checks) {
+    const prefix = item.ok ? "OK " : "ERR";
+    console.log(`- [${prefix}] ${item.label}: ${item.message}`);
+  }
+
+  if (report.nextSteps.length) {
+    console.log("\nSuggested next steps:\n");
+    for (const step of report.nextSteps) {
+      console.log(`- ${step}`);
+    }
+  }
 }
 
 async function runAuth() {
@@ -240,6 +277,16 @@ async function main() {
 
   if (command === "auth") {
     await runAuth();
+    return;
+  }
+
+  if (command === "import-client") {
+    runImportClient(args);
+    return;
+  }
+
+  if (command === "doctor") {
+    runDoctor();
     return;
   }
 

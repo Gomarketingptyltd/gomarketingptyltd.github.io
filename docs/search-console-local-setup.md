@@ -33,6 +33,26 @@ Examples:
 - Domain property: `sc-domain:gomarketing.net.au`
 - URL-prefix property: `https://gomarketing.net.au/`
 
+### Faster option: import the downloaded Google OAuth JSON
+
+If you download the OAuth client JSON from Google Cloud, you do not need to copy values manually.
+
+Run:
+
+```bash
+npm run search-console:import-client -- /absolute/path/to/client_secret_xxx.json
+```
+
+This will safely extract:
+
+- `clientId`
+- `clientSecret`
+- `redirectUri`
+
+and write them into:
+
+- `.search-console/config.json`
+
 ## 3. Authorize locally
 
 Run:
@@ -46,6 +66,12 @@ The script will print a Google authorization URL. Open it in your browser, sign 
 On success, the token is saved locally to:
 
 - `.search-console/token.json`
+
+You can run a quick local health check at any time:
+
+```bash
+npm run search-console:doctor
+```
 
 ## 4. Check accessible properties
 
@@ -93,6 +119,7 @@ Reports are written to:
 - The scripts use the official Search Console API with OAuth 2.0.
 - The default scope is read-only: `https://www.googleapis.com/auth/webmasters.readonly`
 - The default report range skips the most recent few days because Search Console data can lag behind the current date.
+- The Google account you authorize must already have access to the Search Console property.
 
 ## Official references
 
