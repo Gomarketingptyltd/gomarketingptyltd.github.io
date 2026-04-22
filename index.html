@@ -43,6 +43,15 @@
 	{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://gomarketing.net.au/#agency","name":"Go Marketing Pty Ltd","alternateName":"Go Marketing","url":"https://gomarketing.net.au/","logo":"https://gomarketing.net.au/images/newlogoblack.jpeg","image":"https://gomarketing.net.au/images/logo.png","email":"info@gomarketing.net.au","telephone":"+61299096785","address":{"@type":"PostalAddress","streetAddress":"100 Barangaroo Ave","addressLocality":"Barangaroo","addressRegion":"NSW","postalCode":"2000","addressCountry":"AU"},"areaServed":[{"@type":"City","name":"Sydney"},{"@type":"Country","name":"Australia"}],"availableLanguage":["English","Chinese"],"description":"Go Marketing is a Sydney-based bilingual marketing agency helping hospitality, property, wellness and service-based businesses build stronger trust, clearer communication and better visibility across Chinese-Australian and mainstream Australian markets.","knowsAbout":["Bilingual marketing","Chinese-Australian audience communication","Xiaohongshu marketing","WeChat marketing","Website messaging","Digital credibility"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Bilingual marketing services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Chinese Community Growth"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bilingual Brand and Content Strategy"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Messaging and Digital Credibility"}}]}},{"@type":"WebSite","@id":"https://gomarketing.net.au/#website","name":"Go Marketing","url":"https://gomarketing.net.au/","publisher":{"@id":"https://gomarketing.net.au/#agency"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://gomarketing.net.au/#webpage","url":"https://gomarketing.net.au/","name":"Bilingual Marketing Agency Sydney","description":"Go Marketing is a Sydney-based bilingual marketing agency helping hospitality, property, wellness and service-based businesses build stronger trust, clearer communication and better visibility across Chinese-Australian and mainstream Australian markets.","isPartOf":{"@id":"https://gomarketing.net.au/#website"},"about":{"@id":"https://gomarketing.net.au/#agency"},"inLanguage":"en-AU"}]}
 	</script>
 	<!-- End managed structured data -->
+	<script>
+		(function () {
+			var path = window.location.pathname;
+			if (/\/index\.html$/.test(path)) {
+				var normalizedPath = path.replace(/index\.html$/, "");
+				window.history.replaceState({}, "", normalizedPath + window.location.search + window.location.hash);
+			}
+		})();
+	</script>
 </head>
 
 <body>
@@ -51,7 +60,7 @@
 	<!--        header-->
 	<header class="header">
 		<div class="header-logo">
-		<a href="./index.html" aria-label="Go to home page">
+		<a href="./" aria-label="Go to home page">
 			<img
 				draggable="false"
 				src="images/newlogo.jpeg"
@@ -74,13 +83,13 @@
 			>
 		</div>
 		<ul class="header-nav">
-			<li><a href="index.html" class="nav-active">Home</a></li>
+			<li><a href="./" class="nav-active">Home</a></li>
 			<li><a href="services">Services</a></li>
 			<li><a href="services/project.html">Projects</a></li>
 			<li><a href="services/targetMarket.html">Target Market</a></li>
 			<li><a href="services/insights.html">Insights</a></li>
 			<li><a href="services/QnA.html">Q&A</a></li>
-			<li><a href="./cn/index.html">简体中文</a></li>
+			<li><a href="./cn/">简体中文</a></li>
 			<li><a href="#info">Contact US</a></li>
 		</ul>
 	</header>
@@ -88,7 +97,7 @@
 	<!--     menu-->
 	<div id="extended-menu">
 		<ul class="menu-items">
-			<li><a href="index.html">Home</a></li>
+			<li><a href="./">Home</a></li>
 			<li class="services-child-menu">
 				<span>Our Services</span>
 				<img
@@ -112,7 +121,7 @@
 			<li><a href="services/targetMarket.html">Target Market</a></li>
 			<li><a href="services/insights.html">Insights</a></li>
 			<li><a href="services/QnA.html">Q&A</a></li>
-			<li><a href="cn/index.html">简体中文</a></li>
+			<li><a href="cn/">简体中文</a></li>
 			<li>
 				<a href="#info">
 					<button class="menu-btn">Contact Us</button>
@@ -645,7 +654,7 @@
 		<div class="footer-home__inner">
 			<div class="footer-home__brand">
 				<div class="footer-logo">
-					<a href="./index.html" aria-label="Go to home page">
+					<a href="./" aria-label="Go to home page">
 						<img src="images/newlogo.jpeg" alt="Go Marketing">
 					</a>
 					<ul class="footer__socialMedia">

@@ -34,13 +34,22 @@
 	{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://gomarketing.net.au/#website","name":"Go Marketing","url":"https://gomarketing.net.au/","publisher":{"@id":"https://gomarketing.net.au/#agency"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://gomarketing.net.au/services/#webpage","url":"https://gomarketing.net.au/services/","name":"Bilingual Marketing Services Sydney","description":"Explore Go Marketing service areas for Sydney businesses, including Chinese community growth, bilingual brand and content strategy, website messaging, paid visibility, Xiaohongshu, WeChat, SEO, email automation and design support.","isPartOf":{"@id":"https://gomarketing.net.au/#website"},"about":{"@id":"https://gomarketing.net.au/#agency"},"inLanguage":"en-AU"}]}
 	</script>
 	<!-- End managed structured data -->
+	<script>
+		(function () {
+			var path = window.location.pathname;
+			if (/\/index\.html$/.test(path)) {
+				var normalizedPath = path.replace(/index\.html$/, "");
+				window.history.replaceState({}, "", normalizedPath + window.location.search + window.location.hash);
+			}
+		})();
+	</script>
 </head>
 
 <body>
 <div class="main-container">
 	<header class="header">
 		<div class="header-logo">
-		<a href="../index.html" aria-label="Go to home page">
+		<a href="../" aria-label="Go to home page">
 			<img draggable="false" src="../images/newlogo.jpeg" alt="Go Marketing"/>
 		</a>
 	</div>
@@ -49,7 +58,7 @@
 			<img id="cancel" draggable="false" src="../images/header/cancel.svg" alt=""/>
 		</div>
 		<ul class="header-nav">
-			<li><a href="../index.html">Home</a></li>
+			<li><a href="../">Home</a></li>
 			<li><a href="../services" class="nav-active">Services</a></li>
 			<li><a href="project.html">Projects</a></li>
 			<li><a href="../services/targetMarket.html">Target Market</a></li>
@@ -62,7 +71,7 @@
 
 	<div id="extended-menu">
 		<ul class="menu-items">
-			<li><a href="../index.html">Home</a></li>
+			<li><a href="../">Home</a></li>
 			<li class="services-child-menu">
 				<span>Our Services</span>
 				<img id="drop-down" src="../images/chevron-small-down-svgrepo-com.svg" alt="down"/>
@@ -203,7 +212,7 @@
 
 	<footer class="footer">
 		<div class="footer-logo">
-		<a href="../index.html" aria-label="Go to home page">
+		<a href="../" aria-label="Go to home page">
 			<img src="../images/newlogo.jpeg" alt="Go Marketing"/>
 		</a>
 		<ul class="footer__socialMedia">
