@@ -1484,10 +1484,19 @@ a {
   min-width: 0;
 }
 
+.ourInsightCard_inner img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
 .ourInsightCard_inner .ourInsightCardHeader {
   margin: 0;
   font-size: 22px;
   line-height: 1.2;
+  min-height: calc(1.2em * 4);
   overflow-wrap: anywhere;
   word-break: normal;
 }
@@ -1550,6 +1559,7 @@ a {
 
   .ourInsightCard_inner .ourInsightCardHeader {
     font-size: 19px;
+    min-height: auto;
   }
 
   .ourInsightCard_inner .date {

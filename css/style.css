@@ -1474,6 +1474,7 @@ body {
 .ourInsightCard_inner .ourInsightCardHeader {
   font-size: 22px;
   line-height: 1.2;
+  min-height: calc(1.2em * 4);
   margin: 0;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -1567,6 +1568,7 @@ body {
   }
   .ourInsightCard_inner .ourInsightCardHeader {
     font-size: 18px;
+    min-height: auto;
   }
   .ourInsightCard_inner .date {
     font-size: 14px;
