@@ -39,6 +39,14 @@ const CUSTOM_SOCIAL_IMAGES = {
     "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/sydneyHospitalityMarketing.html":
     "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/sydneyPropertyMarketing.html":
+    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/sydneyPropertyMarketing.html":
+    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/sydneyHealthWellnessDentalMarketing.html":
+    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/sydneyHealthWellnessDentalMarketing.html":
+    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "services/bilingualBrandContentStrategy.html":
     "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/bilingualBrandContentStrategy.html":

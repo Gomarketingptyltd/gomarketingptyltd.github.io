@@ -308,8 +308,12 @@ Completed:
 - `cn/targetMarket.html`
 - `services/sydneyHospitalityMarketing.html`
 - `cn/sydneyHospitalityMarketing.html`
+- `services/sydneyPropertyMarketing.html`
+- `cn/sydneyPropertyMarketing.html`
+- `services/sydneyHealthWellnessDentalMarketing.html`
+- `cn/sydneyHealthWellnessDentalMarketing.html`
 
-Phase 2 industry positioning is now implemented with primary sectors, supporting sectors, service-fit links and related insight links. Hospitality now also has a dedicated bilingual landing page to support the “Sydney hospitality marketing” cluster.
+Phase 2 industry positioning is now implemented with primary sectors, supporting sectors, service-fit links and related insight links. Hospitality, property, and health / wellness / dental now each have dedicated bilingual landing pages to support the main industry keyword clusters.
 
 ### Phase 3: Add Focused Service Landing Pages
 

@@ -233,11 +233,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/cn/sydneyHealthWellnessDentalMarketing.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/sydneyHealthWellnessDentalMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/sydneyHealthWellnessDentalMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyHealthWellnessDentalMarketing.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/cn/sydneyHospitalityMarketing.html</loc>
     <lastmod>2026-04-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/sydneyHospitalityMarketing.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/sydneyHospitalityMarketing.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyHospitalityMarketing.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/cn/sydneyPropertyMarketing.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/sydneyPropertyMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/sydneyPropertyMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyPropertyMarketing.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/cn/targetMarket.html</loc>
@@ -555,11 +569,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/services/sydneyHealthWellnessDentalMarketing.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/sydneyHealthWellnessDentalMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/sydneyHealthWellnessDentalMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyHealthWellnessDentalMarketing.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/services/sydneyHospitalityMarketing.html</loc>
     <lastmod>2026-04-24</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/sydneyHospitalityMarketing.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/sydneyHospitalityMarketing.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyHospitalityMarketing.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/sydneyPropertyMarketing.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/sydneyPropertyMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/sydneyPropertyMarketing.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/sydneyPropertyMarketing.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/services/targetMarket.html</loc>

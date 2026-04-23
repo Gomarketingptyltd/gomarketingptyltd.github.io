@@ -2284,6 +2284,23 @@ a {
   background: #F69306;
 }
 
+.experience-card__cta {
+  margin-top: 18px;
+}
+
+.experience-card__cta a {
+  color: #F69306;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.experience-card__cta a:hover {
+  text-decoration: underline;
+}
+
 .home-client-cta {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto 110px;
