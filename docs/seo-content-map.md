@@ -306,8 +306,10 @@ Completed:
 
 - `services/targetMarket.html`
 - `cn/targetMarket.html`
+- `services/sydneyHospitalityMarketing.html`
+- `cn/sydneyHospitalityMarketing.html`
 
-Phase 2 industry positioning is now implemented with primary sectors, supporting sectors, service-fit links and related insight links.
+Phase 2 industry positioning is now implemented with primary sectors, supporting sectors, service-fit links and related insight links. Hospitality now also has a dedicated bilingual landing page to support the “Sydney hospitality marketing” cluster.
 
 ### Phase 3: Add Focused Service Landing Pages
 
