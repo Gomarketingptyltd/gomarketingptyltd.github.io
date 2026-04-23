@@ -35,6 +35,10 @@ const CUSTOM_SOCIAL_IMAGES = {
     "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/chineseCommunityGrowth.html":
     "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/digital.html":
+    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/digital.html":
+    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "services/sydneyHospitalityMarketing.html":
     "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/sydneyHospitalityMarketing.html":
