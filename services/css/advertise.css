@@ -409,6 +409,25 @@ a {
   margin: 0 auto 96px;
 }
 
+.service-context__header {
+  max-width: 1080px;
+  margin-bottom: 34px;
+}
+
+.service-context__header p {
+  margin: 0 0 14px;
+  color: #F69306;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.service-context__header h2 {
+  margin: 0;
+  max-width: 1040px;
+}
+
 .service-context__intro {
   max-width: 860px;
   margin-bottom: 28px;
@@ -424,6 +443,7 @@ a {
 }
 
 .service-context h2 {
+  margin: 0;
   color: #ffffff;
   font-size: 36px;
   line-height: 1.18;
@@ -528,6 +548,12 @@ a {
   .service-context {
     width: calc(100% - 40px);
     margin-bottom: 72px;
+  }
+  .service-context__header {
+    margin-bottom: 26px;
+  }
+  .service-context__header p {
+    margin-bottom: 12px;
   }
   .service-context h2 {
     font-size: 28px;
