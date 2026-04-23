@@ -39,6 +39,10 @@ const CUSTOM_SOCIAL_IMAGES = {
     "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/bilingualBrandContentStrategy.html":
     "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/sydneyBilingualMarketingAgency.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/sydneyBilingualMarketingAgency.html":
+    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "services/web.html":
     "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/web.html":

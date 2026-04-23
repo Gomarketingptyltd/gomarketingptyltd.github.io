@@ -51,7 +51,7 @@ Target pages:
 - Home page
 - Services overview
 - About section
-- Future dedicated landing page if search demand is confirmed
+- Dedicated bilingual agency landing page
 
 Priority phrases:
 
@@ -340,12 +340,14 @@ Completed:
 - `cn/chineseCommunityGrowth.html`
 - `services/bilingualBrandContentStrategy.html`
 - `cn/bilingualBrandContentStrategy.html`
+- `services/sydneyBilingualMarketingAgency.html`
+- `cn/sydneyBilingualMarketingAgency.html`
 - `services/web.html`
 - `cn/web.html`
 - `services/xiaohongshuWeChatContentSupport.html`
 - `cn/xiaohongshuWeChatContentSupport.html`
 
-Phase 3 service structure is now in place, with the overview pages routing into focused service landing pages rather than a generic capability list.
+Phase 3 service structure is now in place, with the overview pages routing into focused service landing pages rather than a generic capability list. A dedicated bilingual-agency landing page now supports the core “Sydney bilingual marketing agency” cluster and links into the main service paths.
 
 ## Internal Linking Rules
 
