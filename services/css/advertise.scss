@@ -1388,7 +1388,7 @@ a {
 
 /* insights layout refresh */
 .my-blog {
-  width: min(100%, 1240px);
+  width: min(1180px, calc(100% - 48px));
   margin: 0 auto 56px;
   padding: 24px;
   box-sizing: border-box;
@@ -1430,8 +1430,8 @@ a {
 }
 
 .ourInsightWrap {
-  width: min(100%, 1442px);
-  padding: 0 24px;
+  width: min(1180px, calc(100% - 48px));
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -1528,7 +1528,7 @@ a {
 
 @media screen and (max-width: 720px) {
   .ourInsightWrap {
-    padding: 0 18px;
+    width: calc(100% - 36px);
   }
 
   .my-blog {

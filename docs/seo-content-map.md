@@ -275,8 +275,12 @@ Completed:
 - `cn/wechatXiaohongshuPlatformFit.html`
 - `services/propertyCommunicationChineseAudiences.html`
 - `cn/propertyCommunicationChineseAudiences.html`
+- `services/dentalTrustChinesePatientsSydney.html`
+- `cn/dentalTrustChinesePatientsSydney.html`
+- `services/localSeoStartsWithClearMessaging.html`
+- `cn/localSeoStartsWithClearMessaging.html`
 
-Phase 1 article roadmap is now implemented as a bilingual insight cluster.
+Phase 1 article roadmap is now implemented as a bilingual insight cluster, with added coverage for dental trust-building and local SEO messaging quality.
 
 ### Phase 2: Strengthen Industry Pages
 

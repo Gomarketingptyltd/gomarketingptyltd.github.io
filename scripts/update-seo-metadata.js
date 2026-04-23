@@ -83,6 +83,14 @@ const CUSTOM_SOCIAL_IMAGES = {
     "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
     "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/dentalTrustChinesePatientsSydney.html":
+    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/dentalTrustChinesePatientsSydney.html":
+    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/localSeoStartsWithClearMessaging.html":
+    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/localSeoStartsWithClearMessaging.html":
+    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "services/howToEvaluateWhetherBusiness.html":
     "https://images.pexels.com/photos/8970671/pexels-photo-8970671.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/howToEvaluateWhetherBusiness.html":
