@@ -20,6 +20,19 @@ Main remaining growth work:
 - Use Google Search Console data to prioritise pages that already have impressions but weak rankings.
 - Strengthen service and industry pages with clearer search intent, internal links and conversion pathways.
 
+## Latest additions
+
+Recently added to support faster SEO gains around live Search Console impressions:
+
+- `Sydney Bilingual Marketing Agency` landing page
+- `Sydney Hospitality Marketing` industry page
+- `Sydney Property Marketing` industry page
+- `Sydney Health, Wellness & Dental Marketing` industry page
+- `Chinese Marketing Agency vs Bilingual Marketing Agency in Sydney`
+- `How Sydney Businesses Should Structure Chinese and English Website Messaging`
+
+These pages intentionally support agency-intent, bilingual communication and service-page clarity keywords that are already starting to appear in Search Console.
+
 ## Positioning Guardrails
 
 Use this framing consistently:
