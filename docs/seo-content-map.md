@@ -28,6 +28,7 @@ Recently added to support faster SEO gains around live Search Console impression
 - `Sydney Hospitality Marketing` industry page
 - `Sydney Property Marketing` industry page
 - `Sydney Health, Wellness & Dental Marketing` industry page
+- `Marketing Automation Services Sydney` landing page
 - `Chinese Marketing Agency vs Bilingual Marketing Agency in Sydney`
 - `How Sydney Businesses Should Structure Chinese and English Website Messaging`
 

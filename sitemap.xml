@@ -149,6 +149,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/marketing%26advertising.html" />
   </url>
   <url>
+    <loc>https://gomarketing.net.au/cn/marketingAutomationServicesSydney.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/marketingAutomationServicesSydney.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/marketingAutomationServicesSydney.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/marketingAutomationServicesSydney.html" />
+  </url>
+  <url>
     <loc>https://gomarketing.net.au/cn/marketingResearch.html</loc>
     <lastmod>2026-04-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/marketingResearch.html" />
@@ -497,6 +504,13 @@
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/marketing%26advertising.html" />
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/marketing%26advertising.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/marketing%26advertising.html" />
+  </url>
+  <url>
+    <loc>https://gomarketing.net.au/services/marketingAutomationServicesSydney.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-AU" href="https://gomarketing.net.au/services/marketingAutomationServicesSydney.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://gomarketing.net.au/cn/marketingAutomationServicesSydney.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gomarketing.net.au/services/marketingAutomationServicesSydney.html" />
   </url>
   <url>
     <loc>https://gomarketing.net.au/services/marketingResearch.html</loc>
