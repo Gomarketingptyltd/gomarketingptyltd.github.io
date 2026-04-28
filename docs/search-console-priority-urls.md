@@ -18,6 +18,7 @@ Submit these first:
 10. `https://gomarketing.net.au/services/sydneyHealthWellnessDentalMarketing.html`
 11. `https://gomarketing.net.au/services/insights.html`
 12. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
+13. `https://gomarketing.net.au/services/support.html`
 
 ## Second priority
 
@@ -38,6 +39,7 @@ Then submit the Chinese equivalents:
 6. `https://gomarketing.net.au/cn/web.html`
 7. `https://gomarketing.net.au/cn/insights.html`
 8. `https://gomarketing.net.au/cn/marketingAutomationServicesSydney.html`
+9. `https://gomarketing.net.au/cn/support.html`
 
 ## Fourth priority
 
