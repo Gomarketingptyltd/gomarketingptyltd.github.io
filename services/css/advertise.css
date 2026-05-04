@@ -278,8 +278,8 @@ a {
 .related-service-grid__items {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22rem;
-  width: min(100%, 1180rem);
+  gap: 20rem;
+  width: min(100%, 1120rem);
   height: auto;
   margin: 0 auto;
   transform: none !important;
@@ -305,11 +305,11 @@ a {
 .related-service-grid .graphic-slide > a {
   width: 100%;
   min-height: 0;
-  padding: 24rem;
+  padding: 18rem;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
   gap: 18rem;
   color: inherit;
@@ -317,10 +317,11 @@ a {
 }
 
 .related-service-card__copy {
-  order: 2;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 8rem;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .related-service-grid .graphic-slide-title {
@@ -331,23 +332,23 @@ a {
   text-align: left;
 }
 .related-service-grid .graphic-slide-title h6 {
-  font-size: 22rem;
+  font-size: 18rem;
   line-height: 1.22;
   font-weight: 600;
 }
 
 .related-service-card__copy p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 15rem;
-  line-height: 1.58;
+  font-size: 14rem;
+  line-height: 1.55;
   font-weight: 400;
 }
 
 .related-service-grid .graphic-img {
-  order: 1;
-  width: 100%;
-  max-width: none;
-  height: 230rem;
+  flex: 0 0 168rem;
+  width: 168rem;
+  max-width: 168rem;
+  height: 132rem;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -358,28 +359,29 @@ a {
 
 @media screen and (max-width: 900px) {
   .related-service-grid__items {
-    width: min(100%, 880rem);
+    grid-template-columns: 1fr;
+    width: min(100%, 820rem);
   }
 }
 
 @media screen and (max-width: 500px) {
   .related-service-grid__items {
-    grid-template-columns: 1fr;
     gap: 18rem;
     width: min(100%, 390rem);
   }
-  .related-service-grid .graphic-slide-title {
-    min-height: 0;
+  .related-service-grid .graphic-slide > a {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14rem;
   }
   .related-service-grid .graphic-slide-title h6 {
     font-size: 20rem;
   }
-  .related-service-card__copy p {
-    font-size: 14rem;
-    line-height: 1.55;
-  }
   .related-service-grid .graphic-img {
-    height: 185rem;
+    flex-basis: auto;
+    width: 100%;
+    max-width: none;
+    height: 190rem;
   }
 }
 
@@ -1321,30 +1323,43 @@ a {
 
 .support-contact__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(280px, 0.92fr);
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  grid-template-areas: "phone qr" "email qr";
+  gap: 16px;
   align-items: start;
 }
 
 .support-contact__card {
   min-height: 0;
-  padding: 24px;
+  padding: 22px 24px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   align-items: flex-start;
   align-self: start;
+}
+
+.support-contact__card--phone {
+  grid-area: phone;
+}
+
+.support-contact__card--email {
+  grid-area: email;
 }
 
 .support-contact__card--qr .support-contact__qr {
   align-self: center;
 }
 .support-contact__card--qr {
-  gap: 16px;
-  justify-content: center;
+  grid-area: qr;
+  gap: 14px;
+  min-height: 100%;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
 }
 
 .support-contact__eyebrow {
@@ -1364,8 +1379,8 @@ a {
 
 .support-contact__detail {
   color: #FFFFFF;
-  font-size: 28px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1.24;
   word-break: break-word;
   font-weight: 600;
 }
@@ -1379,7 +1394,7 @@ a {
 
 .support-contact__qr {
   display: block;
-  width: min(100%, 190px);
+  width: min(100%, 170px);
   height: auto;
   border-radius: 18px;
   background: #FFFFFF;
@@ -1395,6 +1410,7 @@ a {
 
   .support-contact__grid {
     grid-template-columns: 1fr;
+    grid-template-areas: "phone" "email" "qr";
   }
 
   .web-page__grid {
@@ -1539,7 +1555,7 @@ a {
     font-size: 22px;
   }
   .support-contact__detail {
-    font-size: 24px;
+    font-size: 20px;
   }
   .support-contact__note {
     font-size: 15px;
