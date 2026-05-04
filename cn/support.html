@@ -119,37 +119,37 @@
 		</ul>
 	</div>
 
-	<!--        graphic design services-->
-	<div class="graphic">
-		<div class="graphic__head">
-			<div class="graphic__head-wrapper">
-				<div class="double-triangle">
-					<img
-						class="thick-triangle"
-						draggable="false"
-						src="../images/services&cases/thick-triangle.svg"
-						alt=""
-					/>
-					<img
-						class="thin-triangle"
-						draggable="false"
-						src="../images/services&cases/thin-triangle.svg"
-						alt=""
-					/>
-				</div>
-				<h1 class="graphic-heading">悉尼营销支持服务</h1>
-			</div>
-		</div>
-		<!--   Q&A-->
-		<div class="QnA__content">
-			<div class="content__details" style="background: none">
-				<div class="QnA--normal" style="display: block">
-					<p>
-						这个页面适合正在寻找悉尼营销支持服务的企业，尤其当真正的问题不只是“多做一点营销”，而是需要更清楚的表达、更合适的受众路径和更强的数字可信度。请简单说明您的业务、目标市场、所在行业，以及目前最需要解决的沟通或投放问题。<br/><br/>
-						我们会围绕信息清晰度、受众适配、自动化节奏和数字可信度来判断适合的下一步。如果项目涉及客户名称、案例结果、认证或表现数据，也请提供可确认的信息；我们不会替品牌编造证明。
-					</p>
+	<main class="support-page">
+		<div class="graphic support-page__hero">
+			<div class="graphic__head">
+				<div class="graphic__head-wrapper">
+					<div class="double-triangle">
+						<img
+							class="thick-triangle"
+							draggable="false"
+							src="../images/services&cases/thick-triangle.svg"
+							alt=""
+						/>
+						<img
+							class="thin-triangle"
+							draggable="false"
+							src="../images/services&cases/thin-triangle.svg"
+							alt=""
+						/>
+					</div>
+					<h1 class="graphic-heading">悉尼营销支持服务</h1>
 				</div>
 			</div>
+			<section class="support-page__lead" aria-labelledby="support-lead-title">
+				<p class="service-context__eyebrow">支持概览</p>
+				<h2 id="support-lead-title">当真正的问题不止是某一个营销动作时，这里会是更清楚的起点</h2>
+				<p>
+					这个页面适合正在寻找悉尼营销支持服务的企业，尤其当真正的问题不只是“多做一点营销”，而是需要更清楚的表达、更合适的受众路径和更强的数字可信度。
+				</p>
+				<p>
+					我们会围绕信息清晰度、受众适配、自动化节奏和数字可信度来判断适合的下一步。如果项目涉及客户名称、案例结果、认证或表现数据，也请提供可确认的信息；我们不会替品牌编造证明。
+				</p>
+			</section>
 		</div>
 		<section class="service-context" aria-labelledby="support-paths-title">
 			<div class="service-context__intro">
@@ -202,8 +202,9 @@
 				</article>
 			</div>
 		</section>
-		<section class="support-contact" aria-labelledby="support-contact-title">
-			<div class="support-contact__intro">
+		<section class="service-context support-contact" aria-labelledby="support-contact-title">
+			<div class="service-context__intro support-contact__intro">
+				<p class="service-context__eyebrow">联系路径</p>
 				<h2 id="support-contact-title">选择适合的营销支持联系方式</h2>
 				<p>如果您已经有明确需求，邮箱更适合发送 brief 和项目背景；如果想先快速确认方向，电话更直接；如果希望先建立一对一沟通，也可以直接扫描 WhatsApp 二维码。</p>
 			</div>
@@ -260,33 +261,16 @@
 				</article>
 			</div>
 		</section>
-	</div>
-</div>
-
-<!--        Other services-->
-<div class="graphic">
-	<div class="graphic__head">
-		<div class="graphic__head-wrapper">
-			<div class="double-triangle">
-				<img
-					class="thick-triangle"
-					draggable="false"
-					src="../images/services&cases/thick-triangle.svg"
-					alt=""
-				/>
-				<img
-					class="thin-triangle"
-					draggable="false"
-					src="../images/services&cases/thin-triangle.svg"
-					alt=""
-				/>
+		<section class="service-context support-page__related" aria-labelledby="related-services-title">
+			<div class="service-context__intro">
+				<p class="service-context__eyebrow">相关服务方向</p>
+				<h2 id="related-services-title">先从最贴近当前问题的支持方向开始</h2>
+				<p>
+					当目前最需要解决的营销问题已经更清楚之后，这几条服务路径通常会是下一步更合适的起点。
+				</p>
 			</div>
-			<h2 class="graphic-heading">相关服务方向</h2>
-		</div>
-	</div>
-	<div class="graphic__content">
-		<div class="related-service-grid">
-			<div class="related-service-grid__items">
+			<div class="related-service-grid">
+				<div class="related-service-grid__items">
 								<!-- Slide-start -->
 				<div class="related-service-card graphic-slide">
 					<a href="graphicDesign.html">
@@ -343,9 +327,9 @@
 				</div>
 				<!-- Slide-end -->
 			</div>
-		</div>
-	</div>
-</div>
+			</div>
+		</section>
+	</main>
 
 <!--        footer-->
 <footer class="footer">
@@ -410,30 +394,6 @@
 	</div>
 </footer>
 
-<script
-	type="module"
-	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-	nomodule
-	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-></script>
-<script>
-	// 1. What do we do?
-	const plus1 = document.getElementById("plus-sign1")
-	const minus1 = document.getElementById("minus-sign1")
-	const normal1 = document.getElementById("QnA--normal1")
-	plus1.addEventListener("click", () => {
-		normal1.style.display = "block"
-		plus1.style.display = "none"
-		minus1.style.display = "block"
-	})
-	minus1.addEventListener("click", () => {
-		normal1.style.display = "none"
-		plus1.style.display = "block"
-		minus1.style.display = "none"
-	})
-</script>
 <script src="../js/drop-down-up.js"></script>
 <script src="../js/menu.js"></script>
 </body>

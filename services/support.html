@@ -111,45 +111,44 @@
 		</ul>
 	</div>
 
-	<!--        graphic design services-->
-	<div class="graphic">
-		<div class="graphic__head">
-			<div class="graphic__head-wrapper">
-				<div class="double-triangle">
-					<img
-						class="thick-triangle"
-						draggable="false"
-						src="../images/services&cases/thick-triangle.svg"
-						alt=""
-					/>
-					<img
-						class="thin-triangle"
-						draggable="false"
-						src="../images/services&cases/thin-triangle.svg"
-						alt=""
-					/>
-				</div>
-				<h1 class="graphic-heading">Marketing Support Services Sydney</h1>
-			</div>
-		</div>
-		<!--   Q&A-->
-		<div class="QnA__content">
-			<div class="content__details" style="background: none">
-				<div class="QnA--normal" style="display: block">
-					<p>
-							This page is for businesses looking for marketing support services
-							in Sydney, especially where the real issue is not just doing more
-							activity, but creating clearer communication, better audience fit
-							and stronger digital credibility. Contact Go Marketing with a short
-							description of your business, audience and current challenge.<br/><br/>
-							We are best placed to help when the work involves
-							Chinese-Australian and mainstream Australian market communication,
-							website messaging, bilingual content clarity, Xiaohongshu or
-							WeChat context, marketing automation support, campaign direction or
-							practical brand positioning for Sydney-based service businesses.
-					</p>
+	<main class="support-page">
+		<div class="graphic support-page__hero">
+			<div class="graphic__head">
+				<div class="graphic__head-wrapper">
+					<div class="double-triangle">
+						<img
+							class="thick-triangle"
+							draggable="false"
+							src="../images/services&cases/thick-triangle.svg"
+							alt=""
+						/>
+						<img
+							class="thin-triangle"
+							draggable="false"
+							src="../images/services&cases/thin-triangle.svg"
+							alt=""
+						/>
+					</div>
+					<h1 class="graphic-heading">Marketing Support Services Sydney</h1>
 				</div>
 			</div>
+			<section class="support-page__lead" aria-labelledby="support-lead-title">
+				<p class="service-context__eyebrow">Support overview</p>
+				<h2 id="support-lead-title">A clearer starting point when the issue is bigger than one marketing task</h2>
+				<p>
+					This page is for businesses looking for marketing support services in
+					Sydney, especially where the real issue is not just doing more
+					activity, but creating clearer communication, better audience fit and
+					stronger digital credibility.
+				</p>
+				<p>
+					We are best placed to help when the work involves Chinese-Australian
+					and mainstream Australian market communication, website messaging,
+					bilingual content clarity, Xiaohongshu or WeChat context, marketing
+					automation support, campaign direction or practical brand positioning
+					for Sydney-based service businesses.
+				</p>
+			</section>
 		</div>
 		<section class="service-context" aria-labelledby="support-paths-title">
 			<div class="service-context__intro">
@@ -209,8 +208,9 @@
 				</article>
 			</div>
 		</section>
-		<section class="support-contact" aria-labelledby="support-contact-title">
-			<div class="support-contact__intro">
+		<section class="service-context support-contact" aria-labelledby="support-contact-title">
+			<div class="service-context__intro support-contact__intro">
+				<p class="service-context__eyebrow">Contact paths</p>
 				<h2 id="support-contact-title">Choose the best contact path for marketing support</h2>
 				<p>Email works well for detailed briefs, phone is best for faster clarification, and WhatsApp is useful when you want a direct first conversation.</p>
 			</div>
@@ -269,33 +269,17 @@
 				</article>
 			</div>
 		</section>
-	</div>
-</div>
-
-<!--        Other services-->
-<div class="graphic">
-	<div class="graphic__head">
-		<div class="graphic__head-wrapper">
-			<div class="double-triangle">
-				<img
-					class="thick-triangle"
-					draggable="false"
-					src="../images/services&cases/thick-triangle.svg"
-					alt=""
-				/>
-				<img
-					class="thin-triangle"
-					draggable="false"
-					src="../images/services&cases/thin-triangle.svg"
-					alt=""
-				/>
+		<section class="service-context support-page__related" aria-labelledby="related-services-title">
+			<div class="service-context__intro">
+				<p class="service-context__eyebrow">Related service areas</p>
+				<h2 id="related-services-title">Start with the support area that best matches the current marketing gap</h2>
+				<p>
+					These are the service paths most businesses move to once the current
+					marketing problem is clearer and the next priority is easier to define.
+				</p>
 			</div>
-			<h2 class="graphic-heading">Related Service Areas</h2>
-		</div>
-	</div>
-	<div class="graphic__content">
-		<div class="related-service-grid">
-			<div class="related-service-grid__items">
+			<div class="related-service-grid">
+				<div class="related-service-grid__items">
 								<!-- Slide-start -->
 				<div class="related-service-card graphic-slide">
 					<a href="./">
@@ -352,9 +336,9 @@
 				</div>
 				<!-- Slide-end -->
 			</div>
-		</div>
-	</div>
-</div>
+			</div>
+		</section>
+	</main>
 
 <!--        footer-->
 <footer class="footer">
@@ -419,30 +403,6 @@
 	</div>
 </footer>
 
-<script
-	type="module"
-	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-	nomodule
-	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-></script>
-<script>
-	// 1. What do we do?
-	const plus1 = document.getElementById("plus-sign1")
-	const minus1 = document.getElementById("minus-sign1")
-	const normal1 = document.getElementById("QnA--normal1")
-	plus1.addEventListener("click", () => {
-		normal1.style.display = "block"
-		plus1.style.display = "none"
-		minus1.style.display = "block"
-	})
-	minus1.addEventListener("click", () => {
-		normal1.style.display = "none"
-		plus1.style.display = "block"
-		minus1.style.display = "none"
-	})
-</script>
 <script src="../js/drop-down-up.js"></script>
 <script src="../js/menu.js"></script>
 </body>
