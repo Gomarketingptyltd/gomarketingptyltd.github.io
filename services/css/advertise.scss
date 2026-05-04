@@ -292,18 +292,19 @@ a {
 .related-service-grid__items {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28rem;
+  gap: 22rem;
   width: min(100%, 1480rem);
   height: auto;
   margin: 0 auto;
   transform: none !important;
   box-sizing: border-box;
+  align-items: start;
 }
 
 .related-service-grid .graphic-slide {
   width: auto !important;
   height: auto;
-  min-height: 360rem;
+  min-height: 0;
   overflow: hidden;
   border-radius: 8px;
   transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
@@ -317,27 +318,38 @@ a {
 
 .related-service-grid .graphic-slide > a {
   width: 100%;
-  min-height: 360rem;
-  padding: 30rem 24rem;
+  min-height: 0;
+  padding: 24rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 18rem;
   color: inherit;
   text-decoration: none;
 }
 
 .related-service-grid .graphic-slide-title {
+  order: 2;
   padding-bottom: 0;
-  font-size: 24rem;
+  min-height: 92rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+
+  h6 {
+    font-size: 22rem;
+    line-height: 1.22;
+    font-weight: 600;
+  }
 }
 
 .related-service-grid .graphic-img {
+  order: 1;
   width: 100%;
-  max-width: 320rem;
-  height: 190rem;
+  max-width: none;
+  height: 210rem;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -359,16 +371,15 @@ a {
     gap: 18rem;
     width: min(100%, 390rem);
   }
-  .related-service-grid .graphic-slide,
-  .related-service-grid .graphic-slide > a {
-    min-height: 290rem;
-  }
   .related-service-grid .graphic-slide-title {
-    font-size: 22rem;
+    min-height: 0;
+
+    h6 {
+      font-size: 20rem;
+    }
   }
   .related-service-grid .graphic-img {
-    max-width: 300rem;
-    height: 165rem;
+    height: 185rem;
   }
 }
 
@@ -1389,22 +1400,26 @@ a {
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(280px, 0.92fr);
     gap: 18px;
+    align-items: start;
   }
 
   &__card {
-    min-height: 100%;
-    padding: 26px;
+    min-height: 0;
+    padding: 24px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     align-items: flex-start;
+    align-self: start;
 
     &--qr {
+      gap: 16px;
+
       .support-contact__qr {
         align-self: center;
       }
@@ -1421,30 +1436,31 @@ a {
 
   h3 {
     color: #FFFFFF;
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 20px;
+    line-height: 1.3;
     font-weight: 600;
   }
 
   &__detail {
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
     word-break: break-word;
+    font-weight: 600;
   }
 
   &__note {
     color: rgba(255, 255, 255, 0.74);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.58;
   }
 
   &__qr {
     display: block;
-    width: min(100%, 220px);
+    width: min(100%, 190px);
     height: auto;
-    border-radius: 20px;
+    border-radius: 18px;
     background: #FFFFFF;
   }
 }
