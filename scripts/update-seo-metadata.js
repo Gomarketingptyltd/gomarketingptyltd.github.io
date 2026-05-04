@@ -79,6 +79,10 @@ const CUSTOM_SOCIAL_IMAGES = {
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/support.html":
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "services/advertising.html":
+    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  "cn/advertising.html":
+    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "services/insights.html":
     "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
   "cn/insights.html":
