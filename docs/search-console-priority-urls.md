@@ -19,6 +19,20 @@ Submit these first:
 11. `https://gomarketing.net.au/services/insights.html`
 12. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
 13. `https://gomarketing.net.au/services/support.html`
+14. `https://gomarketing.net.au/services/advertising.html`
+15. `https://gomarketing.net.au/services/digital.html`
+
+## Monday quick-run shortlist
+
+If you only want the shortest useful weekly pass, submit these first on Mondays after major updates:
+
+1. `https://gomarketing.net.au/`
+2. `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`
+3. `https://gomarketing.net.au/services/support.html`
+4. `https://gomarketing.net.au/services/advertising.html`
+5. `https://gomarketing.net.au/services/digital.html`
+6. `https://gomarketing.net.au/services/targetMarket.html`
+7. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
 
 ## Second priority
 
