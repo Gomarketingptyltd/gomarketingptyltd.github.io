@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<title>Support Style Preview | Go Marketing</title>
+	<meta name="robots" content="noindex,nofollow"/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+		rel="stylesheet"
+	/>
+	<style>
+		:root {
+			color-scheme: dark;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: "Inter", sans-serif;
+			background: #19191b;
+			color: #ffffff;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.preview-shell {
+			width: min(1160px, calc(100% - 48px));
+			margin: 0 auto;
+			padding: 72px 0 96px;
+		}
+
+		.preview-intro {
+			display: grid;
+			gap: 18px;
+			max-width: 760px;
+			margin-bottom: 56px;
+		}
+
+		.preview-eyebrow {
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: #f69306;
+		}
+
+		.preview-intro h1 {
+			margin: 0;
+			font-size: clamp(40px, 5vw, 64px);
+			line-height: 1.02;
+		}
+
+		.preview-intro p {
+			margin: 0;
+			font-size: 18px;
+			line-height: 1.7;
+			color: rgba(255, 255, 255, 0.76);
+			max-width: 68ch;
+		}
+
+		.preview-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+			margin-top: 10px;
+		}
+
+		.preview-links a {
+			padding: 12px 16px;
+			border-radius: 999px;
+			border: 1px solid rgba(255, 255, 255, 0.14);
+			font-size: 14px;
+			font-weight: 600;
+			color: rgba(255, 255, 255, 0.82);
+		}
+
+		.preview-section {
+			display: grid;
+			gap: 28px;
+			margin-top: 56px;
+		}
+
+		.preview-section__header {
+			display: grid;
+			gap: 10px;
+			max-width: 720px;
+		}
+
+		.preview-section__header h2 {
+			margin: 0;
+			font-size: clamp(30px, 3.4vw, 42px);
+			line-height: 1.1;
+		}
+
+		.preview-section__header p {
+			margin: 0;
+			font-size: 17px;
+			line-height: 1.7;
+			color: rgba(255, 255, 255, 0.72);
+		}
+
+		.preview-contact-layout {
+			display: grid;
+			grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.74fr);
+			gap: 24px;
+			align-items: start;
+		}
+
+		.preview-contact-stack {
+			display: grid;
+			gap: 16px;
+		}
+
+		.preview-contact-card,
+		.preview-service-card {
+			border-radius: 18px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+		}
+
+		.preview-contact-card {
+			padding: 28px 28px 30px;
+		}
+
+		.preview-contact-card--qr {
+			display: grid;
+			gap: 18px;
+			padding: 28px;
+			justify-items: start;
+		}
+
+		.preview-contact-card__label {
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: #f69306;
+		}
+
+		.preview-contact-card h3 {
+			margin: 0;
+			font-size: clamp(28px, 3vw, 38px);
+			line-height: 1.08;
+		}
+
+		.preview-contact-card__value {
+			margin: 0;
+			font-size: clamp(22px, 2.1vw, 30px);
+			line-height: 1.2;
+			font-weight: 600;
+		}
+
+		.preview-contact-card__note {
+			margin: 0;
+			font-size: 16px;
+			line-height: 1.65;
+			color: rgba(255, 255, 255, 0.72);
+			max-width: 40ch;
+		}
+
+		.preview-contact-card__image {
+			width: min(100%, 250px);
+			height: auto;
+			border-radius: 22px;
+			background: #ffffff;
+			display: block;
+		}
+
+		.preview-service-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 18px;
+		}
+
+		.preview-service-card {
+			padding: 16px;
+		}
+
+		.preview-service-card > a {
+			display: grid;
+			grid-template-columns: 136px minmax(0, 1fr);
+			gap: 18px;
+			align-items: center;
+		}
+
+		.preview-service-card img {
+			width: 136px;
+			height: 112px;
+			object-fit: cover;
+			border-radius: 12px;
+			display: block;
+		}
+
+		.preview-service-copy {
+			display: grid;
+			gap: 8px;
+			min-width: 0;
+		}
+
+		.preview-service-copy span {
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.52);
+		}
+
+		.preview-service-copy h3 {
+			margin: 0;
+			font-size: clamp(23px, 2.2vw, 30px);
+			line-height: 1.12;
+		}
+
+		.preview-service-copy p {
+			margin: 0;
+			font-size: 15px;
+			line-height: 1.65;
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		.preview-service-copy strong {
+			font-size: 14px;
+			font-weight: 600;
+			color: #ffffff;
+		}
+
+		.preview-note {
+			margin-top: 48px;
+			padding: 18px 20px;
+			border-radius: 14px;
+			background: rgba(255, 255, 255, 0.04);
+			color: rgba(255, 255, 255, 0.74);
+			font-size: 14px;
+			line-height: 1.65;
+		}
+
+		@media (max-width: 920px) {
+			.preview-contact-layout,
+			.preview-service-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.preview-service-card > a {
+				grid-template-columns: 112px minmax(0, 1fr);
+			}
+
+			.preview-service-card img {
+				width: 112px;
+				height: 96px;
+			}
+		}
+
+		@media (max-width: 640px) {
+			.preview-shell {
+				width: calc(100% - 32px);
+				padding: 48px 0 72px;
+			}
+
+			.preview-intro h1 {
+				font-size: 38px;
+			}
+
+			.preview-intro p,
+			.preview-section__header p {
+				font-size: 16px;
+			}
+
+			.preview-contact-card,
+			.preview-contact-card--qr,
+			.preview-service-card {
+				padding: 20px;
+			}
+
+			.preview-service-card > a {
+				grid-template-columns: 1fr;
+			}
+
+			.preview-service-card img {
+				width: 100%;
+				height: 180px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main class="preview-shell">
+		<header class="preview-intro">
+			<span class="preview-eyebrow">Style preview</span>
+			<h1>Business-clean direction for support and service cards</h1>
+			<p>
+				This preview keeps the dark brand base, but removes the oversized,
+				empty card feeling. The idea is to make support look more credible,
+				clearer and more like a premium service website rather than a stack of
+				UI blocks.
+			</p>
+			<div class="preview-links">
+				<a href="./support.html">Current support page</a>
+				<a href="./web.html">Current web page</a>
+			</div>
+		</header>
+
+		<section class="preview-section" aria-labelledby="preview-contact-title">
+			<div class="preview-section__header">
+				<span class="preview-eyebrow">Contact direction</span>
+				<h2 id="preview-contact-title">Give the practical paths more weight than the container</h2>
+				<p>
+					Phone and email become the main decision points. WhatsApp stays
+					visible, but it feels like a supporting channel instead of the biggest
+					visual object on the page.
+				</p>
+			</div>
+			<div class="preview-contact-layout">
+				<div class="preview-contact-stack">
+					<article class="preview-contact-card">
+						<span class="preview-contact-card__label">Phone</span>
+						<h3>Call for a faster first decision</h3>
+						<p class="preview-contact-card__value">02 9909 6785</p>
+						<p class="preview-contact-card__note">
+							Useful when you need to clarify the next step quickly, check fit,
+							or work out whether the problem is messaging, ads, audience
+							communication or follow-up support.
+						</p>
+					</article>
+					<article class="preview-contact-card">
+						<span class="preview-contact-card__label">Email</span>
+						<h3>Send the brief with context</h3>
+						<p class="preview-contact-card__value">info@gomarketing.net.au</p>
+						<p class="preview-contact-card__note">
+							Best when you want to share website links, current campaigns,
+							sector context, bilingual requirements or the current enquiry gap.
+						</p>
+					</article>
+				</div>
+				<article class="preview-contact-card preview-contact-card--qr">
+					<span class="preview-contact-card__label">WhatsApp</span>
+					<h3>Use it when direct contact is easier</h3>
+					<p class="preview-contact-card__note">
+						A secondary path for quick access, especially when the business is
+						already discussing work internally and just needs a clean first
+						connection point.
+					</p>
+					<img
+						class="preview-contact-card__image"
+						src="../images/contact/whatsapp-official-account.jpg"
+						alt="Go Marketing WhatsApp QR code"
+					/>
+				</article>
+			</div>
+		</section>
+
+		<section class="preview-section" aria-labelledby="preview-services-title">
+			<div class="preview-section__header">
+				<span class="preview-eyebrow">Related paths</span>
+				<h2 id="preview-services-title">Make service cards feel like editorial signposts, not empty boxes</h2>
+				<p>
+					This direction uses shorter image ratios, tighter titles and a small
+					amount of explanation so the cards feel more useful and less
+					decorative.
+				</p>
+			</div>
+			<div class="preview-service-grid">
+				<article class="preview-service-card">
+					<a href="./">
+						<img src="./images/VI-graphic-design.webp" alt="Services Overview"/>
+						<div class="preview-service-copy">
+							<span>Overview</span>
+							<h3>Services Overview</h3>
+							<p>Start here if the business needs a clearer entry point before deciding which path should come first.</p>
+							<strong>See the full service structure</strong>
+						</div>
+					</a>
+				</article>
+				<article class="preview-service-card">
+					<a href="./chineseCommunityGrowth.html">
+						<img src="./images/social-media.webp" alt="Chinese Community Growth"/>
+						<div class="preview-service-copy">
+							<span>Audience growth</span>
+							<h3>Chinese Community Growth</h3>
+							<p>For businesses that need more relevant visibility and stronger trust with Chinese-Australian audiences.</p>
+							<strong>Explore the community-growth path</strong>
+						</div>
+					</a>
+				</article>
+				<article class="preview-service-card">
+					<a href="./bilingualBrandContentStrategy.html">
+						<img src="./images/digital-marketing.webp" alt="Bilingual Brand and Content Strategy"/>
+						<div class="preview-service-copy">
+							<span>Brand clarity</span>
+							<h3>Bilingual Brand &amp; Content Strategy</h3>
+							<p>For brands that need one clearer position across Chinese-speaking and mainstream Australian markets.</p>
+							<strong>See the strategy path</strong>
+						</div>
+					</a>
+				</article>
+				<article class="preview-service-card">
+					<a href="./web.html">
+						<img src="./images/website.webp" alt="Website Messaging and Digital Credibility"/>
+						<div class="preview-service-copy">
+							<span>Website trust</span>
+							<h3>Website Messaging &amp; Digital Credibility</h3>
+							<p>For service businesses whose websites still sound too broad, thin or generic to support better enquiries.</p>
+							<strong>Improve trust and clarity</strong>
+						</div>
+					</a>
+				</article>
+			</div>
+		</section>
+
+		<p class="preview-note">
+			This is a preview page only. It is not linked from the main navigation and
+			will not be indexed by Google. If this direction feels right, we can
+			apply it to the live support and web pages next.
+		</p>
+	</main>
+</body>
+</html>
