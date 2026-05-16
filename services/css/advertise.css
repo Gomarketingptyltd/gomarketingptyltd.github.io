@@ -278,7 +278,7 @@ a {
 .related-service-grid__items {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20rem;
+  gap: 18px;
   width: min(100%, 1120rem);
   height: auto;
   margin: 0 auto;
@@ -293,25 +293,27 @@ a {
   min-height: 0;
   overflow: hidden;
   border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
   transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 .related-service-grid .graphic-slide:hover {
-  transform: translateY(-4rem);
+  transform: translateY(-3px);
   border-color: #F69306;
-  background-color: #1f1f22;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.03));
 }
 
 .related-service-grid .graphic-slide > a {
   width: 100%;
   min-height: 0;
-  padding: 18rem;
+  padding: 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  gap: 18rem;
+  gap: 16px;
   color: inherit;
   text-decoration: none;
 }
@@ -319,9 +321,10 @@ a {
 .related-service-card__copy {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 10px;
   flex: 1 1 auto;
   min-width: 0;
+  padding-top: 2px;
 }
 
 .related-service-grid .graphic-slide-title {
@@ -332,25 +335,26 @@ a {
   text-align: left;
 }
 .related-service-grid .graphic-slide-title h6 {
-  font-size: 18rem;
-  line-height: 1.22;
+  font-size: 24px;
+  line-height: 1.18;
   font-weight: 600;
+  letter-spacing: 0;
 }
 
 .related-service-card__copy p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 14rem;
+  font-size: 15px;
   line-height: 1.55;
   font-weight: 400;
 }
 
 .related-service-grid .graphic-img {
-  flex: 0 0 168rem;
-  width: 168rem;
-  max-width: 168rem;
-  height: 132rem;
+  flex: 0 0 180px;
+  width: 180px;
+  max-width: 180px;
+  height: 128px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .graphic-slider-control1 {
@@ -367,21 +371,24 @@ a {
 @media screen and (max-width: 500px) {
   .related-service-grid__items {
     gap: 18rem;
-    width: min(100%, 390rem);
+    width: calc(100% - 24px);
+    max-width: 390rem;
   }
   .related-service-grid .graphic-slide > a {
     flex-direction: column;
     align-items: stretch;
-    gap: 14rem;
+    gap: 14px;
+    padding: 16px;
   }
   .related-service-grid .graphic-slide-title h6 {
-    font-size: 20rem;
+    font-size: 20px;
+    line-height: 1.22;
   }
   .related-service-grid .graphic-img {
     flex-basis: auto;
     width: 100%;
     max-width: none;
-    height: 190rem;
+    height: 190px;
   }
 }
 
@@ -1323,42 +1330,32 @@ a {
 
 .support-contact__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-  grid-template-areas: "phone qr" "email qr";
-  gap: 16px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 18px;
   align-items: start;
+}
+
+.support-contact__stack {
+  display: grid;
+  gap: 16px;
+  align-content: start;
 }
 
 .support-contact__card {
   min-height: 0;
-  padding: 22px 24px;
+  padding: 24px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.03));
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   align-items: flex-start;
   align-self: start;
 }
-
-.support-contact__card--phone {
-  grid-area: phone;
-}
-
-.support-contact__card--email {
-  grid-area: email;
-}
-
-.support-contact__card--qr .support-contact__qr {
-  align-self: center;
-}
 .support-contact__card--qr {
-  grid-area: qr;
-  gap: 14px;
-  min-height: 100%;
-  justify-content: space-between;
-  padding-bottom: 18px;
+  gap: 16px;
+  padding: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
 }
 
@@ -1379,8 +1376,8 @@ a {
 
 .support-contact__detail {
   color: #FFFFFF;
-  font-size: 22px;
-  line-height: 1.24;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.16;
   word-break: break-word;
   font-weight: 600;
 }
@@ -1389,15 +1386,17 @@ a {
   color: rgba(255, 255, 255, 0.74);
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.58;
+  line-height: 1.6;
+  max-width: 42ch;
 }
 
 .support-contact__qr {
   display: block;
-  width: min(100%, 170px);
+  width: min(100%, 220px);
   height: auto;
   border-radius: 18px;
   background: #FFFFFF;
+  align-self: center;
 }
 
 @media screen and (max-width: 960px) {
@@ -1410,7 +1409,6 @@ a {
 
   .support-contact__grid {
     grid-template-columns: 1fr;
-    grid-template-areas: "phone" "email" "qr";
   }
 
   .web-page__grid {
@@ -1548,6 +1546,9 @@ a {
   .support-contact__intro p {
     font-size: 16px;
   }
+  .support-contact__stack {
+    gap: 14px;
+  }
   .support-contact__card {
     padding: 22px;
   }
@@ -1555,11 +1556,14 @@ a {
     font-size: 22px;
   }
   .support-contact__detail {
-    font-size: 20px;
+    font-size: 22px;
   }
   .support-contact__note {
     font-size: 15px;
     line-height: 1.55;
+  }
+  .support-contact__qr {
+    width: min(100%, 190px);
   }
 }
 
