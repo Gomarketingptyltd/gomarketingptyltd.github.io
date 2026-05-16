@@ -327,6 +327,14 @@ a {
   padding-top: 2px;
 }
 
+.related-service-card__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.52);
+}
+
 .related-service-grid .graphic-slide-title {
   padding-bottom: 0;
   min-height: 0;
@@ -346,6 +354,14 @@ a {
   font-size: 15px;
   line-height: 1.55;
   font-weight: 400;
+}
+
+.related-service-card__cta {
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .related-service-grid .graphic-img {
