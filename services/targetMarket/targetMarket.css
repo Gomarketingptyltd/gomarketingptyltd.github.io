@@ -29,7 +29,7 @@ body {
   margin-top: 80px;
   /* padding-left: 25px; */
   font-size: 50px;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 600;
   font-style: italic;
   color: #f69306;
@@ -41,7 +41,7 @@ body {
   font-size: 48px;
   line-height: 58px;
   margin: 1rem 0;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 600;
   color: white;
 }
@@ -167,7 +167,7 @@ header */
 
 .marketTextBold {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: white;
   font-weight: 700;
   line-height: 28px;
@@ -175,7 +175,7 @@ header */
 
 .marketText {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: white;
   font-weight: 200;
   line-height: 28px;
@@ -183,7 +183,7 @@ header */
 
 .marketTextY {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: #f69306;
   font-weight: 300;
   line-height: 28px;

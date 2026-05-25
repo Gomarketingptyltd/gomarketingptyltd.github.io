@@ -18,7 +18,7 @@ body {
   padding: 0;
   background-color: #19191B;
   cursor: url("../../images/cursor.gif"), auto;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
@@ -1770,7 +1770,7 @@ a {
 
 .ourInsightCard_inner .ourInsightCardHeader {
   margin: 1rem 0;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 600;
   color: white;
   font-size: 20rem;
@@ -1785,7 +1785,7 @@ a {
 
 .ourInsightCard_inner .date {
   font-size: 20rem;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: #888888;
   letter-spacing: 0.2rem;
   font-weight: 700;
@@ -1798,7 +1798,7 @@ a {
 }
 
 .ourInsightCard_inner .insightsText {
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: #888888;
   font-weight: 200;
   line-height: 28px;
@@ -1814,7 +1814,7 @@ a {
   margin-top: 80px;
   padding-left: 25px;
   font-size: 50px;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-weight: 600;
   font-style: italic;
   color: #f69306;

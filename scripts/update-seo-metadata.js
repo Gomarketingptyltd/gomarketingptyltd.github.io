@@ -24,145 +24,145 @@ const SOCIAL_PROFILES = [
 ];
 const CUSTOM_SOCIAL_IMAGES = {
   "index.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/index.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/index.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/graphicDesign.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/chineseCommunityGrowth.html":
-    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "cn/chineseCommunityGrowth.html":
-    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "services/digital.html":
-    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "cn/digital.html":
-    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "services/marketingAutomationServicesSydney.html":
-    "https://images.pexels.com/photos/29205845/pexels-photo-29205845.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
   "cn/marketingAutomationServicesSydney.html":
-    "https://images.pexels.com/photos/29205845/pexels-photo-29205845.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
   "services/sydneyHospitalityMarketing.html":
-    "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
   "cn/sydneyHospitalityMarketing.html":
-    "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
   "services/sydneyPropertyMarketing.html":
-    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17082224.jpg`,
   "cn/sydneyPropertyMarketing.html":
-    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17082224.jpg`,
   "services/sydneyHealthWellnessDentalMarketing.html":
-    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
   "cn/sydneyHealthWellnessDentalMarketing.html":
-    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
   "services/bilingualBrandContentStrategy.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/bilingualBrandContentStrategy.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/sydneyBilingualMarketingAgency.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/sydneyBilingualMarketingAgency.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/web.html":
-    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
   "cn/web.html":
-    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
   "services/targetMarket.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/targetMarket.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/QnA.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/QnA.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/support.html":
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-3184465.jpg`,
   "cn/support.html":
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-3184465.jpg`,
   "services/advertising.html":
-    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "cn/advertising.html":
-    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "services/insights.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/insights.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/bilingualMarketingNotTranslation.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/bilingualMarketingNotTranslation.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/restaurantTrustChineseCustomers.html":
-    "https://images.pexels.com/photos/29394567/pexels-photo-29394567.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-29394567.jpg`,
   "cn/restaurantTrustChineseCustomers.html":
-    "https://images.pexels.com/photos/29394567/pexels-photo-29394567.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-29394567.jpg`,
   "services/websiteMessagingMistakes.html":
-    "https://images.pexels.com/photos/5483188/pexels-photo-5483188.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-5483188.jpg`,
   "cn/websiteMessagingMistakes.html":
-    "https://images.pexels.com/photos/5483188/pexels-photo-5483188.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-5483188.jpg`,
   "services/wechatXiaohongshuPlatformFit.html":
-    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "cn/wechatXiaohongshuPlatformFit.html":
-    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "services/propertyCommunicationChineseAudiences.html":
-    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17082224.jpg`,
   "cn/propertyCommunicationChineseAudiences.html":
-    "https://images.pexels.com/photos/17082224/pexels-photo-17082224.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17082224.jpg`,
   "services/digitalCredibilityChecklist.html":
-    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
   "cn/digitalCredibilityChecklist.html":
-    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
   "services/xiaohongshuVsInstagramHospitality.html":
-    "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
   "cn/xiaohongshuVsInstagramHospitality.html":
-    "https://images.pexels.com/photos/17564425/pexels-photo-17564425.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
   "services/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
-    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
-    "https://images.pexels.com/photos/30470951/pexels-photo-30470951.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "services/dentalTrustChinesePatientsSydney.html":
-    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
   "cn/dentalTrustChinesePatientsSydney.html":
-    "https://images.pexels.com/photos/12746003/pexels-photo-12746003.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
   "services/localSeoStartsWithClearMessaging.html":
-    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "cn/localSeoStartsWithClearMessaging.html":
-    "https://images.pexels.com/photos/8970645/pexels-photo-8970645.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "services/howToEvaluateWhetherBusiness.html":
-    "https://images.pexels.com/photos/8970671/pexels-photo-8970671.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970671.jpg`,
   "cn/howToEvaluateWhetherBusiness.html":
-    "https://images.pexels.com/photos/8970671/pexels-photo-8970671.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970671.jpg`,
   "services/howToMakeMotion.html":
-    "https://images.pexels.com/photos/7818230/pexels-photo-7818230.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-7818230.jpg`,
   "cn/howToMakeMotion.html":
-    "https://images.pexels.com/photos/7818230/pexels-photo-7818230.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-7818230.jpg`,
   "services/whatIsBrandKit.html":
-    "https://images.pexels.com/photos/8970685/pexels-photo-8970685.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970685.jpg`,
   "cn/whatIsBrandKit.html":
-    "https://images.pexels.com/photos/8970685/pexels-photo-8970685.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8970685.jpg`,
   "services/whatIsAgileMarketing.html":
-    "https://images.pexels.com/photos/8279219/pexels-photo-8279219.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8279219.jpg`,
   "cn/whatIsAgileMarketing.html":
-    "https://images.pexels.com/photos/8279219/pexels-photo-8279219.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-8279219.jpg`,
   "services/whatIsGlobalStrategy.html":
-    "https://images.pexels.com/photos/7412032/pexels-photo-7412032.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-7412032.jpg`,
   "cn/whatIsGlobalStrategy.html":
-    "https://images.pexels.com/photos/7412032/pexels-photo-7412032.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-7412032.jpg`,
   "services/whatIsMarketingAutomation.html":
-    "https://images.pexels.com/photos/29205845/pexels-photo-29205845.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
   "cn/whatIsMarketingAutomation.html":
-    "https://images.pexels.com/photos/29205845/pexels-photo-29205845.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
   "services/whatIsDigitalPoster.html":
-    "https://images.pexels.com/photos/12887602/pexels-photo-12887602.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-12887602.jpg`,
   "cn/whatIsDigitalPoster.html":
-    "https://images.pexels.com/photos/12887602/pexels-photo-12887602.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-12887602.jpg`,
   "services/chineseMarketingAgencyVsBilingualMarketingAgencySydney.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/chineseMarketingAgencyVsBilingualMarketingAgencySydney.html":
-    "https://images.pexels.com/photos/4344340/pexels-photo-4344340.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "services/chineseEnglishWebsiteMessagingSydney.html":
-    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
   "cn/chineseEnglishWebsiteMessagingSydney.html":
-    "https://images.pexels.com/photos/10347149/pexels-photo-10347149.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
 };
 
 const SOCIAL_BLOCK_RE =
