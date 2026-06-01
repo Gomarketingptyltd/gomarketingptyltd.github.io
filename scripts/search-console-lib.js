@@ -261,9 +261,10 @@ function reportsDirForRange(label) {
   return path.join(REPORTS_DIR, label);
 }
 
-function doctor() {
+async function doctor() {
   const checks = [];
   const nextSteps = [];
+  let tokenIsUsable = false;
 
   const configExists = fs.existsSync(CONFIG_PATH);
   checks.push({
@@ -315,6 +316,25 @@ function doctor() {
     if (!canManage) {
       nextSteps.push("Re-run local authorization to upgrade from read-only access: npm run search-console:auth");
     }
+
+    if (canManage && !placeholder) {
+      try {
+        await getAccessToken(config, token);
+        tokenIsUsable = true;
+        checks.push({
+          label: "Token refresh",
+          ok: true,
+          message: "Saved token can still obtain a valid access token.",
+        });
+      } catch (errorObject) {
+        checks.push({
+          label: "Token refresh",
+          ok: false,
+          message: errorObject.message,
+        });
+        nextSteps.push("Refresh the local Search Console authorization: npm run search-console:auth");
+      }
+    }
   }
 
   if (placeholder) {
@@ -325,7 +345,7 @@ function doctor() {
     nextSteps.push("Run local authorization: npm run search-console:auth");
   }
 
-  if (tokenExists) {
+  if (tokenExists && tokenIsUsable) {
     nextSteps.push("List accessible Search Console properties: npm run search-console:sites");
     nextSteps.push("Pull the latest performance bundle: npm run search-console:report -- --days=28");
     nextSteps.push("Submit the current sitemap: npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml");

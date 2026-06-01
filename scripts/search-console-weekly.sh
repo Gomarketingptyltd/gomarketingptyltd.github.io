@@ -26,5 +26,10 @@ fi
 cd "$REPO_DIR"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S %Z')] Running weekly Search Console snapshot"
-node scripts/search-console.js snapshot --days=28
+if ! node scripts/search-console.js snapshot --days=28; then
+  exit_code=$?
+  echo "[$(date '+%Y-%m-%d %H:%M:%S %Z')] Weekly Search Console snapshot failed." >&2
+  echo "If the token was expired or revoked, run: npm run search-console:auth" >&2
+  exit "$exit_code"
+fi
 echo "[$(date '+%Y-%m-%d %H:%M:%S %Z')] Weekly Search Console snapshot complete"

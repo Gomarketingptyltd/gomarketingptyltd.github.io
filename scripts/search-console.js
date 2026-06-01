@@ -62,11 +62,11 @@ function runImportClient(args) {
   console.log("  npm run search-console:auth");
 }
 
-function runDoctor() {
+async function runDoctor() {
   const {
     doctor,
   } = require("./search-console-lib");
-  const report = doctor();
+  const report = await doctor();
 
   console.log("\nSearch Console local status:\n");
   for (const item of report.checks) {
@@ -507,7 +507,7 @@ async function main() {
   }
 
   if (command === "doctor") {
-    runDoctor();
+    await runDoctor();
     return;
   }
 
