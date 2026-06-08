@@ -97,18 +97,25 @@ Window: 2026-06-08 to 2026-06-17
    - `Xiaohongshu Marketing for Sydney Restaurants`
    - `Digital Marketing Services Sydney: What Small Businesses Actually Need`
 
-### Phase 2: 30-day validation
+### Phase 2: high-frequency validation
 
 Window: 2026-06-18 to 2026-07-07
 
-- Do not run another major rewrite on a page within 14 days of its last material edit unless there is a technical issue or clear cannibalisation.
-- Use Monday reviews and Thursday pulse checks to judge:
+- Do a technical and data pulse every 2-3 days during the first two weeks after a material publish.
+- Do not run another full page rewrite within 14 days of its last material edit unless there is a technical issue or clear cannibalisation.
+- Allow a smaller title, meta, first-screen, FAQ, or internal-link edit after 7-10 days if data clearly shows weak CTR, query mismatch, or the wrong owner page taking a keyword family.
+- Use high-frequency checks to judge:
   - impressions
   - clicks
   - CTR
   - average position
   - query-to-page match
-- Use these checkpoints:
+- Use these checkpoints after the 2026-06-08 publish:
+  - 2026-06-10
+  - 2026-06-12
+  - 2026-06-15
+  - 2026-06-17
+  - 2026-06-19
   - 2026-06-22
   - 2026-06-29
   - 2026-07-06
@@ -214,12 +221,15 @@ Each log line must include:
 
 The SEO manager must:
 
+- run a light pulse every 2-3 days during the active sprint
+- check technical health, sitemap state, Search Console auth, and fresh GSC reports before recommending edits
 - review the 4 active owner pages first
 - report whether the next action is `edit`, `hold`, or `request indexing`
 - state whether query ownership is clean or confused
 - mention if the homepage is still overreaching into service-intent terms
 - keep `support.html` and `advertising.html` on observation unless new data clearly upgrades them
 - remind the user of priority URLs after any material publish
+- keep content production moving at 1-2 focused support articles per week once the first support cluster is indexed or showing impressions
 
 ## Priority manual indexing URLs
 
@@ -239,11 +249,17 @@ The SEO manager must:
 
 ## Next execution checkpoints
 
-1. 2026-06-12
+1. 2026-06-10
+   Run a technical and indexing pulse: `seo:check`, Search Console auth, sitemap state, and whether the new support URLs are visible in the latest exports. Primary action should usually be `hold` or `request indexing`.
+2. 2026-06-12
    Check sitemap processing, Search Console auth, and early impressions for new support articles. Primary action should usually be `hold` unless a technical issue appears.
-2. 2026-06-15
-   Run an early read on the 2026-06-08 publish. Check whether the new support articles are appearing in Search Console and whether owner-page query ownership is cleaner.
-3. 2026-06-22
+3. 2026-06-15
+   Run an early read on the 2026-06-08 publish. Check whether the new support articles are appearing in Search Console, whether owner-page query ownership is cleaner, and which second-batch article should be drafted next.
+4. 2026-06-17
+   If indexing is clean or early impressions appear, publish or prepare the next focused support article for the strongest owner-page signal. If signals are still absent, keep the action as `request indexing` and technical follow-up.
+5. 2026-06-19
+   Run a content and query-ownership pulse. Decide whether a small title/meta/internal-link edit is justified before the 2026-06-22 checkpoint.
+6. 2026-06-22
    Run the first meaningful validation checkpoint for the owner-page sprint. Decide whether `digital.html`, `sydneyBilingualMarketingAgency.html`, or `chineseCommunityGrowth.html` deserves the next targeted edit.
 
 ## What not to do
