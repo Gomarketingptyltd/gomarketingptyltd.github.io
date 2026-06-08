@@ -119,6 +119,18 @@ const CUSTOM_SOCIAL_IMAGES = {
     `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
   "cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
     `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
+  "services/howToReachChineseConsumersInSydney.html":
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
+  "cn/howToReachChineseConsumersInSydney.html":
+    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
+  "services/xiaohongshuMarketingForSydneyRestaurants.html":
+    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
+  "cn/xiaohongshuMarketingForSydneyRestaurants.html":
+    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
+  "services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html":
+    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
+  "cn/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html":
+    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
   "services/dentalTrustChinesePatientsSydney.html":
     `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
   "cn/dentalTrustChinesePatientsSydney.html":
