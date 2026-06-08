@@ -227,9 +227,24 @@ The SEO manager must:
 2. `https://gomarketing.net.au/services/digital.html`
 3. `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`
 4. `https://gomarketing.net.au/services/chineseCommunityGrowth.html`
-5. `https://gomarketing.net.au/services/support.html`
-6. `https://gomarketing.net.au/services/advertising.html`
-7. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
+5. `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`
+6. `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html`
+7. `https://gomarketing.net.au/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
+8. `https://gomarketing.net.au/cn/howToReachChineseConsumersInSydney.html`
+9. `https://gomarketing.net.au/cn/xiaohongshuMarketingForSydneyRestaurants.html`
+10. `https://gomarketing.net.au/cn/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
+11. `https://gomarketing.net.au/services/support.html`
+12. `https://gomarketing.net.au/services/advertising.html`
+13. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
+
+## Next execution checkpoints
+
+1. 2026-06-12
+   Check sitemap processing, Search Console auth, and early impressions for new support articles. Primary action should usually be `hold` unless a technical issue appears.
+2. 2026-06-15
+   Run an early read on the 2026-06-08 publish. Check whether the new support articles are appearing in Search Console and whether owner-page query ownership is cleaner.
+3. 2026-06-22
+   Run the first meaningful validation checkpoint for the owner-page sprint. Decide whether `digital.html`, `sydneyBilingualMarketingAgency.html`, or `chineseCommunityGrowth.html` deserves the next targeted edit.
 
 ## What not to do
 
