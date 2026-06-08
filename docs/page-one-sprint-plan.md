@@ -210,9 +210,9 @@ Each log line must include:
 - validation date
 - current status
 
-## Monday and Thursday supervision rules
+## SEO manager review cadence
 
-The automation must:
+The SEO manager must:
 
 - review the 4 active owner pages first
 - report whether the next action is `edit`, `hold`, or `request indexing`
