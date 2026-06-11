@@ -1,6 +1,6 @@
 # Page-1 SEO Compression Plan
 
-Last updated: 2026-06-08
+Last updated: 2026-06-11
 
 ## Mission
 
@@ -10,18 +10,18 @@ Last updated: 2026-06-08
 
 ## Current baseline
 
-Data window: 2026-05-09 to 2026-06-05
+Data window: 2026-05-12 to 2026-06-08
 
-- Site clicks: 18
-- Site impressions: 2,024
-- Site CTR: 0.89%
-- Site average position: 29.09
+- Site clicks: 20
+- Site impressions: 2,017
+- Site CTR: 0.99%
+- Site average position: 30.58
 
 Primary pages:
 
-- Homepage `/`: 13 clicks, 492 impressions, CTR 2.64%, position 12.8
-- `services/digital.html`: 0 clicks, 129 impressions, CTR 0.00%, position 13.9
-- `services/chineseCommunityGrowth.html`: 1 click, 272 impressions, CTR 0.37%, position 17.1
+- Homepage `/`: 14 clicks, 492 impressions, CTR 2.85%, position 12.8
+- `services/digital.html`: 0 clicks, 128 impressions, CTR 0.00%, position 14.5
+- `services/chineseCommunityGrowth.html`: 1 click, 250 impressions, CTR 0.40%, position 20.3
 - `services/sydneyBilingualMarketingAgency.html`: no material visibility yet in the latest export
 
 Hold pages:
@@ -32,8 +32,9 @@ Hold pages:
 Important context:
 
 - The previous material page publish happened on 2026-06-02.
-- The new compressed strategy begins on 2026-06-08.
-- Do not judge the 2026-06-02 page copy changes as a full success or failure until post-publish data covers a longer window.
+- The compressed strategy began on 2026-06-08.
+- The two-week page-one push began on 2026-06-11.
+- Do not judge the 2026-06-11 page-one push until Search Console has at least one fresh post-publish window.
 
 ## Keyword ownership map
 
@@ -51,6 +52,7 @@ Rules:
 - A keyword family can have only one owner page.
 - The homepage can mention the service themes, but it must not try to become the main ranking page for all of them.
 - `support.html` and `advertising.html` are not active rewrite targets during this sprint.
+- Two-week exception: from 2026-06-11 to 2026-06-25, the homepage may carry `Chinese & Multicultural Marketing Agency Sydney` because GSC already showed page-one positions for `chinese marketing agency sydney` and `chinese marketing sydney` from the homepage. The tactical goal is to capture page-one demand fastest while strengthening exact-match internal links to `services/sydneyBilingualMarketingAgency.html`.
 
 ## Active and inactive pages
 
@@ -230,6 +232,45 @@ The SEO manager must:
 - keep `support.html` and `advertising.html` on observation unless new data clearly upgrades them
 - remind the user of priority URLs after any material publish
 - keep content production moving at 1-2 focused support articles per week once the first support cluster is indexed or showing impressions
+
+## Two-week daily operating schedule
+
+Window: 2026-06-12 to 2026-06-25
+
+Timezone: Australia/Sydney
+
+Daily fixed rhythm:
+
+- 09:00: check Search Console auth, newest available GSC report, sitemap state, and whether the latest GitHub Pages deploy is live.
+- 10:30: classify each priority page as `edit`, `hold`, or `request indexing`.
+- 14:00: implement only the highest-leverage action for that day, if data or deployment status justifies it.
+- 16:30: run `npm run seo:check`, submit sitemap after material changes, and update the execution log.
+
+Daily sprint plan:
+
+| Date | Main target | Action | Success check |
+| --- | --- | --- | --- |
+| 2026-06-12 | Homepage and `sydneyBilingualMarketingAgency.html` | Confirm the 2026-06-11 page-one push is live, submit sitemap, and verify title/meta/FAQ online | Online pages show the new Chinese agency titles and sitemap has 0 errors |
+| 2026-06-13 | `chineseCommunityGrowth.html` | Review whether it needs a small title/meta/internal-link pass for `chinese marketing sydney` and Xiaohongshu/WeChat terms | Action is `edit` only if the page still has weak CTR or confused query ownership |
+| 2026-06-14 | Internal links | Add or strengthen homepage, services overview, insights, and article links into `sydneyBilingualMarketingAgency.html` if crawl paths look weak | Exact-match anchors exist from the highest-authority internal pages |
+| 2026-06-15 | Data pulse | Pull the newest 28-day GSC report and compare against the 2026-06-08 baseline | Decide whether homepage, agency page, support page, or digital page is the strongest next push |
+| 2026-06-16 | Support article brief | Draft the next support article only if GSC shows a clear query direction; otherwise prepare a short case-study page outline | Article or case target is chosen from live impressions, not guesswork |
+| 2026-06-17 | Publish or hold | Publish one focused support article/case page if ready, otherwise hold and keep internal-link improvements only | No generic content is published |
+| 2026-06-18 | First formal validation | Run full GSC review: query-page ownership, CTR, average position, impressions, sitemap, and online metadata | Report whether each priority page is `edit`, `hold`, or `request indexing` |
+| 2026-06-19 | Tactical correction | If `chinese marketing agency sydney` still lands only on homepage, strengthen service-page links; if CTR is weak, adjust title/meta | One targeted correction, not a full rewrite |
+| 2026-06-20 | Weekend light pulse | Check live pages, sitemap, and Search Console availability only | No edits unless a technical issue appears |
+| 2026-06-21 | Weekend content prep | Prepare the next article/case draft for the strongest signal from 2026-06-18 | Draft ready, but publish only if it supports a live ranking opportunity |
+| 2026-06-22 | Second formal validation | Pull GSC report and compare owner pages, especially support, agency, digital, and community pages | Decide the next page-one push for 2026-06-23 to 2026-06-25 |
+| 2026-06-23 | Second push action | Execute the strongest validated action: title/meta, FAQ, internal links, or support content | One high-confidence action shipped and logged |
+| 2026-06-24 | Indexing and deployment | Verify the 2026-06-23 action is live, run SEO check, resubmit sitemap if needed | No technical blockers remain before the two-week review |
+| 2026-06-25 | Two-week review | Compare rankings and query ownership against baseline; decide whether to continue, intensify with content, or correct cannibalisation | Final two-week report with next 14-day plan |
+
+Two-week success targets:
+
+- `chinese marketing agency sydney`: keep a top-10 signal and improve CTR from 0%.
+- `chinese marketing sydney`: keep or regain a top-10 signal and reduce homepage-only dependency.
+- `marketing support services`: move from positions 14-15 toward top 10-12.
+- `sydneyBilingualMarketingAgency.html`: gain impressions for the Chinese agency keyword family.
 
 ## Priority manual indexing URLs
 
