@@ -185,6 +185,10 @@ for (const file of files) {
     reportIssue(issues, relative, "missing meta description");
   }
 
+  if (!noindex && !/<link\b[^>]*\brel=["']stylesheet["']/i.test(scanHtml)) {
+    reportIssue(issues, relative, "missing stylesheet link");
+  }
+
   if (relative.startsWith("cn/") && !/<html\s+lang=["']zh-Hans["']/i.test(scanHtml)) {
     reportIssue(issues, relative, "Chinese page should use lang=\"zh-Hans\"");
   }
