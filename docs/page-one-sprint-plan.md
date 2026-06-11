@@ -135,6 +135,7 @@ Window: 2026-07-08 to 2026-08-06
 
 Before an active page is published, it must have:
 
+- a working stylesheet link preserved from the site design system
 - one keyword family owner
 - a unique title with the main keyword and a clear differentiator
 - a unique meta description with a real click reason
@@ -146,6 +147,27 @@ Before an active page is published, it must have:
 - a clear CTA
 
 If one of these is missing, the page is not ready for publish.
+
+## Production safety gate
+
+SEO changes are production releases. No SEO, HTML, metadata, sitemap, internal-link, or page-generation change can be pushed unless the release gate passes.
+
+Required before commit or push:
+
+- Run `npm run seo:release-gate`.
+- Confirm normal indexable pages still include `<link rel="stylesheet">`.
+- Confirm SEO metadata edits did not remove CSS, font, favicon, script, canonical, hreflang, or structured-data blocks.
+- For high-priority pages, inspect the `<head>` diff before publishing.
+
+Required after push to `main`:
+
+- Run `npm run seo:live-check`.
+- Verify production homepage, Chinese homepage, active owner pages, and newest support articles include stylesheet links.
+- If production does not show the expected stylesheet links after deployment, stop SEO work and fix production first.
+
+Critical incident reference:
+
+- `docs/production-incident-2026-06-11-stylesheet-removal.md`
 
 ## Decision rules
 
