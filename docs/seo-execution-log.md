@@ -1,6 +1,6 @@
 # SEO Execution Log
 
-Last updated: 2026-06-08
+Last updated: 2026-06-11
 
 ## Purpose
 
@@ -33,6 +33,7 @@ Every new entry must include:
 | 2026-06-08 | `docs/page-one-sprint-plan.md` | indexing and validation operations | Expanded the priority manual indexing list to include the 3 new supporting articles and their Chinese equivalents, then added 2026-06-12, 2026-06-15, and 2026-06-22 execution checkpoints | Make the next SEO actions explicit inside the project workflow now that Codex task scheduling has been removed | 2026-06-12 | active |
 | 2026-06-08 | `docs/page-one-sprint-plan.md` | high-frequency SEO management | Shortened the validation rhythm to a 2-3 day pulse cadence with checkpoints on 2026-06-10, 2026-06-12, 2026-06-15, 2026-06-17, 2026-06-19, and 2026-06-22 | Increase execution speed while keeping full page rewrites controlled by data instead of impatience | 2026-06-10 | active |
 | 2026-06-08 | `index.html`, `scripts/update-seo-metadata.js` | `marketing agency sydney`, `chinese marketing agency sydney` | Changed homepage title, description, hidden H1, social metadata and structured data from `Chinese Marketing Agency Sydney` to broader `Marketing Agency Sydney`; kept `Chinese Marketing Agency Sydney` ownership with `services/sydneyBilingualMarketingAgency.html`; added the 3 new support article social images to the metadata generator | Capture an immediate cannibalisation opportunity and stop the homepage from competing with the Chinese marketing agency owner page | 2026-06-15 | live |
+| 2026-06-11 | `services/support.html`, `services/digital.html`, `cn/digital.html`, `cn/graphicDesign.html`, `services/whatIsMarketingAutomation.html` | `marketing support services`, `digital marketing strategy sydney`, `悉尼数字营销`, `marketing automation sydney` | Pulled fresh 28-day GSC report, added query-page cross table, sharpened support page title/meta, added digital strategy language to English/Chinese digital owner pages, routed Chinese service-overview clicks toward `/cn/digital.html`, and retitled the automation article as informational so the service page can own implementation intent | Act on live opportunities: support page was at position 14.29 with 0 CTR, Chinese digital query was landing on the wrong page, digital page was seeing strategy queries, and automation implementation intent was being held by an article instead of the service page | 2026-06-18 | live |
 
 ## Current build queue
 
