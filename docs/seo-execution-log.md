@@ -1,6 +1,6 @@
 # SEO Execution Log
 
-Last updated: 2026-06-11
+Last updated: 2026-06-16
 
 ## Purpose
 
@@ -38,6 +38,7 @@ Every new entry must include:
 | 2026-06-11 | `docs/page-one-sprint-plan.md` | two-week page-one push operations | Added a daily Australia/Sydney operating schedule from 2026-06-12 to 2026-06-25, with fixed 09:00, 10:30, 14:00, and 16:30 work blocks, daily target pages, and two-week success metrics | Turn the 2026-06-18 checkpoint into a managed daily sprint instead of a single delayed review | 2026-06-18 | active |
 | 2026-06-11 | full site HTML and `scripts/seo-check.js` | production safety | Restored stylesheet, font, and favicon links across affected HTML pages; added a stylesheet guard to `npm run seo:check`; verified live priority pages after deployment | Critical production incident: SEO-related HTML changes had removed stylesheet links, causing the live site to render as unstyled HTML | 2026-06-11 | fixed |
 | 2026-06-11 | `docs/production-incident-2026-06-11-stylesheet-removal.md`, `docs/page-one-sprint-plan.md`, `package.json`, `.github/workflows/seo-check.yml` | release governance | Recorded the incident, added mandatory production safety gate rules, and formalised `npm run seo:release-gate` / `npm run seo:live-check` as required SEO release checks | Prevent this class of visual production failure from being handled as memory-only knowledge | 2026-06-12 | active |
+| 2026-06-16 | Monday SEO review catch-up | weekly data pulse and execution accountability | Confirmed the 2026-06-15 09:00 LaunchAgent ran the Search Console snapshot for 2026-05-15 to 2026-06-11, but no automatic optimization edit or commit ran on Monday; ran `seo:release-gate` and `seo:live-check`; reviewed owner-page data and identified `services/digital.html` plus `services/support.html` as the next practical edit candidates | Close the gap between scheduled data collection and actual SEO manager action; make clear that data collection is not the same as timed optimization | 2026-06-17 | needs action |
 
 ## Current build queue
 
