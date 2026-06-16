@@ -49,6 +49,13 @@ const FORBIDDEN_TEXT = [
   "鸿图",
 ];
 
+const MOJIBAKE_PATTERNS = [
+  { label: "Unicode replacement character", pattern: /\uFFFD/u },
+  { label: "common UTF-8 mojibake sequence", pattern: /(?:Ã[\x80-\xBF]|Â[\x80-\xBF]?|â[€\x80-\xBF]|[äåæç][\x80-\xBF])/u },
+];
+
+const INSECURE_HTTP_RE = /http:\/\/(?!127\.0\.0\.1(?::\d+)?(?:[/"'\s]|$)|localhost(?::\d+)?(?:[/"'\s]|$))/i;
+
 function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const filePath = path.join(dir, entry.name);
@@ -166,6 +173,14 @@ function reportIssue(issues, file, message) {
   issues.push(`${file}: ${message}`);
 }
 
+function findMojibake(value) {
+  for (const { label, pattern } of MOJIBAKE_PATTERNS) {
+    const match = value.match(pattern);
+    if (match) return `${label}: ${match[0]}`;
+  }
+  return "";
+}
+
 const issues = [];
 const files = htmlFiles();
 const pairs = buildPairs();
@@ -176,9 +191,19 @@ for (const file of files) {
   const scanHtml = html.replace(/<!--[\s\S]*?-->/g, "");
   const noindex = isNoindex(html);
   const ids = getIds(scanHtml);
+  const mojibake = findMojibake(scanHtml);
+  const insecureHttp = scanHtml.match(INSECURE_HTTP_RE);
 
   if (!/<title>[\s\S]*?<\/title>/i.test(scanHtml)) {
     reportIssue(issues, relative, "missing <title>");
+  }
+
+  if (mojibake) {
+    reportIssue(issues, relative, `possible mojibake or broken encoding: ${mojibake}`);
+  }
+
+  if (insecureHttp) {
+    reportIssue(issues, relative, `contains insecure http:// URL: ${insecureHttp[0]}`);
   }
 
   if (!/<meta\s+name=["']description["']/i.test(scanHtml)) {

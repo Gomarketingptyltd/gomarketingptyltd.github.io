@@ -54,6 +54,7 @@ These rules are mandatory for every future SEO or HTML change.
 5. After pushing to `main`, run `npm run seo:live-check` and verify priority pages are loading stylesheet links from production.
 6. Record material SEO actions in `docs/seo-execution-log.md`.
 7. If a future automated script rewrites HTML head content, it must preserve existing resource links unless the change is explicitly reviewed as a visual/frontend change.
+8. Before and after every commit/push, verify priority pages do not contain mojibake, broken encoding markers, insecure `http://` production URLs, or non-HTTPS production assets.
 
 ## Release Blockers
 
@@ -64,6 +65,8 @@ Any of the following must block release:
 - a priority production URL has no stylesheet link after deployment.
 - a CSS asset referenced by a priority production URL returns a non-2xx HTTP status.
 - a page-generation script changes `<head>` resource links while the intended task is SEO metadata only.
+- an indexable page contains mojibake, broken encoding markers, or an insecure `http://` production URL.
+- a priority production page or stylesheet resolves to a non-HTTPS final URL.
 
 ## Owner Note
 

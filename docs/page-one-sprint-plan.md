@@ -156,6 +156,7 @@ Required before commit or push:
 
 - Run `npm run seo:release-gate`.
 - Confirm normal indexable pages still include `<link rel="stylesheet">`.
+- Confirm normal indexable pages do not contain mojibake, broken encoding markers, or insecure `http://` production URLs.
 - Confirm SEO metadata edits did not remove CSS, font, favicon, script, canonical, hreflang, or structured-data blocks.
 - For high-priority pages, inspect the `<head>` diff before publishing.
 
@@ -163,6 +164,7 @@ Required after push to `main`:
 
 - Run `npm run seo:live-check`.
 - Verify production homepage, Chinese homepage, active owner pages, and newest support articles include stylesheet links.
+- Verify production priority pages are served over HTTPS with UTF-8 HTML and no mojibake or insecure `http://` URLs.
 - If production does not show the expected stylesheet links after deployment, stop SEO work and fix production first.
 
 Critical incident reference:
