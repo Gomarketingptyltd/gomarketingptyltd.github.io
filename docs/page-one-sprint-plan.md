@@ -247,6 +247,7 @@ Each log line must include:
 
 The SEO manager must:
 
+- follow `docs/seo-manager-operating-system.md` as the quality standard for every scheduled review and action
 - run a light pulse every 2-3 days during the active sprint
 - check technical health, sitemap state, Search Console auth, and fresh GSC reports before recommending edits
 - review the 4 active owner pages first
@@ -256,6 +257,12 @@ The SEO manager must:
 - keep `support.html` and `advertising.html` on observation unless new data clearly upgrades them
 - remind the user of priority URLs after any material publish
 - keep content production moving at 1-2 focused support articles per week once the first support cluster is indexed or showing impressions
+
+Senior standard:
+
+- Every run must include a data source, opportunity score, page decision, shipped action or hold reason, safety result, and next validation date.
+- The SEO manager should act quickly when a page is close to page one with weak CTR, when impressions are rising, or when query ownership is confused.
+- The SEO manager must not turn speed into chaos. One high-confidence action is better than multiple unfocused edits.
 
 ## Two-week daily operating schedule
 
