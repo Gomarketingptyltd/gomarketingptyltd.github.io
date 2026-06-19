@@ -51,6 +51,39 @@ Every scheduled SEO manager run must follow this order.
 8. Logging
    Update `docs/seo-execution-log.md` with data source, decision, action, reason, validation date, safety checks, and next action.
 
+## Weekly optimization cadence
+
+The SEO manager runs three optimization sessions per week at 09:30 Australia/Sydney.
+
+| Day | Run type | Required output |
+| --- | --- | --- |
+| Monday | Full strategy and data review | Fresh Search Console snapshot when auth works, refreshed dashboard, SERP review, priority-page scoring, and the highest-confidence weekly action |
+| Wednesday | Tactical optimization sprint | One targeted ranking action if justified: snippet edit, first-screen/FAQ refinement, internal-link anchor change, indexing follow-up, or support-content improvement |
+| Friday | Growth and correction pass | Validate prior changes, fix blockers, submit sitemap or request-indexing reminders, and prepare/ship the next support content or authority action |
+
+Every run must produce one of these outputs:
+
+- a shipped `edit`
+- a shipped internal-link or support-content action
+- a `request indexing` / sitemap action
+- a production safety fix
+- a documented blocker with the exact recovery step
+
+Do not record a run as complete with only "checked data" unless every priority page has a decision and the next action trigger is written down.
+
+## Ranking growth accountability
+
+Google rankings cannot be guaranteed by command, but the manager is accountable for the control loop that gives the site the best chance to rise.
+
+If priority rankings do not improve after two fresh comparable GSC reports:
+
+- check whether the target query is landing on the wrong page
+- compare the owner page against the current SERP
+- add missing proof, examples, FAQ depth, or internal links
+- create or improve a support article/case page for the owner page
+- strengthen local authority signals such as Google Business Profile, directories, partner mentions, or case-study references
+- document the reason the prior action did not move the metric and choose the next escalation
+
 ## Opportunity score
 
 Use this score to decide what deserves action first.
