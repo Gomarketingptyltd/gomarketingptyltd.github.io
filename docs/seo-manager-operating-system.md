@@ -53,7 +53,7 @@ Every scheduled SEO manager run must follow this order.
 
 ## Weekly optimization cadence
 
-The SEO manager runs three optimization sessions per week at 09:30 Australia/Sydney.
+The SEO manager runs three one-hour optimization sessions per week at 09:30 Australia/Sydney.
 
 | Day | Run type | Required output |
 | --- | --- | --- |
@@ -70,6 +70,27 @@ Every run must produce one of these outputs:
 - a documented blocker with the exact recovery step
 
 Do not record a run as complete with only "checked data" unless every priority page has a decision and the next action trigger is written down.
+
+## One-hour session structure
+
+Each Monday, Wednesday, and Friday run is a 60-minute SEO manager work block. The run should not stop after the first check unless there is a hard blocker that prevents all safe work.
+
+| Time | Work block | Output |
+| --- | --- | --- |
+| 00-10 min | Production safety and deploy health | `seo:release-gate`, `seo:live-check`, visual check when relevant, and blocker classification if any check fails |
+| 10-20 min | Data and market signal review | Search Console doctor/snapshot when auth works, dashboard refresh, latest GSC report review, and SERP/competitor note if it is Monday or a query moved materially |
+| 20-35 min | SEO manager diagnosis | Opportunity scores, `edit` / `hold` / `request indexing` decision for each priority page, and one highest-leverage action selected |
+| 35-50 min | Execution | Ship the selected action: page edit, metadata refinement, internal-link fix, support-content improvement, sitemap/indexing action, proof/case-content brief, or production blocker fix |
+| 50-60 min | Verification and project control | Run release checks, commit/push when files changed, run post-push live checks, update `docs/seo-execution-log.md`, and set the next trigger |
+
+If a safety, network, or Search Console blocker appears before minute 35, the remaining time must be used to:
+
+- fix the blocker when possible
+- document the blocker and exact recovery step
+- prepare a safe non-ranking asset such as a SERP gap note, support-content brief, internal-link plan, case-study outline, or indexing checklist
+- update the execution log so the next run can continue without rediscovering the same issue
+
+The only valid early stop is a hard blocker that prevents both production verification and safe project work. In that case, the log must state why the full hour could not be used productively.
 
 ## Ranking growth accountability
 

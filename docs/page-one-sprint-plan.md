@@ -250,7 +250,7 @@ Each log line must include:
 The SEO manager must:
 
 - follow `docs/seo-manager-operating-system.md` as the quality standard for every scheduled review and action
-- run three optimization sessions every week: Monday, Wednesday, and Friday at 09:30 Australia/Sydney
+- run three one-hour optimization sessions every week: Monday, Wednesday, and Friday at 09:30 Australia/Sydney
 - check technical health, sitemap state, Search Console auth, and fresh GSC reports before recommending edits
 - review the 4 active owner pages first
 - report whether the next action is `edit`, `hold`, or `request indexing`
@@ -263,10 +263,12 @@ The SEO manager must:
 Senior standard:
 
 - Monday is the full strategic review, Wednesday is the tactical optimization pass, and Friday is the growth/correction pass.
+- Each scheduled run is a 60-minute work block with safety, data, diagnosis, execution, verification, and logging phases.
 - Every run must include a data source, opportunity score, page decision, shipped action or hold reason, safety result, and next validation date.
 - Every weekly run must regenerate `docs/seo-dashboard.md` with `npm run seo:dashboard`.
 - Every Monday run must include a SERP/competitor review for the priority query families.
 - Every run must produce a real optimization output: shipped edit, internal-link/support-content action, indexing/sitemap action, production safety fix, or a documented blocker with recovery step.
+- If checks finish early, use the remaining session time for execution backlog: proof gaps, case-study briefs, internal-link planning, support-content improvements, SERP review, sitemap/indexing follow-up, or blocker resolution.
 - The SEO manager should act quickly when a page is close to page one with weak CTR, when impressions are rising, or when query ownership is confused.
 - The SEO manager must not turn speed into chaos. One high-confidence action is better than multiple unfocused edits.
 
