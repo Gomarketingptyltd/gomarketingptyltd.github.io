@@ -79,6 +79,26 @@ def write_markdown_report(run_dir, rows, issues):
     (run_dir / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def render_with_retry(page, url, attempts=3):
+    last_error = None
+
+    for attempt in range(1, attempts + 1):
+        try:
+            response = page.goto(url, wait_until="networkidle", timeout=45000)
+            page.wait_for_timeout(600)
+            if response is None or response.status < 500 or attempt == attempts:
+                return response, attempt, None
+            last_error = f"HTTP {response.status}"
+        except Exception as exc:
+            last_error = str(exc)
+            if attempt == attempts:
+                return None, attempt, last_error
+
+        page.wait_for_timeout(1000 * attempt)
+
+    return None, attempts, last_error
+
+
 def main():
     try:
         from playwright.sync_api import sync_playwright
@@ -113,11 +133,9 @@ def main():
                 page.on("console", lambda message: console_errors.append(message.text) if message.type == "error" else None)
                 page.on("pageerror", lambda error: page_errors.append(str(error)))
 
-                try:
-                    response = page.goto(url, wait_until="networkidle", timeout=45000)
-                    page.wait_for_timeout(600)
-                except Exception as exc:
-                    issues.append(f"{viewport_name} {url}: failed to render page: {exc}")
+                response, attempts, render_error = render_with_retry(page, url)
+                if render_error:
+                    issues.append(f"{viewport_name} {url}: failed to render page after {attempts} attempt(s): {render_error}")
                     page.close()
                     continue
 
@@ -187,6 +205,7 @@ def main():
                     "bodyFontFamily": metrics["bodyFontFamily"],
                     "screenshot": str(screenshot_path),
                     "consoleErrorCount": len(console_errors),
+                    "attempts": attempts,
                 })
 
                 page.close()
