@@ -5,6 +5,8 @@
     "seo:check": "node scripts/seo-check.js",
     "seo:release-gate": "npm run seo:check && git diff --check",
     "seo:live-check": "node scripts/verify-live-stylesheets.js",
+    "seo:visual-check": "python3 scripts/visual-live-check.py",
+    "seo:dashboard": "node scripts/seo-dashboard.js",
     "search-console:auth": "node scripts/search-console.js auth",
     "search-console:import-client": "node scripts/search-console.js import-client",
     "search-console:doctor": "node scripts/search-console.js doctor",

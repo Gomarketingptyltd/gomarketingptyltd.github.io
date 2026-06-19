@@ -52,9 +52,10 @@ These rules are mandatory for every future SEO or HTML change.
 3. Do not publish if any indexable page is missing a `<link rel="stylesheet">`.
 4. Do not remove CSS/font/favicon head blocks while changing SEO metadata.
 5. After pushing to `main`, run `npm run seo:live-check` and verify priority pages are loading stylesheet links from production.
-6. Record material SEO actions in `docs/seo-execution-log.md`.
-7. If a future automated script rewrites HTML head content, it must preserve existing resource links unless the change is explicitly reviewed as a visual/frontend change.
-8. Before and after every commit/push, verify priority pages do not contain mojibake, broken encoding markers, insecure `http://` production URLs, or non-HTTPS production assets.
+6. When HTML, head, stylesheet, script, layout, or safety rules change, run `npm run seo:visual-check` and inspect the generated screenshot report before treating the release as safe.
+7. Record material SEO actions in `docs/seo-execution-log.md`.
+8. If a future automated script rewrites HTML head content, it must preserve existing resource links unless the change is explicitly reviewed as a visual/frontend change.
+9. Before and after every commit/push, verify priority pages do not contain mojibake, broken encoding markers, insecure `http://` production URLs, or non-HTTPS production assets.
 
 ## Release Blockers
 

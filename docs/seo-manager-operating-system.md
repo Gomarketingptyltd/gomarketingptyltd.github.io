@@ -35,11 +35,11 @@ Use these as standing references when making judgment calls:
 Every scheduled SEO manager run must follow this order.
 
 1. Production safety
-   Run `npm run seo:release-gate` and `npm run seo:live-check` first. If either fails, stop ranking edits and treat the run as a production safety incident.
+   Run `npm run seo:release-gate`, `npm run seo:live-check`, and `npm run seo:visual-check` first. If a deterministic safety check fails, stop ranking edits and treat the run as a production safety incident. If the failure is clearly an environment fetch/browser blocker, record the blocker and rerun from a network-enabled environment before ranking edits.
 2. Data freshness
    Run `node scripts/search-console.js doctor` and `node scripts/search-console.js snapshot --days=28`. Use the newest report and compare it to the previous report.
 3. Page scoring
-   Score every priority page using the opportunity score below.
+   Run `npm run seo:dashboard`, then score every priority page using the opportunity score below.
 4. Decision
    Assign exactly one action to every priority page: `edit`, `hold`, or `request indexing`.
 5. Execution
@@ -47,7 +47,7 @@ Every scheduled SEO manager run must follow this order.
 6. Release gate
    Before commit, run `npm run seo:release-gate` again. Inspect any changed HTML head blocks for lost CSS, canonical, hreflang, favicon, script, and structured data.
 7. Deploy and live check
-   Push only after checks pass. After deployment, run `npm run seo:live-check`.
+   Push only after checks pass. After deployment, run `npm run seo:live-check` and `npm run seo:visual-check`.
 8. Logging
    Update `docs/seo-execution-log.md` with data source, decision, action, reason, validation date, safety checks, and next action.
 
@@ -122,13 +122,35 @@ If these questions are not answered, the page is not ready.
 Every SEO manager report should include:
 
 - Data window and source files reviewed
+- Link to `docs/seo-dashboard.md`
 - Priority-page table with clicks, impressions, CTR, average position, and movement
 - Query-to-page ownership assessment
 - Decision per page: `edit`, `hold`, or `request indexing`
 - Action shipped, if any
 - Commit hash and deployment status, if any
 - Production safety result
+- Visual check report path when screenshots are captured
 - Next validation date and trigger for the next action
+
+## SERP review
+
+Search Console is not enough by itself. Every Monday review must include a current SERP review for:
+
+- `marketing agency sydney`
+- `digital marketing services sydney`
+- `chinese marketing agency sydney`
+- `chinese marketing sydney`
+- `xiaohongshu marketing sydney`
+
+The SERP review should identify:
+
+- which page types are ranking
+- which trust signals competitors show
+- whether directories are crowding the result
+- which intent gaps Go Marketing can close
+- whether the next action should be page copy, proof/case content, internal links, local citations, or no action
+
+The current seed review is `docs/seo-serp-review-2026-06-19.md`.
 
 ## Escalation rules
 

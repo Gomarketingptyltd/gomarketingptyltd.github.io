@@ -163,8 +163,10 @@ Required before commit or push:
 Required after push to `main`:
 
 - Run `npm run seo:live-check`.
+- Run `npm run seo:visual-check` when a page, HTML head, stylesheet, script, layout, or production-safety rule changes.
 - Verify production homepage, Chinese homepage, active owner pages, and newest support articles include stylesheet links.
 - Verify production priority pages are served over HTTPS with UTF-8 HTML and no mojibake or insecure `http://` URLs.
+- Verify visual screenshots render normal desktop and mobile layouts for priority pages.
 - If production does not show the expected stylesheet links after deployment, stop SEO work and fix production first.
 
 Critical incident reference:
@@ -261,6 +263,8 @@ The SEO manager must:
 Senior standard:
 
 - Every run must include a data source, opportunity score, page decision, shipped action or hold reason, safety result, and next validation date.
+- Every weekly run must regenerate `docs/seo-dashboard.md` with `npm run seo:dashboard`.
+- Every Monday run must include a SERP/competitor review for the priority query families.
 - The SEO manager should act quickly when a page is close to page one with weak CTR, when impressions are rising, or when query ownership is confused.
 - The SEO manager must not turn speed into chaos. One high-confidence action is better than multiple unfocused edits.
 
