@@ -1,6 +1,6 @@
 # SEO Execution Log
 
-Last updated: 2026-06-19
+Last updated: 2026-06-22
 
 ## Purpose
 
@@ -22,6 +22,7 @@ Every new entry must include:
 
 | Date | Page or scope | Target keyword family | Action taken | Why it was done | Validation date | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-22 | `services/xiaohongshuMarketingForSydneyRestaurants.html`, `sitemap.xml`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-dashboard.md` | `xiaohongshu marketing sydney`, `chinese marketing sydney` support | Refreshed stale dashboard from latest local GSC report, created Monday SERP review, expanded the Xiaohongshu restaurant support article with Sydney dining scenarios, UGC/creator evaluation criteria and an internal link to `services/chineseCommunityGrowth.html`, then updated the article sitemap `lastmod` | Search Console token refresh is expired/revoked, so fresh ranking data was blocked; current SERP review showed restaurant/RedNote competitors using practical UGC, category and Australia-China detail that the support article lacked | 2026-06-25 | pending deploy validation |
 | 2026-06-02 | `services/digital.html`, `services/support.html`, `services/advertising.html` and Chinese equivalents | `digital marketing services sydney`, `marketing support services sydney`, `google ads support sydney` | Updated title, meta description, first-screen copy, FAQ, and related structured metadata; published to `main` | Tighten query alignment and improve CTR on existing service pages | 2026-06-15 | live |
 | 2026-06-08 | `services/digital.html`, `cn/digital.html` | `digital marketing services sydney` | Rebuilt the digital owner page around SEO, Google Ads, social content, automation, and clearer owner-page routing | Make `digital.html` the execution owner page and reduce keyword overlap with agency/community pages | 2026-06-22 | in progress |
 | 2026-06-08 | `services/sydneyBilingualMarketingAgency.html`, `cn/sydneyBilingualMarketingAgency.html`, `index.html`, `services/index.html` | `chinese marketing agency sydney`, `digital marketing services sydney` | Added direct routing between the bilingual agency page, digital owner page, homepage search paths, and services overview | Align the site structure with the owner-page model and reduce keyword overlap | 2026-06-22 | live |
@@ -50,6 +51,39 @@ Every new entry must include:
 | 2026-06-19 | `scripts/visual-live-check.py` | visual QA reliability | Added retry handling for transient render failures after the first post-push full visual run hit a temporary GitHub 503 on mobile `/cn/`; standalone `/cn/` visual recheck passed | Avoid false production blockers from one-off CDN errors while still failing persistent visual, CSS, encoding, HTTPS, or page-rendering problems | 2026-06-22 | active |
 | 2026-06-19 | Codex automation `go-marketing-seo-manager-execution`, `docs/seo-manager-operating-system.md`, `docs/page-one-sprint-plan.md` | three-times-weekly ranking growth cadence | Changed the SEO manager rhythm to Monday, Wednesday, and Friday at 09:30 Australia/Sydney, with Monday full strategy, Wednesday tactical optimization, and Friday growth/correction; each run must ship an optimization action, indexing/sitemap action, safety fix, or documented blocker | Increase optimization frequency while keeping decisions data-backed and production-safe; rankings cannot be guaranteed directly, so the system now forces repeated action, measurement, and escalation when rankings do not rise | 2026-06-22 | active |
 | 2026-06-19 | Codex automation `go-marketing-seo-manager-execution`, `docs/seo-manager-operating-system.md`, `docs/page-one-sprint-plan.md` | one-hour SEO manager work blocks | Upgraded each Monday/Wednesday/Friday run into a 60-minute work block with safety, data, diagnosis, execution, verification, and logging phases; if checks finish early, remaining time must be used for backlog execution or blocker recovery | Prevent automation from ending after a quick check and make each scheduled session operate like a senior SEO manager actively managing the project | 2026-06-23 | active |
+
+## 2026-06-22 Monday full review detail
+
+- Run time: 2026-06-22 09:30 AEST
+- Data window: latest available local GSC export only, 2026-05-17 to 2026-06-13; fresh snapshot blocked by Search Console token refresh failure
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-06-19.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-05-17_to_2026-06-13/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-06-21T23:36:19.517Z from stale local data and flagged with an 8-day freshness warning
+- SERP review: `docs/seo-serp-review-2026-06-22.md`
+- Search Console status: `node scripts/search-console.js doctor` failed token refresh; recovery step is `npm run search-console:auth`, then `node scripts/search-console.js snapshot --days=28`, then `npm run seo:dashboard`
+- Action shipped: expanded `services/xiaohongshuMarketingForSydneyRestaurants.html` with local Sydney restaurant scenarios, UGC/creator evaluation criteria, and an internal link to `services/chineseCommunityGrowth.html`; updated article `article:modified_time`, JSON-LD `dateModified`, visible updated date and `sitemap.xml` `lastmod`
+- Indexing action: sitemap file updated locally; after deploy, submit `https://gomarketing.net.au/sitemap.xml` and manually request indexing for `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html` once Search Console auth is restored
+- Safety checks:
+  - `npm run seo:release-gate`: passed before edits and after edits
+  - `npm run seo:live-check`: passed before edits
+  - `npm run seo:visual-check`: passed before edits, 28 screenshots captured
+- Visual report: `.seo-visual/20260621T233512Z/report.md`
+- Commit hash: `332eda7`
+- Deployment status: pending before push
+- Validation date: 2026-06-25
+- Next trigger: Wednesday 2026-06-24 tactical sprint should first restore Search Console auth; if auth remains blocked, submit no major ranking rewrite and instead prepare the Chinese agency proof block or local citation checklist
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Stale GSC shows no high-confidence edit trigger; homepage already had recent sprint positioning and should not absorb more service intent |
+| `services/digital.html` | 2 | `hold` | Latest local data is stale and post-2026-06-16 edit impact cannot be judged without fresh GSC |
+| `services/sydneyBilingualMarketingAgency.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Stale data shows impressions but position 29.4; support-content reinforcement is safer than another owner-page rewrite |
+| `services/support.html` | 2 | `hold` | Stale data cannot validate whether the 2026-06-16 snippet edit improved CTR |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with no current upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `edit` | SERP gap showed thin practical RedNote/Xiaohongshu restaurant detail; shipped support-content edit and sitemap `lastmod` update |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
 
 ## 2026-06-19 hardening run detail
 

@@ -1,10 +1,10 @@
 # SEO Dashboard
 
-- Generated: 2026-06-19T01:23:18.341Z
+- Generated: 2026-06-21T23:36:19.517Z
 - Latest GSC window: 2026-05-17 to 2026-06-13
 - Previous comparison window: 2026-05-15 to 2026-06-11
 - Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-05-17_to_2026-06-13
-- Freshness warning: latest available GSC end date is 6 days old. Refresh Search Console auth and run a new snapshot before making major ranking calls.
+- Freshness warning: latest available GSC end date is 8 days old. Refresh Search Console auth and run a new snapshot before making major ranking calls.
 
 ## Site Summary
 
