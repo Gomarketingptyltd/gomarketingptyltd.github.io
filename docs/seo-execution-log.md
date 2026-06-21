@@ -67,7 +67,7 @@ Every new entry must include:
   - `npm run seo:live-check`: passed before edits
   - `npm run seo:visual-check`: passed before edits, 28 screenshots captured
 - Visual report: `.seo-visual/20260621T233512Z/report.md`
-- Commit hash: `332eda7`
+- Commit hash: `fd89135` for the SEO action commit; log hash correction follows separately
 - Deployment status: pending before push
 - Validation date: 2026-06-25
 - Next trigger: Wednesday 2026-06-24 tactical sprint should first restore Search Console auth; if auth remains blocked, submit no major ranking rewrite and instead prepare the Chinese agency proof block or local citation checklist
