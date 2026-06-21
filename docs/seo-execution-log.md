@@ -22,7 +22,7 @@ Every new entry must include:
 
 | Date | Page or scope | Target keyword family | Action taken | Why it was done | Validation date | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026-06-22 | `services/xiaohongshuMarketingForSydneyRestaurants.html`, `sitemap.xml`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-dashboard.md` | `xiaohongshu marketing sydney`, `chinese marketing sydney` support | Refreshed stale dashboard from latest local GSC report, created Monday SERP review, expanded the Xiaohongshu restaurant support article with Sydney dining scenarios, UGC/creator evaluation criteria and an internal link to `services/chineseCommunityGrowth.html`, then updated the article sitemap `lastmod` | Search Console token refresh is expired/revoked, so fresh ranking data was blocked; current SERP review showed restaurant/RedNote competitors using practical UGC, category and Australia-China detail that the support article lacked | 2026-06-25 | pending deploy validation |
+| 2026-06-22 | `services/xiaohongshuMarketingForSydneyRestaurants.html`, `sitemap.xml`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-dashboard.md` | `xiaohongshu marketing sydney`, `chinese marketing sydney` support | Refreshed stale dashboard from latest local GSC report, created Monday SERP review, expanded the Xiaohongshu restaurant support article with Sydney dining scenarios, UGC/creator evaluation criteria and an internal link to `services/chineseCommunityGrowth.html`, then updated the article sitemap `lastmod` | Search Console token refresh is expired/revoked, so fresh ranking data was blocked; current SERP review showed restaurant/RedNote competitors using practical UGC, category and Australia-China detail that the support article lacked | 2026-06-25 | live; indexing blocked by Search Console auth |
 | 2026-06-02 | `services/digital.html`, `services/support.html`, `services/advertising.html` and Chinese equivalents | `digital marketing services sydney`, `marketing support services sydney`, `google ads support sydney` | Updated title, meta description, first-screen copy, FAQ, and related structured metadata; published to `main` | Tighten query alignment and improve CTR on existing service pages | 2026-06-15 | live |
 | 2026-06-08 | `services/digital.html`, `cn/digital.html` | `digital marketing services sydney` | Rebuilt the digital owner page around SEO, Google Ads, social content, automation, and clearer owner-page routing | Make `digital.html` the execution owner page and reduce keyword overlap with agency/community pages | 2026-06-22 | in progress |
 | 2026-06-08 | `services/sydneyBilingualMarketingAgency.html`, `cn/sydneyBilingualMarketingAgency.html`, `index.html`, `services/index.html` | `chinese marketing agency sydney`, `digital marketing services sydney` | Added direct routing between the bilingual agency page, digital owner page, homepage search paths, and services overview | Align the site structure with the owner-page model and reduce keyword overlap | 2026-06-22 | live |
@@ -61,14 +61,18 @@ Every new entry must include:
 - SERP review: `docs/seo-serp-review-2026-06-22.md`
 - Search Console status: `node scripts/search-console.js doctor` failed token refresh; recovery step is `npm run search-console:auth`, then `node scripts/search-console.js snapshot --days=28`, then `npm run seo:dashboard`
 - Action shipped: expanded `services/xiaohongshuMarketingForSydneyRestaurants.html` with local Sydney restaurant scenarios, UGC/creator evaluation criteria, and an internal link to `services/chineseCommunityGrowth.html`; updated article `article:modified_time`, JSON-LD `dateModified`, visible updated date and `sitemap.xml` `lastmod`
-- Indexing action: sitemap file updated locally; after deploy, submit `https://gomarketing.net.au/sitemap.xml` and manually request indexing for `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html` once Search Console auth is restored
+- Indexing action: sitemap file updated and deployed; `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml` failed because the Search Console token is expired/revoked; manually request indexing for `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html` once auth is restored
 - Safety checks:
   - `npm run seo:release-gate`: passed before edits and after edits
   - `npm run seo:live-check`: passed before edits
   - `npm run seo:visual-check`: passed before edits, 28 screenshots captured
-- Visual report: `.seo-visual/20260621T233512Z/report.md`
+- Post-push checks:
+  - `npm run seo:live-check`: passed after push
+  - `npm run seo:visual-check`: passed after push, 28 screenshots captured
+  - production content fetch confirmed the updated article text and `Updated Jun 22, 2026` date are live
+- Visual reports: `.seo-visual/20260621T233512Z/report.md` before edit and `.seo-visual/20260621T234021Z/report.md` after push
 - Commit hash: `fd89135` for the SEO action commit; log hash correction follows separately
-- Deployment status: pending before push
+- Deployment status: live on production; pushed through `cee4c6c` plus final validation-log update
 - Validation date: 2026-06-25
 - Next trigger: Wednesday 2026-06-24 tactical sprint should first restore Search Console auth; if auth remains blocked, submit no major ranking rewrite and instead prepare the Chinese agency proof block or local citation checklist
 
