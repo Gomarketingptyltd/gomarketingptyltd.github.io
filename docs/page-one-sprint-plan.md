@@ -264,6 +264,7 @@ Senior standard:
 
 - Monday is the full strategic review, Wednesday is the tactical optimization pass, and Friday is the growth/correction pass.
 - Each scheduled run is a 60-minute work block with safety, data, diagnosis, execution, verification, and logging phases.
+- Each scheduled run must use `npm run seo:session-start` and `npm run seo:session-finish` so early exits are visible.
 - Every run must include a data source, opportunity score, page decision, shipped action or hold reason, safety result, and next validation date.
 - Every weekly run must regenerate `docs/seo-dashboard.md` with `npm run seo:dashboard`.
 - Every Monday run must include a SERP/competitor review for the priority query families.

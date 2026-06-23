@@ -1,6 +1,6 @@
 # SEO Execution Log
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 ## Purpose
 
@@ -23,6 +23,7 @@ Every new entry must include:
 | Date | Page or scope | Target keyword family | Action taken | Why it was done | Validation date | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026-06-22 | `services/xiaohongshuMarketingForSydneyRestaurants.html`, `sitemap.xml`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-dashboard.md` | `xiaohongshu marketing sydney`, `chinese marketing sydney` support | Refreshed stale dashboard from latest local GSC report, created Monday SERP review, expanded the Xiaohongshu restaurant support article with Sydney dining scenarios, UGC/creator evaluation criteria and an internal link to `services/chineseCommunityGrowth.html`, then updated the article sitemap `lastmod` | Search Console token refresh is expired/revoked, so fresh ranking data was blocked; current SERP review showed restaurant/RedNote competitors using practical UGC, category and Australia-China detail that the support article lacked | 2026-06-25 | live; indexing blocked by Search Console auth |
+| 2026-06-23 | `services/sydneyBilingualMarketingAgency.html`, `cn/sydneyBilingualMarketingAgency.html`, `sitemap.xml`, `scripts/seo-session-guard.js`, SEO manager automation | `chinese marketing agency sydney`, one-hour execution governance | Ran a Tuesday make-up SEO manager session, restored Search Console authorization, pulled a fresh 28-day snapshot, regenerated the dashboard, added a proof-points section to the English and Chinese Chinese agency pages, updated sitemap `lastmod`, and added a session guard requiring future runs to start and finish a minimum-duration work block | 2026-06-22 ran about 12 minutes because the automation completed its task and exited; the missing control was a wall-clock session guard. Fresh GSC also showed `chinese marketing agency sydney` impressions rising from 83 to 91 with no clicks and no owner-page row, so a proof/indexing-focused action was justified | 2026-06-25 | in progress; submit sitemap after deploy |
 | 2026-06-02 | `services/digital.html`, `services/support.html`, `services/advertising.html` and Chinese equivalents | `digital marketing services sydney`, `marketing support services sydney`, `google ads support sydney` | Updated title, meta description, first-screen copy, FAQ, and related structured metadata; published to `main` | Tighten query alignment and improve CTR on existing service pages | 2026-06-15 | live |
 | 2026-06-08 | `services/digital.html`, `cn/digital.html` | `digital marketing services sydney` | Rebuilt the digital owner page around SEO, Google Ads, social content, automation, and clearer owner-page routing | Make `digital.html` the execution owner page and reduce keyword overlap with agency/community pages | 2026-06-22 | in progress |
 | 2026-06-08 | `services/sydneyBilingualMarketingAgency.html`, `cn/sydneyBilingualMarketingAgency.html`, `index.html`, `services/index.html` | `chinese marketing agency sydney`, `digital marketing services sydney` | Added direct routing between the bilingual agency page, digital owner page, homepage search paths, and services overview | Align the site structure with the owner-page model and reduce keyword overlap | 2026-06-22 | live |
@@ -88,6 +89,29 @@ Every new entry must include:
 | `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `edit` | SERP gap showed thin practical RedNote/Xiaohongshu restaurant detail; shipped support-content edit and sitemap `lastmod` update |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
+
+## 2026-06-23 Tuesday make-up run detail
+
+- Reason for make-up: the 2026-06-22 Monday automation completed real work but only ran from about 09:30 to 09:42 AEST, not the required one-hour SEO manager work block.
+- Root cause: the automation prompt described a 60-minute work block, but there was no wall-clock guard. The automation completed safety checks, SERP review, content edit, commit, push and verification, then exited when the task looked complete.
+- Governance fix: added `scripts/seo-session-guard.js`, `npm run seo:session-start`, and `npm run seo:session-finish`. Future scheduled runs must start and finish through the guard. Runs under the minimum duration fail unless a hard blocker is documented and `--allow-short-blocker` is used.
+- Search Console status: authorization restored successfully; `npm run search-console:doctor` now passes token refresh.
+- Fresh data pulled: `.search-console/reports/2026-05-24_to_2026-06-20`
+- Dashboard: `docs/seo-dashboard.md`, generated 2026-06-23T05:12:58.668Z
+- Latest site totals: 20 clicks, 1,840 impressions, 1.09% CTR, average position 35.26
+- Change vs previous report: clicks -3, impressions -26, CTR -0.15 percentage points, average position +1.89 positions worse
+- Decision: do not run another broad rewrite. Make one proof-focused Chinese agency edit because the query is gaining impressions but the owner page still has no row in the latest page report.
+- Action shipped before deploy: added proof points to `services/sydneyBilingualMarketingAgency.html` and `cn/sydneyBilingualMarketingAgency.html` covering industry-specific trust signals, platform-specific execution logic, bilingual message control and Sydney market fit.
+- Sitemap action: updated `sitemap.xml` `lastmod` for English and Chinese Chinese agency pages to 2026-06-23.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage still gets the most clicks and has acceptable CTR; avoid making it absorb more service intent |
+| `services/digital.html` | 2 | `hold` | 61 impressions, position 21.2, but impressions fell; not enough fresh signal for another edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `edit` + `request indexing` | Query `chinese marketing agency sydney` rose to 91 impressions, but owner page still has no page row; add proof block and submit/index after deploy |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Impressions rose to 246 but average position is 34.9; support-content and internal-link reinforcement are safer than another owner-page rewrite |
+| `services/support.html` | 4 | `hold for title; monitor tactical edit` | Query `marketing support services` is at 75 impressions and position 15.9, but the page had a 2026-06-16 snippet edit; next action should be a small FAQ/internal-link refinement if Wednesday data still shows CTR 0 |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Updated on 2026-06-22 and still has no latest page row; submit sitemap and request indexing |
 
 ## 2026-06-19 hardening run detail
 

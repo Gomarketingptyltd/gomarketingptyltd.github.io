@@ -75,6 +75,8 @@ Do not record a run as complete with only "checked data" unless every priority p
 
 Each Monday, Wednesday, and Friday run is a 60-minute SEO manager work block. The run should not stop after the first check unless there is a hard blocker that prevents all safe work.
 
+Every scheduled run must start with `npm run seo:session-start` and finish with `npm run seo:session-finish`. If a hard blocker prevents productive use of the full hour, finish with `node scripts/seo-session-guard.js finish --allow-short-blocker` only after the blocker and recovery step are recorded in `docs/seo-execution-log.md`.
+
 | Time | Work block | Output |
 | --- | --- | --- |
 | 00-10 min | Production safety and deploy health | `seo:release-gate`, `seo:live-check`, visual check when relevant, and blocker classification if any check fails |
