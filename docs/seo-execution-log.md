@@ -22,6 +22,7 @@ Every new entry must include:
 
 | Date | Page or scope | Target keyword family | Action taken | Why it was done | Validation date | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-24 | `services/xiaohongshuWeChatContentSupport.html`, `sitemap.xml`, `docs/seo-dashboard.md` | `xiaohongshu marketing sydney`, `wechat marketing australia`, Chinese-community platform support | Ran Wednesday tactical sprint with fresh Search Console snapshot and production safety checks; updated the page title, meta/social descriptions, JSON-LD page name/description, H1 and first-screen copy to add Sydney intent and clearer platform-role value; updated sitemap `lastmod` for the edited URL | GSC page report showed the page at average position 7.5 with 34 impressions and 0 clicks, making it the strongest immediate CTR/snippet opportunity; this supports `services/chineseCommunityGrowth.html` without another owner-page rewrite | 2026-06-26 | pending post-push validation |
 | 2026-06-22 | `services/xiaohongshuMarketingForSydneyRestaurants.html`, `sitemap.xml`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-dashboard.md` | `xiaohongshu marketing sydney`, `chinese marketing sydney` support | Refreshed stale dashboard from latest local GSC report, created Monday SERP review, expanded the Xiaohongshu restaurant support article with Sydney dining scenarios, UGC/creator evaluation criteria and an internal link to `services/chineseCommunityGrowth.html`, then updated the article sitemap `lastmod` | Search Console token refresh is expired/revoked, so fresh ranking data was blocked; current SERP review showed restaurant/RedNote competitors using practical UGC, category and Australia-China detail that the support article lacked | 2026-06-25 | live; indexing blocked by Search Console auth |
 | 2026-06-23 | `services/sydneyBilingualMarketingAgency.html`, `cn/sydneyBilingualMarketingAgency.html`, `sitemap.xml`, `scripts/seo-session-guard.js`, SEO manager automation | `chinese marketing agency sydney`, one-hour execution governance | Ran a Tuesday make-up SEO manager session, restored Search Console authorization, pulled a fresh 28-day snapshot, regenerated the dashboard, added a proof-points section to the English and Chinese Chinese agency pages, updated sitemap `lastmod`, added a session guard requiring future runs to start and finish a minimum-duration work block, then submitted the sitemap after deploy | 2026-06-22 ran about 12 minutes because the automation completed its task and exited; the missing control was a wall-clock session guard. Fresh GSC also showed `chinese marketing agency sydney` impressions rising from 83 to 91 with no clicks and no owner-page row, so a proof/indexing-focused action was justified | 2026-06-25 | live; sitemap submitted |
 | 2026-06-02 | `services/digital.html`, `services/support.html`, `services/advertising.html` and Chinese equivalents | `digital marketing services sydney`, `marketing support services sydney`, `google ads support sydney` | Updated title, meta description, first-screen copy, FAQ, and related structured metadata; published to `main` | Tighten query alignment and improve CTR on existing service pages | 2026-06-15 | live |
@@ -122,6 +123,45 @@ Every new entry must include:
 | `services/chineseCommunityGrowth.html` | 2 | `hold` | Impressions rose to 246 but average position is 34.9; support-content and internal-link reinforcement are safer than another owner-page rewrite |
 | `services/support.html` | 4 | `hold for title; monitor tactical edit` | Query `marketing support services` is at 75 impressions and position 15.9, but the page had a 2026-06-16 snippet edit; next action should be a small FAQ/internal-link refinement if Wednesday data still shows CTR 0 |
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Updated on 2026-06-22 and still has no latest page row; submit sitemap and request indexing |
+
+## 2026-06-24 Wednesday tactical sprint detail
+
+- Run time: 2026-06-24 09:31 AEST
+- Data window: fresh Search Console snapshot for 2026-05-24 to 2026-06-20
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-05-24_to_2026-06-20/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-06-23T23:32:54.516Z
+- SERP review context: `docs/seo-serp-review-2026-06-22.md`
+- Search Console status: `node scripts/search-console.js doctor` passed; `node scripts/search-console.js snapshot --days=28` saved `.search-console/reports/2026-05-24_to_2026-06-20`
+- Data signal: site totals remain 20 clicks, 1,840 impressions, 1.09% CTR, average position 35.26; `services/xiaohongshuWeChatContentSupport.html` had 34 impressions, 0 clicks, 0% CTR and average position 7.5 in the page report
+- Action shipped before deploy: updated `services/xiaohongshuWeChatContentSupport.html` title, meta description, social metadata, JSON-LD page name/description, H1 and first-screen copy to align the snippet with "Xiaohongshu & WeChat Content Support Sydney"; updated `sitemap.xml` `lastmod` for the edited English URL to 2026-06-24
+- Reason: page-one average position with 0 CTR is a score-5 snippet opportunity, and the page supports `services/chineseCommunityGrowth.html` without changing owner-page keyword ownership
+- Head/resource inspection: changed head block preserved stylesheet, font, favicon, canonical, hreflang, social metadata and structured data
+- Safety checks before edit:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Visual report: `.seo-visual/20260623T233123Z/report.md`
+- Safety checks after edit:
+  - `npm run seo:release-gate`: passed
+- Commit hash: pending
+- Deployment status: pending push and post-push checks
+- Indexing action: submit `https://gomarketing.net.au/sitemap.xml` after deploy; manual URL Inspection recommended for `https://gomarketing.net.au/services/xiaohongshuWeChatContentSupport.html`
+- Validation date: 2026-06-26
+- Next trigger: Friday 2026-06-26 growth/correction pass should validate this snippet edit, submit sitemap/indexing if not already complete, and consider a small `services/support.html` FAQ/internal-link refinement if `marketing support services` remains near position 16 with 0 CTR
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage CTR is acceptable and no new ownership problem is visible; avoid pulling more service intent into the homepage |
+| `services/digital.html` | 2 | `hold` | 61 impressions at position 21.2, but impressions fell and the 2026-06-16 edit still needs more post-edit data |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `request indexing` | Updated on 2026-06-23 and still has no latest page row; sitemap and manual URL Inspection remain the next indexing action |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | 246 impressions with position 34.9; support-content reinforcement is safer than another owner-page rewrite |
+| `services/support.html` | 4 | `hold` | `marketing support services` is close to page two at position 15.9 with 0 CTR, but the page had a 2026-06-16 snippet edit; next safe action is FAQ/internal-link only if Friday data confirms the signal |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with 66 impressions at position 49.3 and no current upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No row in latest page report; request indexing remains appropriate |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No row in latest page report; request indexing remains appropriate |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Updated 2026-06-22 but still no latest page row; request indexing remains appropriate |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No row in latest page report; request indexing remains appropriate |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `edit` | Page report shows average position 7.5 with 34 impressions and 0 clicks; shipped title/meta/H1 first-screen refinement |
 
 ## 2026-06-19 hardening run detail
 
