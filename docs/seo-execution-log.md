@@ -143,7 +143,7 @@ Every new entry must include:
 - Visual report: `.seo-visual/20260623T233123Z/report.md`
 - Safety checks after edit:
   - `npm run seo:release-gate`: passed
-- Commit hash: pending
+- Commit hash: `6a5d0de`
 - Deployment status: pending push and post-push checks
 - Indexing action: submit `https://gomarketing.net.au/sitemap.xml` after deploy; manual URL Inspection recommended for `https://gomarketing.net.au/services/xiaohongshuWeChatContentSupport.html`
 - Validation date: 2026-06-26
