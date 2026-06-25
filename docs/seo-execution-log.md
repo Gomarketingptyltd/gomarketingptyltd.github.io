@@ -187,8 +187,13 @@ Every new entry must include:
   - `npm run seo:release-gate`: passed
 - Visual report: `.seo-visual/20260625T233248Z/report.md`
 - Commit hash: `2a1271f`
-- Deployment status: pending push and post-push checks at time of this log entry
-- Indexing action required after push: submit `https://gomarketing.net.au/sitemap.xml` and manually request URL Inspection indexing for `https://gomarketing.net.au/services/support.html`
+- Deployment status: pushed to `main` through `c3fc0a7`; delayed production content recheck returned HTTP 200 UTF-8 HTML and confirmed the new first-review section and FAQ are live
+- Post-push checks:
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+  - `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`: submitted successfully
+- Post-push visual report: `.seo-visual/20260625T233700Z/report.md`
+- Indexing action: sitemap submitted successfully; manual URL Inspection request still recommended for `https://gomarketing.net.au/services/support.html`
 - Validation date: 2026-06-29
 - Next trigger: Monday 2026-06-29 full strategy review should compare fresh GSC to this 2026-05-26 to 2026-06-22 report, refresh the SERP review, validate `services/xiaohongshuWeChatContentSupport.html` and `services/support.html`, and escalate Chinese agency indexing if the owner page still has no page row
 
