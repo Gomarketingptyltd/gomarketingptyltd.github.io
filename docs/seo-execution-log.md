@@ -167,6 +167,45 @@ Every new entry must include:
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No row in latest page report; request indexing remains appropriate |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `edit` | Page report shows average position 7.5 with 34 impressions and 0 clicks; shipped title/meta/H1 first-screen refinement |
 
+## 2026-06-26 Friday growth/correction pass detail
+
+- Run time: 2026-06-26 09:32 AEST
+- Data window: fresh Search Console snapshot for 2026-05-26 to 2026-06-22
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-05-26_to_2026-06-22/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-06-25T23:34:13.771Z
+- SERP review context: `docs/seo-serp-review-2026-06-22.md`
+- Search Console status: `node scripts/search-console.js doctor` passed; `node scripts/search-console.js snapshot --days=28` saved `.search-console/reports/2026-05-26_to_2026-06-22`
+- Data signal: site totals improved to 22 clicks, 1,863 impressions, 1.18% CTR and average position 36.14; `marketing support services` remained at 75 impressions, 0 clicks and average position 16.6, so it stays a close-to-page-two support-page opportunity after the 2026-06-16 snippet edit
+- Action shipped before deploy: added a concrete first-review section to `services/support.html`, changed one FAQ/FAQPage item to explain what happens in the first marketing support review, and updated `sitemap.xml` `lastmod` for `https://gomarketing.net.au/services/support.html` to 2026-06-26
+- Reason: Friday growth/correction pass found no safe broad owner-page rewrite trigger, but `marketing support services` still has 0 CTR near position 16; a small proof/process expansion is the lowest-risk action that matches the query without changing keyword ownership
+- Head/resource inspection: changed head block preserved stylesheet, font, favicon, canonical, hreflang, social metadata and structured data
+- Safety checks before edit:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Safety checks after edit:
+  - `npm run seo:release-gate`: passed
+- Visual report: `.seo-visual/20260625T233248Z/report.md`
+- Commit hash: `2a1271f`
+- Deployment status: pending push and post-push checks at time of this log entry
+- Indexing action required after push: submit `https://gomarketing.net.au/sitemap.xml` and manually request URL Inspection indexing for `https://gomarketing.net.au/services/support.html`
+- Validation date: 2026-06-29
+- Next trigger: Monday 2026-06-29 full strategy review should compare fresh GSC to this 2026-05-26 to 2026-06-22 report, refresh the SERP review, validate `services/xiaohongshuWeChatContentSupport.html` and `services/support.html`, and escalate Chinese agency indexing if the owner page still has no page row
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage clicks and CTR improved, but average position softened; no ownership or CTR trigger strong enough for another homepage edit |
+| `services/digital.html` | 2 | `hold` | 57 impressions at position 22.7 with impressions down; continue collecting post-edit data before another change |
+| `services/sydneyBilingualMarketingAgency.html` | 3 | `request indexing` | Owner page still has no latest page row while `chinese marketing agency sydney` has 94 impressions; request indexing remains the next action after the 2026-06-23 proof edit |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | 262 impressions but average position 36.4; support reinforcement remains safer than another owner-page rewrite |
+| `services/support.html` | 4 | `edit` | `marketing support services` is at 75 impressions, 0 clicks and position 16.6; shipped small first-review proof/process and FAQ refinement |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with 54 impressions at position 48.9 and no upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; request indexing remains appropriate |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row; request indexing remains appropriate |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Updated 2026-06-22 but still no latest page row; request indexing remains appropriate |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; request indexing remains appropriate |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | Wednesday snippet edit is committed and the page remains at position 7.9 with 35 impressions and 0 clicks; wait for post-edit data before changing again |
+
 ## 2026-06-19 hardening run detail
 
 - Run time: 2026-06-19 11:20 AEST
