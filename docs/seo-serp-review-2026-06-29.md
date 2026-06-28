@@ -21,7 +21,7 @@ Monday full-review refresh for priority query families after pulling the 2026-05
 | Signal | Interpretation | Action |
 | --- | --- | --- |
 | Site totals fell to 19 clicks, 1,815 impressions, 1.05% CTR and average position 37.0 | Slight softening versus the prior comparable window; no single broad rewrite trigger | Keep page ownership stable and focus on indexing/crawl actions |
-| `chinese marketing agency sydney` rose to 97 impressions at average position 31.9 | Demand is present, but the English Chinese agency owner page still has no latest page row | Request indexing and resubmit sitemap |
+| `chinese marketing agency sydney` rose to 97 impressions at average position 31.9 | Demand is present, but query/page export shows the homepage taking 63 impressions at position 11.5 while the owner page has no row | Clean up homepage ownership signals, keep exact-match links to the owner page, request indexing and resubmit sitemap |
 | `services/xiaohongshuWeChatContentSupport.html` has 37 impressions at average position 7.8 and 0 clicks | Strong position/CTR opportunity, but the 2026-06-24 snippet edit has only partial data in this window | Hold until the next comparable report |
 | `marketing support services` has 77 impressions at average position 17.4 and 0 clicks | Still a tactical opportunity, but the 2026-06-26 page edit is not reflected in the window | Hold until the next comparable report |
 | GSC still reports `http://gomarketing.net.au/` with 110 impressions | Live HTTP redirects to HTTPS, so this is not a current production safety failure | Track as a canonical/indexing follow-up; keep sitemap HTTPS-only |
@@ -37,8 +37,9 @@ Monday full-review refresh for priority query families after pulling the 2026-05
 
 ## Decision
 
-- Highest-confidence action today: indexing/crawl reinforcement rather than ranking-copy changes.
-- Action taken: submitted `https://gomarketing.net.au/sitemap.xml` in Search Console.
+- Highest-confidence action today: wrong-page ownership cleanup plus indexing/crawl reinforcement.
+- Action taken: changed homepage title, meta description, social metadata, JSON-LD page name/description, hidden H1 and hero copy away from exact `Chinese marketing agency Sydney` ownership while preserving exact-match internal links to `services/sydneyBilingualMarketingAgency.html`.
+- Indexing action: submitted `https://gomarketing.net.au/sitemap.xml` in Search Console.
 - Manual URL Inspection still recommended for:
   - `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`
   - `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`

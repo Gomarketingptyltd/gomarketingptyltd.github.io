@@ -99,8 +99,9 @@ Every new entry must include:
 - Dashboard: `docs/seo-dashboard.md`, regenerated 2026-06-28T23:33:58.412Z
 - SERP review: `docs/seo-serp-review-2026-06-29.md`
 - Search Console status: `node scripts/search-console.js doctor` passed; `node scripts/search-console.js snapshot --days=28` saved `.search-console/reports/2026-05-29_to_2026-06-25`
-- Data signal: site totals softened to 19 clicks, 1,815 impressions, 1.05% CTR and average position 37.0; `chinese marketing agency sydney` rose to 97 impressions but `services/sydneyBilingualMarketingAgency.html` still has no latest page row; `services/xiaohongshuWeChatContentSupport.html` remains a page-one CTR opportunity but was edited on 2026-06-24, and `services/support.html` was edited on 2026-06-26 after this GSC window ended
-- Action taken: submitted `https://gomarketing.net.au/sitemap.xml` successfully through Search Console as the highest-confidence indexing/crawl action
+- Data signal: site totals softened to 19 clicks, 1,815 impressions, 1.05% CTR and average position 37.0; `chinese marketing agency sydney` rose to 97 impressions; query/page export showed the homepage taking 63 impressions at average position 11.5 for `chinese marketing agency sydney`, while `services/sydneyBilingualMarketingAgency.html` still has no latest page row; `services/xiaohongshuWeChatContentSupport.html` remains a page-one CTR opportunity but was edited on 2026-06-24, and `services/support.html` was edited on 2026-06-26 after this GSC window ended
+- Action taken: cleaned up homepage cannibalisation by changing the homepage title, meta description, social metadata, JSON-LD page name/description, hidden H1 and hero copy from exact Chinese-agency ownership to the broader `Sydney marketing agency` role; preserved exact-match internal links to `services/sydneyBilingualMarketingAgency.html`; updated homepage `sitemap.xml` `lastmod` to 2026-06-29
+- Indexing action: submitted `https://gomarketing.net.au/sitemap.xml` successfully through Search Console before the homepage edit; resubmit after deploy remains required
 - HTTP/canonical check: GSC still reports `http://gomarketing.net.au/` with 110 impressions, but live `http://gomarketing.net.au/` and `http://www.gomarketing.net.au/` both 301 to `https://gomarketing.net.au/` and the final response is UTF-8 HTML, so this is a canonical/indexing follow-up rather than a live production safety incident
 - Safety checks before action:
   - `npm run seo:release-gate`: passed
@@ -109,6 +110,7 @@ Every new entry must include:
 - Visual report: `.seo-visual/20260628T233208Z/report.md`
 - Commit hash: `6ed7581`; documentation/dashboard/SERP review only, no production code change was justified
 - Follow-up audit commit: `4aeaf59` corrected the logged review hash after the amended commit changed it
+- Production SEO edit commit: `fe92210`
 - Post-push checks:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
@@ -119,9 +121,9 @@ Every new entry must include:
 
 | Page | Opportunity score | Decision | Reason |
 | --- | ---: | --- | --- |
-| `index.html` | 2 | `hold` | Homepage has 15 clicks and 3.61% CTR; average position softened to 18.1 but no query-ownership or CTR trigger justifies another homepage edit |
+| `index.html` | 5 | `edit` | Wrong-page ranking: query/page export shows homepage collecting 63 impressions for `chinese marketing agency sydney` at position 11.5 after the temporary homepage exception expired on 2026-06-25; shipped homepage ownership cleanup |
 | `services/digital.html` | 2 | `hold` | 45 impressions at position 20.0 with impressions down 12; no rising-impression edit trigger |
-| `services/sydneyBilingualMarketingAgency.html` | 4 | `request indexing` | Target query `chinese marketing agency sydney` rose to 97 impressions, but the owner page still has no latest page row after the 2026-06-23 proof edit |
+| `services/sydneyBilingualMarketingAgency.html` | 5 | `request indexing` | Target query `chinese marketing agency sydney` rose to 97 impressions, but the owner page still has no latest page row and the homepage is the wrong ranking page |
 | `services/chineseCommunityGrowth.html` | 3 | `hold` | 274 impressions and rising, but average position is 39.3; support-cluster and indexing work are safer than another owner-page rewrite |
 | `services/support.html` | 4 | `hold after edit` | `marketing support services` has 77 impressions at position 17.4 and 0 clicks, but the 2026-06-26 process/FAQ edit is not reflected in the latest GSC window |
 | `services/advertising.html` | 2 | `hold` | Observation-only page with 42 impressions at position 47.0 and no current upgrade trigger |
