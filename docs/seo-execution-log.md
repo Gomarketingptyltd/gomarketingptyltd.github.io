@@ -91,6 +91,41 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `edit` | SERP gap showed thin practical RedNote/Xiaohongshu restaurant detail; shipped support-content edit and sitemap `lastmod` update |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No row in latest local report; request indexing remains needed once auth is restored |
 
+## 2026-06-29 Monday full strategy review detail
+
+- Run time: 2026-06-29 09:32 AEST
+- Data window: fresh Search Console snapshot for 2026-05-29 to 2026-06-25
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-06-22.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-05-29_to_2026-06-25/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-06-28T23:33:58.412Z
+- SERP review: `docs/seo-serp-review-2026-06-29.md`
+- Search Console status: `node scripts/search-console.js doctor` passed; `node scripts/search-console.js snapshot --days=28` saved `.search-console/reports/2026-05-29_to_2026-06-25`
+- Data signal: site totals softened to 19 clicks, 1,815 impressions, 1.05% CTR and average position 37.0; `chinese marketing agency sydney` rose to 97 impressions but `services/sydneyBilingualMarketingAgency.html` still has no latest page row; `services/xiaohongshuWeChatContentSupport.html` remains a page-one CTR opportunity but was edited on 2026-06-24, and `services/support.html` was edited on 2026-06-26 after this GSC window ended
+- Action taken: submitted `https://gomarketing.net.au/sitemap.xml` successfully through Search Console as the highest-confidence indexing/crawl action
+- HTTP/canonical check: GSC still reports `http://gomarketing.net.au/` with 110 impressions, but live `http://gomarketing.net.au/` and `http://www.gomarketing.net.au/` both 301 to `https://gomarketing.net.au/` and the final response is UTF-8 HTML, so this is a canonical/indexing follow-up rather than a live production safety incident
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Visual report: `.seo-visual/20260628T233208Z/report.md`
+- Commit hash: `46be4fd`; documentation/dashboard/SERP review only, no production code change was justified
+- Manual URL Inspection still recommended for `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`, `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`, `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`, `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`, `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html`, and `https://gomarketing.net.au/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
+- Validation date: 2026-07-01
+- Next trigger: Wednesday 2026-07-01 tactical sprint should compare the next fresh GSC window, check whether the Chinese agency owner page appears after sitemap submission, and only edit if `services/xiaohongshuWeChatContentSupport.html` or `services/support.html` still shows 0 CTR after their post-edit windows are represented
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage has 15 clicks and 3.61% CTR; average position softened to 18.1 but no query-ownership or CTR trigger justifies another homepage edit |
+| `services/digital.html` | 2 | `hold` | 45 impressions at position 20.0 with impressions down 12; no rising-impression edit trigger |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `request indexing` | Target query `chinese marketing agency sydney` rose to 97 impressions, but the owner page still has no latest page row after the 2026-06-23 proof edit |
+| `services/chineseCommunityGrowth.html` | 3 | `hold` | 274 impressions and rising, but average position is 39.3; support-cluster and indexing work are safer than another owner-page rewrite |
+| `services/support.html` | 4 | `hold after edit` | `marketing support services` has 77 impressions at position 17.4 and 0 clicks, but the 2026-06-26 process/FAQ edit is not reflected in the latest GSC window |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with 42 impressions at position 47.0 and no current upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; included in sitemap submission and manual URL Inspection queue |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row; included in sitemap submission and manual URL Inspection queue |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row after the 2026-06-22 support-content improvement; included in sitemap submission and manual URL Inspection queue |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; included in sitemap submission and manual URL Inspection queue |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | 37 impressions at average position 7.8 and 0 clicks, but the 2026-06-24 snippet edit needs a fuller post-edit data window before another title/meta change |
+
 ## 2026-06-23 Tuesday make-up run detail
 
 - Reason for make-up: the 2026-06-22 Monday automation completed real work but only ran from about 09:30 to 09:42 AEST, not the required one-hour SEO manager work block.
