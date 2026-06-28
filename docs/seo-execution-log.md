@@ -107,7 +107,7 @@ Every new entry must include:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
 - Visual report: `.seo-visual/20260628T233208Z/report.md`
-- Commit hash: `46be4fd`; documentation/dashboard/SERP review only, no production code change was justified
+- Commit hash: `6ed7581`; documentation/dashboard/SERP review only, no production code change was justified
 - Manual URL Inspection still recommended for `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`, `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`, `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`, `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`, `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html`, and `https://gomarketing.net.au/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
 - Validation date: 2026-07-01
 - Next trigger: Wednesday 2026-07-01 tactical sprint should compare the next fresh GSC window, check whether the Chinese agency owner page appears after sitemap submission, and only edit if `services/xiaohongshuWeChatContentSupport.html` or `services/support.html` still shows 0 CTR after their post-edit windows are represented
