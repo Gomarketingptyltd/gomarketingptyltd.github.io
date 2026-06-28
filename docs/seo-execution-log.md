@@ -110,7 +110,7 @@ Every new entry must include:
 - Visual report: `.seo-visual/20260628T233208Z/report.md`
 - Commit hash: `6ed7581`; documentation/dashboard/SERP review only, no production code change was justified
 - Follow-up audit commit: `4aeaf59` corrected the logged review hash after the amended commit changed it
-- Production SEO edit commit: `fe92210`
+- Production SEO edit commit: `5f13b8c`
 - Post-push checks:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
