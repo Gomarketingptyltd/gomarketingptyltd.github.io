@@ -115,6 +115,12 @@ Every new entry must include:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
 - Post-push visual report: `.seo-visual/20260628T233640Z/report.md`
+- Production homepage content check: passed after `5f13b8c` deploy; live title is `Sydney Marketing Agency for Bilingual Growth | Go Marketing`
+- Final post-push checks after homepage ownership cleanup:
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+  - `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`: submitted successfully
+- Final post-push visual report: `.seo-visual/20260628T234318Z/report.md`
 - Manual URL Inspection still recommended for `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`, `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`, `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`, `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`, `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html`, and `https://gomarketing.net.au/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
 - Validation date: 2026-07-01
 - Next trigger: Wednesday 2026-07-01 tactical sprint should compare the next fresh GSC window, check whether the Chinese agency owner page appears after sitemap submission, and only edit if `services/xiaohongshuWeChatContentSupport.html` or `services/support.html` still shows 0 CTR after their post-edit windows are represented
