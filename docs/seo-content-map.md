@@ -34,6 +34,34 @@ Recently added to support faster SEO gains around live Search Console impression
 
 These pages intentionally support agency-intent, bilingual communication and service-page clarity keywords that are already starting to appear in Search Console.
 
+## 2026-07-01 Tactical Escalation Backlog
+
+Use this backlog only after Search Console auth is restored and the latest 28-day report confirms the same opportunity still exists. Do not publish these as generic articles; each item must support one owner page and one measurable query family.
+
+1. Chinese agency proof gap
+   - Owner page: `services/sydneyBilingualMarketingAgency.html`
+   - Query family: `chinese marketing agency sydney`
+   - Trigger: owner page still has no GSC page row after manual URL Inspection, or the homepage keeps collecting the query after the 2026-06-29 ownership cleanup
+   - Action: add one approved proof/case-study brief or anonymous category example showing bilingual audience planning, platform choice and website-message adjustment
+
+2. Xiaohongshu page-one CTR gap
+   - Owner/support page: `services/xiaohongshuWeChatContentSupport.html`
+   - Query family: `xiaohongshu marketing sydney`
+   - Trigger: fresh comparable report still shows average position 4-10 with 0 clicks or CTR below 2%
+   - Action: refine the first FAQ and snippet promise around Sydney business fit, creator/UGC evaluation and when Xiaohongshu should connect back to Google and the website
+
+3. Marketing support close-to-page-two gap
+   - Owner page: `services/support.html`
+   - Query family: `marketing support services`
+   - Trigger: fresh comparable report still shows average position 11-20 with 0 clicks after the 2026-06-26 first-review edit
+   - Action: add one internal link from a relevant service or insight page using practical marketing support language, then consider a tighter meta description only if CTR remains weak
+
+4. Marketing automation indexing gap
+   - Owner page: `services/marketingAutomationServicesSydney.html`
+   - Query family: `marketing automation sydney`
+   - Trigger: no GSC page row after sitemap submission and URL Inspection
+   - Action: add a support-content bridge from `services/whatIsMarketingAutomation.html` if the existing internal links do not pass enough implementation intent
+
 ## Positioning Guardrails
 
 Use this framing consistently:
