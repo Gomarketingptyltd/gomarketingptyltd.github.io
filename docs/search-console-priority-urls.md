@@ -22,6 +22,26 @@ Submit these first:
 14. `https://gomarketing.net.au/services/advertising.html`
 15. `https://gomarketing.net.au/services/digital.html`
 
+## 2026-07-01 tactical recovery shortlist
+
+Search Console authorization is currently blocked by an expired or revoked token. After running `npm run search-console:auth`, use this shortlist before making another page-copy edit because the latest available dashboard still shows no page row for these URLs:
+
+1. `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`
+2. `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`
+3. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
+4. `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`
+5. `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html`
+6. `https://gomarketing.net.au/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
+
+Recovery sequence:
+
+1. Run `npm run search-console:auth`
+2. Run `node scripts/search-console.js doctor`
+3. Run `node scripts/search-console.js snapshot --days=28`
+4. Run `npm run seo:dashboard`
+5. Submit `https://gomarketing.net.au/sitemap.xml`
+6. Use URL Inspection and request indexing for the shortlist above
+
 ## Monday quick-run shortlist
 
 If you only want the shortest useful weekly pass, submit these first on Mondays after major updates:
