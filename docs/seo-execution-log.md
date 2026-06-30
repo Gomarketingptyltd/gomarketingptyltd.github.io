@@ -79,6 +79,8 @@ Every new entry must include:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
 - Final production edit visual report: `.seo-visual/20260630T234351Z/report.md`
+- Final current-tip visual report after log commit `daa9638`: `.seo-visual/20260630T234601Z/report.md`
+- Short-run blocker note: after production safety, documentation, internal-link reinforcement, sitemap update, commit/push and post-push checks were completed, additional ranking edits were not productive without restoring Search Console auth and pulling a fresh post-edit comparable report; recovery is `npm run search-console:auth`, then `node scripts/search-console.js snapshot --days=28`, then `npm run seo:dashboard`
 - Validation date: 2026-07-04
 - Next trigger: Friday 2026-07-04 growth/correction pass should restore Search Console auth first, pull a fresh 28-day report, resubmit the sitemap, manually request indexing for the shortlist, and only then decide whether `services/xiaohongshuWeChatContentSupport.html` or `services/support.html` needs another CTR-focused edit
 
