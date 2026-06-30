@@ -70,7 +70,11 @@ Every new entry must include:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
 - Visual report: `.seo-visual/20260630T233200Z/report.md`
-- Commit hash: pending
+- Commit hash: `89f5a25`
+- Post-push checks:
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Post-push visual report: `.seo-visual/20260630T233522Z/report.md`
 - Validation date: 2026-07-04
 - Next trigger: Friday 2026-07-04 growth/correction pass should restore Search Console auth first, pull a fresh 28-day report, resubmit the sitemap, manually request indexing for the shortlist, and only then decide whether `services/xiaohongshuWeChatContentSupport.html` or `services/support.html` needs another CTR-focused edit
 
