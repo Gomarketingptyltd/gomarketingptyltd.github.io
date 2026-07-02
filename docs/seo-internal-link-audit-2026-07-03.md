@@ -36,3 +36,15 @@ This audit covers the Friday growth/correction pass after the 2026-07-02 manual 
 4. If `services/xiaohongshuWeChatContentSupport.html` still averages page one with 0 clicks, add one agency-fit body paragraph linking to `services/sydneyBilingualMarketingAgency.html`.
 5. If the June support articles still have no page rows, check crawl/index status before adding more content.
 6. If `chinese marketing agency sydney` still lands mostly on the homepage after fresh data reflects the 2026-06-29 and 2026-07-02 edits, prioritize query-page ownership cleanup over new support content.
+
+## Query Ownership Triggers For 2026-07-06
+
+These triggers come from `.search-console/reports/2026-06-02_to_2026-06-29/query_pages.csv` and should be rechecked against the next fresh report before making new ranking edits.
+
+| Query | Current owner target | Latest visible owner | Trigger |
+| --- | --- | --- | --- |
+| `chinese marketing agency sydney` | `services/sydneyBilingualMarketingAgency.html` | Homepage: 62 impressions at average position 13.3; owner page: 2 impressions at average position 15.0 | If the homepage still has most impressions after the 2026-06-29 and 2026-07-02 edits are represented, run another ownership cleanup or add one high-context support link to the owner page |
+| `chinese marketing sydney` | `services/chineseCommunityGrowth.html` | Owner page: 10 impressions at average position 18.0; homepage: 7 impressions at average position 18.9 | If both pages remain close, strengthen the owner page's FAQ/snippet rather than pushing this phrase harder on the homepage |
+| `marketing support services` | `services/support.html` | Owner page: 73 impressions at average position 18.4 | If post-2026-06-26 data still shows 0 clicks around positions 15-20, tighten title/meta or first FAQ |
+| `marketing automation sydney` | `services/marketingAutomationServicesSydney.html` | Informational article `services/whatIsMarketingAutomation.html`: 19 impressions at average position 42.3 | If the service page still has no row after indexing, add a stronger contextual link from the article to the service page and reduce implementation-intent wording on the article |
+| `digital marketing strategy sydney` | `services/digital.html` | Owner page: 10 impressions at average position 33.2 | Hold unless impressions rise into positions 16-25 or query ownership shifts |
