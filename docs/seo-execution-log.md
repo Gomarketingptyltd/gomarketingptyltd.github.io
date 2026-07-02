@@ -445,8 +445,10 @@ Every new entry must include:
 - Pre-commit checks:
   - `npm run seo:release-gate`: passed after edits
   - Head diff inspected: stylesheet, canonical, hreflang, favicon, script and structured data blocks remain present
-- Commit hash: pending
-- Post-push checks: pending
+- Commit hash: `6e3940a`
+- Push/deploy status: blocked; `git push origin main` failed with `fatal: could not read Username for 'https://github.com': Device not configured`
+- Recovery step: authenticate GitHub for this local repo or switch the remote to an authenticated credential, then run `git push origin main`; after push, run `npm run seo:live-check`, `npm run seo:visual-check`, and submit `https://gomarketing.net.au/sitemap.xml` in Search Console
+- Post-push checks: not run because push/deploy is blocked; local live production safety check still passed against the currently deployed site
 - Validation date: 2026-07-06
 - Next trigger: Monday 2026-07-06 full strategy review should pull the next 28-day snapshot, check whether the manually inspected and updated pages have new page rows, compare `chinese marketing agency sydney` homepage vs owner-page ownership, and only edit again if the post-2026-07-02/03 data shows stale ownership, weak CTR near page one, or no crawl/indexing movement.
 
