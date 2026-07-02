@@ -450,6 +450,7 @@ Every new entry must include:
 - Push/deploy status: blocked; `git push origin main` failed with `fatal: could not read Username for 'https://github.com': Device not configured`
 - Recovery step: authenticate GitHub for this local repo or switch the remote to an authenticated credential, then run `git push origin main`; after push, run `npm run seo:live-check`, `npm run seo:visual-check`, and submit `https://gomarketing.net.au/sitemap.xml` in Search Console
 - Post-push checks: not run because push/deploy is blocked; local live production safety check still passed against the currently deployed site
+- Short-session blocker: after the support edit and safe documentation backlog were completed, the remaining high-value work required either deployment credentials or a fresh post-deploy GSC window. Additional ranking edits before deploying and validating the committed changes would create signal churn, so the session should finish with `node scripts/seo-session-guard.js finish --allow-short-blocker`.
 - Validation date: 2026-07-06
 - Next trigger: Monday 2026-07-06 full strategy review should pull the next 28-day snapshot, check whether the manually inspected and updated pages have new page rows, compare `chinese marketing agency sydney` homepage vs owner-page ownership, and only edit again if the post-2026-07-02/03 data shows stale ownership, weak CTR near page one, or no crawl/indexing movement.
 
