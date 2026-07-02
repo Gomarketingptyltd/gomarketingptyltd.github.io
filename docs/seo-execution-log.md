@@ -426,6 +426,44 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 5 | `hold` | Production safety validation blocker; no ranking work until live-check access is restored |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 5 | `hold` | Production safety validation blocker; no ranking work until live-check access is restored |
 
+## 2026-07-03 Friday growth/correction pass detail
+
+- Run time: 2026-07-03 09:30 AEST
+- Run type: Friday growth/correction pass
+- Data window: fresh Search Console snapshot still resolves to 2026-06-02 to 2026-06-29; latest available GSC end date is 4 days old
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-06-29.md`, `.search-console/reports/2026-06-02_to_2026-06-29/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-02T23:32:31.391Z
+- Search Console status: `node scripts/search-console.js doctor` passed; `node scripts/search-console.js snapshot --days=28` saved `.search-console/reports/2026-06-02_to_2026-06-29`
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Visual report: `.seo-visual/20260702T233109Z/report.md`
+- Data signal: the newest available GSC window is unchanged from the 2026-07-02 dashboard, so the 2026-07-02 Chinese-agency owner-page edit and manual URL Inspection requests cannot be judged yet. Manual URL Inspection was already completed on 2026-07-02 for the priority recovery URLs, so today did not repeat the same request.
+- Action shipped: strengthened the English and Chinese `How to Reach Chinese Consumers in Sydney` support article with a body-level service handoff to `services/sydneyBilingualMarketingAgency.html` / `cn/sydneyBilingualMarketingAgency.html` and `services/chineseCommunityGrowth.html` / `cn/chineseCommunityGrowth.html`; updated article modified metadata and sitemap `lastmod` for both alternates.
+- Why this action: Friday growth/correction pass needed a safe support-content/internal-link action while recently edited owner pages were held. This article still had no latest GSC page row and supports the Chinese agency and Chinese community-growth owner pages, so a precise contextual handoff is higher confidence than another owner-page rewrite.
+- Pre-commit checks:
+  - `npm run seo:release-gate`: passed after edits
+  - Head diff inspected: stylesheet, canonical, hreflang, favicon, script and structured data blocks remain present
+- Commit hash: pending
+- Post-push checks: pending
+- Validation date: 2026-07-06
+- Next trigger: Monday 2026-07-06 full strategy review should pull the next 28-day snapshot, check whether the manually inspected and updated pages have new page rows, compare `chinese marketing agency sydney` homepage vs owner-page ownership, and only edit again if the post-2026-07-02/03 data shows stale ownership, weak CTR near page one, or no crawl/indexing movement.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage has 16 clicks, 400 impressions and 4.00% CTR; the 2026-06-29 cannibalisation cleanup is not fully represented by fresh GSC data yet |
+| `services/digital.html` | 2 | `hold` | 34 impressions, position 20.0 and impressions down; no rising-impression or CTR snippet trigger |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | Owner page now has a page row and 2 impressions at position 15 for `chinese marketing agency sydney`, but the 2026-07-02 owner-page edit and manual indexing request are too recent to judge |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | 240 impressions but average position 44.1; support/internal-link reinforcement is safer than another owner-page rewrite |
+| `services/support.html` | 2 | `hold` | 549 impressions but average position 44.1; latest data cannot judge the recent support-page edits |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with 31 impressions and no current upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `hold after request indexing` | No latest page row, but manual URL Inspection was completed on 2026-07-02; wait for fresh crawl/index data |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `edit` | No latest page row after manual indexing; shipped support-content handoff and sitemap `lastmod` update to reinforce owner pages |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `hold after request indexing` | No latest page row, but manual URL Inspection was completed on 2026-07-02; wait for fresh crawl/index data |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `hold after request indexing` | No latest page row, but manual URL Inspection was completed on 2026-07-02; wait for fresh crawl/index data |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | 30 impressions at average position 8.0 and 0 clicks, but the 2026-07-02 snippet edit is too recent for another change |
+
 ## Current build queue
 
 | Planned date | Page | Target keyword family | Planned action | Status |

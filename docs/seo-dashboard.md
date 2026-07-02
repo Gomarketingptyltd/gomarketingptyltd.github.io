@@ -1,6 +1,6 @@
 # SEO Dashboard
 
-- Generated: 2026-07-02T01:33:05.642Z
+- Generated: 2026-07-02T23:32:31.391Z
 - Latest GSC window: 2026-06-02 to 2026-06-29
 - Previous comparison window: 2026-05-29 to 2026-06-25
 - Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-06-02_to_2026-06-29
