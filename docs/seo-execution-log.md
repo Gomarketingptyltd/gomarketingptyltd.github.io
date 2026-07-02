@@ -441,6 +441,7 @@ Every new entry must include:
 - Visual report: `.seo-visual/20260702T233109Z/report.md`
 - Data signal: the newest available GSC window is unchanged from the 2026-07-02 dashboard, so the 2026-07-02 Chinese-agency owner-page edit and manual URL Inspection requests cannot be judged yet. Manual URL Inspection was already completed on 2026-07-02 for the priority recovery URLs, so today did not repeat the same request.
 - Action shipped: strengthened the English and Chinese `How to Reach Chinese Consumers in Sydney` support article with a body-level service handoff to `services/sydneyBilingualMarketingAgency.html` / `cn/sydneyBilingualMarketingAgency.html` and `services/chineseCommunityGrowth.html` / `cn/chineseCommunityGrowth.html`; updated article modified metadata and sitemap `lastmod` for both alternates.
+- Backlog output: added `docs/seo-internal-link-audit-2026-07-03.md` with the priority cluster link audit, post-indexing triggers and next internal-link escalation candidates.
 - Why this action: Friday growth/correction pass needed a safe support-content/internal-link action while recently edited owner pages were held. This article still had no latest GSC page row and supports the Chinese agency and Chinese community-growth owner pages, so a precise contextual handoff is higher confidence than another owner-page rewrite.
 - Pre-commit checks:
   - `npm run seo:release-gate`: passed after edits
