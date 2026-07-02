@@ -24,7 +24,9 @@ Submit these first:
 
 ## 2026-07-01 tactical recovery shortlist
 
-Search Console authorization is currently blocked by an expired or revoked token. After running `npm run search-console:auth`, use this shortlist before making another page-copy edit because the latest available dashboard still shows no page row for these URLs:
+Status: completed on 2026-07-02 after Search Console authorization was restored, the sitemap was submitted, and the user manually requested indexing in URL Inspection.
+
+Search Console authorization was blocked by an expired or revoked token on 2026-07-01. After running `npm run search-console:auth`, use this shortlist before making another page-copy edit if any of these URLs again lose page rows or show a fresh crawl/indexing issue:
 
 1. `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`
 2. `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`
@@ -35,12 +37,12 @@ Search Console authorization is currently blocked by an expired or revoked token
 
 Recovery sequence:
 
-1. Run `npm run search-console:auth`
-2. Run `node scripts/search-console.js doctor`
-3. Run `node scripts/search-console.js snapshot --days=28`
-4. Run `npm run seo:dashboard`
-5. Submit `https://gomarketing.net.au/sitemap.xml`
-6. Use URL Inspection and request indexing for the shortlist above
+1. Run `npm run search-console:auth` - completed 2026-07-02
+2. Run `node scripts/search-console.js doctor` - completed 2026-07-02
+3. Run `node scripts/search-console.js snapshot --days=28` - completed 2026-07-02
+4. Run `npm run seo:dashboard` - completed 2026-07-02
+5. Submit `https://gomarketing.net.au/sitemap.xml` - completed 2026-07-02
+6. Use URL Inspection and request indexing for the shortlist above - completed by user 2026-07-02
 
 ## Monday quick-run shortlist
 
