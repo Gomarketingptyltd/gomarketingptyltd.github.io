@@ -44,6 +44,27 @@ Recovery sequence:
 5. Submit `https://gomarketing.net.au/sitemap.xml` - completed 2026-07-02
 6. Use URL Inspection and request indexing for the shortlist above - completed by user 2026-07-02
 
+## 2026-07-03 follow-up
+
+Status: local support-content update is committed but not deployed because `git push origin main` is blocked by missing GitHub credentials in this environment.
+
+Do not repeat the 2026-07-02 manual URL Inspection requests until either:
+
+1. a fresh GSC report shows a crawl/indexing issue for one of the requested URLs, or
+2. the 2026-07-03 support-content update has been pushed and deployed.
+
+After the push blocker is fixed, run:
+
+1. `git push origin main`
+2. `npm run seo:live-check`
+3. `npm run seo:visual-check`
+4. `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`
+
+Then inspect only the newly changed support URL if a manual request is available:
+
+1. `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`
+2. `https://gomarketing.net.au/cn/howToReachChineseConsumersInSydney.html`
+
 ## Monday quick-run shortlist
 
 If you only want the shortest useful weekly pass, submit these first on Mondays after major updates:
