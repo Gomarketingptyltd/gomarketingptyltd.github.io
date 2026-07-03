@@ -46,19 +46,19 @@ Recovery sequence:
 
 ## 2026-07-03 follow-up
 
-Status: local support-content update is committed but not deployed because `git push origin main` is blocked by missing GitHub credentials in this environment.
+Status: completed. The support-content update was initially blocked by missing GitHub credentials during the 09:30 automation run, then pushed and validated at 14:11 AEST on 2026-07-03.
 
 Do not repeat the 2026-07-02 manual URL Inspection requests until either:
 
 1. a fresh GSC report shows a crawl/indexing issue for one of the requested URLs, or
 2. the 2026-07-03 support-content update has been pushed and deployed.
 
-After the push blocker is fixed, run:
+Completed after the push blocker was fixed:
 
-1. `git push origin main`
-2. `npm run seo:live-check`
-3. `npm run seo:visual-check`
-4. `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`
+1. `git push origin main` - completed, deployed through `8daaff9`
+2. `npm run seo:live-check` - passed
+3. `npm run seo:visual-check` - passed
+4. `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml` - submitted
 
 Then inspect only the newly changed support URL if a manual request is available:
 
