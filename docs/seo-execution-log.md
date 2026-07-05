@@ -497,6 +497,10 @@ Every new entry must include:
 - Deployment status: push blocked; `git push origin main` failed with `fatal: could not read Username for 'https://github.com': Device not configured`; `gh auth status` reports no logged-in GitHub hosts and `origin` uses HTTPS.
 - Exact recovery step: authenticate GitHub or restore push credentials, then run `git push origin main`, `npm run seo:live-check`, `npm run seo:visual-check`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
 - Post-push checks: pending until commit `65c55e5` is pushed and deployed
+- Final local/live checks after blocker documentation:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed against current production, which does not yet include today edit
+  - `npm run seo:visual-check`: passed against current production, visual report `.seo-visual/20260705T233748Z/report.md`
 - Validation date: 2026-07-08
 - Next trigger: Wednesday 2026-07-08 tactical sprint should confirm deploy/live checks, submit sitemap if not already submitted, check whether `services/marketingAutomationServicesSydney.html` gains a page row, and only then consider a support-page snippet edit if `marketing support services` remains around position 15-20 with 0 clicks.
 
