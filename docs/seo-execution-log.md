@@ -1,6 +1,6 @@
 # SEO Execution Log
 
-Last updated: 2026-07-06
+Last updated: 2026-07-08
 
 ## Purpose
 
@@ -22,6 +22,7 @@ Every new entry must include:
 
 | Date | Page or scope | Target keyword family | Action taken | Why it was done | Validation date | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-07-08 | `services/sydneyBilingualMarketingAgency.html`, `sitemap.xml`, `docs/seo-dashboard.md` | `chinese marketing agency sydney`, Chinese-agency owner-page CTR and intent fit | Ran Wednesday tactical sprint with fresh 2026-06-07 to 2026-07-04 GSC data, regenerated the dashboard, tightened the Chinese agency owner page title/meta/social/schema description/H1/hero promise around bilingual strategy, proof and growth, updated sitemap `lastmod`; action commit `773a836`; pre-edit and post-edit `seo:release-gate` passed | Dashboard moved `services/sydneyBilingualMarketingAgency.html` to score 4: 46 impressions, 0 clicks, average position 23.1 and +14 impressions vs previous report. This is the only priority owner page in the position 16-25 rising-impression edit zone; the edit was kept to snippet/first-screen wording to avoid another full rewrite | 2026-07-10 | committed; pending push/live post-checks |
 | 2026-07-06 | `services/whatIsMarketingAutomation.html`, `sitemap.xml`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-06.md` | `marketing automation sydney`, query ownership cleanup, service-page discovery | Ran Monday full strategy review with fresh 2026-06-05 to 2026-07-02 GSC data, generated query-page diagnostics, created current SERP review, changed the marketing automation article from Sydney service-page framing to educational guide framing, strengthened its exact handoff to `services/marketingAutomationServicesSydney.html`, updated article modified dates and sitemap `lastmod`; pushed commits `65c55e5`, `44262cd`, and `5d9147c`; post-push `seo:release-gate`, `seo:live-check`, `seo:visual-check`, Search Console doctor and sitemap submission all passed | GSC showed `marketing automation sydney` had 19 impressions only on the informational article while the intended service page still had no row; this is a wrong-page ownership/crawl-path issue, so a precise role-and-link fix is higher confidence than rewriting recently edited Chinese/Xiaohongshu pages | 2026-07-08 | live; sitemap submitted |
 | 2026-07-02 | Manual Search Console URL Inspection for priority URLs | indexing recovery, post-edit recrawl, support-article discovery | User confirmed manual URL Inspection and **Request indexing** were completed for the priority recovery URLs after the 2026-07-02 sitemap submission and owner-page edits: `services/sydneyBilingualMarketingAgency.html`, `services/xiaohongshuWeChatContentSupport.html`, `services/support.html`, `services/marketingAutomationServicesSydney.html`, `services/howToReachChineseConsumersInSydney.html`, `services/xiaohongshuMarketingForSydneyRestaurants.html`, and `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | Completes the indexing loop that the API cannot perform directly; the next manager action should be monitoring fresh GSC page rows, crawl/index status and CTR/ranking movement instead of asking the user to repeat the same manual requests immediately | 2026-07-04 | completed; monitor |
 | 2026-07-02 | Search Console auth, `docs/seo-dashboard.md`, `.search-console/reports/2026-06-02_to_2026-06-29`, `services/sydneyBilingualMarketingAgency.html`, `sitemap.xml` | `chinese marketing agency sydney`, owner-page recovery, indexing recovery | Restored Search Console authorization, confirmed token refresh works, pulled a fresh 28-day snapshot for 2026-06-02 to 2026-06-29, regenerated `docs/seo-dashboard.md`, submitted `https://gomarketing.net.au/sitemap.xml`, saved sitemap status, generated a query-page diagnostic CSV, then added a choosing-criteria section to the Chinese agency owner page and updated its sitemap `lastmod` | Fresh GSC showed the Chinese agency owner page finally has a page row at 3 impressions and average position 22.3; query-page diagnostics showed `chinese marketing agency sydney` still mostly lands on the homepage, but the owner page is now appearing at average position 15 for that query, so a small owner-page intent/proof edit is justified while holding the homepage after the 2026-06-29 cannibalisation cleanup | 2026-07-04 | live; sitemap submitted |
@@ -518,6 +519,44 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `hold after request indexing` | Still no page row; wait for crawl/indexing movement after prior manual request |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `hold after request indexing` | Still no page row; no new material edit today |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | 31 impressions at average position 7.7 and 0 clicks, but the 2026-07-02 snippet edit is not yet represented by fresh post-edit data |
+
+## 2026-07-08 Wednesday tactical sprint detail
+
+- Run time: 2026-07-08 09:32 AEST
+- Run type: Wednesday tactical optimization sprint
+- Data window: fresh Search Console snapshot for 2026-06-07 to 2026-07-04
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-06.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-07T23:33:46.207Z
+- SERP review context: `docs/seo-serp-review-2026-07-06.md`
+- Search Console status: `node scripts/search-console.js doctor` passed; `node scripts/search-console.js snapshot --days=28` saved `.search-console/reports/2026-06-07_to_2026-07-04`
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Visual report: `.seo-visual/20260707T233238Z/report.md`
+- Data signal: site totals are 20 clicks, 1,716 impressions, 1.17% CTR and average position 42.93. The Chinese agency owner page moved to 46 impressions, 0 clicks, average position 23.1 and +14 impressions, making it the only score-4 edit candidate in the priority dashboard. `services/marketingAutomationServicesSydney.html` and the three June support articles still have no latest page row.
+- Action shipped: tightened `services/sydneyBilingualMarketingAgency.html` title/meta/social metadata/schema page name and description, H1 and first-screen copy around "Chinese marketing agency in Sydney", bilingual strategy, Chinese-Australian audience trust, Xiaohongshu, WeChat, SEO, website messaging and proof points; updated `sitemap.xml` `lastmod` to 2026-07-08.
+- Why this action: the page is in the position 16-25 rising-impression zone with 0 clicks, while the existing proof and choosing-criteria sections are already present. A snippet/first-screen promise edit is higher confidence than another full owner-page rewrite.
+- Pre-commit checks:
+  - `npm run seo:release-gate`: passed after edits
+  - Head diff inspected: stylesheet, font, favicon, canonical, hreflang, social metadata, script and structured data blocks remain present
+- Action commit hash: `773a836`
+- Validation date: 2026-07-10
+- Next trigger: Friday 2026-07-10 growth/correction pass should verify the pushed Chinese agency snippet live, submit the sitemap if needed, check whether the marketing automation service page or support articles gain page rows, and only then choose between sitemap/indexing follow-up and a support-page CTR edit.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | 17 clicks, 396 impressions and 4.29% CTR; homepage should stay broad after the 2026-06-29 ownership cleanup |
+| `services/digital.html` | 2 | `hold` | 80 impressions and rising, but average position is 62.2, outside the 16-25 edit zone; needs support/authority before another page-copy edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `edit` | 46 impressions, 0 clicks, average position 23.1 and +14 impressions; shipped snippet and first-screen refinement |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | 243 impressions but average position 47.9; no precise page-copy trigger |
+| `services/support.html` | 2 | `hold` | 532 impressions but average position 46.0; priority query `marketing support services` is near position 18.8 but impressions fell slightly |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with 45 impressions and no current upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row after the 2026-07-06 article handoff; include in sitemap/indexing follow-up rather than rewriting |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row after prior support-link reinforcement and manual request |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row after prior content improvement and manual request |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; keep in indexing follow-up queue |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | 30 impressions at average position 7.5 and 0 clicks, but the 2026-07-02 snippet edit is still too recent for another change |
 
 ## Current build queue
 
