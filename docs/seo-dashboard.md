@@ -1,28 +1,28 @@
 # SEO Dashboard
 
-- Generated: 2026-07-05T23:32:46.927Z
-- Latest GSC window: 2026-06-05 to 2026-07-02
-- Previous comparison window: 2026-06-02 to 2026-06-29
-- Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-06-05_to_2026-07-02
+- Generated: 2026-07-07T23:33:46.207Z
+- Latest GSC window: 2026-06-07 to 2026-07-04
+- Previous comparison window: 2026-06-05 to 2026-07-02
+- Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-06-07_to_2026-07-04
 - Freshness: latest available GSC end date is 3 days old.
 
 ## Site Summary
 
-- Clicks: 20 (+1)
-- Impressions: 1,659 (+4)
-- CTR: 1.21% (+0.06 pp)
-- Avg position: 41.48 (+1.66; lower is better)
+- Clicks: 20 (0)
+- Impressions: 1,716 (+57)
+- CTR: 1.17% (-0.04 pp)
+- Avg position: 42.93 (+1.45; lower is better)
 
 ## Priority Pages
 
 | Page | Path | Clicks | Impressions | CTR | Position | Impr delta | Score | Decision | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Homepage | / | 17 | 401 | 4.24% | 22.3 | +1 | 2 | hold | No high-confidence edit trigger yet |
-| Digital services | /services/digital.html | 0 | 46 | 0.00% | 44.1 | +12 | 2 | hold | No high-confidence edit trigger yet |
-| Chinese agency | /services/sydneyBilingualMarketingAgency.html | 0 | 32 | 0.00% | 26.0 | +29 | 2 | hold | No high-confidence edit trigger yet |
-| Chinese community growth | /services/chineseCommunityGrowth.html | 0 | 242 | 0.00% | 47.4 | +2 | 2 | hold | No high-confidence edit trigger yet |
-| Marketing support | /services/support.html | 0 | 534 | 0.00% | 45.9 | -15 | 2 | hold | No high-confidence edit trigger yet |
-| Advertising | /services/advertising.html | 0 | 32 | 0.00% | 55.9 | +1 | 2 | hold | No high-confidence edit trigger yet |
+| Homepage | / | 17 | 396 | 4.29% | 22.6 | -5 | 2 | hold | No high-confidence edit trigger yet |
+| Digital services | /services/digital.html | 0 | 80 | 0.00% | 62.2 | +34 | 2 | hold | No high-confidence edit trigger yet |
+| Chinese agency | /services/sydneyBilingualMarketingAgency.html | 0 | 46 | 0.00% | 23.1 | +14 | 4 | edit | Position 16-25 with rising impressions |
+| Chinese community growth | /services/chineseCommunityGrowth.html | 0 | 243 | 0.00% | 47.9 | +1 | 2 | hold | No high-confidence edit trigger yet |
+| Marketing support | /services/support.html | 0 | 532 | 0.00% | 46.0 | -2 | 2 | hold | No high-confidence edit trigger yet |
+| Advertising | /services/advertising.html | 0 | 45 | 0.00% | 62.6 | +13 | 2 | hold | No high-confidence edit trigger yet |
 | Marketing automation | /services/marketingAutomationServicesSydney.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
 | Reach Chinese consumers article | /services/howToReachChineseConsumersInSydney.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
 | Xiaohongshu restaurants article | /services/xiaohongshuMarketingForSydneyRestaurants.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
@@ -34,18 +34,19 @@
 | --- | --- | --- | --- | --- | --- |
 | marketing agency sydney | 0 | 0 | 0.00% | - | - |
 | digital marketing services sydney | 0 | 0 | 0.00% | - | - |
-| digital marketing strategy sydney | 0 | 6 | 0.00% | 36.2 | -4 |
-| chinese marketing agency sydney | 0 | 103 | 0.00% | 35.2 | +3 |
-| chinese marketing sydney | 0 | 23 | 0.00% | 32.7 | 0 |
+| digital marketing strategy sydney | 0 | 3 | 0.00% | 43.3 | -3 |
+| chinese marketing agency sydney | 0 | 101 | 0.00% | 34.0 | -2 |
+| chinese marketing sydney | 0 | 23 | 0.00% | 32.5 | 0 |
 | xiaohongshu marketing sydney | 0 | 0 | 0.00% | - | - |
-| wechat marketing agency australia | 0 | 66 | 0.00% | 48.8 | +1 |
-| marketing support services | 0 | 72 | 0.00% | 18.9 | -1 |
-| marketing automation sydney | 0 | 19 | 0.00% | 43.1 | 0 |
+| wechat marketing agency australia | 0 | 63 | 0.00% | 48.7 | -3 |
+| marketing support services | 0 | 70 | 0.00% | 18.8 | -2 |
+| marketing automation sydney | 0 | 18 | 0.00% | 43.4 | -1 |
 
 ## Next Action Queue
 
 | Page | Path | Score | Decision | Reason |
 | --- | --- | --- | --- | --- |
+| Chinese agency | /services/sydneyBilingualMarketingAgency.html | 4 | edit | Position 16-25 with rising impressions |
 | Marketing automation | /services/marketingAutomationServicesSydney.html | 3 | request indexing | No row in latest report |
 | Reach Chinese consumers article | /services/howToReachChineseConsumersInSydney.html | 3 | request indexing | No row in latest report |
 | Xiaohongshu restaurants article | /services/xiaohongshuMarketingForSydneyRestaurants.html | 3 | request indexing | No row in latest report |
