@@ -569,3 +569,43 @@ Every new entry must include:
 | 2026-06-13 | `services/chineseCommunityGrowth.html` | `chinese marketing sydney`, `xiaohongshu marketing sydney`, `wechat marketing australia` | Full owner-page rebuild and intent split from agency page | live |
 | 2026-06-14 | homepage `/` | `marketing agency sydney` | Internal-link and anchor-text redistribution only | live |
 | 2026-06-15 to 2026-06-17 | support articles | support for active owner pages | Publish 3 supporting articles with links back to owner pages | live |
+
+## 2026-07-10 Friday growth/correction pass detail
+
+- Run time: 2026-07-10 09:31 AEST
+- Run type: Friday growth/correction pass
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-06.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-09T23:32:30.544Z with stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-07-06.md`
+- Search Console status:
+  - `node scripts/search-console.js doctor`: failed because the OAuth token has expired or been revoked
+  - `node scripts/search-console.js snapshot --days=28`: failed with the same token error
+  - `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`: failed with the same token error
+  - Recovery step: run `npm run search-console:auth`, then rerun `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed
+  - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed, 28 screenshots captured
+- Visual report: `.seo-visual/20260709T233129Z/report.md`
+- Deployment status: still blocked. Local `main` is 3 commits ahead of `origin/main`, including the 2026-07-08 Chinese agency snippet edit. `git push origin main` failed again with `fatal: could not read Username for 'https://github.com': Device not configured`; `gh auth status` reports no logged-in GitHub hosts.
+- Deployment recovery step: run `gh auth login` or restore HTTPS Git credentials for `github.com`, then run `git push origin main`. After push, run `npm run seo:live-check`, `npm run seo:visual-check`, and submit `https://gomarketing.net.au/sitemap.xml`.
+- Data signal: because the GSC token is revoked and the prior Chinese agency edit is not deployed, no new ranking copy edit is justified today. The safe Friday output is blocker correction documentation plus the request-indexing queue below.
+- Action taken: documented the active GitHub deployment blocker, Search Console auth blocker, sitemap submission blocker, priority-page decisions, and exact recovery sequence. No ranking copy was changed because that would stack additional unpublished SEO changes on stale data.
+- Commit hash: `6017d40`
+- Validation date: 2026-07-13
+- Next trigger: Monday 2026-07-13 full strategy review should first restore GitHub and Search Console auth, push the three pending commits, verify production, submit the sitemap, pull a fresh 28-day snapshot, then reassess whether the Chinese agency page and indexing queue have post-deploy movement.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage remains broad-owner page; no fresh GSC data and no Friday correction trigger |
+| `services/digital.html` | 2 | `hold` | Latest local dashboard shows 80 impressions and position 62.2; outside tactical edit zone and data is stale |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | Wednesday snippet/first-screen edit is committed locally but not pushed; push and sitemap submission must happen before another edit |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Latest local dashboard shows 243 impressions at position 47.9; no precise copy trigger without fresh data |
+| `services/support.html` | 2 | `hold` | Latest priority query is near position 18.8 but not rising; keep until fresh comparable report after auth recovery |
+| `services/advertising.html` | 2 | `hold` | Observation-only page with no current upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row after the 2026-07-06 handoff; sitemap/manual indexing follow-up is blocked by Search Console auth |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row after support-link reinforcement; sitemap/manual indexing follow-up is blocked by Search Console auth |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row after prior content improvement; sitemap/manual indexing follow-up is blocked by Search Console auth |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; sitemap/manual indexing follow-up is blocked by Search Console auth |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | Strong old local signal around position 7.5 with 0 clicks, but the 2026-07-02 snippet edit still needs fresh post-edit data |
