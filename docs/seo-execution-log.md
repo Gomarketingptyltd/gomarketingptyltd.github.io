@@ -588,13 +588,13 @@ Every new entry must include:
   - `npm run seo:live-check`: passed, 14 priority pages and 5 unique stylesheet URLs checked
   - `npm run seo:visual-check`: passed, 28 screenshots captured
 - Visual report: `.seo-visual/20260709T233129Z/report.md`
-- Deployment status: still blocked. Local `main` is 3 commits ahead of `origin/main`, including the 2026-07-08 Chinese agency snippet edit. `git push origin main` failed again with `fatal: could not read Username for 'https://github.com': Device not configured`; `gh auth status` reports no logged-in GitHub hosts.
+- Deployment status: still blocked. Local `main` was 3 commits ahead of `origin/main` before this run's log/dashboard commits, including the 2026-07-08 Chinese agency snippet edit; it is 5 commits ahead after this run's local documentation commits. `git push origin main` failed again with `fatal: could not read Username for 'https://github.com': Device not configured`; `gh auth status` reports no logged-in GitHub hosts.
 - Deployment recovery step: run `gh auth login` or restore HTTPS Git credentials for `github.com`, then run `git push origin main`. After push, run `npm run seo:live-check`, `npm run seo:visual-check`, and submit `https://gomarketing.net.au/sitemap.xml`.
 - Data signal: because the GSC token is revoked and the prior Chinese agency edit is not deployed, no new ranking copy edit is justified today. The safe Friday output is blocker correction documentation plus the request-indexing queue below.
 - Action taken: documented the active GitHub deployment blocker, Search Console auth blocker, sitemap submission blocker, priority-page decisions, and exact recovery sequence. No ranking copy was changed because that would stack additional unpublished SEO changes on stale data.
-- Commit hash: `6017d40`
+- Commit hash: `14f8885` for the local log/dashboard commit; push remains blocked
 - Validation date: 2026-07-13
-- Next trigger: Monday 2026-07-13 full strategy review should first restore GitHub and Search Console auth, push the three pending commits, verify production, submit the sitemap, pull a fresh 28-day snapshot, then reassess whether the Chinese agency page and indexing queue have post-deploy movement.
+- Next trigger: Monday 2026-07-13 full strategy review should first restore GitHub and Search Console auth, push the pending local commits, verify production, submit the sitemap, pull a fresh 28-day snapshot, then reassess whether the Chinese agency page and indexing queue have post-deploy movement.
 
 | Page | Opportunity score | Decision | Reason |
 | --- | ---: | --- | --- |
