@@ -627,12 +627,17 @@ Every new entry must include:
   - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS
   - `npm run seo:visual-check`: completed; 27 desktop/mobile screenshots captured at `.seo-visual/20260712T233305Z/`
   - Manual screenshot inspection: homepage desktop layout rendered normally; stylesheet and typography were present, with no visible mojibake or broken layout
-- Deployment status: blocked. Local `main` is five commits ahead of `origin/main`, including the 2026-07-08 Chinese agency snippet edit. `gh auth status` confirms no logged-in GitHub host.
-- Deployment recovery step: run `gh auth login` or restore HTTPS Git credentials for `github.com`, then run `git push origin main`. After push, run `npm run seo:live-check`, `npm run seo:visual-check`, and submit `https://gomarketing.net.au/sitemap.xml`.
+- Deployment status: recovered during the run. `git push origin main` succeeded and published all six pending commits through `1582d7f`, including the 2026-07-08 Chinese agency snippet edit and today's strategy assets.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked
+  - production fetch confirmed the live Chinese agency title is `Chinese Marketing Agency Sydney | Strategy, Proof & Growth`
+  - `npm run seo:visual-check`: completed; post-push screenshots captured at `.seo-visual/20260712T233622Z/`
+  - `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`: blocked by the revoked OAuth token
+- Commit hash: `1582d7f`
 - Market signal: the fresh SERP sample continues to reward explicit Sydney locality, platform-specific Chinese-market expertise, concrete delivery detail and credible client/category proof. Go Marketing's owner pages have strong positioning and crawl paths, but the proof section is descriptive rather than backed by a publishable case asset.
 - Action taken: created `docs/seo-case-study-brief-chinese-audience-growth-2026-07-13.md`, a production-ready proof asset brief with a client/evidence approval gate, page role, narrative, proof modules, metadata draft, internal-link plan and release/indexing checklist. No ranking copy was changed because GSC is stale and the prior selected edit is still unpublished.
 - Validation date: 2026-07-15
-- Next trigger: Wednesday 2026-07-15 should restore GitHub and Search Console auth first, push the pending commits, run post-push live/visual checks, submit the sitemap, pull a fresh 28-day report and request indexing for the four no-row pages. Start the case page only after one project passes the documented evidence gate.
+- Next trigger: Wednesday 2026-07-15 should restore Search Console auth, submit the sitemap, pull a fresh 28-day report and request indexing for the four no-row pages. Validate the deployed Chinese agency snippet against post-deploy data; start the case page only after one project passes the documented evidence gate.
 
 | Page | Opportunity score | Decision | Reason |
 | --- | ---: | --- | --- |
