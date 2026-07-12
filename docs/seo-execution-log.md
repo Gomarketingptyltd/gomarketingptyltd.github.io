@@ -609,3 +609,41 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row after prior content improvement; sitemap/manual indexing follow-up is blocked by Search Console auth |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; sitemap/manual indexing follow-up is blocked by Search Console auth |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | Strong old local signal around position 7.5 with 0 clicks, but the 2026-07-02 snippet edit still needs fresh post-edit data |
+
+## 2026-07-13 Monday full strategy review detail
+
+- Run time: 2026-07-13 09:32 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-06.md`, `docs/seo-execution-log.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-13 with an eight-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-07-13.md`
+- Search Console status:
+  - `node scripts/search-console.js doctor`: failed because the OAuth token has expired or been revoked
+  - `node scripts/search-console.js snapshot --days=28`: failed with the same token error
+  - Recovery step: run `npm run search-console:auth`, then rerun `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS
+  - `npm run seo:visual-check`: completed; 27 desktop/mobile screenshots captured at `.seo-visual/20260712T233305Z/`
+  - Manual screenshot inspection: homepage desktop layout rendered normally; stylesheet and typography were present, with no visible mojibake or broken layout
+- Deployment status: blocked. Local `main` is five commits ahead of `origin/main`, including the 2026-07-08 Chinese agency snippet edit. `gh auth status` confirms no logged-in GitHub host.
+- Deployment recovery step: run `gh auth login` or restore HTTPS Git credentials for `github.com`, then run `git push origin main`. After push, run `npm run seo:live-check`, `npm run seo:visual-check`, and submit `https://gomarketing.net.au/sitemap.xml`.
+- Market signal: the fresh SERP sample continues to reward explicit Sydney locality, platform-specific Chinese-market expertise, concrete delivery detail and credible client/category proof. Go Marketing's owner pages have strong positioning and crawl paths, but the proof section is descriptive rather than backed by a publishable case asset.
+- Action taken: created `docs/seo-case-study-brief-chinese-audience-growth-2026-07-13.md`, a production-ready proof asset brief with a client/evidence approval gate, page role, narrative, proof modules, metadata draft, internal-link plan and release/indexing checklist. No ranking copy was changed because GSC is stale and the prior selected edit is still unpublished.
+- Validation date: 2026-07-15
+- Next trigger: Wednesday 2026-07-15 should restore GitHub and Search Console auth first, push the pending commits, run post-push live/visual checks, submit the sitemap, pull a fresh 28-day report and request indexing for the four no-row pages. Start the case page only after one project passes the documented evidence gate.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Broad owner page is stable; edit only on fresh evidence of ownership regression or weak near-page-one CTR |
+| `services/digital.html` | 2 | `hold` | Last usable position is 62.2; proof/authority support is higher leverage than more owner-page copy |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | Score-4 edit is already committed locally; deploy and collect a comparable post-deploy report before another change |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Position 47.9 without a precise page-copy trigger; support with evidence-led case content |
+| `services/support.html` | 2 | `hold` | Priority query was position 18.8 but not rising; require fresh comparable data |
+| `services/advertising.html` | 2 | `hold` | Observation-only page without an upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No page row; submit sitemap and request inspection after auth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No page row after prior internal-link reinforcement |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No page row after prior content improvement |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No page row; keep in the sitemap/manual inspection queue |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | Prior page-one/zero-click signal needs fresh post-edit data before another snippet change |
