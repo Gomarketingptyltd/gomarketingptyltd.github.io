@@ -674,6 +674,7 @@ Every new entry must include:
 - Data decision: no ranking-copy edit is justified on 10-day-stale data, especially because the Chinese agency snippet was deployed only on 2026-07-13. The priority owner pages remain in their existing action-measure window.
 - Action shipped: created `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`, converting Monday's case-study brief into a usable evidence and approval workflow. It captures project identity, baseline, delivered work, source-backed outcomes, asset permissions, attribution caveats and a hard publication decision so the next proof page cannot become generic or unsupported content.
 - Why this action: the latest SERP review identifies credible project proof as the clearest non-copy gap, while stale GSC data and a recent owner-page deployment make another snippet or first-screen rewrite unsafe. The intake is the smallest production-safe action that can unblock an evidence-led case asset supporting the Chinese agency and Chinese community owner pages.
+- Commit hash: `188a9ed` (documentation action and regenerated dashboard; amended commit hash will differ)
 - Validation date: 2026-07-17
 - Next trigger: Friday 2026-07-17 should restore Search Console auth, submit the sitemap, refresh the 28-day report and review whether the four no-row pages now appear. Start the case-page pair only if one completed evidence intake is marked `approved to draft`; otherwise keep owner-page copy unchanged and obtain stronger proof.
 
