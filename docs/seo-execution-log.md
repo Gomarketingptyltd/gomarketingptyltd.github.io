@@ -675,6 +675,11 @@ Every new entry must include:
 - Action shipped: created `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`, converting Monday's case-study brief into a usable evidence and approval workflow. It captures project identity, baseline, delivered work, source-backed outcomes, asset permissions, attribution caveats and a hard publication decision so the next proof page cannot become generic or unsupported content.
 - Why this action: the latest SERP review identifies credible project proof as the clearest non-copy gap, while stale GSC data and a recent owner-page deployment make another snippet or first-screen rewrite unsafe. The intake is the smallest production-safe action that can unblock an evidence-led case asset supporting the Chinese agency and Chinese community owner pages.
 - Commit hash: `188a9ed` (documentation action and regenerated dashboard; amended commit hash will differ)
+- Deployment status: pushed commits `188a9ed` and `b95d7e3` to `origin/main`.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots captured at `.seo-visual/20260714T233525Z/report.md`
+- Session-duration blocker: the fresh-data and indexing portion cannot continue without the account holder completing Google sign-in. Production verification and the safe proof-workflow backlog action were completed, so no further ranking or indexing mutation is safe in this run. Recovery is the Search Console authorization sequence above.
 - Validation date: 2026-07-17
 - Next trigger: Friday 2026-07-17 should restore Search Console auth, submit the sitemap, refresh the 28-day report and review whether the four no-row pages now appear. Start the case-page pair only if one completed evidence intake is marked `approved to draft`; otherwise keep owner-page copy unchanged and obtain stronger proof.
 
