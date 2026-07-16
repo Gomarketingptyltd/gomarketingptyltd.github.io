@@ -38,6 +38,19 @@ If no measurable commercial outcome can be disclosed, use approved process evide
 - Reject paid bulk-link packages, unrelated guest-post networks and placements that cannot identify a real editorial or business relationship.
 - Record the live URL, link target, anchor/context, owner and verification date before counting the signal as complete.
 
+## Public citation correction queue
+
+A 2026-07-17 branded search found inconsistent third-party business details. Correct existing identity signals before pursuing broad new directory coverage.
+
+| Source | Observed issue | Required action | Verification |
+| --- | --- | --- | --- |
+| Australian Business Register | Active company record shows main business location NSW 2037, while the website presents Barangaroo NSW 2000 | Confirm the registered/principal and customer-facing address roles with the business owner; update the appropriate authoritative records rather than forcing an unsupported match | Save the official record URL and confirmation date |
+| Dun & Bradstreet | Profile shows Forest Lodge NSW 2037 and an unrelated retail-industry classification | Claim/correct the profile if access is available; use the legal company name, accurate marketing-services category, current website and approved address | Recheck the public profile after the provider processes the correction |
+| Birdeye / syndicated Google review profile | Website is listed with `http://`; profile includes mixed review sentiment and should not be treated as approved proof | Correct the website to HTTPS and verify NAP details; respond to reviews through the owned Google Business Profile according to the business's review policy, without fabricating or suppressing feedback | Record the owned-profile response/correction date and live HTTPS URL |
+| Sydney Today listing | Current listing exposes the Barangaroo address and website but uses broad promotional claims | Confirm the listing is owned; replace unsupported superlatives/conversion promises with the approved bilingual Sydney positioning and HTTPS URL | Capture the updated live listing and date |
+
+The website, official company record and owned Google Business Profile are the sources of truth. Do not change legal details based only on an aggregator. Escalate any address or phone mismatch to the business owner before editing profiles.
+
 ## Production handoff
 
 When an intake is marked `approved to draft`:
