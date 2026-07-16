@@ -77,6 +77,19 @@ If you only want the shortest useful weekly pass, submit these first on Mondays 
 6. `https://gomarketing.net.au/services/targetMarket.html`
 7. `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
 
+## 2026-07-17 Friday recovery state
+
+Search Console OAuth remains expired or revoked. The latest local report ends on 2026-07-04, and the priority URLs were already manually requested on 2026-07-02. Do not repeat those URL Inspection requests without a new material edit or a fresh crawl/indexing error.
+
+Exact recovery sequence:
+
+1. Run `npm run search-console:auth` and complete Google sign-in and consent in the opened browser.
+2. Run `node scripts/search-console.js doctor`.
+3. Run `node scripts/search-console.js snapshot --days=28`.
+4. Run `npm run seo:dashboard`.
+5. Run `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+6. Inspect the four no-row URLs in the fresh report. Use manual URL Inspection again only if Search Console reports an indexing problem or the URL has received a new material update.
+
 ## Second priority
 
 Then submit the two newest search-supporting articles:

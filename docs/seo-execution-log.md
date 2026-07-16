@@ -1,5 +1,34 @@
 # SEO Execution Log
 
+## 2026-07-17 Friday growth/correction pass
+
+- Run time: 2026-07-17 09:34 AEST
+- Data window: fresh Search Console pull blocked; latest usable local window remains 2026-06-07 to 2026-07-04
+- Source files: `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-13.md`, `docs/seo-case-study-brief-chinese-audience-growth-2026-07-13.md`, `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-17 with a 12-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-07-13.md`; no new ranking-copy decision was made from stale data
+- Production safety before action: `npm run seo:release-gate` passed across 123 HTML files and 55 bilingual pairs; `npm run seo:live-check` passed across 14 priority pages and five stylesheet URLs; `npm run seo:visual-check` passed with 28 desktop/mobile screenshots at `.seo-visual/20260716T233418Z/report.md`
+- Search Console blocker: `node scripts/search-console.js doctor` and the 28-day snapshot failed because the OAuth token is expired or revoked. Exact recovery: run `npm run search-console:auth`, complete Google sign-in/consent, then run doctor, the 28-day snapshot, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Indexing decision: retain `request indexing` for the four no-row pages, but do not repeat the manual requests completed on 2026-07-02 unless a fresh report shows an indexing error or a page receives another material update.
+- Action shipped: created `docs/seo-authority-proof-outreach-plan-2026-07-17.md` and added the dated Search Console recovery state to `docs/search-console-priority-urls.md`. The plan converts the approved case-study brief/intake into a prioritized client/partner evidence request, defines acceptable authority placements, rejects low-quality link tactics and sets draft/escalation/measurement triggers.
+- Why this action: the current SERP gap is credible project proof and authority, while the Chinese agency score-4 edit only went live on 2026-07-13 and cannot safely be judged using the report ending 2026-07-04.
+- Validation date: 2026-07-20
+- Next trigger: restore Search Console auth and refresh the comparable report; begin the case-page pair immediately when one intake is marked `approved to draft`; if no candidate can approve an outcome by 2026-07-24, escalate to an anonymised process-evidence case.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Broad owner page is stable; no fresh ownership or CTR regression signal |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; proof/authority remains higher leverage than owner-page copy |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Score-4 edit went live 2026-07-13; wait for a fresh comparable post-deploy report |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Stale position 47.9 with no precise edit trigger; support through approved case proof |
+| `services/support.html` | 2 | `hold` | Stale query signal near position 18.8 was not rising; require fresh comparable data |
+| `services/advertising.html` | 2 | `hold` | Observation-only page without an upgrade trigger |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No row in latest local report; recheck after OAuth recovery rather than duplicate the 2026-07-02 request |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No row in latest local report; retain in post-auth inspection queue |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No row after prior improvement; retain in post-auth inspection queue |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No row in latest local report; retain in post-auth inspection queue |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Prior page-one/zero-click signal needs fresh post-edit data before another snippet change |
+
 Last updated: 2026-07-08
 
 ## Purpose
