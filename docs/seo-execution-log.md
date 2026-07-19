@@ -731,3 +731,32 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row after prior content improvement; keep in the post-auth queue |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; keep in the post-auth sitemap/manual inspection queue |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | Prior page-one/zero-click signal still needs fresh post-edit data before another snippet change |
+
+## 2026-07-20 Monday full strategy review detail
+
+- Run time: 2026-07-20 09:31 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04
+- Source files: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-13.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-20 with a 15-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-07-20.md`
+- Search Console blocker: doctor and 28-day snapshot failed because the OAuth token is expired or revoked. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety: `npm run seo:release-gate` passed (123 HTML files, 55 bilingual pairs); `npm run seo:live-check` passed (14 priority pages, 5 stylesheet URLs over HTTPS); the visual run captured the priority desktop/mobile set with normal titles and H1s and no reported layout/encoding failure.
+- Market diagnosis: fresh results continue to reward Sydney locality, platform-specific delivery detail, sector use cases and verifiable proof. Go Marketing is visible for the broad Sydney marketing sample, while the Chinese-market competitors provide more explicit platform and local-audience detail.
+- Action: created `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md`, a non-generic decision-intent brief with ownership, cannibalisation, evidence, internal-link and publication gates. No ranking copy was changed on stale data.
+- Validation date: 2026-07-22
+- Next trigger: Wednesday 2026-07-22 should restore Search Console auth, submit the sitemap, pull a fresh report and reassess the four request-indexing pages. Draft the support guide only if the fresh report still shows the Chinese community/platform opportunity and no approved case asset is ready first.
+
+| Page | Score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Broad owner remains visible; require fresh ownership or CTR regression before editing |
+| `services/digital.html` | 2 | `hold` | Last position 62.2; proof/authority support is higher leverage |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | 2026-07-13 live edit needs a fresh comparable report |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Last position 47.9; support content is safer than owner-page copy |
+| `services/support.html` | 2 | `hold` | Position 18.8 signal was not rising and is now stale |
+| `services/advertising.html` | 2 | `hold` | Observation-only without an upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; blocked on Search Console auth |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row; blocked on Search Console auth |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row; blocked on Search Console auth |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; blocked on Search Console auth |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | Last page-one/zero-click signal needs fresh post-edit data |
