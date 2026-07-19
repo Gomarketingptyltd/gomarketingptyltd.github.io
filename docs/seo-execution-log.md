@@ -744,6 +744,9 @@ Every new entry must include:
 - Safety: `npm run seo:release-gate` passed (123 HTML files, 55 bilingual pairs); `npm run seo:live-check` passed (14 priority pages, 5 stylesheet URLs over HTTPS); the visual run captured the priority desktop/mobile set with normal titles and H1s and no reported layout/encoding failure.
 - Market diagnosis: fresh results continue to reward Sydney locality, platform-specific delivery detail, sector use cases and verifiable proof. Go Marketing is visible for the broad Sydney marketing sample, while the Chinese-market competitors provide more explicit platform and local-audience detail.
 - Action: created `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md`, a non-generic decision-intent brief with ownership, cannibalisation, evidence, internal-link and publication gates. No ranking copy was changed on stale data.
+- Commit and deployment: `6ea8fa1` pushed to `origin/main`.
+- Post-push checks: `npm run seo:live-check` passed for 14 priority pages and 5 stylesheet URLs; `npm run seo:visual-check` passed with 28 desktop/mobile screenshots at `.seo-visual/20260719T233444Z/report.md`.
+- Remaining external blocker: further data-led ranking and indexing actions require the account holder to complete Search Console authorization. The safe non-data-dependent Monday backlog action is complete; drafting a case page also remains gated on an evidence intake being approved to draft.
 - Validation date: 2026-07-22
 - Next trigger: Wednesday 2026-07-22 should restore Search Console auth, submit the sitemap, pull a fresh report and reassess the four request-indexing pages. Draft the support guide only if the fresh report still shows the Chinese community/platform opportunity and no approved case asset is ready first.
 
