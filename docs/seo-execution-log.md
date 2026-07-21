@@ -781,6 +781,11 @@ Every new entry must include:
 - Diagnosis: the four pages without performance rows were manually requested on 2026-07-02. Live `robots.txt` allows crawling and declares the sitemap; the live sitemap contains all four English/Chinese page pairs; and the latest saved sitemap response reports zero warnings and errors. Their absence from a stale performance report is not proof that they are excluded from the index.
 - Action taken: added the verified 2026-07-22 indexing recovery queue to `docs/search-console-priority-urls.md`. It separates sitemap submission, URL Inspection coverage diagnosis and content/internal-link escalation, preventing duplicate indexing requests without evidence while giving the next authorized run an exact execution order.
 - Action commit: `f3eb230`
+- Deployment status: pushed the indexing recovery action and execution record through `31ff824` to `origin/main`.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots captured with normal rendering
+  - Post-push visual report: `.seo-visual/20260721T233357Z/report.md`
 - Ranking-copy decision: no page copy was changed. The data is stale, the Chinese agency page is still awaiting a comparable post-2026-07-13 report, and Monday's Xiaohongshu-versus-WeChat guide brief requires a fresh opportunity signal or approved proof asset before drafting.
 - Validation date: 2026-07-24
 - Next trigger: Friday 2026-07-24 should restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and use URL Inspection on the four no-row pages only if coverage shows exclusion/crawl failure or a material-change trigger. If authorization remains blocked, progress the evidence-approved case asset first; otherwise strengthen one existing support page's internal links only where live crawl-path evidence shows a gap.
