@@ -90,6 +90,25 @@ Exact recovery sequence:
 5. Run `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
 6. Inspect the four no-row URLs in the fresh report. Use manual URL Inspection again only if Search Console reports an indexing problem or the URL has received a new material update.
 
+## 2026-07-22 verified indexing recovery queue
+
+Status: ready to execute after Search Console authorization is restored. The live checks on 2026-07-22 confirmed that `robots.txt` allows crawling, declares `https://gomarketing.net.au/sitemap.xml`, and the live sitemap contains the English and Chinese URLs for all four no-row page pairs. The latest locally saved sitemap response (submitted 2026-07-06) reported zero warnings and zero errors. This makes authentication and fresh inspection data the blocker, not site discovery configuration.
+
+Recovery owner sequence:
+
+1. Run `npm run search-console:auth` and complete Google sign-in and consent in the opened browser.
+2. Run `node scripts/search-console.js doctor`; continue only when token refresh reports OK.
+3. Run `node scripts/search-console.js snapshot --days=28` and `npm run seo:dashboard`.
+4. Run `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml` once after authorization recovery.
+5. Check the fresh page report for these URLs:
+   - `https://gomarketing.net.au/services/marketingAutomationServicesSydney.html`
+   - `https://gomarketing.net.au/services/howToReachChineseConsumersInSydney.html`
+   - `https://gomarketing.net.au/services/xiaohongshuMarketingForSydneyRestaurants.html`
+   - `https://gomarketing.net.au/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html`
+6. Use URL Inspection only when a URL is excluded/not indexed, has a crawl error, or has received a material update since its 2026-07-02 request. If it is indexed but has zero impressions, diagnose content depth and internal links instead of repeating the request.
+
+Decision boundary: do not treat absence from the stale 2026-06-07 to 2026-07-04 performance export as proof of non-indexing. A performance row can be absent because the page received no impressions. Fresh URL Inspection coverage is required before another manual request.
+
 ## Second priority
 
 Then submit the two newest search-supporting articles:
