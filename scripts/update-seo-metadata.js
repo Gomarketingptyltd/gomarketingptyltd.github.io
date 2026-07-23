@@ -380,8 +380,8 @@ function agencyNode(description) {
     telephone: TELEPHONE,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Level 35, International Tower One, 100 Barangaroo Ave",
-      addressLocality: "Barangaroo",
+      streetAddress: "Suite 201, 276 Pitt Street",
+      addressLocality: "Sydney",
       addressRegion: "NSW",
       postalCode: "2000",
       addressCountry: "AU",
