@@ -836,6 +836,12 @@ Every new entry must include:
 - Action taken: created `docs/seo-serp-review-2026-07-27.md` and materially improved `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md` with a live-SERP differentiation gate covering platform roles, operational readiness, sector scenarios, scope/cost factors, measurement and evidence-safe Go Marketing differentiation. This is a support-content action; no production ranking copy was changed on stale data.
 - Evidence decision: the Chinese-audience case study remains blocked because `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md` is empty and is not marked `approved to draft`. No client result, pricing or proof claim was invented.
 - Commit/deployment: SEO review, dashboard and support-brief action pushed to `origin/main` in `942f782`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260726T233622Z/report.md`
+  - A bounded follow-up watch returned HTTP 200 with the final HTTPS homepage URL on five consecutive samples.
+- Session-duration blocker: all safe production checks, Monday decisions and the support-brief action are complete. Further data-led ranking and indexing work requires the account holder to complete Search Console sign-in; the alternative proof/case branch requires a completed evidence intake marked `approved to draft`. Exact recovery is the Search Console authorization sequence above or approval of one evidence intake. No additional owner-page or case-content mutation is safe without one of those external-state changes.
 - Validation date: 2026-07-29
 - Next trigger: Wednesday 2026-07-29 should restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and reassess query ownership. Draft the Xiaohongshu-versus-WeChat guide only if fresh data still shows the Chinese community owner outside the top 25 or the platform-support page retains impressions without clicks; prioritise the case-page pair if an evidence intake is approved first.
 
