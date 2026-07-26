@@ -55,6 +55,21 @@ Help a Sydney business decide whether it needs discovery content, private-commun
 - Do not use audience-size statistics without a current, attributable source and date.
 - Do not publish client names, screenshots, quotations or outcomes without written approval.
 
+## Live-SERP differentiation gate — added 2026-07-27
+
+The 2026-07-27 review found that specialist results increasingly expose their platform process, sector fit, commercial scope and proof before the enquiry. The draft must therefore answer the buyer questions below without copying competitor claims or inventing Go Marketing evidence.
+
+| Buyer question | Required guide treatment | Publication guard |
+| --- | --- | --- |
+| What job does each platform do? | Compare discovery/research on Xiaohongshu with relationship continuity and private follow-up on WeChat, then show where the website and enquiry path fit. | Attribute platform capabilities to current first-party documentation; frame strategy recommendations as Go Marketing guidance. |
+| What has to exist before launch? | Cover account readiness, Chinese-language response capacity, content approvals, landing/booking path and enquiry ownership. | Do not imply that opening an account creates demand or guarantees distribution. |
+| What changes by sector? | Include Sydney hospitality, property, health/wellness and professional-service scenarios with a useful next action for each. | Use scenarios only unless a completed evidence intake authorises a real result. |
+| What changes the scope or cost? | Explain the practical scope drivers: platform count, setup/verification, content volume, creator activity, paid media, response workflow and reporting. | Do not publish fees until the business approves a real pricing position. Never borrow competitor price ranges. |
+| How will success be judged? | Connect platform-native indicators to branded search, website behaviour, enquiries, bookings and CRM evidence. | State attribution limits and avoid vanity-metric promises. |
+| Why use Go Marketing? | Position the value as connecting bilingual message quality, Sydney market context, platform roles and the conversion path. | Proof claims require the approved case-study intake; otherwise use process differentiation only. |
+
+Current comparison set: [Deep Reach Sydney](https://www.deepreachagency.com/locations/sydney/) for local audience/sector specificity, [RedNote Marketing](https://rednotemarketing.com.au/) for dedicated platform education, [Riseo](https://riseo.com.au/services/wechat-xiaohongshu-marketing-australia/) for process/pricing/proof visibility, and [Vantage Digital](https://vantagedigital.com.au/) for experience/network proof. These are editorial gap references, not sources for Go Marketing claims.
+
 ## Release and indexing checklist
 
 1. Draft English and Chinese paired pages with distinct, natural localisation.

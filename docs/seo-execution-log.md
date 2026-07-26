@@ -803,3 +803,52 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Keep in the recovery queue; sitemap discovery is verified and fresh coverage must determine the next action |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Keep in the recovery queue; sitemap discovery is verified and fresh coverage must determine the next action |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | The prior page-one/zero-click signal remains stale; require fresh post-edit data before another snippet change |
+
+## 2026-07-24 — Friday growth/correction pass blocked by local process exhaustion
+
+- Run time: 2026-07-23T23:31:02.573Z
+- Data window: Not refreshed; Search Console doctor and 28-day snapshot could not run.
+- Source files: Existing local SEO context not re-read because the environment could not create any shell process.
+- Dashboard: `docs/seo-dashboard.md` not regenerated; treat existing dashboard data as stale until recovery.
+- SERP review: Not performed.
+- Priority-page opportunity scores and decisions: Not safely reassessed. Existing decisions remain unchanged; no ranking-copy edits were made.
+- Action: Recorded a hard environment blocker after three consecutive failures to launch `npm run seo:session-start` (`CreateProcess: Resource temporarily unavailable`, OS error 35), including a retry without a login shell.
+- Safety checks: `seo:session-start`, `seo:release-gate`, `seo:live-check`, and `seo:visual-check` could not run. Production safety is therefore unverified for this run.
+- Commit/push: None.
+- Exact recovery step: Restart the Codex/local execution host (or terminate orphaned processes to restore process capacity), then rerun this Friday block from `npm run seo:session-start`; complete release gate, live check, visual check, Search Console doctor/snapshot, dashboard regeneration, priority-page edit/hold/request-indexing decisions, and finish with `node scripts/seo-session-guard.js finish --allow-short-blocker` only if the process-capacity blocker persists.
+- Next trigger: Immediately after shell process creation is restored; do not make ranking edits before deterministic production-safety checks pass.
+
+## 2026-07-27 — Monday full strategy and data review
+
+- Run time: 2026-07-27 09:32 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 22 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-20.md`, `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md`, `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`, `docs/seo-authority-proof-outreach-plan-2026-07-17.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, and the live-result sample documented in `docs/seo-serp-review-2026-07-27.md`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-27 with a 22-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-07-27.md`
+- Search Console blocker: `node scripts/search-console.js doctor` and `node scripts/search-console.js snapshot --days=28` failed at token refresh with `Bad Request`. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots captured with normal rendering
+  - Visual report: `.seo-visual/20260726T233232Z/report.md`
+- Monday market diagnosis: Go Marketing's homepage and Chinese agency owner page appeared in the sampled results. Specialist competitors now make named-platform delivery, Sydney audience/sector fit, process, pricing and client proof unusually explicit. The clearest gap is credible proof and buyer-decision detail, not another owner-page rewrite.
+- Action taken: created `docs/seo-serp-review-2026-07-27.md` and materially improved `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md` with a live-SERP differentiation gate covering platform roles, operational readiness, sector scenarios, scope/cost factors, measurement and evidence-safe Go Marketing differentiation. This is a support-content action; no production ranking copy was changed on stale data.
+- Evidence decision: the Chinese-audience case study remains blocked because `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md` is empty and is not marked `approved to draft`. No client result, pricing or proof claim was invented.
+- Commit/deployment: pending release verification and isolated commit; unrelated workspace changes will not be included.
+- Validation date: 2026-07-29
+- Next trigger: Wednesday 2026-07-29 should restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and reassess query ownership. Draft the Xiaohongshu-versus-WeChat guide only if fresh data still shows the Chinese community owner outside the top 25 or the platform-support page retains impressions without clicks; prioritise the case-page pair if an evidence intake is approved first.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Homepage is present in the sampled broad-agency result set; require fresh evidence of ownership regression or a near-page-one CTR gap before editing |
+| `services/digital.html` | 2 | `hold` | Last usable position is 62.2; current competitors reinforce that proof/authority support is higher leverage than another owner-page copy pass |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | The page is indexed and appeared in the sampled Chinese-agency results; the 2026-07-13 edit still needs a fresh comparable report |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Last usable position is 47.9; the selected comparison-guide improvement supports this owner without rewriting it on stale data |
+| `services/support.html` | 2 | `hold` | Last priority-query signal was position 18.8 but not rising; require a fresh comparable report |
+| `services/advertising.html` | 2 | `hold` | Observation-only page without a current upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; retain in the verified post-auth sitemap/URL Inspection queue |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row; sitemap discovery is already verified and fresh coverage must determine escalation |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row; retain in the post-auth coverage queue rather than repeating an unsupported request |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; retain in the post-auth sitemap/manual inspection queue |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | The prior page-one/zero-click signal is stale; today's action improves its planned support guide while fresh post-edit data remains required for another snippet change |
