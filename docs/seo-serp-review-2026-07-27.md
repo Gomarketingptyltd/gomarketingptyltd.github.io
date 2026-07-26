@@ -1,7 +1,9 @@
 # SEO SERP Review — 2026-07-27
 
-Run type: Monday full strategy and data review  
-Market: Sydney, Australia  
+Run type: Monday full strategy and data review
+
+Market: Sydney, Australia
+
 Method: live web-result sample reviewed 2026-07-27 AEST. Rankings are personalised and volatile, so this is an intent/competitor-feature review rather than a rank tracker.
 
 ## Executive decision
@@ -43,4 +45,3 @@ Highest-confidence action shipped this run: improve `docs/seo-support-brief-xiao
 - Restore Search Console access with `npm run search-console:auth`, then run doctor, a 28-day snapshot and the dashboard before any owner-page ranking edit.
 - Draft the comparison guide only if a fresh report still shows the Chinese community owner outside the top 25 or the platform-support page retains impressions without clicks.
 - Prioritise the case-page pair instead if one evidence intake becomes `approved to draft` first.
-
