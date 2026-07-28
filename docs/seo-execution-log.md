@@ -876,6 +876,12 @@ Every new entry must include:
 - Action taken: changed one related-insight card on the English and Chinese Xiaohongshu/WeChat support pages to link directly to the paired `xiaohongshuMarketingForSydneyRestaurants.html` article, using descriptive localised anchors and context. This is a narrow internal-link/discovery action; owner-page titles, H1s, first-screen copy and head resources were not changed.
 - Evidence decision: the case-study intake remains empty and is not marked `approved to draft`; no client proof or outcome was invented. The Xiaohongshu-versus-WeChat guide remains held until its documented fresh-data or approved-proof trigger is met.
 - Pre-commit release gate: passed after the internal-link change; changed head blocks were inspected and stylesheet, font, favicon, canonical, hreflang, script and structured-data resources remain intact.
+- Commit/deployment: `c4c501e` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260728T233444Z/report.md`
+- Session-duration blocker: the safe Wednesday internal-link action, deployment and verification are complete. Further data-led ranking/indexing work requires the account holder to complete Search Console sign-in, while the alternative case-content branch requires an evidence intake marked `approved to draft`; neither external state can be changed safely in this run. Exact recovery is the authorization sequence above or approval of one completed evidence intake.
 - Validation date: 2026-07-31
 - Next trigger: Friday 2026-07-31 should restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and inspect coverage for the four no-row pages. If authorization remains blocked, verify the new internal link live and progress an approved evidence/citation action without rewriting owner-page copy.
 
