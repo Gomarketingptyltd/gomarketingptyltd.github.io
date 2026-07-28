@@ -858,3 +858,37 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | No latest page row; retain in the post-auth coverage queue rather than repeating an unsupported request |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | No latest page row; retain in the post-auth sitemap/manual inspection queue |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after edit` | The prior page-one/zero-click signal is stale; today's action improves its planned support guide while fresh post-edit data remains required for another snippet change |
+## 2026-07-29 — Wednesday tactical optimization sprint
+
+- Run time: 2026-07-29 09:32 AEST
+- Run type: Wednesday tactical optimization sprint
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 24 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-27.md`, `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md`, `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the four request-indexing pages, and their inbound internal-link sources
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-29 with a 24-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-07-27.md`; no new SERP review was required for the Wednesday tactical sprint because fresh performance data was unavailable
+- Search Console blocker: token refresh still returns `Bad Request`; the 28-day snapshot failed. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots captured with normal rendering
+  - Visual report: `.seo-visual/20260728T233220Z/report.md`
+- Diagnosis: all four no-row pages remain present in the sitemap and have crawl paths, so no unsupported repeat indexing request was made. The Xiaohongshu restaurant article had only three inbound HTML sources, while the closely related platform-support page linked to a broader restaurant-trust article instead of the exact platform-and-sector guide.
+- Action taken: changed one related-insight card on the English and Chinese Xiaohongshu/WeChat support pages to link directly to the paired `xiaohongshuMarketingForSydneyRestaurants.html` article, using descriptive localised anchors and context. This is a narrow internal-link/discovery action; owner-page titles, H1s, first-screen copy and head resources were not changed.
+- Evidence decision: the case-study intake remains empty and is not marked `approved to draft`; no client proof or outcome was invented. The Xiaohongshu-versus-WeChat guide remains held until its documented fresh-data or approved-proof trigger is met.
+- Pre-commit release gate: passed after the internal-link change; changed head blocks were inspected and stylesheet, font, favicon, canonical, hreflang, script and structured-data resources remain intact.
+- Validation date: 2026-07-31
+- Next trigger: Friday 2026-07-31 should restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and inspect coverage for the four no-row pages. If authorization remains blocked, verify the new internal link live and progress an approved evidence/citation action without rewriting owner-page copy.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh ownership-regression or near-page-one CTR evidence; stale data does not justify a homepage edit |
+| `services/digital.html` | 2 | `hold` | Last usable position is 62.2; proof/authority support remains higher leverage than another owner-page rewrite |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | The 2026-07-13 edit still lacks a fresh comparable post-change report |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Last usable position is 47.9; use support/authority actions until fresh data supplies a precise copy trigger |
+| `services/support.html` | 2 | `hold` | Last priority-query position was 18.8 but the comparable signal is stale and was not rising |
+| `services/advertising.html` | 2 | `hold` | Observation-only page without a fresh upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Retain in the post-auth sitemap and URL Inspection queue; sitemap and crawl paths are already verified |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | Retain in the post-auth coverage queue; do not repeat the request without current coverage evidence |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Added a relevant bilingual internal-link source today; submit/inspect after authorization is restored |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Retain in the post-auth coverage queue; sitemap discovery remains verified |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after internal-link action` | Prior page-one/zero-click signal is stale; today it passed relevance to the sector guide without another snippet rewrite |
