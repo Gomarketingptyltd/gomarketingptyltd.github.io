@@ -915,6 +915,8 @@ Every new entry must include:
 - Diagnosis: fresh ranking edits and unsupported repeat indexing requests remain unsafe. The Friday authority review found conflicting public identity signals: the current homepage shows Suite 201, 276 Pitt Street and `02 9909 6785`; an indexed Chinese page/result and Birdeye/Sydney Today show Barangaroo; ABR/D&B show NSW 2037/Forest Lodge; D&B also assigns an unrelated retail classification.
 - Action taken: created `docs/seo-local-citation-correction-pack-2026-07-31.md` with source evidence, a single owner-confirmation block, correction order, submission tracker and verification triggers. No legal address, phone, profile or ranking claim was guessed or changed.
 - Evidence decision: the Chinese-audience case-study intake remains empty and is not marked `approved to draft`; no client proof or outcome was invented.
+- Commit/deployment: citation pack, stale-dashboard refresh and initial execution record pushed to `origin/main` in `3152c9f`; unrelated workspace changes were excluded.
+- Post-push check: `npm run seo:live-check` passed for 14 priority pages and 5 unique stylesheet URLs. A current visual report remains blocked as documented above; no production HTML, CSS or ranking copy changed in this deployment.
 - Validation date: 2026-08-03
 - Next trigger: approve the public business name, customer-facing address, phone, address role and category in the correction pack; then align the bilingual website and owned profiles in the documented order. Monday 2026-08-03 should also restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and reassess query ownership before any ranking-copy change.
 
