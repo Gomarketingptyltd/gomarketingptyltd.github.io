@@ -898,3 +898,36 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Added a relevant bilingual internal-link source today; submit/inspect after authorization is restored |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Retain in the post-auth coverage queue; sitemap discovery remains verified |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after internal-link action` | Prior page-one/zero-click signal is stale; today it passed relevance to the sector guide without another snippet rewrite |
+
+## 2026-07-31 — Friday growth/correction pass
+
+- Run time: 2026-07-31 09:31 AEST
+- Run type: Friday growth/correction pass
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 26 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-27.md`, `docs/seo-authority-proof-outreach-plan-2026-07-17.md`, `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`, `docs/search-console-priority-urls.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, and the public citation sources recorded in `docs/seo-local-citation-correction-pack-2026-07-31.md`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-07-31 with a 26-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-07-27.md`; no ranking SERP refresh was used for a copy decision because fresh GSC data remains unavailable
+- Search Console blocker: token refresh still returns `Bad Request`; `node scripts/search-console.js snapshot --days=28` failed. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - First `npm run seo:live-check`: one transient HTTP 503 on `services/support.html`; five immediate direct HTTPS samples returned HTTP 200 with `text/html; charset=utf-8`, and the full rerun passed for 14 priority pages and 5 stylesheet URLs. No persistent production fault was reproduced.
+  - `npm run seo:visual-check`: browser command exited without creating a report or printing an actionable error; latest usable visual report remains `.seo-visual/20260728T233444Z/report.md`. Exact recovery: rerun from a browser-enabled environment and require a newly timestamped report before treating visual verification as current.
+- Diagnosis: fresh ranking edits and unsupported repeat indexing requests remain unsafe. The Friday authority review found conflicting public identity signals: the current homepage shows Suite 201, 276 Pitt Street and `02 9909 6785`; an indexed Chinese page/result and Birdeye/Sydney Today show Barangaroo; ABR/D&B show NSW 2037/Forest Lodge; D&B also assigns an unrelated retail classification.
+- Action taken: created `docs/seo-local-citation-correction-pack-2026-07-31.md` with source evidence, a single owner-confirmation block, correction order, submission tracker and verification triggers. No legal address, phone, profile or ranking claim was guessed or changed.
+- Evidence decision: the Chinese-audience case-study intake remains empty and is not marked `approved to draft`; no client proof or outcome was invented.
+- Validation date: 2026-08-03
+- Next trigger: approve the public business name, customer-facing address, phone, address role and category in the correction pack; then align the bilingual website and owned profiles in the documented order. Monday 2026-08-03 should also restore Search Console authorization, submit the sitemap once, pull a fresh 28-day report and reassess query ownership before any ranking-copy change.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh near-page-one CTR or ownership-regression evidence; today's authority action supports the broad/local owner safely |
+| `services/digital.html` | 2 | `hold` | Last usable position is 62.2; no fresh copy trigger |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after edit` | The 2026-07-13 edit still lacks a fresh comparable post-change report |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Last usable position is 47.9; no fresh support-content trigger |
+| `services/support.html` | 2 | `hold` | Transient 503 did not reproduce; stale ranking signal does not justify copy changes |
+| `services/advertising.html` | 2 | `hold` | Observation-only page without a fresh upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Retain in the post-auth coverage queue; sitemap discovery was previously verified |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | Retain in the post-auth coverage queue; do not repeat without current coverage evidence |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Wednesday's new crawl path is live; submit/inspect only after authorization recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Retain in the post-auth coverage queue |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after internal-link action` | Prior page-one/zero-click data is stale; require a fresh comparable report before another edit |
