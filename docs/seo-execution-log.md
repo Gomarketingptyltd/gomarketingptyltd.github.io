@@ -933,3 +933,38 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Wednesday's new crawl path is live; submit/inspect only after authorization recovery |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Retain in the post-auth coverage queue |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold after internal-link action` | Prior page-one/zero-click data is stale; require a fresh comparable report before another edit |
+
+## 2026-08-03 — Monday full strategy and data review
+
+- Run time: 2026-08-03 09:32 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 29 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-07-27.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the priority pages, and the current web-search sample recorded in `docs/seo-serp-review-2026-08-03.md`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-03 with a 29-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-08-03.md`
+- Search Console blocker: `node scripts/search-console.js doctor` and `node scripts/search-console.js snapshot --days=28` failed at token refresh with `Bad Request`. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots captured with normal rendering
+  - Visual report: `.seo-visual/20260802T233205Z/report.md`
+- Monday diagnosis: Go Marketing appeared in the sampled broad Sydney agency results. Digital-service competitors consistently expose named channels, customer/sector fit, process and proof. The digital owner already covers the named service mix; its bilingual supporting guide was thin and focused on ranking mechanics rather than helping a buyer choose a service sequence.
+- Action taken: materially improved the English and Chinese `digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` support articles with a bottleneck-led service decision framework, practical execution order, buyer questions, bilingual-market logic and contextual links to the digital, automation and Chinese-agency service paths. No owner-page title, H1 or first-screen ranking copy was changed, and no client outcome was invented.
+- Indexing decision: the materially updated support-page pair is `request indexing`; submit the sitemap and inspect/request indexing after Search Console authorization is restored.
+- Head/resource inspection: both changed pages retain stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, structured data and scripts.
+- Validation date: 2026-08-05
+- Next trigger: Wednesday should restore Search Console authorization, submit the sitemap once, request indexing for the updated support-page pair, and use the fresh 28-day report to test query ownership. If authorization remains blocked, verify the new content live and continue an approved proof/citation action without rewriting owner-page copy.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Present in sampled broad-agency results; require fresh near-page-one weak-CTR or ownership-regression evidence |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; today's support-content improvement is safer than another owner-page rewrite |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | The 2026-07-13 edit still lacks a fresh comparable post-change report |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Stale position 47.9 and no precise owner-page trigger |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; retain in the post-auth sitemap/URL Inspection queue |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | No latest page row; verify coverage after OAuth recovery |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | New internal crawl path is live; verify coverage after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual support-content improvement shipped today |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Prior page-one/zero-click signal is stale; require a fresh comparable report before another snippet edit |
