@@ -952,6 +952,13 @@ Every new entry must include:
 - Action taken: materially improved the English and Chinese `digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` support articles with a bottleneck-led service decision framework, practical execution order, buyer questions, bilingual-market logic and contextual links to the digital, automation and Chinese-agency service paths. No owner-page title, H1 or first-screen ranking copy was changed, and no client outcome was invented.
 - Indexing decision: the materially updated support-page pair is `request indexing`; submit the sitemap and inspect/request indexing after Search Console authorization is restored.
 - Head/resource inspection: both changed pages retain stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, structured data and scripts.
+- Pre-commit release gate: passed after the support-content change; 123 HTML files and 55 bilingual pairs checked, with no whitespace errors.
+- Commit/deployment: `f2d4d8f` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260802T233820Z/report.md`
+- Session-duration blocker: the safe Monday SERP review, bilingual support-content action, deployment and verification are complete. Further data-led ranking or indexing work requires the account holder to complete Search Console sign-in; the alternative proof/case and local-citation branches require an approved evidence intake or approved business source-of-truth fields. Without one of those external-state changes, another owner-page edit, unsupported indexing request or unverified proof claim would not be production-safe. Exact recovery is the Search Console authorization sequence above, approval of a completed case-study evidence intake, or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`.
 - Validation date: 2026-08-05
 - Next trigger: Wednesday should restore Search Console authorization, submit the sitemap once, request indexing for the updated support-page pair, and use the fresh 28-day report to test query ownership. If authorization remains blocked, verify the new content live and continue an approved proof/citation action without rewriting owner-page copy.
 
