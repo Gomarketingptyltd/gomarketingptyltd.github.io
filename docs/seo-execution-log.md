@@ -994,6 +994,12 @@ Every new entry must include:
 - Indexing action: both materially updated support URLs remain `request indexing`; sitemap submission and URL Inspection are queued immediately after OAuth recovery.
 - Head/resource inspection: the changed Chinese article retains its stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, structured data and scripts; only the stale JSON-LD date changed in the head.
 - Pre-commit release gate: passed after the tactical action; 123 HTML files and 55 bilingual pairs checked, with no whitespace errors.
+- Commit/deployment: `777bcd6` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260804T233644Z/report.md`
+  - Cache-busted production fetch confirmed the new Chinese internal link, both `2026-08-03` sitemap dates and the corrected Chinese `BlogPosting.dateModified` on the first propagation attempt
 - Validation date: 2026-08-07
 - Session-duration blocker: the safe crawl-signal/internal-link action and local verification are complete. Further data-led ranking or indexing work requires the account holder to complete Search Console sign-in; the alternative case/citation branches still require an approved evidence intake or approved source-of-truth fields. Exact recovery is the authorization sequence above, approval of one completed case-study intake, or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`.
 - Next trigger: Friday should restore Search Console authorization, submit the sitemap once, request indexing for the updated English and Chinese guide URLs, pull a fresh 28-day report, and reassess query ownership before any owner-page copy edit. If authorization remains blocked, progress only an approved proof or citation action.
