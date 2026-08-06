@@ -975,6 +975,49 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | New internal crawl path is live; verify coverage after OAuth recovery |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual support-content improvement shipped today |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Prior page-one/zero-click signal is stale; require a fresh comparable report before another snippet edit |
+
+## 2026-08-07 — Friday growth/correction pass
+
+- Run time: 2026-08-07 09:32 AEST
+- Run type: Friday growth/correction pass
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 33 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-03.md`, `docs/seo-local-citation-correction-pack-2026-07-31.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the priority pages, their bilingual support-article crawl paths, and `sitemap.xml`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-07 with a 33-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-08-03.md`; no ranking-copy decision was made from stale GSC data
+- Search Console blocker: `node scripts/search-console.js doctor` failed token refresh with `Bad Request`, and `node scripts/search-console.js snapshot --days=28` could not run. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260806T233508Z/report.md`
+- Friday diagnosis: the materially improved `howToReachChineseConsumersInSydney.html` article pair had a relevant reciprocal path to the Chinese-agency owner pages, but the English and Chinese owner pages did not link back to the practical guide. This left the request-indexing article with only the insight hub and Chinese-community owner page as non-self inbound sources. Fresh title, H1 and first-screen edits remain unjustified while GSC is stale.
+- Action taken: added one contextual internal link from each English/Chinese `sydneyBilingualMarketingAgency.html` owner page to its matching `howToReachChineseConsumersInSydney.html` guide, using descriptive localized anchors, and updated only those owner-page sitemap `lastmod` values to `2026-08-07`. No title, meta description, H1, first-screen copy, CSS, structured data or unsupported proof claim changed.
+- Indexing action: both guide URLs remain `request indexing`; the updated sitemap is live, while submission and URL Inspection remain queued immediately after OAuth recovery.
+- Head/resource inspection: neither changed HTML head was edited; stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, structured data and scripts remain intact.
+- Pre-commit release gate: passed after the internal-link action; 123 HTML files and 55 bilingual pairs checked, with no whitespace errors.
+- Commit/deployment: `0fd36b2` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260806T233802Z/report.md`
+  - Cache-busted production fetch confirmed both localized guide links and both `2026-08-07` sitemap dates on the first propagation check
+- Validation date: 2026-08-10
+- Session-duration blocker: the safe Friday crawl-path action, deployment and verification are complete. Further data-led ranking or indexing work requires the account holder to complete Search Console sign-in; the alternative case-study and citation-correction branches require an evidence intake marked `approved to draft` or approved business source-of-truth fields. Exact recovery is the authorization sequence above, approval of one completed case-study intake, or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`.
+- Next trigger: Monday 2026-08-10 should restore Search Console authorization, submit the sitemap once, request indexing for the English and Chinese consumer guides plus the recently improved digital-services guides, pull a fresh 28-day report, refresh the SERP review, and reassess query ownership. If authorization remains blocked, execute only an approved proof or citation correction rather than rewriting owner-page copy.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh weak-CTR or ownership-regression evidence; stale data does not justify a homepage edit |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; Monday's support improvement and Wednesday's crawl fix still need fresh data |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold after internal-link action` | Stale rising-impression signal cannot justify another snippet edit; today's reciprocal support-guide link strengthens relevance safely |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Stale position 47.9 and no precise owner-page trigger |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; retain in the post-auth sitemap/URL Inspection queue |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | The bilingual article pair gained a new relevant owner-page crawl path and is live in the updated sitemap |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Relevant crawl paths are live; verify coverage after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Recent material bilingual improvement and corrected crawl signals remain queued for post-auth inspection |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Prior page-one/zero-click signal is stale; require a fresh comparable report before another snippet edit |
 ## 2026-08-05 — Wednesday tactical optimization sprint
 
 - Run time: 2026-08-05 09:31 AEST
