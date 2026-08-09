@@ -976,6 +976,39 @@ Every new entry must include:
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual support-content improvement shipped today |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Prior page-one/zero-click signal is stale; require a fresh comparable report before another snippet edit |
 
+## 2026-08-10 — Monday full strategy and data review
+
+- Run time: 2026-08-10 09:31 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 36 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-03.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the priority owner pages, `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`, and the current web-search sample recorded in `docs/seo-serp-review-2026-08-10.md`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-10 with a 36-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-08-10.md`
+- Search Console blocker: `node scripts/search-console.js doctor` failed token refresh with `Bad Request`, and `node scripts/search-console.js snapshot --days=28` could not run. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs checked over HTTPS, including live CSS and UTF-8/encoding/unsafe-URL rules
+  - `npm run seo:visual-check`: environment/browser blocker; Playwright stalled during navigation and the run was interrupted after creating only `.seo-visual/20260809T233500Z/desktop__home.png` and `desktop__cn.png`. No report was produced, so this is not accepted as a current visual pass. Exact recovery: rerun from a browser/network environment that can finish all 28 desktop/mobile captures and require a new timestamped `report.md` before ranking-copy edits.
+- Monday diagnosis: current Sydney agency results continue to reward named services, delivery process, local/sector fit and verifiable proof. Go Marketing appeared for the sampled `xiaohongshu marketing sydney` family with clean owner-page alignment. Competitors expose concrete project outcomes and platform delivery detail; Go Marketing's approved-evidence intake remains empty, so another title/H1/first-screen edit would be lower confidence and unsafe with stale GSC plus incomplete visual verification.
+- Action taken: created `docs/seo-serp-review-2026-08-10.md` and added a SERP-prioritised Priority A evidence packet to `docs/seo-case-study-evidence-intake-chinese-audience-growth-2026-07-15.md`. The packet requests one real Sydney buyer problem, comparable dated baseline/outcome, channel-role evidence, an approved before/after asset and explicit publication permission. No client result, ranking claim or production page copy was invented or changed.
+- Verification: documentation diff reviewed; no HTML head, stylesheet, canonical, hreflang, favicon, script or structured-data block changed in this action. Final `npm run seo:release-gate` passed with 123 HTML files and 55 bilingual pairs checked and no whitespace errors.
+- Validation date: 2026-08-12
+- Next trigger: restore Search Console authorization, submit the sitemap once, request indexing/inspect the queued support URLs, capture a complete visual report, then use a fresh 28-day snapshot to reassess ownership. In parallel, the internal project owner can complete one Priority A evidence packet; draft the bilingual case-page pair only after the intake is marked `approved to draft`.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh weak-CTR or ownership-regression evidence; local identity corrections still require approved source-of-truth fields |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; recent support improvements need a fresh comparable report |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Prior rising-impression signal is stale; approved case evidence is the next safe escalation |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Stale position 47.9; keep community-growth intent separate from the platform-service owner |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; retain in the post-auth sitemap/URL Inspection queue |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual content and owner-page crawl paths are live; inspect after OAuth recovery |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Relevant crawl paths are live; verify coverage after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvement remains queued for post-auth inspection |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled result has clean query alignment; require fresh CTR data or approved proof before editing |
+
 ## 2026-08-07 — Friday growth/correction pass
 
 - Run time: 2026-08-07 09:32 AEST
