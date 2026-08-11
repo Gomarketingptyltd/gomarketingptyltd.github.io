@@ -1095,3 +1095,39 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Internal crawl path is live; verify coverage after OAuth recovery |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual update now has corrected sitemap dates, structured data and Chinese owner-page crawl path |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Prior page-one/zero-click signal is stale; require a fresh comparable report before another snippet edit |
+## 2026-08-12 — Wednesday tactical optimization sprint
+
+- Run time: 2026-08-12 09:31 AEST
+- Run type: Wednesday tactical optimization sprint
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 38 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-10.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the priority-page queue, the English/Chinese Xiaohongshu restaurant support pair, and `sitemap.xml`
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-12 with a 38-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-08-10.md`; no owner-page ranking-copy decision was made from stale GSC data
+- Search Console blocker: `node scripts/search-console.js doctor` failed token refresh with `Bad Request`; the 28-day snapshot and authenticated indexing actions could not run. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed after terminating two stale duplicate `git diff --check` processes from an earlier interrupted invocation; 123 HTML files and 55 bilingual pairs checked with no whitespace errors
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS, including UTF-8, encoding and insecure-URL rules
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260811T233614Z/report.md`
+- Tactical diagnosis: the English Xiaohongshu restaurant article already covered Sydney dining scenarios, creator briefing, useful measurement and cross-channel execution, while its Chinese counterpart remained the thin 2026-06-08 version. This bilingual parity gap was a safer and clearer support-content action than another owner-page edit without fresh GSC data.
+- Action taken: expanded only `cn/xiaohongshuMarketingForSydneyRestaurants.html` with localized Sydney scenarios, decision-useful content requirements, UGC/creator briefing fields, practical success measures and a contextual link to the Chinese community-growth owner page. Updated the visible date, `article:modified_time`, `BlogPosting.dateModified`, and only the matching Chinese sitemap `lastmod` to `2026-08-12`. No title, meta description, H1, first-screen owner-page copy, CSS or unsupported performance claim changed.
+- Indexing action: the materially improved Chinese support URL is `request indexing`; sitemap submission and URL Inspection remain queued immediately after OAuth recovery.
+- Head/resource inspection: the changed page retains its stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, JSON-LD graph and scripts; only the article modification dates changed in the head.
+- Pre-commit release gate: passed with 123 HTML files and 55 bilingual pairs checked and no whitespace errors.
+- Validation date: 2026-08-14
+- Session-duration blocker: the safe tactical support-content action and all available production checks are complete. Further data-led ranking or indexing work requires the account holder to complete Search Console sign-in; the proof/citation alternatives require an evidence intake marked `approved to draft` or approved business source-of-truth fields. Exact recovery is the authorization sequence above, approval of one completed case-study intake, or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`.
+- Next trigger: Friday should restore Search Console authorization, submit the sitemap once, request indexing for the updated Chinese Xiaohongshu restaurant guide and the existing queue, pull a fresh 28-day report, and reassess query ownership before any owner-page copy edit. If authorization remains blocked, execute only an approved proof or citation correction.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh weak-CTR or ownership-regression evidence; stale data does not justify a homepage edit |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; recent support improvements still need a fresh comparable report |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Prior rising-impression signal is stale; approved case evidence remains the safer escalation |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Stale position 47.9; today's support-page parity action reinforces this owner without changing its ranking copy |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh upgrade signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; retain in the post-auth sitemap/URL Inspection queue |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual content and owner-page crawl paths remain queued for inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Chinese counterpart materially improved today; submit the pair and inspect the updated Chinese URL after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvement remains queued for post-auth inspection |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled query alignment is clean; require fresh CTR data or approved proof before editing |
