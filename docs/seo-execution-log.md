@@ -1114,6 +1114,12 @@ Every new entry must include:
 - Indexing action: the materially improved Chinese support URL is `request indexing`; sitemap submission and URL Inspection remain queued immediately after OAuth recovery.
 - Head/resource inspection: the changed page retains its stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, JSON-LD graph and scripts; only the article modification dates changed in the head.
 - Pre-commit release gate: passed with 123 HTML files and 55 bilingual pairs checked and no whitespace errors.
+- Commit/deployment: `435095e` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260811T234101Z/report.md`
+  - Cache-busted production fetch confirmed the expanded Chinese content, `BlogPosting.dateModified` value, visible update date and matching sitemap `lastmod`
 - Validation date: 2026-08-14
 - Session-duration blocker: the safe tactical support-content action and all available production checks are complete. Further data-led ranking or indexing work requires the account holder to complete Search Console sign-in; the proof/citation alternatives require an evidence intake marked `approved to draft` or approved business source-of-truth fields. Exact recovery is the authorization sequence above, approval of one completed case-study intake, or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`.
 - Next trigger: Friday should restore Search Console authorization, submit the sitemap once, request indexing for the updated Chinese Xiaohongshu restaurant guide and the existing queue, pull a fresh 28-day report, and reassess query ownership before any owner-page copy edit. If authorization remains blocked, execute only an approved proof or citation correction.
