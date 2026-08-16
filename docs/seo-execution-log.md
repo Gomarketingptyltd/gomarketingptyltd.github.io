@@ -1179,3 +1179,38 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Chinese page materially changed on 2026-08-12 and is first in the recovery queue |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvement remains absent from the stale local page report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled query ownership is clean; require fresh CTR data or approved proof before editing |
+
+## 2026-08-17 — Monday full strategy and data review
+
+- Run time: 2026-08-17 09:32 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and is 43 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-10.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the priority pages, newest support pages and bilingual internal-link paths
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-17 with a 43-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-08-17.md`, covering all five required query families
+- Search Console blocker: token refresh failed with `Bad Request`; the 28-day snapshot and authenticated indexing actions could not run. Exact recovery: run `npm run search-console:auth`, complete Google consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before action:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS, including UTF-8, encoding and insecure-URL rules
+  - Initial `npm run seo:visual-check`: environment-blocked because the Playwright Chromium executable was missing; restored with `playwright install chromium`
+  - Rerun `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260816T233235Z/report.md`
+- Monday diagnosis: the current web-search sample surfaced Go Marketing's Xiaohongshu/WeChat service page for `xiaohongshu marketing sydney`, confirming clean query alignment. The relevant restaurant support pair linked only to the broader community-growth owner, leaving a precise internal-authority path unused.
+- Action taken: added bilingual contextual links from the Sydney restaurant Xiaohongshu guide pair to the English and Chinese Xiaohongshu/WeChat service owners. Updated the visible modification dates, `article:modified_time`, `BlogPosting.dateModified`, and matching sitemap `lastmod` values to 2026-08-17. No title, meta description, H1, first-screen owner copy, CSS or performance claim changed.
+- Indexing action: the restaurant support pair remains `request indexing`; after OAuth recovery, inspect each canonical and request indexing only if Google lacks the current version, then submit the sitemap once.
+- Validation date: 2026-08-19
+- Next trigger: Wednesday should restore OAuth, pull a fresh comparable report, submit the sitemap once, inspect the updated restaurant pair, and reassess query ownership. If auth remains blocked, validate the deployed internal links and progress only approved proof/citation work or a verified crawl correction.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh CTR or ownership-regression evidence |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; recent support improvements need fresh data |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Rising-impression signal is stale; require fresh data or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent and avoid platform-owner overlap |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; inspect after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair remains queued for inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Bilingual contextual owner links materially changed today |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain queued for inspection |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Current result has clean ownership; require fresh CTR data or approved proof before editing |
