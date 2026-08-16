@@ -1198,7 +1198,16 @@ Every new entry must include:
 - Monday diagnosis: the current web-search sample surfaced Go Marketing's Xiaohongshu/WeChat service page for `xiaohongshu marketing sydney`, confirming clean query alignment. The relevant restaurant support pair linked only to the broader community-growth owner, leaving a precise internal-authority path unused.
 - Action taken: added bilingual contextual links from the Sydney restaurant Xiaohongshu guide pair to the English and Chinese Xiaohongshu/WeChat service owners. Updated the visible modification dates, `article:modified_time`, `BlogPosting.dateModified`, and matching sitemap `lastmod` values to 2026-08-17. No title, meta description, H1, first-screen owner copy, CSS or performance claim changed.
 - Indexing action: the restaurant support pair remains `request indexing`; after OAuth recovery, inspect each canonical and request indexing only if Google lacks the current version, then submit the sitemap once.
+- Head/resource inspection: both changed articles retain stylesheet, Google Fonts, favicon, canonical, hreflang, social metadata, JSON-LD and scripts; only truthful modification dates changed in the head.
+- Pre-commit release gate: passed with 123 HTML files and 55 bilingual pairs checked; JSON-LD parsed successfully and `git diff --check` passed.
+- Commit/deployment: `39b0ab6` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs remained healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260816T233814Z/report.md`
+  - Cache-busted production fetch confirmed both contextual owner links, both 2026-08-17 article modification signals and matching sitemap dates on the first propagation check
 - Validation date: 2026-08-19
+- Session-duration blocker: the production fix, Monday SERP review, bilingual internal-link action, deployment and all available verification are complete. Further data-led ranking/indexing work requires the account holder to complete Search Console OAuth; case/citation alternatives require an evidence intake marked `approved to draft` or approved source-of-truth fields. Exact recovery is the OAuth sequence above, approval of one completed case-study intake, or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`.
 - Next trigger: Wednesday should restore OAuth, pull a fresh comparable report, submit the sitemap once, inspect the updated restaurant pair, and reassess query ownership. If auth remains blocked, validate the deployed internal links and progress only approved proof/citation work or a verified crawl correction.
 
 | Page | Opportunity score | Decision | Reason |
