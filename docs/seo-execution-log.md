@@ -1223,3 +1223,39 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Bilingual contextual owner links materially changed today |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain queued for inspection |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Current result has clean ownership; require fresh CTR data or approved proof before editing |
+
+## 2026-08-19 — Wednesday tactical optimization sprint
+
+- Run time: 2026-08-19 09:31 AEST
+- Run type: Wednesday tactical optimization sprint
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 45 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-17.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/search-console-priority-urls.md`, the indexing recovery queue, Monday's English/Chinese restaurant-guide changes, and the approved-proof/citation backlog
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-19 with a 45-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-08-17.md`; no owner-page ranking-copy decision was made from stale GSC data
+- Search Console blocker: `node scripts/search-console.js doctor` failed token refresh with `Bad Request`, so the 28-day snapshot, sitemap submission and URL Inspection could not run. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS, including UTF-8, encoding and insecure-URL rules
+  - Initial `npm run seo:visual-check`: environment-blocked by a missing Playwright Chromium 1208 binary; restored with `python3 -m playwright install chromium`
+  - Rerun `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260818T233153Z/report.md`
+- Prior-action validation: cache-busted live fetches confirmed both 2026-08-17 restaurant-guide updates, English/Chinese contextual links to the matching Xiaohongshu/WeChat service owners, and the current structured modification dates remain deployed.
+- Tactical diagnosis and action: owner-page copy remains on hold because the ranking source is stale. The authenticated indexing recovery packet remains the highest-leverage action, but cannot be executed without account-holder OAuth. The marketing-automation support/owner path was also rechecked and already has multiple contextual bilingual links, so another internal-link edit would be duplicative. The tangible output for this run is a verified deployment/crawl decision and a documented blocker with an exact recovery sequence; no CSS, metadata, sitemap date, page copy or unsupported proof claim changed.
+- Indexing decision: retain the updated restaurant pair and three older bilingual pairs in the URL Inspection queue. After authorization, inspect current canonical/coverage first, request indexing only where Google lacks the material current version, and submit the sitemap once.
+- Validation date: 2026-08-21, or immediately after OAuth recovery
+- Session-duration blocker: all available production checks, prior-change validation, crawl-path review, dashboard refresh and decision work are complete. Fresh ranking decisions and authenticated indexing require the account holder to complete Google OAuth; the remaining proof/citation actions require an evidence intake marked `approved to draft` or approval of the source-of-truth block in `docs/seo-local-citation-correction-pack-2026-07-31.md`. These dependencies prevent safe productive ranking or authority work for the remainder of the hour.
+- Next trigger: Friday should restore Search Console OAuth, pull a fresh comparable report, execute `docs/seo-indexing-recovery-2026-08-14.md`, submit the sitemap once, and reassess query ownership. If OAuth remains blocked, ship only an approved proof/citation correction or a newly verified crawl defect; keep owner-page copy unchanged.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh weak-CTR or ownership-regression evidence |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; existing support improvements need fresh comparable data |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Prior rising-impression signal is stale; require fresh data or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent; Monday's platform-owner reinforcement is live |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Existing bilingual crawl paths are strong; inspect coverage after OAuth recovery before requesting |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair remains queued for current-canonical inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Bilingual owner links changed on 2026-08-17; inspect both current canonicals after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale local page report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Query ownership was clean in Monday's SERP sample; require fresh CTR data or approved proof before editing |
