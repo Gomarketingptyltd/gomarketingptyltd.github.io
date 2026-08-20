@@ -1264,3 +1264,39 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Bilingual owner links changed on 2026-08-17; inspect both current canonicals after OAuth recovery |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale local page report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Query ownership was clean in Monday's SERP sample; require fresh CTR data or approved proof before editing |
+
+## 2026-08-21 — Friday growth/correction pass
+
+- Run time: 2026-08-21 09:31 AEST
+- Run type: Friday growth/correction pass
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 47 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-17.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, the eight queued live URLs, live `robots.txt`, live `sitemap.xml`, and the proof/citation approval backlog
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-21 with a 47-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-08-17.md`; no owner-page ranking-copy decision was made from stale GSC data
+- Search Console blocker: `node scripts/search-console.js doctor` failed token refresh with `Bad Request`, so the 28-day snapshot, authenticated sitemap submission and URL Inspection could not run. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS, including UTF-8, encoding and insecure-URL rules
+  - Initial `npm run seo:visual-check`: environment-blocked by a missing Playwright Chromium 1208 binary; restored with `python3 -m playwright install chromium`
+  - Rerun `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260820T233203Z/report.md`
+- Friday correction action: revalidated the complete four-pair indexing queue against cache-busted live production and refreshed `docs/seo-indexing-recovery-2026-08-14.md` with current evidence. All eight URLs return `200` over HTTPS with UTF-8, self-referencing canonicals and two stylesheet links; all remain in the sitemap with expected `lastmod` dates; and live `robots.txt` declares the sitemap. No deterministic crawl-path, canonical, resource or sitemap defect was found, so ranking copy and sitemap dates remain unchanged.
+- Indexing decision: retain the restaurant-guide pair, digital-services guide pair, Chinese-consumer guide pair and marketing-automation pair in `request indexing`. After authorization, inspect current canonical/coverage first, request indexing only where Google lacks the material current version, and submit the sitemap once.
+- Proof/authority decision: case-study evidence intake is still unapproved and local-citation source-of-truth fields remain blank. Publishing claims or changing business identity signals would be unsafe without owner approval.
+- Validation date: 2026-08-24, or immediately after OAuth recovery
+- Session-duration blocker: production verification, visual recovery, dashboard refresh, the full live indexing-queue audit and recovery-packet update are complete. Fresh ranking decisions and authenticated indexing require the account holder to complete Google OAuth; remaining proof/citation actions require an evidence intake marked `approved to draft` or approved source-of-truth fields. These dependencies prevent further safe ranking or authority execution in this block.
+- Next trigger: Monday should restore OAuth, pull a fresh comparable report, submit the sitemap once, inspect the restaurant-guide pair first, update the required five-family SERP review, and reassess query ownership. If OAuth remains blocked, ship only an approved proof/citation correction or a newly verified technical defect; keep owner-page ranking copy unchanged.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | No fresh weak-CTR or ownership-regression evidence |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; existing support improvements need fresh comparable data |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Prior rising-impression signal is stale; require fresh data or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent; current platform-owner reinforcement remains live |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Live canonical/crawl signals pass; inspect Search Console coverage after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair passes live checks and remains queued for current-canonical inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest material bilingual change is live and first in the post-auth inspection queue |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements pass live checks but remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Latest sampled ownership was clean; require fresh CTR data or approved proof before editing |

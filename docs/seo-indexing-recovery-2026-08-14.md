@@ -34,6 +34,15 @@ Use this queue immediately after Search Console OAuth is restored. The listed pa
 6. Use URL Inspection in the priority order above. Do not repeatedly request indexing when Google already reports the current version indexed with the correct canonical.
 7. Record inspection status, Google-selected canonical, last crawl and any request-indexing action in `docs/seo-execution-log.md`.
 
+## Live queue revalidation — 2026-08-21
+
+- All eight queued URLs returned `200` from their HTTPS canonical URL with `text/html; charset=utf-8`.
+- Each page retained its self-referencing canonical and two stylesheet links.
+- All eight URLs remain in the live sitemap. The restaurant-guide pair has `lastmod` 2026-08-17, the digital-services guide pair 2026-08-03, the Chinese-consumer guide pair 2026-07-03, and the marketing-automation pair 2026-06-11.
+- The live `robots.txt` still allows crawling and declares `https://gomarketing.net.au/sitemap.xml`.
+- Search Console token refresh still returns `Bad Request`, so sitemap submission and URL Inspection remain blocked. No crawl, canonical, resource or sitemap defect was found that would justify changing production pages.
+- Next action remains the exact recovery sequence above. Inspect the restaurant-guide pair first because it contains the newest material change; request indexing only if Google lacks the current canonical version, then submit the sitemap once.
+
 ## Escalation rule
 
 If a URL is excluded or Google selects a different canonical, stop snippet edits and diagnose the reported coverage/canonical reason first. If all URLs are indexed correctly, use the fresh page/query export to decide `edit` or `hold`; do not infer a ranking-copy problem from the old 2026-07-04 report.
