@@ -1305,3 +1305,39 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest material bilingual change is live and first in the post-auth inspection queue |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements pass live checks but remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Latest sampled ownership was clean; require fresh CTR data or approved proof before editing |
+
+## 2026-08-24 — Monday full strategy and data review
+
+- Run time: 2026-08-24 09:31-09:35 AEST
+- Run type: Monday full strategy and data review
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 50 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-17.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, the priority-page set, newest Xiaohongshu support pages, the existing Xiaohongshu-vs-WeChat support brief and the approved-proof backlog
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-08-24 with a 50-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-08-24.md`, covering all five required query families
+- Search Console blocker: `node scripts/search-console.js doctor` reported token refresh `Bad Request` and `snapshot --days=28` failed, so fresh comparison data, authenticated sitemap submission and URL Inspection could not run. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs were healthy over HTTPS, including UTF-8, encoding and insecure-URL rules
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260823T233125Z/report.md`
+- Monday diagnosis: Go Marketing surfaced in the current web-search sample for the homepage and the Xiaohongshu service family, with clean platform-owner alignment. Competing specialist pages now expose setup, ongoing scope, creator activity, sector fit, process and pricing more directly. The stale GSC window does not justify changing owner-page titles, first-screen copy or FAQs.
+- Highest-leverage action: upgraded `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md` with a buyer-decision content block covering scope drivers, three non-price engagement shapes, operational inputs, creator governance, measurement and a cost FAQ evidence gate. The brief explicitly prevents copying competitor ranges or publishing unsupported Go Marketing pricing/proof.
+- Publication blocker and recovery: the support page cannot be drafted safely through publication until the owner approves one public pricing position (`approved range`, `custom quote only`, or `do not publish pricing`) and current first-party platform sources are selected. Record those inputs in the brief, then draft the English/Chinese pair, run cannibalisation review and release checks, deploy, submit the sitemap and request indexing after OAuth recovery.
+- Pre-commit release gate: passed; SEO checks covered 123 HTML files and 55 bilingual pairs, and `git diff --check` passed.
+- Validation date: 2026-08-26, or immediately after OAuth/pricing-input recovery
+- Session-duration blocker: production verification, dashboard refresh, five-family current SERP review, priority scoring and the safe support-content planning action are complete. Fresh ranking/indexing work requires account-holder OAuth, while the next support-content implementation requires an owner-approved pricing position and first-party source selection. These dependencies prevent further safe production execution in this block.
+- Next trigger: Wednesday should restore OAuth, pull the fresh 28-day report, inspect the restaurant-guide pair first, submit the sitemap once and request indexing only where Google lacks the current canonical. If OAuth remains blocked, approve the pricing-position row and platform sources so the bilingual Xiaohongshu-vs-WeChat guide can move into drafting.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Sampled visibility is present; no fresh CTR or ownership-regression evidence |
+| `services/digital.html` | 2 | `hold` | Stale position 62.2; require a fresh comparable report |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is stale; require fresh data or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent and avoid platform-owner overlap |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; inspect current canonical after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair remains queued for authenticated inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest material bilingual change remains first in the post-auth inspection queue |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Current sampled ownership is clean; support content is the safer pricing/scope response |

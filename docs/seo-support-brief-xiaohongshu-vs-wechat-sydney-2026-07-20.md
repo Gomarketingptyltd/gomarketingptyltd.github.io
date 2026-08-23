@@ -70,6 +70,47 @@ The 2026-07-27 review found that specialist results increasingly expose their pl
 
 Current comparison set: [Deep Reach Sydney](https://www.deepreachagency.com/locations/sydney/) for local audience/sector specificity, [RedNote Marketing](https://rednotemarketing.com.au/) for dedicated platform education, [Riseo](https://riseo.com.au/services/wechat-xiaohongshu-marketing-australia/) for process/pricing/proof visibility, and [Vantage Digital](https://vantagedigital.com.au/) for experience/network proof. These are editorial gap references, not sources for Go Marketing claims.
 
+## Buyer-decision upgrade — added 2026-08-24
+
+The 2026-08-24 SERP sample showed a sharper commercial-information gap: specialist results now answer setup cost, ongoing scope, creator activity and sector fit before the enquiry. The guide should help a buyer understand what changes the work without publishing an unapproved Go Marketing price or turning the article into a service-page duplicate.
+
+Add these components to the draft:
+
+1. **Scope-driver table**
+   - platform count and account setup/verification state;
+   - Chinese-language content volume and production format;
+   - organic publishing versus paid distribution;
+   - creator/KOL/KOC sourcing, briefing, usage rights and disclosure checks;
+   - community response and enquiry handoff ownership;
+   - landing-page, booking, analytics and reporting requirements.
+2. **Three non-price scope shapes**
+   - readiness/setup project;
+   - single-platform content test;
+   - coordinated Xiaohongshu, WeChat and website journey.
+   Describe included decisions and dependencies, not fees or promised results.
+3. **Minimum-input checklist**
+   - approved Chinese-language responder;
+   - content and brand approval owner;
+   - usable visual asset pipeline;
+   - truthful product/service details;
+   - enquiry destination and response SLA;
+   - measurement owner and baseline.
+4. **Creator governance note**
+   Explain that creator fit, briefing, permissions, disclosure and reusable asset rights can change both scope and risk. Do not imply Go Marketing has a creator network unless an approved evidence source supports that claim.
+5. **Cost FAQ with an evidence gate**
+   Answer `What changes Xiaohongshu or WeChat marketing cost?` with the scope drivers above. A numerical range may be added only when the business supplies an approved current price position, inclusions, GST treatment and review date. Competitor ranges are comparison evidence only and must never be presented as Go Marketing pricing.
+
+Publication inputs still required:
+
+| Input | Owner-supplied requirement | Status |
+| --- | --- | --- |
+| Go Marketing pricing position | Approved public range, `custom quote only`, or `do not publish pricing` | Pending |
+| Deliverable boundaries | Setup, content volume, creator work, paid media and reporting inclusions | Pending |
+| Platform capability sources | Current first-party URLs checked during drafting | Pending |
+| Proof/case block | Completed evidence intake with publication approval | Optional; pending |
+
+Do not publish until the pricing-position row and platform-source row are complete. If pricing remains confidential, publish the scope-driver explanation with an explicit custom-scope CTA and no artificial range.
+
 ## Release and indexing checklist
 
 1. Draft English and Chinese paired pages with distinct, natural localisation.
