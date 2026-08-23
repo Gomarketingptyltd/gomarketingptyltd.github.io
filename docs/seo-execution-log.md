@@ -1324,6 +1324,11 @@ Every new entry must include:
 - Highest-leverage action: upgraded `docs/seo-support-brief-xiaohongshu-vs-wechat-sydney-2026-07-20.md` with a buyer-decision content block covering scope drivers, three non-price engagement shapes, operational inputs, creator governance, measurement and a cost FAQ evidence gate. The brief explicitly prevents copying competitor ranges or publishing unsupported Go Marketing pricing/proof.
 - Publication blocker and recovery: the support page cannot be drafted safely through publication until the owner approves one public pricing position (`approved range`, `custom quote only`, or `do not publish pricing`) and current first-party platform sources are selected. Record those inputs in the brief, then draft the English/Chinese pair, run cannibalisation review and release checks, deploy, submit the sitemap and request indexing after OAuth recovery.
 - Pre-commit release gate: passed; SEO checks covered 123 HTML files and 55 bilingual pairs, and `git diff --check` passed.
+- Commit/deployment: Monday review, dashboard and support-brief commit `f12907a` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 unique stylesheet URLs remained healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260823T233522Z/report.md`
 - Validation date: 2026-08-26, or immediately after OAuth/pricing-input recovery
 - Session-duration blocker: production verification, dashboard refresh, five-family current SERP review, priority scoring and the safe support-content planning action are complete. Fresh ranking/indexing work requires account-holder OAuth, while the next support-content implementation requires an owner-approved pricing position and first-party source selection. These dependencies prevent further safe production execution in this block.
 - Next trigger: Wednesday should restore OAuth, pull the fresh 28-day report, inspect the restaurant-guide pair first, submit the sitemap once and request indexing only where Google lacks the current canonical. If OAuth remains blocked, approve the pricing-position row and platform sources so the bilingual Xiaohongshu-vs-WeChat guide can move into drafting.
