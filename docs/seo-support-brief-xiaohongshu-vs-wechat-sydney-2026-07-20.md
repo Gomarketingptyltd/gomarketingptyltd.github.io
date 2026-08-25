@@ -106,10 +106,30 @@ Publication inputs still required:
 | --- | --- | --- |
 | Go Marketing pricing position | Approved public range, `custom quote only`, or `do not publish pricing` | Pending |
 | Deliverable boundaries | Setup, content volume, creator work, paid media and reporting inclusions | Pending |
-| Platform capability sources | Current first-party URLs checked during drafting | Pending |
+| Platform capability sources | Current first-party URLs checked during drafting | Ready for drafting; source matrix below checked 2026-08-26 |
 | Proof/case block | Completed evidence intake with publication approval | Optional; pending |
 
 Do not publish until the pricing-position row and platform-source row are complete. If pricing remains confidential, publish the scope-driver explanation with an explicit custom-scope CTA and no artificial range.
+
+## First-party source matrix — checked 2026-08-26
+
+Use these sources narrowly. They establish product identity and documented product surfaces; they do not prove Australian audience reach, buyer intent, algorithmic distribution, marketing outcomes or Go Marketing capability.
+
+| Draft statement supported | First-party source | Drafting boundary |
+| --- | --- | --- |
+| Xiaohongshu describes itself as a lifestyle-interest community and exposes content exploration/search surfaces. | [Xiaohongshu official site](https://www.xiaohongshu.com/explore) | Treat `discovery`, `research` and `social proof` as practical strategy language, not a universal platform promise. Do not infer Sydney reach or audience size. |
+| WeChat supports chat, voice/video calls, Moments and mobile payments. | [WeChat official site](https://www.wechat.com/en/) | This supports relationship-continuity examples, but not a claim that every Sydney customer uses a given feature or that private follow-up improves conversion. |
+| Weixin maintains distinct documentation for Official Accounts, Service Accounts, Mini Programs and Channels. | [Weixin official developer documentation](https://developers.weixin.qq.com/doc/service/new.html) | Name a surface only when the proposed customer journey actually requires it. Do not collapse personal WeChat, an Official Account, a Service Account and a Mini Program into one deliverable. |
+
+Drafting rules from the source check:
+
+- Attribute documented features to the platform and date the source check in the article notes.
+- Label the platform-role comparison as Go Marketing's decision framework.
+- Keep setup, verification, advertising access and account eligibility conditional until the client's account type, entity and current platform rules are confirmed.
+- Exclude audience-size figures, Australia penetration estimates and algorithm claims unless a newer primary source is approved during drafting.
+- Recheck all three URLs immediately before publication; replace any redirected or inaccessible source rather than citing a cached summary.
+
+The platform-source publication input is now complete. The remaining mandatory gate is Go Marketing's pricing position; deliverable boundaries should be confirmed in the same approval so the cost FAQ and scope shapes cannot overstate what is included.
 
 ## Release and indexing checklist
 
