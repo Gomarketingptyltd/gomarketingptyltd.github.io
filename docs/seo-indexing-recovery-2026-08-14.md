@@ -43,6 +43,14 @@ Use this queue immediately after Search Console OAuth is restored. The listed pa
 - Search Console token refresh still returns `Bad Request`, so sitemap submission and URL Inspection remain blocked. No crawl, canonical, resource or sitemap defect was found that would justify changing production pages.
 - Next action remains the exact recovery sequence above. Inspect the restaurant-guide pair first because it contains the newest material change; request indexing only if Google lacks the current canonical version, then submit the sitemap once.
 
+## Live queue revalidation — 2026-08-28
+
+- Rechecked all eight queued URLs with cache-busted live requests. Every URL returned `200` over HTTPS with `text/html; charset=utf-8`, its expected self-referencing canonical and two stylesheet links.
+- The live sitemap still contains all eight URLs. The restaurant-guide pair retains `lastmod` 2026-08-17, the digital-services guide pair 2026-08-03, the Chinese-consumer guide pair 2026-07-03 and the marketing-automation pair 2026-06-11.
+- Live `robots.txt` still allows crawling and declares `https://gomarketing.net.au/sitemap.xml`.
+- The current local crawl-path audit found 29 links to the marketing-automation slug, 9 to the Chinese-consumer guide slug, 9 to the Xiaohongshu restaurant guide slug and 8 to the digital-services guide slug, including bilingual alternates. Contextual owner/support-page anchors remain descriptive; no internal-link defect justifies another production edit.
+- Search Console token refresh still returns `Bad Request`. Sitemap submission, current-canonical inspection and request-indexing actions remain blocked on account-holder OAuth. Run the exact recovery sequence above, inspect the restaurant-guide pair first and request indexing only where Google lacks the current material version.
+
 ## Escalation rule
 
 If a URL is excluded or Google selects a different canonical, stop snippet edits and diagnose the reported coverage/canonical reason first. If all URLs are indexed correctly, use the fresh page/query export to decide `edit` or `hold`; do not infer a ranking-copy problem from the old 2026-07-04 report.
