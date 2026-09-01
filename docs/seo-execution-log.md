@@ -1485,6 +1485,11 @@ Every new entry must include:
   - Visual report: `.seo-visual/20260901T233225Z/report.md`
 - Tactical output: refreshed the dashboard and indexing recovery packet, verified that the interactive OAuth recovery flow starts correctly, and preserved the four-pair authenticated indexing queue. Ranking copy, sitemap dates and unsupported proof/pricing claims remain unchanged because production is healthy and the ranking source is 59 days stale.
 - Indexing decision: after OAuth consent, submit the sitemap once, inspect the Xiaohongshu restaurant-guide pair first and request indexing only where Google lacks the current canonical/material version; then process the digital-services guide, Chinese-consumer guide and marketing-automation pairs in that order.
+- Commit/deployment: dashboard, execution record and indexing recovery commit `dafa768` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and five unique stylesheet URLs remained healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260901T233457Z/report.md`
 - Validation date: 2026-09-04, or immediately after OAuth recovery
 - Session-duration blocker: production verification, visual review, dashboard refresh, OAuth recovery diagnosis, priority scoring and the safe indexing packet update are complete. Fresh ranking/indexing execution requires account-holder Google OAuth; the prepared Xiaohongshu-versus-WeChat guide requires approved pricing and deliverable boundaries; proof/citation work requires approved evidence or source-of-truth fields. No additional ranking-copy, pricing, proof, citation or indexing mutation is safe without one of those external-state changes, so the full hour cannot be used productively.
 - Next trigger: Friday should complete OAuth, pull a fresh 28-day report, submit the sitemap once and inspect the restaurant-guide pair first. If OAuth remains blocked, ship only an approved pricing/scope guide, proof/citation correction or newly verified technical defect.
