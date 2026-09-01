@@ -51,6 +51,13 @@ Use this queue immediately after Search Console OAuth is restored. The listed pa
 - The current local crawl-path audit found 29 links to the marketing-automation slug, 9 to the Chinese-consumer guide slug, 9 to the Xiaohongshu restaurant guide slug and 8 to the digital-services guide slug, including bilingual alternates. Contextual owner/support-page anchors remain descriptive; no internal-link defect justifies another production edit.
 - Search Console token refresh still returns `Bad Request`. Sitemap submission, current-canonical inspection and request-indexing actions remain blocked on account-holder OAuth. Run the exact recovery sequence above, inspect the restaurant-guide pair first and request indexing only where Google lacks the current material version.
 
+## Authentication recovery check — 2026-09-02
+
+- Production remained safe: the release gate passed across 123 HTML files and 55 bilingual pairs, the live check passed for 14 priority pages and five stylesheet URLs, and 28 desktop/mobile renders passed (`.seo-visual/20260901T233225Z/report.md`).
+- `npm run search-console:auth` successfully started a localhost OAuth callback listener and generated a Google consent URL. Completing consent requires the account holder's signed-in browser session; no authorization was completed during the unattended run.
+- Token refresh, the fresh 28-day snapshot and authenticated sitemap submission still fail with `Bad Request`. The dashboard therefore uses the 2026-06-07 to 2026-07-04 window, now 59 days stale.
+- Keep all four bilingual pairs in `request indexing`. After consent, run the exact recovery sequence above, submit the sitemap once and inspect the restaurant-guide pair first. Do not change ranking copy or sitemap dates to work around an authentication failure.
+
 ## Escalation rule
 
 If a URL is excluded or Google selects a different canonical, stop snippet edits and diagnose the reported coverage/canonical reason first. If all URLs are indexed correctly, use the fresh page/query export to decide `edit` or `hold`; do not infer a ranking-copy problem from the old 2026-07-04 report.

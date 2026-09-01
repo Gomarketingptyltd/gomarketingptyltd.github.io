@@ -1467,3 +1467,38 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest material bilingual change remains first in the post-auth inspection queue |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled ownership is clean; guide publication requires approved pricing and scope |
+
+## 2026-09-02 — Wednesday tactical optimization sprint
+
+- Run time: 2026-09-02 09:32 AEST; shortened only after production verification, OAuth recovery testing, dashboard refresh, priority scoring and all safe approval-independent work were completed
+- Run type: Wednesday tactical optimization sprint
+- Data window: Search Console refresh blocked; latest usable local GSC window remains 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 59 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-31.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, the current sitemap queue and the approval-gated proof/support backlog
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-09-02 with a 59-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-08-31.md`; Monday's sampled owner alignment remains the latest market context, so no ranking-copy decision was made from stale GSC data
+- Search Console blocker: doctor token refresh and `snapshot --days=28` failed with `Bad Request`; authenticated sitemap submission also failed. `npm run search-console:auth` successfully generated a Google consent URL and listened on `http://127.0.0.1:8788`, proving the local recovery flow can start, but completion requires the account holder's signed-in consent. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Browser recovery limitation: the available interactive-browser control surface was not callable in this unattended run, so Codex could not complete account-holder Google consent on the user's behalf.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and five unique stylesheet URLs were healthy over HTTPS, including UTF-8, encoding and insecure-URL rules
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260901T233225Z/report.md`
+- Tactical output: refreshed the dashboard and indexing recovery packet, verified that the interactive OAuth recovery flow starts correctly, and preserved the four-pair authenticated indexing queue. Ranking copy, sitemap dates and unsupported proof/pricing claims remain unchanged because production is healthy and the ranking source is 59 days stale.
+- Indexing decision: after OAuth consent, submit the sitemap once, inspect the Xiaohongshu restaurant-guide pair first and request indexing only where Google lacks the current canonical/material version; then process the digital-services guide, Chinese-consumer guide and marketing-automation pairs in that order.
+- Validation date: 2026-09-04, or immediately after OAuth recovery
+- Session-duration blocker: production verification, visual review, dashboard refresh, OAuth recovery diagnosis, priority scoring and the safe indexing packet update are complete. Fresh ranking/indexing execution requires account-holder Google OAuth; the prepared Xiaohongshu-versus-WeChat guide requires approved pricing and deliverable boundaries; proof/citation work requires approved evidence or source-of-truth fields. No additional ranking-copy, pricing, proof, citation or indexing mutation is safe without one of those external-state changes, so the full hour cannot be used productively.
+- Next trigger: Friday should complete OAuth, pull a fresh 28-day report, submit the sitemap once and inspect the restaurant-guide pair first. If OAuth remains blocked, ship only an approved pricing/scope guide, proof/citation correction or newly verified technical defect.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Production is healthy; require fresh weak CTR, ownership regression or approved local proof |
+| `services/digital.html` | 2 | `hold` | Monday's sample showed the correct owner; require a fresh comparable report |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is 59 days stale; require fresh confirmation or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent and avoid platform-owner overlap |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | No latest page row; inspect coverage and canonical after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair remains queued for authenticated inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest material bilingual change remains first in the post-auth inspection queue |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled ownership is clean; guide publication requires approved pricing and scope |
