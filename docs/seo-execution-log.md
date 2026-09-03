@@ -1484,6 +1484,11 @@ Every new entry must include:
   - Visual report: `.seo-visual/20260903T233157Z/report.md`
 - Friday correction output: regenerated the stale-data dashboard, rechecked the current indexing/support backlog and preserved the four-pair authenticated indexing queue. No production crawl, canonical, stylesheet, encoding, HTTPS or rendering defect was found; no ranking copy, unsupported proof, invented pricing or sitemap date was changed.
 - Indexing decision: after OAuth consent, submit the sitemap once, inspect the Xiaohongshu restaurant-guide pair first and request indexing only where Google lacks the current canonical/material version; then process the digital-services guide, Chinese-consumer guide and marketing-automation pairs in that order.
+- Commit/deployment: dashboard and Friday execution record commit `377a093` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; 14 priority pages and five unique stylesheet URLs remained healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260903T233431Z/report.md`
 - Validation date: 2026-09-07, or immediately after OAuth recovery
 - Session-duration blocker: production verification, visual review, dashboard refresh, priority scoring, indexing-queue review and recovery-path confirmation are complete. Authenticated indexing and fresh ranking execution require account-holder Google OAuth; the prepared Xiaohongshu-versus-WeChat guide requires approved pricing and deliverable boundaries; proof/citation work requires approved evidence or source-of-truth fields. No additional ranking-copy, pricing, proof, citation or indexing mutation is safe without one of those external-state changes, so the full hour cannot be used productively.
 - Next trigger: Monday should complete Search Console OAuth, pull and compare a fresh 28-day report, submit the sitemap once, inspect the restaurant-guide pair first and refresh the five-family SERP review. If OAuth remains blocked, ship only an approved pricing/scope guide, proof/citation correction or newly verified technical defect.
