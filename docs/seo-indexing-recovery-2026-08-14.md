@@ -58,6 +58,13 @@ Use this queue immediately after Search Console OAuth is restored. The listed pa
 - Token refresh, the fresh 28-day snapshot and authenticated sitemap submission still fail with `Bad Request`. The dashboard therefore uses the 2026-06-07 to 2026-07-04 window, now 59 days stale.
 - Keep all four bilingual pairs in `request indexing`. After consent, run the exact recovery sequence above, submit the sitemap once and inspect the restaurant-guide pair first. Do not change ranking copy or sitemap dates to work around an authentication failure.
 
+## Live queue revalidation — 2026-09-07
+
+- All eight queued English/Chinese URLs returned `200` over HTTPS with `text/html; charset=utf-8` and the expected self-referencing canonical. The complete production safety checker also passed stylesheet, encoding and insecure-URL rules across all 14 priority pages.
+- Live `robots.txt` continues to declare `https://gomarketing.net.au/sitemap.xml`; the release gate passed all 123 HTML files and 55 bilingual pairs.
+- The local crawl-path audit still finds links from 16 HTML files to the marketing-automation pair, 7 to the Chinese-consumer pair, 7 to the Xiaohongshu restaurant-guide pair and 6 to the digital-services guide pair. No new crawl-path defect was found.
+- Search Console token refresh and the fresh 28-day snapshot still fail with `Bad Request`. Keep all four pairs in `request indexing`; after account-holder consent, submit the sitemap once and inspect the restaurant-guide pair first.
+
 ## Escalation rule
 
 If a URL is excluded or Google selects a different canonical, stop snippet edits and diagnose the reported coverage/canonical reason first. If all URLs are indexed correctly, use the fresh page/query export to decide `edit` or `hold`; do not infer a ranking-copy problem from the old 2026-07-04 report.
