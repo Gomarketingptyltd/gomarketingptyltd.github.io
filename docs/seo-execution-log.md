@@ -1549,7 +1549,7 @@ Every new entry must include:
 
 # 2026-09-07 — Monday full strategy and data review
 
-- Run time: started 2026-09-07 09:31 AEST
+- Run time: 2026-09-07 09:31-09:35 AEST; session guard passed after 4.43 minutes under the documented short-blocker allowance
 - Run type: Monday full strategy and data review
 - Data window: fresh Search Console retrieval blocked; latest usable local GSC window is 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 64 days stale
 - Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-08-31.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, the priority pages and current web-search samples
@@ -1564,6 +1564,11 @@ Every new entry must include:
 - Monday diagnosis: the current sample surfaced Go Marketing's Chinese-community owner with aligned intent. Competitors continue to foreground delivery scope, pricing, creator governance and proof. Because GSC data is 64 days stale and Go Marketing's pricing, proof and local identity approvals remain unavailable, no owner-page ranking copy or unsupported claim changed.
 - Highest-leverage action: refreshed the five-family SERP review and revalidated the full four-pair indexing packet against live production. All eight URLs are HTTPS/UTF-8 with self-canonicals; production safety and robots/sitemap declaration pass; current crawl paths remain present. No deterministic crawl, canonical or resource defect justifies changing production pages.
 - Indexing decision: keep all four bilingual pairs in `request indexing`. After OAuth recovery, submit the sitemap once, inspect the Xiaohongshu restaurant-guide pair first and request indexing only where Google lacks the current canonical/material version.
+- Commit/deployment: Monday dashboard, SERP review, indexing-recovery packet and execution record commit `3744dcf` pushed to `origin/main`; unrelated workspace changes were excluded.
+- Post-push checks:
+  - `npm run seo:live-check`: passed; all 14 priority pages and 5 stylesheet URLs remained healthy over HTTPS
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Post-push visual report: `.seo-visual/20260906T233435Z/report.md`
 - Validation date: 2026-09-09, or immediately after OAuth recovery
 - Session-duration blocker: production verification, dashboard refresh, the Monday SERP review, priority scoring and live indexing-queue revalidation are complete. Fresh ranking and authenticated indexing execution requires account-holder Google OAuth; the prepared Xiaohongshu-versus-WeChat guide requires approved pricing and deliverable boundaries; proof/citation work requires approved evidence or source-of-truth fields. No further ranking-copy, pricing, proof, citation or indexing mutation is safe without one of those external-state changes.
 - Next trigger: Wednesday should complete OAuth, pull a fresh 28-day report, submit the sitemap once and inspect the restaurant-guide pair first. If OAuth remains blocked, ship only an approved pricing/scope guide, proof/citation correction or newly verified technical defect.
