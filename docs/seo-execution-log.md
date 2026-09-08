@@ -1586,3 +1586,38 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest materially changed pair remains first in the inspection queue |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled intent is aligned; publication requires approved pricing and scope |
+
+# 2026-09-09 — Wednesday tactical optimization sprint
+
+- Run time: 2026-09-09 09:32-09:35 AEST; shortened under the documented hard-blocker allowance after all safe approval-independent work was exhausted
+- Run type: Wednesday tactical optimization sprint
+- Data window: fresh Search Console retrieval blocked; latest usable local GSC window is 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 66 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-07.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, the priority pages, sitemap and current internal-link paths
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-09-09 with a 66-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-09-07.md`; no market change or fresh query/page signal justified repeating Monday's review
+- Search Console blocker: `node scripts/search-console.js doctor`, `snapshot --days=28` and authenticated sitemap submission all failed with `Bad Request`. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 14 priority pages and 5 stylesheet URLs were healthy over HTTPS with UTF-8 and no insecure production URL failures
+  - `npm run seo:visual-check`: passed; 28 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260908T233222Z/report.md`
+- Tactical output: attempted the required authenticated sitemap action, then live-revalidated the first indexing pair. Both restaurant-guide URLs return HTTP 200 over HTTPS with UTF-8, correct self-canonicals and reciprocal `en-AU`/`zh-Hans`/`x-default` alternates. The pair remains in the XML sitemap and has crawl paths from both insight hubs and both Xiaohongshu/WeChat service pages. No technical or internal-link defect justified a production edit.
+- Ranking decision: no ranking copy changed from a 66-day-old report. The historical Chinese-agency score-4 signal remains `hold` until fresh confirmation; the four materially changed/new bilingual pairs remain `request indexing` pending authenticated URL Inspection.
+- Commit/deployment: dashboard and execution record only; commit hash and deployment status recorded after release verification below
+- Validation date: 2026-09-11, or immediately after OAuth recovery
+- Session-duration blocker: production verification, visual review, dashboard refresh, authenticated sitemap attempt, priority scoring and live indexing-pair/crawl-path verification are complete. Fresh ranking decisions and the required indexing action need account-holder Google OAuth; the prepared Xiaohongshu-versus-WeChat guide still needs approved pricing and deliverable boundaries; proof/citation work needs approved source-of-truth evidence. No further ranking-copy, pricing, proof, citation or indexing mutation is safe without one of those external-state changes, so the full hour cannot be used productively.
+- Next trigger: Friday should restore OAuth, pull the fresh 28-day snapshot, submit the sitemap once and inspect/request indexing for the restaurant-guide pair first. If OAuth remains blocked, ship only a newly verified technical defect or an approved pricing/scope/proof action.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Require fresh weak CTR, ownership regression or approved local proof |
+| `services/digital.html` | 2 | `hold` | Require a fresh comparable report before another ranking edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is 66 days stale; require fresh confirmation or approved evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent and avoid platform-owner overlap |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Inspect canonical and coverage after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair remains queued for authenticated inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Live pair and crawl paths are healthy; authenticated inspection remains the next action |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled intent is aligned; publication requires approved pricing and scope |
