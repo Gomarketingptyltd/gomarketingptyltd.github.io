@@ -68,3 +68,10 @@ Use this queue immediately after Search Console OAuth is restored. The listed pa
 ## Escalation rule
 
 If a URL is excluded or Google selects a different canonical, stop snippet edits and diagnose the reported coverage/canonical reason first. If all URLs are indexed correctly, use the fresh page/query export to decide `edit` or `hold`; do not infer a ranking-copy problem from the old 2026-07-04 report.
+
+## Production-safety coverage correction — 2026-09-11
+
+- Expanded both production checkers to include the English marketing-automation page plus all four Chinese alternates in this recovery queue. The live checker now tests 19 priority URLs instead of 14, and the visual checker renders the same 19 URLs at desktop and mobile sizes.
+- The expanded live check passed: every queued page returned HTTPS/UTF-8 HTML, retained at least one stylesheet, and loaded healthy CSS without mojibake or insecure production URLs.
+- Current local crawl-path counts are 15 linking files for the marketing-automation slug, 7 for the Chinese-consumer guide, 7 for the Xiaohongshu restaurant guide and 6 for the digital-services guide. All eight URLs remain in the live sitemap and `robots.txt` still declares it.
+- Search Console doctor, the required 28-day snapshot and sitemap submission still fail with OAuth refresh `Bad Request`. Keep all four pairs in `request indexing`; complete the exact recovery sequence above before making another ranking-copy decision.

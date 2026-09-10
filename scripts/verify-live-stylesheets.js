@@ -14,9 +14,14 @@ const PRIORITY_PATHS = [
   "/cn/chineseCommunityGrowth.html",
   "/services/support.html",
   "/services/advertising.html",
+  "/services/marketingAutomationServicesSydney.html",
+  "/cn/marketingAutomationServicesSydney.html",
   "/services/howToReachChineseConsumersInSydney.html",
+  "/cn/howToReachChineseConsumersInSydney.html",
   "/services/xiaohongshuMarketingForSydneyRestaurants.html",
+  "/cn/xiaohongshuMarketingForSydneyRestaurants.html",
   "/services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html",
+  "/cn/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html",
 ];
 
 const MOJIBAKE_PATTERNS = [

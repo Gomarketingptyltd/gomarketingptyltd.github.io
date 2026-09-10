@@ -1587,6 +1587,41 @@ Every new entry must include:
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled intent is aligned; publication requires approved pricing and scope |
 
+# 2026-09-11 — Friday growth/correction pass
+
+- Run time: 2026-09-11 09:32-09:36 AEST; shortened under the documented blocker allowance after the production-safety correction and all safe approval-independent work were completed
+- Run type: Friday growth/correction pass
+- Data window: fresh Search Console retrieval blocked; latest usable local GSC window is 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 68 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-07.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, the live sitemap/robots files and current indexing-queue crawl paths
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-09-11 with a 68-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-09-07.md`; no fresh query/page signal justified changing ranking copy
+- Search Console blocker: `node scripts/search-console.js doctor`, `snapshot --days=28` and authenticated sitemap submission all failed with OAuth refresh `Bad Request`. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed initially for the former 14-URL set; after the coverage correction, passed for all 19 priority URLs and five unique stylesheet assets over HTTPS with UTF-8, no mojibake and no insecure production URLs
+  - Initial 14-page `npm run seo:visual-check`: passed with 28 desktop/mobile screenshots; report `.seo-visual/20260910T233226Z/report.md`
+- Production-safety action: expanded `scripts/verify-live-stylesheets.js` and `scripts/visual-live-check.py` to cover the English marketing-automation page and the four Chinese alternates in the indexing-recovery queue. The focused post-change visual run passed all five added URLs at desktop and mobile sizes (10 screenshots); report `.seo-visual/20260910T233542Z/report.md`.
+- Indexing/crawl validation: all eight bilingual queue URLs remain in the live sitemap and `robots.txt` declares it. The local graph has 15 linking files for marketing automation, 7 for the Chinese-consumer guide, 7 for the Xiaohongshu restaurant guide and 6 for the digital-services guide. No crawl-path, canonical or CSS defect requires page-copy or sitemap-date changes.
+- Ranking decision: no ranking copy changed from a 68-day-old report. Keep the four bilingual pairs in `request indexing`; after OAuth recovery, submit the sitemap once and inspect the restaurant-guide pair first.
+- Commit/deployment: pending production-safety commit; unrelated workspace changes remain excluded
+- Validation date: 2026-09-14, or immediately after OAuth recovery
+- Session-duration blocker: the safe production checker correction, dashboard refresh, indexing-queue validation and priority scoring are complete. Fresh ranking and authenticated indexing execution require account-holder Google OAuth; the prepared comparison guide requires approved pricing and deliverable boundaries; proof/citation work requires approved source-of-truth evidence. No further ranking-copy, pricing, proof, citation or indexing mutation is safe without one of those external-state changes.
+- Next trigger: Monday should complete OAuth, pull and compare a fresh 28-day report, submit the sitemap once, inspect the restaurant-guide pair first and refresh the five-family SERP review. If OAuth remains blocked, ship only a newly verified technical defect or approved pricing/scope/proof action.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Require fresh weak CTR, ownership regression or approved local proof |
+| `services/digital.html` | 2 | `hold` | Require a fresh comparable report before another ranking edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is 68 days stale; require fresh confirmation or approved evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve broader community intent and avoid platform-owner overlap |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Expanded safety coverage passes; inspect canonical and coverage after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair is now fully covered by automated live/visual checks and remains queued for inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Newest materially changed pair remains first in the authenticated inspection queue |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Sampled intent is aligned; publication requires approved pricing and scope |
+
 # 2026-09-09 — Wednesday tactical optimization sprint
 
 - Run time: 2026-09-09 09:32-09:35 AEST; shortened under the documented hard-blocker allowance after all safe approval-independent work was exhausted
