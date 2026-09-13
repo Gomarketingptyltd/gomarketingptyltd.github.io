@@ -75,3 +75,9 @@ If a URL is excluded or Google selects a different canonical, stop snippet edits
 - The expanded live check passed: every queued page returned HTTPS/UTF-8 HTML, retained at least one stylesheet, and loaded healthy CSS without mojibake or insecure production URLs.
 - Current local crawl-path counts are 15 linking files for the marketing-automation slug, 7 for the Chinese-consumer guide, 7 for the Xiaohongshu restaurant guide and 6 for the digital-services guide. All eight URLs remain in the live sitemap and `robots.txt` still declares it.
 - Search Console doctor, the required 28-day snapshot and sitemap submission still fail with OAuth refresh `Bad Request`. Keep all four pairs in `request indexing`; complete the exact recovery sequence above before making another ranking-copy decision.
+
+## Public search discovery check — 2026-09-14
+
+- A current web-search sample surfaced the English Xiaohongshu restaurant guide and English marketing-automation page with their intended topic and live snippets. This is positive evidence that Google can discover these URLs and lowers the likelihood of a basic crawl-path failure.
+- Discovery in a sampled result does not prove that both language alternates are indexed, that Google selected the intended canonicals, or that the newest restaurant-guide material is the indexed version.
+- Keep all four bilingual pairs in `request indexing`. After OAuth recovery, submit the sitemap once and use URL Inspection on the restaurant-guide pair first; request indexing only where Google's selected canonical, last crawl or rendered version is not current.
