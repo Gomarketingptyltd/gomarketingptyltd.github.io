@@ -1695,3 +1695,37 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | English URL is search-discovered; verify the current bilingual pair with URL Inspection |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and scope |
+# 2026-09-16 — Wednesday tactical optimization sprint
+
+- Run time: 2026-09-16 09:31-09:33 AEST; shortened under the documented blocker allowance after the safe tactical action and all approval-independent checks were completed
+- Run type: Wednesday tactical optimization sprint
+- Data window: fresh Search Console retrieval blocked; latest usable local GSC window is 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 73 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-14.md`, `docs/seo-indexing-recovery-2026-08-14.md`, the bilingual Xiaohongshu/Instagram support article and its restaurant-guide link targets
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-09-16 with a 73-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-09-14.md`; no fresh query/page signal justified an owner-page ranking-copy edit
+- Search Console blocker: `node scripts/search-console.js doctor`, `snapshot --days=28` and authenticated sitemap submission failed with OAuth refresh `Bad Request`. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 19 priority pages and five stylesheet assets were healthy over HTTPS with UTF-8, no mojibake and no insecure production URLs
+  - `npm run seo:visual-check`: passed; 38 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260915T233132Z/report.md`
+- Tactical output: added a contextual bilingual internal link from `services/xiaohongshuVsInstagramHospitality.html` and its Chinese alternate to the newer Xiaohongshu restaurant guide pair. This strengthens a relevant support-to-support crawl path and descriptive anchor signal without changing page ownership, commercial claims, pricing or unverified proof.
+- Ranking decision: hold owner-page copy because the available GSC report is 73 days stale. Keep all four bilingual recovery pairs in `request indexing`; the restaurant-guide pair remains first after OAuth recovery.
+- Content commit: `00a4129` (`seo: strengthen restaurant guide internal links`)
+- Validation date: 2026-09-18, or immediately after OAuth recovery
+- Session-duration blocker: production verification, dashboard refresh, the authenticated sitemap attempt, priority scoring and the safe bilingual internal-link action are complete. Fresh ranking decisions and authenticated indexing execution require account-holder Google OAuth; proof/case improvements require approved source-of-truth evidence; the comparison guide requires approved pricing and delivery boundaries. No further ranking-copy, claim, pricing or authenticated indexing mutation is safe without one of those external-state changes.
+- Next trigger: Friday should restore OAuth, pull a fresh 28-day snapshot, submit the sitemap once and inspect the restaurant-guide pair first. If OAuth remains blocked, ship only an approved proof/case packet, pricing/scope guide or newly verified technical defect.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Require fresh weak CTR, ownership regression or approved local proof |
+| `services/digital.html` | 2 | `hold` | Require a fresh comparable report before another ranking edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is 73 days stale; require fresh confirmation or approved evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve aligned community-intent ownership |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Inspect both canonicals after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 4 | `request indexing` | Improved bilingual pair remains queued for authenticated inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | New contextual bilingual crawl path shipped; inspect this pair first after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and scope |
