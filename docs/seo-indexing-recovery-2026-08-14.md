@@ -81,3 +81,10 @@ If a URL is excluded or Google selects a different canonical, stop snippet edits
 - A current web-search sample surfaced the English Xiaohongshu restaurant guide and English marketing-automation page with their intended topic and live snippets. This is positive evidence that Google can discover these URLs and lowers the likelihood of a basic crawl-path failure.
 - Discovery in a sampled result does not prove that both language alternates are indexed, that Google selected the intended canonicals, or that the newest restaurant-guide material is the indexed version.
 - Keep all four bilingual pairs in `request indexing`. After OAuth recovery, submit the sitemap once and use URL Inspection on the restaurant-guide pair first; request indexing only where Google's selected canonical, last crawl or rendered version is not current.
+
+## Friday deployment and queue validation — 2026-09-18
+
+- The full production gate passed before the review: 123 HTML files and 55 bilingual pairs passed the release check; all 19 priority URLs and five stylesheet assets passed the live check; 38 desktop/mobile renders passed (`.seo-visual/20260917T233122Z/report.md`).
+- Wednesday's new contextual links are deployed on both Xiaohongshu-versus-Instagram hospitality pages. The English page links to the English restaurant guide with the anchor `Xiaohongshu marketing for Sydney restaurants`; the Chinese page links to its Chinese alternate with the anchor `悉尼餐厅小红书营销指南`.
+- Current local crawl-path counts are 16 linking files for the marketing-automation slug, 7 for the Chinese-consumer guide, 9 for the Xiaohongshu restaurant guide and 6 for the digital-services guide. The live sitemap still contains every English/Chinese queue URL and `robots.txt` still declares the sitemap.
+- Search Console token refresh, the fresh 28-day snapshot and authenticated sitemap submission still fail with `Bad Request`. Keep all four bilingual pairs in `request indexing`; complete OAuth consent, submit the sitemap once and inspect the restaurant-guide pair first. Do not make a ranking-copy or sitemap-date change to work around the authentication failure.
