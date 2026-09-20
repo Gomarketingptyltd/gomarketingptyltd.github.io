@@ -88,3 +88,10 @@ If a URL is excluded or Google selects a different canonical, stop snippet edits
 - Wednesday's new contextual links are deployed on both Xiaohongshu-versus-Instagram hospitality pages. The English page links to the English restaurant guide with the anchor `Xiaohongshu marketing for Sydney restaurants`; the Chinese page links to its Chinese alternate with the anchor `悉尼餐厅小红书营销指南`.
 - Current local crawl-path counts are 16 linking files for the marketing-automation slug, 7 for the Chinese-consumer guide, 9 for the Xiaohongshu restaurant guide and 6 for the digital-services guide. The live sitemap still contains every English/Chinese queue URL and `robots.txt` still declares the sitemap.
 - Search Console token refresh, the fresh 28-day snapshot and authenticated sitemap submission still fail with `Bad Request`. Keep all four bilingual pairs in `request indexing`; complete OAuth consent, submit the sitemap once and inspect the restaurant-guide pair first. Do not make a ranking-copy or sitemap-date change to work around the authentication failure.
+
+## Monday public-discovery check — 2026-09-21
+
+- The full safety gate passed again: 123 HTML files and 55 bilingual pairs passed locally; all 19 live priority URLs and five stylesheet assets passed; 38 desktop/mobile renders were normal (`.seo-visual/20260920T233741Z/report.md`).
+- A current web-search sample again surfaced the English Xiaohongshu restaurant guide with its August update and intended Sydney hospitality scenarios. Go Marketing's homepage also appeared with the intended bilingual-agency framing.
+- Search discovery is positive crawl evidence, but it still does not prove both language alternates, Google-selected canonicals or the current indexed version. OAuth token refresh and the fresh snapshot remain blocked with `Bad Request`.
+- Keep all four bilingual pairs in `request indexing`. After consent, submit the sitemap once, inspect the restaurant-guide pair first and request indexing only when URL Inspection shows an outdated crawl, missing current content or a canonical/coverage problem.

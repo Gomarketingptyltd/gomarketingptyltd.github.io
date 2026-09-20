@@ -1696,6 +1696,41 @@ Every new entry must include:
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 4 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and scope |
 
+# 2026-09-21 — Monday full strategy and data review
+
+- Run time: 2026-09-21 09:31 AEST; shortened under the documented hard-blocker allowance after production verification, current market review and all safe approval-independent work were completed
+- Run type: Monday full strategy and data review
+- Data window: fresh Search Console retrieval blocked; latest usable local GSC window is 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 78 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-14.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, priority pages and current web-search samples
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-09-21 with a 78-day stale-data warning
+- SERP review: `docs/seo-serp-review-2026-09-21.md`, covering all five required query families
+- Search Console blocker: `node scripts/search-console.js doctor` reported token refresh `Bad Request`, and `snapshot --days=28` failed. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:live-check`: passed; 19 priority pages and five stylesheet assets were healthy over HTTPS with UTF-8, no mojibake and no insecure production URLs
+  - `npm run seo:visual-check`: passed; 38 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260920T233741Z/report.md`
+- Monday diagnosis: Go Marketing's homepage appeared with its intended bilingual-agency framing and the English Xiaohongshu restaurant guide remained discoverable. Current competitors increasingly foreground explicit deliverables, pricing bands, platform ownership and case outcomes. These are evidence/scope gaps, not permission to invent claims or rewrite owner pages from a 78-day-old report.
+- Highest-leverage output: refreshed the five-family SERP review and indexing recovery evidence. The prepared Xiaohongshu-versus-WeChat support guide remains the clearest support-content opportunity, but publishing it requires approved pricing, deliverables, turnaround and platform-ownership boundaries.
+- Ranking decision: hold all owner-page copy until fresh query/page evidence or approved proof exists. Keep all four bilingual recovery pairs in `request indexing`; after OAuth recovery, submit the sitemap once and inspect the restaurant-guide pair first.
+- Validation date: 2026-09-23, or immediately after OAuth recovery or scope/proof approval
+- Session-duration blocker: production verification, dashboard refresh, Monday SERP review, priority scoring and public-discovery revalidation are complete. Fresh ranking and authenticated indexing execution require account-holder Google OAuth; the next support guide requires approved commercial scope; proof/case improvements require approved source-of-truth evidence. No further ranking-copy, claim, pricing or indexing mutation is safe without one of those external-state changes, so the full hour cannot be used productively.
+- Next trigger: Wednesday should restore OAuth, pull and compare a fresh 28-day report, submit the sitemap once and inspect the restaurant-guide pair first. If OAuth remains blocked, ship the comparison guide only after scope approval, add an approved proof/case packet, or fix a newly verified technical defect.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Require fresh weak CTR, ownership regression or approved local proof |
+| `services/digital.html` | 2 | `hold` | Require a fresh comparable report before another ranking edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is 78 days stale; require fresh confirmation or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve distinct community-strategy ownership; verify query landing pages after OAuth recovery |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Inspect both canonicals after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | Improved bilingual pair remains queued for authenticated inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | English URL remains search-discovered; inspect both canonicals and current version first |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and delivery boundaries |
+
 # 2026-09-16 — Wednesday tactical optimization sprint
 
 - Run time: 2026-09-16 09:31-09:33 AEST; shortened under the documented blocker allowance after the safe tactical action and all approval-independent checks were completed
