@@ -1805,3 +1805,37 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 3 | `request indexing` | Wednesday's bilingual crawl path is deployed; inspect this pair first after OAuth recovery |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and scope |
+# 2026-09-23 — Wednesday tactical optimization sprint
+
+- Run time: 2026-09-23 09:31-09:39 AEST; shortened under the documented hard-blocker allowance after production verification, dashboard refresh, indexing attempt, priority scoring and all safe approval-independent work were completed
+- Run type: Wednesday tactical optimization sprint
+- Data window: fresh Search Console retrieval blocked; latest usable local GSC window is 2026-06-07 to 2026-07-04 and the regenerated dashboard flags it as 80 days stale
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-21.md`, `.search-console/reports/2026-06-07_to_2026-07-04/*`, `docs/seo-indexing-recovery-2026-08-14.md`, and the priority-page queue
+- Dashboard: `docs/seo-dashboard.md`, regenerated 2026-09-23 with an 80-day stale-data warning
+- SERP review context: `docs/seo-serp-review-2026-09-21.md`; Monday's current-market review found proof, delivery-scope and pricing-boundary gaps, but no verified source material that permits a safe new claim
+- Search Console blocker: `node scripts/search-console.js doctor` reported token refresh `Bad Request`; `snapshot --days=28` and authenticated sitemap submission both failed. Exact recovery: run `npm run search-console:auth`, complete Google sign-in and consent in the account holder's browser, then run `node scripts/search-console.js doctor`, `node scripts/search-console.js snapshot --days=28`, `npm run seo:dashboard`, and `npm run search-console:submit-sitemap -- --feedpath=https://gomarketing.net.au/sitemap.xml`.
+- Safety checks before decision:
+  - `npm run seo:live-check`: passed; 19 priority pages and five stylesheet assets were healthy over HTTPS with UTF-8, no mojibake and no insecure production URLs
+  - `node scripts/seo-check.js` (the content phase of `npm run seo:release-gate`): passed; 123 HTML files and 55 bilingual pairs checked
+  - `npm run seo:visual-check`: passed; 38 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260922T233237Z/report.md`
+  - Local tooling note: the repository-wide `git diff --check` phase hung while refreshing the full worktree, including in duplicated checker processes; the processes were stopped without modifying files. Scoped Git diff commands remained healthy. Exact recovery: use scoped `git diff --check -- <changed paths>` / `git diff --cached --check` for this documentation-only run, then investigate full-worktree Git refresh latency separately before any HTML release.
+- Tactical output: refreshed the stale-data dashboard, retried the authenticated sitemap action, and recorded a complete recovery-ready indexing decision set. No owner-page edit is justified from an 80-day-old report, and no support guide or proof claim can safely ship without approved pricing, delivery boundaries or source-of-truth case evidence.
+- Ranking decision: hold all owner-page copy. Keep all four bilingual recovery pairs in `request indexing`; after OAuth recovery, submit the sitemap once and inspect the restaurant-guide pair first.
+- Validation date: 2026-09-25, or immediately after OAuth recovery or approval of scope/proof inputs
+- Session-duration blocker: production verification and safe local planning work are complete. Fresh ranking decisions and authenticated indexing require account-holder Google OAuth; the prepared comparison guide requires approved pricing and delivery boundaries; proof/case improvements require approved source-of-truth evidence. Those external-state blockers prevent any further safe ranking-copy, claim or indexing mutation in this block.
+- Next trigger: Friday should restore OAuth, pull and compare a fresh 28-day report, submit the sitemap once and inspect the restaurant-guide pair first. If OAuth remains blocked, ship only an approved proof/case packet, approved pricing/scope guide, or a newly verified technical defect; also confirm the full-worktree Git diff latency is resolved before any HTML deployment.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Require fresh weak CTR, ownership regression or approved local proof |
+| `services/digital.html` | 2 | `hold` | Require a fresh comparable report before another ranking edit |
+| `services/sydneyBilingualMarketingAgency.html` | 4 | `hold` | Historical rising-impression signal is 80 days stale; require fresh confirmation or approved case evidence |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Preserve distinct community-strategy ownership; verify query landing pages after OAuth recovery |
+| `services/support.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/advertising.html` | 2 | `hold` | Observation page without a fresh actionable signal |
+| `services/marketingAutomationServicesSydney.html` | 3 | `request indexing` | Inspect both language canonicals after OAuth recovery |
+| `services/howToReachChineseConsumersInSydney.html` | 3 | `request indexing` | Improved bilingual pair remains queued for authenticated inspection |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Inspect both canonicals and the current version first after OAuth recovery |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Material bilingual improvements remain absent from the stale report |
+| `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and delivery boundaries |
