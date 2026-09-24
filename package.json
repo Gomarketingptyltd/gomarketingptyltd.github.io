@@ -2,7 +2,7 @@
   "scripts": {
     "seo:metadata": "node scripts/update-seo-metadata.js",
     "seo:sitemap": "node scripts/update-sitemap.js",
-    "seo:check": "node --test scripts/update-seo-metadata.test.js scripts/search-console.test.js scripts/enquiry.test.js && node scripts/seo-check.js",
+    "seo:check": "node --test scripts/update-seo-metadata.test.js scripts/search-console.test.js scripts/enquiry.test.js scripts/analytics.test.js && node scripts/seo-check.js",
     "test:enquiry": "node --test scripts/enquiry.test.js",
     "seo:release-gate": "npm run seo:check && git diff --check",
     "seo:live-check": "node scripts/verify-live-stylesheets.js",

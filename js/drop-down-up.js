@@ -46,3 +46,11 @@ if (document.readyState === "loading") {
 } else {
     optimizeImages();
 }
+
+// Consent controls are independent of menus, images and form submission.
+if (document.currentScript && document.querySelector('link[rel="canonical"]')) {
+    const privacyScript = document.createElement("script");
+    privacyScript.src = new URL("analytics.js", document.currentScript.src).href;
+    privacyScript.async = true;
+    document.head.appendChild(privacyScript);
+}

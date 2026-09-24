@@ -15,7 +15,7 @@ allowed = {
     }
     and Path(name).parts[0] not in {"scripts", "docs", "agency-os"}
 }
-allowed.update({"js/enquiry.js", "css/enquiry.css"})
+allowed.update({"js/enquiry.js", "css/enquiry.css", "js/analytics.js", "css/analytics.css"})
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):

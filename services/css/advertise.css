@@ -2565,6 +2565,16 @@ a {
   margin-top: 18px;
 }
 
+.privacy-notice .QnA--normal p + p {
+  margin-top: 24px;
+}
+
+.privacy-notice .QnA--normal a {
+  color: inherit;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
 .automation-guide #enquiry-demo {
   scroll-margin-top: 24px;
 }
