@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Sydney Marketing Agency for Bilingual Growth | Go Marketing</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/enquiry.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -668,14 +669,17 @@
 		<div class="info-layout">
 			<form
 				class="info-form"
+				data-enquiry-form="native"
 				action="https://formspree.io/f/xknavdvn"
 				method="POST"
 			>
+				<input type="hidden" name="page_language" value="en">
 				<div class="info-details">
 					<label>
 						<input
 							type="text"
 							name="username"
+							aria-label="Name" autocomplete="name"
 								placeholder="Name"
 							required
 						>
@@ -684,17 +688,19 @@
 						<input
 							type="email"
 							name="email"
+							aria-label="Email" autocomplete="email"
 							placeholder="Email"
 							required
 						>
 					</label>
 					<label>
-						<input type="text" name="phone" placeholder="Phone" required>
+						<input type="tel" name="phone" placeholder="Phone" aria-label="Phone" autocomplete="tel" required>
 					</label>
 					<label>
 						<input
 							type="text"
 							name="services"
+							aria-label="Area of support"
 								placeholder="Area of support"
 							required
 						>
@@ -715,13 +721,16 @@
 						<a href="services/privatePolicy.html">privacy policy</a> *
 					</p>
 					<button type="submit" class="info-btn">Request a consultation</button>
+					<p class="enquiry-status" data-enquiry-status role="status" aria-live="polite" aria-atomic="true"></p>
+					<button type="submit" class="enquiry-native" data-enquiry-native hidden>Continue with secure form</button>
 				</div>
 			</form>
 			<aside class="info-whatsapp" aria-label="WhatsApp contact">
 				<div class="info-whatsapp__copy">
 					<span class="info-whatsapp__eyebrow">WhatsApp</span>
-					<h4>Scan To Connect</h4>
-					<p>Use our official WhatsApp QR code for quick enquiries and direct contact with Go Marketing.</p>
+					<h4>Connect on WhatsApp</h4>
+					<p>Open a chat or scan our official QR code. Already sent the form? Let us know when you message.</p>
+					<a class="contact-whatsapp-link" data-whatsapp-contact href="https://wa.me/61450428693?src=qr" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
 				</div>
 				<img
 					src="./images/contact/whatsapp-official-account.jpg"
@@ -809,6 +818,7 @@
 </div>
 
 <script src="js/drop-down-up.js"></script>
+<script src="js/enquiry.js" defer></script>
 <script>
 	const hamburger = document.getElementById("hamburger")
 	const cancel = document.getElementById("cancel")

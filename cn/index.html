@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<title>悉尼华人营销机构 | 双语营销 | Go Marketing</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<link rel="stylesheet" href="../css/enquiry.css"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 	<link
@@ -626,14 +627,17 @@
 		<div class="info-layout">
 			<form
 				class="info-form"
+				data-enquiry-form="native"
 				action="https://formspree.io/f/xknavdvn"
 				method="POST"
 			>
+				<input type="hidden" name="page_language" value="zh">
 				<div class="info-details">
 					<label>
 						<input
 							type="text"
 							name="username"
+							aria-label="姓名" autocomplete="name"
 							placeholder="姓名"
 							required
 						/>
@@ -642,15 +646,16 @@
 						<input
 							type="email"
 							name="email"
+							aria-label="电子邮件" autocomplete="email"
 							placeholder="电子邮件"
 							required
 						/>
 					</label>
 					<label>
-						<input type="text" name="phone" placeholder="电话" required/>
+						<input type="tel" name="phone" placeholder="电话" aria-label="电话" autocomplete="tel" required/>
 					</label>
 					<label>
-						<input type="text" name="services" placeholder="需要支持的方向" required/>
+						<input type="text" name="services" placeholder="需要支持的方向" aria-label="需要支持的方向" required/>
 					</label>
 				</div>
 				<div class="info-content">
@@ -665,13 +670,16 @@
 						<a href="privatePolicy.html">隐私政策</a> *
 					</p>
 					<button type="submit" class="info-btn">预约咨询</button>
+					<p class="enquiry-status" data-enquiry-status role="status" aria-live="polite" aria-atomic="true"></p>
+					<button type="submit" class="enquiry-native" data-enquiry-native hidden>继续通过安全表单提交</button>
 				</div>
 			</form>
 			<aside class="info-whatsapp" aria-label="WhatsApp 联系方式">
 				<div class="info-whatsapp__copy">
 					<span class="info-whatsapp__eyebrow">WhatsApp</span>
-					<h4>扫码联系</h4>
-					<p>扫描官方 WhatsApp 二维码，可直接联系 Go Marketing，适合快速咨询与初步沟通。</p>
+					<h4>通过 WhatsApp 联系</h4>
+					<p>点击打开聊天，或扫描官方二维码。已经填写表单？发消息时告诉我们即可。</p>
+					<a class="contact-whatsapp-link" data-whatsapp-contact href="https://wa.me/61450428693?src=qr" target="_blank" rel="noopener noreferrer">打开 WhatsApp</a>
 				</div>
 				<img
 					src="../images/contact/whatsapp-official-account.jpg"
@@ -757,6 +765,7 @@
 </div>
 
 <script src="../js/drop-down-up.js"></script>
+<script src="../js/enquiry.js" defer></script>
 <script>
 	const hamburger = document.getElementById("hamburger")
 	const cancel = document.getElementById("cancel")

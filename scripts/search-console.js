@@ -382,8 +382,7 @@ function buildSnapshotMarkdown({ siteUrl, sites, sitemaps, summary, outputDir })
   const sitemapLines = activeSitemaps.length
     ? activeSitemaps.map((item) => {
         const submitted = item.contents?.[0]?.submitted || "0";
-        const indexed = item.contents?.[0]?.indexed || "0";
-        return `- ${item.path} | submitted: ${submitted} | indexed: ${indexed} | warnings: ${item.warnings} | errors: ${item.errors}`;
+        return `- ${item.path} | submitted: ${submitted} | warnings: ${item.warnings} | errors: ${item.errors}`;
       }).join("\n")
     : "- No sitemap entries returned";
 
@@ -397,6 +396,8 @@ function buildSnapshotMarkdown({ siteUrl, sites, sitemaps, summary, outputDir })
 ## Sitemaps
 
 ${sitemapLines}
+
+Indexing counts are not available from the Sitemaps API. Its indexed field is deprecated; use the Page indexing report or URL Inspection for indexing status.
 
 ## Performance Summary
 
@@ -484,7 +485,7 @@ async function runSnapshot(args) {
   console.log(`Saved Search Console snapshot to ${outputDir}`);
   console.log(`- Snapshot: ${path.join(outputDir, "snapshot.md")}`);
   console.log(`- Impressions: ${formatNumber(summary.totals.impressions)}`);
-  console.log(`- Indexed from sitemap: ${sitemaps.sitemap?.[0]?.contents?.[0]?.indexed || "0"}`);
+  console.log("- Indexing status: check Page indexing or URL Inspection; sitemap indexed counts are deprecated.");
 }
 
 async function main() {
@@ -545,7 +546,11 @@ async function main() {
   process.exitCode = 1;
 }
 
-main().catch((error) => {
-  console.error(`Search Console command failed: ${error.message}`);
-  process.exitCode = 1;
-});
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(`Search Console command failed: ${error.message}`);
+    process.exitCode = 1;
+  });
+}
+
+module.exports = { buildSnapshotMarkdown };

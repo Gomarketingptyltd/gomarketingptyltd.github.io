@@ -2561,4 +2561,12 @@ a {
   }
 }
 
+.automation-guide .QnA--normal p + p {
+  margin-top: 18px;
+}
+
+.automation-guide #enquiry-demo {
+  scroll-margin-top: 24px;
+}
+
 /*# sourceMappingURL=advertise.css.map */

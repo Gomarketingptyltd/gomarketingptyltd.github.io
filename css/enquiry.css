@@ -1,0 +1,66 @@
+.info-title h3 {
+  line-height: 1.2;
+}
+
+.info-form .info-content textarea {
+  font-family: inherit;
+}
+
+.info-form .info-content .enquiry-status {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.enquiry-status:empty,
+.info-form [hidden] {
+  display: none !important;
+}
+
+.info-form .info-btn:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.info-form .enquiry-native,
+.contact-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #969696;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.info-whatsapp .contact-whatsapp-link,
+.support-contact__card .contact-whatsapp-link {
+  margin: 16px 0 0;
+}
+
+.info-form .enquiry-native:hover,
+.contact-whatsapp-link:hover {
+  border-color: #fe9701;
+  color: #fff;
+}
+
+.info-form :focus-visible,
+.contact-whatsapp-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
