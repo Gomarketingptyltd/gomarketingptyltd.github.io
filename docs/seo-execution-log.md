@@ -1,5 +1,20 @@
 # SEO Execution Log
 
+## 2026-09-24 Safe bilingual blog refresh
+
+- User request: continue SEO, update the blog and protect existing page layouts. This is a user-requested content update, not a ranking-copy decision based on stale analytics.
+- Baseline commit: `7d7e711`. Backed up all edited public files and the metadata generator under `/tmp/go-marketing-seo-20260924-baseline` before editing. Preserve unrelated README, agency-os, fitness-coach and planning-document changes.
+- Content: substantially refreshed `services/localSeoStartsWithClearMessaging.html` and its Chinese counterpart into a practical Sydney local SEO website checklist. Added distinct service intent, accurate location details, Maps versus organic results, URL Inspection, bilingual navigation, enquiry checks, comparable reporting and relevant service/article links. Examples are explicitly fictional; no client outcomes, invented prices or ranking guarantees were introduced. Google primary documentation is linked in the article.
+- Discovery: updated the existing Insights card in both languages without adding/removing/reordering cards. Retained all canonical and hreflang URLs. Sitemap `lastmod` changed only for these four edited pages, not the whole site.
+- Honest dates: retained publication date `2026-04-15`; added visible update date `2026-09-24` and matching BlogPosting/Open Graph modification dates. The generator now accepts a targeted file list and preserves legacy English/Chinese dates. Five date regression tests are included in the existing SEO check command.
+- Defect found during visual comparison: both Insights pages contained unused inline FAQ handlers targeting absent `plus-sign1`, `minus-sign1` and `QnA--normal1` elements. Removed only those dead handlers. Shared menu/dropdown scripts remain unchanged.
+- Production boundaries: no CSS, shared browser JS, homepage, forms, service-owner copy, hosting configuration, DNS, redirects, robots policy or credentials changed. No form submissions were sent. No paid links, bulk location pages or repeated indexing requests were used.
+- Baseline online checks: 19 priority pages and five stylesheet URLs passed the live safety check; 38 desktop/mobile screenshots passed at `.seo-visual/20260924T101633Z/report.md`.
+- Pre-release checks: `npm run seo:release-gate` passed across 123 HTML files and 55 bilingual pairs, including all five new tests. Explicit comparison confirmed unchanged date/social behavior on 108 other primary pages. Targeted metadata regeneration is idempotent; XML validation confirmed only four sitemap dates changed.
+- Layout checks: four edited pages at 1440px, 390px and 320px passed 12 before/after comparisons, with no post-change JavaScript errors, horizontal overflow, clipped headings, heading/date collisions or broken images. Header/footer/related-card markup and geometry, card counts and image sizes were preserved. Mobile menu open/close was exercised. Report and screenshots: `.seo-visual/blog-refresh-20260924/report.json`. Inspected desktop/mobile article and card screenshots directly.
+- Search Console: doctor still fails token refresh with `Bad Request`. No fresh ranking or indexing result was available, and no successful sitemap submission is claimed. Latest usable report still ends `2026-07-04`; it must not be presented as current ranking data. Recovery requires account-holder sign-in via `npm run search-console:auth`, then doctor and a fresh comparable report.
+- Release status: local validation complete; verify the subsequent `main` deployment and exact live HTML before marking publication complete.
+
 ## 2026-07-17 Friday growth/correction pass
 
 - Run time: 2026-07-17 09:34 AEST

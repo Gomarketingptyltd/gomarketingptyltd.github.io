@@ -312,9 +312,30 @@ function normalizeDate(value) {
   return null;
 }
 
-function articleDateFromHtml(html) {
-  const match = html.match(/<div class=["']article-meta["'][\s\S]*?<span class=["']date["']>([\s\S]*?)<\/span>/i);
-  return match ? normalizeDate(match[1]) : null;
+function articleDatesFromHtml(html) {
+  const meta = html.match(/<div class=["']article-meta["'][^>]*>([\s\S]*?)<\/div>/i);
+  if (!meta) return { published: null, modified: null };
+
+  const dates = {};
+  for (const [tag] of meta[1].matchAll(/<time\b[^>]*>/gi)) {
+    const kind = tag.match(/\bdata-article-date=["'](published|modified)["']/i)?.[1];
+    if (!kind) continue;
+    const value = tag.match(/\bdatetime=["']([^"']+)["']/i)?.[1];
+    const parsed = new Date(value);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "") ||
+        !Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) {
+      throw new Error(`Invalid article ${kind} date: ${value}`);
+    }
+    dates[kind.toLowerCase()] = value;
+  }
+
+  const legacy = meta[1].match(/<span class=["']date["']>([\s\S]*?)<\/span>/i);
+  const published = dates.published || (legacy ? normalizeDate(legacy[1]) : null);
+  const modified = dates.modified || published;
+  if (modified && (!published || modified < published)) {
+    throw new Error("Article modified date requires a publication date and cannot precede it");
+  }
+  return { published, modified };
 }
 
 function inLanguage(relative) {
@@ -342,7 +363,7 @@ function socialImageFor(relative) {
 
 function socialMetadata({ title, description, canonical, relative, html }) {
   const image = socialImageFor(relative);
-  const articleDate = articleDateFromHtml(html);
+  const { published: articleDate, modified: modifiedDate } = articleDatesFromHtml(html);
   const ogType = articleDate ? "article" : "website";
   return [
     "\t<!-- Managed social metadata -->",
@@ -356,7 +377,7 @@ function socialMetadata({ title, description, canonical, relative, html }) {
     ...(articleDate
       ? [
           `\t<meta property="article:published_time" content="${articleDate}">`,
-          `\t<meta property="article:modified_time" content="${articleDate}">`,
+          `\t<meta property="article:modified_time" content="${modifiedDate}">`,
         ]
       : []),
     `\t<meta name="twitter:card" content="summary_large_image">`,
@@ -514,15 +535,15 @@ function faqNode({ html, canonical, relative }) {
 
 function articleNode({ title, description, canonical, relative, html }) {
   if (!/class=["']article-meta["']/i.test(html)) return null;
-  const date = articleDateFromHtml(html);
+  const { published, modified } = articleDatesFromHtml(html);
   return {
     "@type": "BlogPosting",
     "@id": `${canonical}#article`,
     headline: pageNameFromTitle(title),
     description,
     image: socialImageFor(relative),
-    datePublished: date || undefined,
-    dateModified: date || undefined,
+    datePublished: published || undefined,
+    dateModified: modified || undefined,
     mainEntityOfPage: canonical,
     author: {
       "@type": "Organization",
@@ -661,9 +682,20 @@ function updateFile(file) {
   }
 }
 
-const files = primaryHtmlFiles();
-for (const file of files) {
-  updateFile(file);
+if (require.main === module) {
+  const requested = process.argv.slice(2);
+  const files = requested.length ? requested.map((name) => {
+    const file = path.resolve(ROOT, name);
+    if (!/^(index\.html|(?:services|cn)\/[^/]+\.html)$/.test(rel(file))) {
+      throw new Error(`Not a primary HTML page: ${name}`);
+    }
+    return file;
+  }) : primaryHtmlFiles();
+  for (const file of files) {
+    updateFile(file);
+  }
+
+  console.log(`Updated social metadata and structured data for ${files.length} primary pages.`);
 }
 
-console.log(`Updated social metadata and structured data for ${files.length} primary pages.`);
+module.exports = { articleDatesFromHtml, articleNode, socialMetadata };
