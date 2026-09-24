@@ -8,12 +8,12 @@ Friday correction review after fresh Search Console data restored. The English `
 
 - The `chinese marketing sydney` result set is primarily commercial agency/service pages rather than general informational articles.
 - Visible competitors foreground concrete channel scope (Xiaohongshu and WeChat), local Sydney relevance, delivery process, pricing boundaries and named proof.
-- Go Marketing's intended owner page, `sydneyBilingualMarketingAgency.html`, is discoverable for the commercial agency intent. The rising article serves the adjacent practical "how to reach" intent and links to that owner page, so no ownership change is warranted.
+- Query/page data shows an ownership overlap for `chinese marketing sydney`: the guide received 20 impressions at position 11.1, while the intended agency owner received eight impressions at position 17.9. The guide still serves the adjacent practical "how to reach" intent, but its contextual link should send a clearer exact-topic signal to the commercial owner.
 - The article's existing title described the topic accurately but did not signal the practical format as clearly as competing results signal their offer or process.
 
 ## Decision
 
-Make a snippet-only edit to the English article: retain the exact topic and H1, add “Practical Guide” to the title, and make the description explicitly name Xiaohongshu, WeChat, Google and bilingual websites. Do not add unverified pricing, results or case claims. Submit the sitemap and request manual URL Inspection for the changed canonical.
+Make a tightly scoped English article edit: retain the exact topic and H1, add “Practical Guide” to the title, make the description explicitly name Xiaohongshu, WeChat, Google and bilingual websites, and change the contextual owner-page anchor to “Chinese marketing in Sydney”. Do not add unverified pricing, results or case claims. Submit the sitemap and request manual URL Inspection for the changed canonical.
 
 ## Validation trigger
 
