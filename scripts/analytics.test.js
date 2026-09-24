@@ -155,3 +155,12 @@ test("canonical mismatch prevents loading on unrelated pages", () => {
   const h = harness({ url: "https://gomarketing.net.au/not-a-public-page" });
   assert.equal(h.nodes.length, 2); assert.equal(h.scripts().length, 0);
 });
+
+test("updated static notices and articles do not bind missing accordion controls", () => {
+  for (const file of ["services/privatePolicy.html", "cn/privatePolicy.html", "services/whatIsMarketingAutomation.html", "cn/whatIsMarketingAutomation.html"]) {
+    const html = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
+    assert.ok(!html.includes('getElementById("plus-sign1")'), file);
+    assert.ok(html.includes('src="../js/menu.js"'), file);
+    assert.ok(html.includes('src="../js/drop-down-up.js"'), file);
+  }
+});
