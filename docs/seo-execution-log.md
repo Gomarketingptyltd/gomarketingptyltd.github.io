@@ -1807,6 +1807,40 @@ Every new entry must include:
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and delivery boundaries |
 
+# 2026-09-25 — Friday growth and correction pass
+
+- Run time: 2026-09-25 09:31 AEST onward
+- Run type: Friday growth and correction pass
+- Data window: 2026-08-25 to 2026-09-21; fresh Search Console snapshot generated 2026-09-25 AEST and compared with 2026-07-28 to 2026-08-24
+- Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-21.md`, `.search-console/reports/2026-08-25_to_2026-09-21/*`, `.search-console/reports/2026-07-28_to_2026-08-24/*`, the priority pages, live sitemap and current SERP samples
+- Dashboard: `docs/seo-dashboard.md`; latest GSC end date is three days old
+- Search Console recovery: the first sandboxed doctor call reported `fetch failed`; the network-enabled doctor passed token refresh. The fresh snapshot then succeeded with 19 clicks, 4,880 impressions, 0.39% CTR and average position 43.02. The sitemap was successfully submitted for `sc-domain:gomarketing.net.au`.
+- Safety checks before decision:
+  - `npm run seo:release-gate`: passed; 45 tests plus 123 HTML files and 55 bilingual pairs checked; full-worktree `git diff --check` completed normally
+  - `npm run seo:live-check`: passed in the network-enabled environment; 23 priority pages and six stylesheet URLs were healthy
+  - `npm run seo:visual-check`: passed in the browser-enabled environment; 46 desktop/mobile screenshots rendered normally
+  - Visual report: `.seo-visual/20260924T233141Z/report.md`
+- Material signal: `services/howToReachChineseConsumersInSydney.html` improved from 22 impressions at position 21.7 to 33 impressions at position 11.4 (+50% impressions; +10.3 positions), but remained at zero clicks. This meets the score-5 position 11-15/weak-CTR rule. The aggregate `chinese marketing sydney` query moved from position 20.4 to 18.7, while impressions eased from 42 to 37.
+- SERP/ownership review: `docs/seo-serp-review-2026-09-25.md`. Current commercial results foreground platform scope, process, pricing and proof. The agency service page remains the commercial owner; the article retains the adjacent practical-guide role and links to that owner, so no cannibalisation cleanup is warranted.
+- Friday action: changed only the English article's title, meta description, matching Open Graph/Twitter/structured-data fields and modification date. The new snippet adds “Practical Guide” and names Xiaohongshu, WeChat, Google and bilingual websites without adding unverified pricing, proof or delivery claims. The H1, body, canonical, hreflang, CSS, scripts and page ownership remain unchanged.
+- Indexing action: submitted `https://gomarketing.net.au/sitemap.xml` successfully. Request manual URL Inspection/indexing for the changed English canonical after deployment.
+- Validation date: 2026-10-23, after one comparable 28-day collection window; validate earlier only for an indexing or ownership defect.
+- Next trigger: if the article remains in positions 4-15 with CTR below 1.5%, test a stronger benefit-led snippet or add verified FAQ/proof. If it loses more than five positions while impressions also fall, inspect query-page match and the current SERP before another edit. Monday should use this restored GSC access for the full five-family review.
+
+| Page | Opportunity score | Decision | Reason |
+| --- | ---: | --- | --- |
+| `index.html` | 2 | `hold` | Position 26.9 with impressions +62; no score-4/5 trigger or ownership regression |
+| `services/digital.html` | 2 | `hold` | 1,116 impressions but position 62.7; requires query-level/support-content diagnosis, not a blind snippet edit |
+| `services/sydneyBilingualMarketingAgency.html` | 2 | `hold` | Position 23.7 and impressions -108; commercial ownership is correct, but rising-impression rule is not met |
+| `services/chineseCommunityGrowth.html` | 2 | `hold` | Position 52.9 with falling impressions; preserve distinct community/channel ownership |
+| `services/support.html` | 2 | `hold` | Position 35.4 with falling impressions; no immediate score-4/5 trigger |
+| `services/advertising.html` | 2 | `hold` | Position 55.1 with falling impressions; no high-confidence page edit |
+| `services/marketingAutomationServicesSydney.html` | 2 | `hold` | Position 40.2 with falling impressions; hold pending query-level support diagnosis |
+| `services/howToReachChineseConsumersInSydney.html` | 5 | `edit` | Position improved to 11.4 and impressions rose 50%, but CTR remains 0%; snippet edit shipped |
+| `services/xiaohongshuMarketingForSydneyRestaurants.html` | 2 | `hold` | Nine impressions at position 87.6; crawl path is healthy and signal is too small for another edit |
+| `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 2 | `hold` | 23 impressions at position 63.3; no rising-impression/page-one trigger |
+| `services/xiaohongshuWeChatContentSupport.html` | 2 | `hold` | Two impressions at position 5 are insufficient; commercial scope and pricing claims remain unapproved |
+
 # 2026-09-16 — Wednesday tactical optimization sprint
 
 - Run time: 2026-09-16 09:31-09:33 AEST; shortened under the documented blocker allowance after the safe tactical action and all approval-independent checks were completed

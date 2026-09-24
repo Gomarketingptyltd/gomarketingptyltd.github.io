@@ -1,56 +1,52 @@
 # SEO Dashboard
 
-- Generated: 2026-09-22T23:36:43.329Z
-- Latest GSC window: 2026-06-07 to 2026-07-04
-- Previous comparison window: 2026-06-05 to 2026-07-02
-- Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-06-07_to_2026-07-04
-- Freshness warning: latest available GSC end date is 80 days old. Refresh Search Console auth and run a new snapshot before making major ranking calls.
+- Generated: 2026-09-24T23:33:40.117Z
+- Latest GSC window: 2026-08-25 to 2026-09-21
+- Previous comparison window: 2026-07-28 to 2026-08-24
+- Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-08-25_to_2026-09-21
+- Freshness: latest available GSC end date is 3 days old.
 
 ## Site Summary
 
-- Clicks: 20 (0)
-- Impressions: 1,716 (+57)
-- CTR: 1.17% (-0.04 pp)
-- Avg position: 42.93 (+1.45; lower is better)
+- Clicks: 19 (-2)
+- Impressions: 4,880 (-913)
+- CTR: 0.39% (+0.03 pp)
+- Avg position: 43.02 (+4.70; lower is better)
 
 ## Priority Pages
 
 | Page | Path | Clicks | Impressions | CTR | Position | Impr delta | Score | Decision | Reason |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Homepage | / | 17 | 396 | 4.29% | 22.6 | -5 | 2 | hold | No high-confidence edit trigger yet |
-| Digital services | /services/digital.html | 0 | 80 | 0.00% | 62.2 | +34 | 2 | hold | No high-confidence edit trigger yet |
-| Chinese agency | /services/sydneyBilingualMarketingAgency.html | 0 | 46 | 0.00% | 23.1 | +14 | 4 | edit | Position 16-25 with rising impressions |
-| Chinese community growth | /services/chineseCommunityGrowth.html | 0 | 243 | 0.00% | 47.9 | +1 | 2 | hold | No high-confidence edit trigger yet |
-| Marketing support | /services/support.html | 0 | 532 | 0.00% | 46.0 | -2 | 2 | hold | No high-confidence edit trigger yet |
-| Advertising | /services/advertising.html | 0 | 45 | 0.00% | 62.6 | +13 | 2 | hold | No high-confidence edit trigger yet |
-| Marketing automation | /services/marketingAutomationServicesSydney.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
-| Reach Chinese consumers article | /services/howToReachChineseConsumersInSydney.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
-| Xiaohongshu restaurants article | /services/xiaohongshuMarketingForSydneyRestaurants.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
-| Digital small business article | /services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html | 0 | 0 | 0.00% | - | - | 3 | request indexing | No row in latest report |
+| Homepage | / | 10 | 668 | 1.50% | 26.9 | +62 | 2 | hold | No high-confidence edit trigger yet |
+| Digital services | /services/digital.html | 0 | 1116 | 0.00% | 62.7 | +85 | 2 | hold | No high-confidence edit trigger yet |
+| Chinese agency | /services/sydneyBilingualMarketingAgency.html | 2 | 399 | 0.50% | 23.7 | -108 | 2 | hold | No high-confidence edit trigger yet |
+| Chinese community growth | /services/chineseCommunityGrowth.html | 1 | 222 | 0.45% | 52.9 | -59 | 2 | hold | No high-confidence edit trigger yet |
+| Marketing support | /services/support.html | 0 | 359 | 0.00% | 35.4 | -146 | 2 | hold | No high-confidence edit trigger yet |
+| Advertising | /services/advertising.html | 1 | 195 | 0.51% | 55.1 | -87 | 2 | hold | No high-confidence edit trigger yet |
+| Marketing automation | /services/marketingAutomationServicesSydney.html | 0 | 754 | 0.00% | 40.2 | -325 | 2 | hold | No high-confidence edit trigger yet |
+| Reach Chinese consumers article | /services/howToReachChineseConsumersInSydney.html | 0 | 33 | 0.00% | 11.4 | +11 | 5 | edit | Position 11-15 with weak CTR |
+| Xiaohongshu restaurants article | /services/xiaohongshuMarketingForSydneyRestaurants.html | 0 | 9 | 0.00% | 87.6 | -8 | 2 | hold | No high-confidence edit trigger yet |
+| Digital small business article | /services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html | 0 | 23 | 0.00% | 63.3 | -8 | 2 | hold | No high-confidence edit trigger yet |
 
 ## Priority Queries
 
 | Query | Clicks | Impressions | CTR | Position | Impr delta |
 | --- | --- | --- | --- | --- | --- |
 | marketing agency sydney | 0 | 0 | 0.00% | - | - |
-| digital marketing services sydney | 0 | 0 | 0.00% | - | - |
-| digital marketing strategy sydney | 0 | 3 | 0.00% | 43.3 | -3 |
-| chinese marketing agency sydney | 0 | 101 | 0.00% | 34.0 | -2 |
-| chinese marketing sydney | 0 | 23 | 0.00% | 32.5 | 0 |
+| digital marketing services sydney | 0 | 3 | 0.00% | 58.3 | - |
+| digital marketing strategy sydney | 0 | 2 | 0.00% | 59.0 | -33 |
+| chinese marketing agency sydney | 0 | 97 | 0.00% | 27.9 | -7 |
+| chinese marketing sydney | 0 | 37 | 0.00% | 18.7 | -5 |
 | xiaohongshu marketing sydney | 0 | 0 | 0.00% | - | - |
-| wechat marketing agency australia | 0 | 63 | 0.00% | 48.7 | -3 |
-| marketing support services | 0 | 70 | 0.00% | 18.8 | -2 |
-| marketing automation sydney | 0 | 18 | 0.00% | 43.4 | -1 |
+| wechat marketing agency australia | 0 | 0 | 0.00% | - | - |
+| marketing support services | 0 | 64 | 0.00% | 11.2 | -32 |
+| marketing automation sydney | 0 | 27 | 0.00% | 26.6 | -12 |
 
 ## Next Action Queue
 
 | Page | Path | Score | Decision | Reason |
 | --- | --- | --- | --- | --- |
-| Chinese agency | /services/sydneyBilingualMarketingAgency.html | 4 | edit | Position 16-25 with rising impressions |
-| Marketing automation | /services/marketingAutomationServicesSydney.html | 3 | request indexing | No row in latest report |
-| Reach Chinese consumers article | /services/howToReachChineseConsumersInSydney.html | 3 | request indexing | No row in latest report |
-| Xiaohongshu restaurants article | /services/xiaohongshuMarketingForSydneyRestaurants.html | 3 | request indexing | No row in latest report |
-| Digital small business article | /services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html | 3 | request indexing | No row in latest report |
+| Reach Chinese consumers article | /services/howToReachChineseConsumersInSydney.html | 5 | edit | Position 11-15 with weak CTR |
 
 ## Manager Notes
 
