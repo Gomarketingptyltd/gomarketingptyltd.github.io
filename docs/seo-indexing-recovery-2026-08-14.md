@@ -95,3 +95,14 @@ If a URL is excluded or Google selects a different canonical, stop snippet edits
 - A current web-search sample again surfaced the English Xiaohongshu restaurant guide with its August update and intended Sydney hospitality scenarios. Go Marketing's homepage also appeared with the intended bilingual-agency framing.
 - Search discovery is positive crawl evidence, but it still does not prove both language alternates, Google-selected canonicals or the current indexed version. OAuth token refresh and the fresh snapshot remain blocked with `Bad Request`.
 - Keep all four bilingual pairs in `request indexing`. After consent, submit the sitemap once, inspect the restaurant-guide pair first and request indexing only when URL Inspection shows an outdated crawl, missing current content or a canonical/coverage problem.
+
+## Recovery completed — 2026-09-25
+
+- Search Console token refresh passed in a network-enabled environment. A fresh 28-day snapshot was generated and the sitemap was submitted successfully.
+- URL Inspection returned `PASS` and `Submitted and indexed` for all eight queued URLs. Every URL is indexing-allowed, robots-allowed and successfully fetched; each Google-selected canonical matches the declared self-canonical.
+- Last crawls reported by URL Inspection:
+  - restaurant guide: English 2026-07-16, Chinese 2026-07-10
+  - Chinese-consumer guide: English 2026-09-05, Chinese 2026-08-15
+  - marketing automation: English 2026-09-12, Chinese 2026-08-29
+  - digital-services guide: English 2026-07-04, Chinese 2026-09-21
+- The recovery queue is closed. Do not keep these pairs in `request indexing` solely because they were absent from the old report. The sitemap submission is the current recrawl signal; use manual request indexing only for a newly changed priority URL when the inspection evidence remains stale after deployment.

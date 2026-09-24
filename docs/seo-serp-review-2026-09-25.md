@@ -4,6 +4,8 @@
 
 Friday correction review after fresh Search Console data restored. The English `howToReachChineseConsumersInSydney.html` article moved from 22 impressions at average position 21.7 in 2026-07-28 to 2026-08-24 to 33 impressions at position 11.4 in 2026-08-25 to 2026-09-21, with zero clicks in both windows.
 
+Within the latest window the weekly trend strengthened from position 21.5 (six impressions) to 12.0 (eight), 9.1 (11), then 6.5 (eight). CTR remained zero in every week. This confirms the edit is responding to a current page-one opportunity rather than an old-window average.
+
 ## Current result pattern
 
 - The `chinese marketing sydney` result set is primarily commercial agency/service pages rather than general informational articles.
@@ -17,4 +19,4 @@ Make a tightly scoped English article edit: retain the exact topic and H1, add â
 
 ## Validation trigger
 
-Review the next fresh comparable 28-day report on or after 2026-10-23. Hold the edit unless the page remains in positions 4-15 with zero/weak CTR, loses more than five positions while impressions also fall, or the agency owner page starts absorbing the article's informational query intent.
+Run an early pulse on or after 2026-10-09, then make the comparable 28-day judgment on or after 2026-10-23. Hold the edit unless the page remains in positions 4-15 with zero/weak CTR, loses more than five positions while impressions also fall, or the agency owner page starts absorbing the article's informational query intent.
