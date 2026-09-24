@@ -1252,6 +1252,9 @@ a {
   max-width: 860px;
   margin-bottom: 28px;
 }
+.web-page__intro h2 {
+  line-height: 1.25;
+}
 .web-page__intro p:not(.service-context__eyebrow) {
   margin-top: 16px;
   color: rgba(255, 255, 255, 0.72);

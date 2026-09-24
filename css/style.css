@@ -2510,6 +2510,7 @@ a {
   }
   .cases__title--experience h2 {
     font-size: 36px;
+    line-height: 1.25;
     margin-bottom: 14px;
   }
   .experience-intro {
