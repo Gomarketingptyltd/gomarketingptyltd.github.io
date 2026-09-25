@@ -1,5 +1,16 @@
 # SEO Execution Log
 
+## 2026-09-25 SEO and promotion priority
+
+- Owner direction: keep the existing form unchanged; pause form changes and delivery tests. Focus on website promotion and SEO. No test submissions, form-provider changes or new tracking configuration in this release.
+- Refreshed the existing Search Console connection and two adjacent, equal-length final-data windows, plus Australia query/page pairs. Business metrics remain in the ignored local report `.search-console/reports/2026-09-25-marketing-push/review.md`; no customer data was accessed. These windows end before the recent content releases and cannot measure their impact.
+- Respect earlier work at `963c219` and `72fe646`: do not rewrite the Chinese-consumer guide snippet or owner-page links again. Hold newly edited core pages while improving the existing small-business buyer guide as a supporting asset.
+- Article scope: bilingual first-review checklist, scope/ownership questions for proposals, and website/app/automation selection. Added one natural contextual Support link per language; retained Digital as the primary owner. No invented case evidence, prices, ranking dates or enquiry guarantees.
+- Preserve title, H1, canonical/hreflang, first publication date, existing cards/images, navigation and resource URLs. Use the existing class on semantic H2 section headings. Update only the two article modification dates and their sitemap entries. No CSS, shared JavaScript or form changes.
+- Promotion: prepared `docs/seo-promotion-pack-2026-09-25.md` with three topics in English and Chinese and verified destination paths. These are unpublished drafts, not scheduled or distributed posts. Updated the old GBP photo checklist to avoid directing users to an unconfirmed historical office. Address/profile corrections wait for owner confirmation of the current customer-facing location and eligibility.
+- Pre-release verification: 45 tests plus the 123-page/55-pair SEO gate pass. Six baseline and six updated desktop/mobile renders (1440/390/320px) showed unchanged header/H1 and related-image dimensions, no broken images, horizontal overflow, clipped text or heading collisions. Visually reviewed Chinese mobile and English desktop content, and followed both language-specific Support links without submitting any forms. Public preflight passed 23 priority pages and six stylesheets.
+- Next assessment: early post-change pulse around 2026-10-09; full 28-day post-release comparison on or after 2026-10-26. These are review windows, not a ranking guarantee or a newly configured recurring task. Deployment confirmation follows separately; do not report draft social copy as published publicity.
+
 ## 2026-09-24 Consent-first Analytics release
 
 - The owner approved the previously described privacy-first GA4 setup. Reused the existing property `304790091`, stream `3263640850`, measurement ID `G-CTQEPEXZ4X`; no new account, credential, integration or access grant.

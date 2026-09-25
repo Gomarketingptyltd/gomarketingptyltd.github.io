@@ -2,6 +2,8 @@
 
 This pack is designed to turn GBP work into a short, practical update pass rather than a vague marketing task.
 
+Update 25 September 2026: use [the current bilingual promotion pack](./seo-promotion-pack-2026-09-25.md) for website, app and customer-support tool messaging. The older copy below is reference material, not proof that any profile edit or post is live. Confirm the current customer-facing address and its eligibility before changing location information.
+
 ## What Google says to keep in mind
 
 Based on current Google help documentation:
@@ -120,7 +122,7 @@ Recommended order:
 
 1. Logo
 2. Team working photo
-3. Office or building exterior at Barangaroo
+3. Current, owner-confirmed customer-facing office or building exterior, only if eligible for public display
 4. Workspace / meeting environment
 5. Website or strategy screenshots shown on a screen
 6. Optional service visuals that reflect bilingual digital strategy work
