@@ -1,5 +1,7 @@
 # Chinese-Audience Growth Case Study Evidence Intake
 
+Status as of 2026-09-25: ARCHIVED, DO NOT FILL IN THIS REPOSITORY. Public client cases are prohibited by the owner, including anonymised stories. Do not enter real client facts or upload source material here. Any selected private demonstration needs separately confirmed recipient, excerpt and agreement permissions in a private location. The historical publication workflow below is not active.
+
 Date: 2026-07-15
 Supports: `docs/seo-case-study-brief-chinese-audience-growth-2026-07-13.md`
 

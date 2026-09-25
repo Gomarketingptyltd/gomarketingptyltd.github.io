@@ -1,14 +1,14 @@
 # Go Marketing: Three Bilingual Promotion Topics
 
-Prepared 25 September 2026. Draft copy only; nothing in this file has been posted to a social account or Google Business Profile. No customer story, identity, project screenshot or claimed result is included.
+Prepared 25 September 2026. Topic 1 English was published to the verified Go Marketing Pty Ltd Google Business Profile on 25 September; the manager showed "Published" after submission. Other versions/topics remain drafts. No customer story, identity, project screenshot or claimed result is included.
 
 ## Publishing Order
 
-Use one topic at a time on the company's own channels. Suggested slots are 28 September, 1 October and 5 October; these are editorial suggestions, not scheduled posts or a ranking promise. Use the language suited to the audience rather than publishing every version together.
+Use one topic at a time on the company's own channels. Topic 1 went live on 25 September. Suggested next slots are 1 October and 5 October; these are editorial suggestions, not scheduled posts or a ranking promise. Use the language suited to the audience rather than publishing every version together.
 
 For Google Business Profile, use an Update with a Learn more button pointing to the matching page. These paragraphs can also be used as short LinkedIn company-page posts. The Chinese versions are suitable starting points for an owned Chinese-language channel; check that channel's current link and promotion rules before publishing. Do not paste promotional messages into unrelated groups.
 
-Use a company-owned logo or an approved business photo when an image is needed. Do not use client logos, messages, faces, dashboards, enquiry screenshots or client work without separate permission. Do not add an office location until the current customer-facing address is confirmed.
+Use a company-owned logo or an approved business photo when an image is needed. The owner prohibits public client cases: do not use client logos, messages, faces, dashboards, enquiry screenshots, anonymised project stories or other client work. Private permission is not public permission. Do not add an office location until the current customer-facing address is confirmed.
 
 ## Topic 1: Choose the Next Marketing Task
 
@@ -74,9 +74,13 @@ Do not imply that every integration or native app-store release is included. Do 
 
 | Topic | Live post URL | Published | Status |
 | --- | --- | --- | --- |
-| Marketing review checklist | Not published | Not scheduled | Copy ready |
+| Marketing review checklist | No public permalink exposed by the manager | 2026-09-25 | English GBP Update published; Learn more points to the English guide |
 | Chinese-Australian audience support | Not published | Not scheduled | Copy ready |
 | Website, app and customer-support tools | Not published | Not scheduled | Copy ready |
+
+Publishing account verified in Google Business Profile Manager as Go Marketing Pty Ltd, status Verified. The first post's submission completed in the embedded manager; its post list displayed the exact copy and "Published". No promotion spend, media upload, client information or address edit was involved. A standalone composer rejected its empty application state before submission; it was closed and did not produce a duplicate post.
+
+LinkedIn company URL was checked, but the current browser is at the sign-in gate. Company publishing rights are not yet verified, so nothing was posted there or through a personal account. No Chinese-channel message or bulk outreach was sent.
 
 ## Local Visibility and Boundaries
 

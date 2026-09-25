@@ -1,5 +1,7 @@
 # SEO Case Study Brief: Chinese-Audience Growth in Sydney
 
+Status as of 2026-09-25: SUPERSEDED. The owner prohibits public client case studies, including anonymised project stories. Do not execute the historical case-page, schema or internal-link plan below. Use general service processes and independently created fictional demonstrations instead. Selected private excerpts require specific recipient and material permission; this brief grants none. See `docs/seo-manager-operating-system.md`.
+
 Date: 2026-07-13
 
 ## Purpose
@@ -74,4 +76,3 @@ Do not substitute estimates, vanity metrics or unsupported percentages. If comme
 ## Next trigger
 
 Content production starts when one project passes the evidence gate. If no client can be named, select the strongest anonymised project with at least one independently documented outcome and approved screenshots.
-

@@ -1,6 +1,14 @@
 # Senior SEO Manager Operating System
 
-Last updated: 2026-06-16
+Last updated: 2026-09-25
+
+## Current owner boundaries
+
+- Client work is not for public case studies, even anonymised. Do not publish client names, project context, screenshots, results or a disguised client story on the website or social channels. Earlier case-study briefs and proof/outreach plans are superseded by this instruction.
+- Public alternatives are service process explanations and independently created, explicitly fictional demonstrations. Do not relabel confidential project material as a demonstration.
+- Selected real material may be discussed privately only after the owner confirms the exact excerpt, recipient and permissions under the relevant agreement. Store any such material outside the public repository and website; `noindex` is not access control.
+- Keep the existing form unchanged. Form changes and delivery tests are paused. Do not require them before continuing safe content and promotion work.
+- Internal enquiry and ranking data stay in ignored local reports. Do not publish the recent enquiry as a client story, testimonial or proof of SEO attribution.
 
 ## Role mission
 

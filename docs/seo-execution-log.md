@@ -1,5 +1,15 @@
 # SEO Execution Log
 
+## 2026-09-25 Confidentiality-safe promotion follow-up
+
+- Owner instruction: no public client cases; selected private material only within the relevant agreement and permissions. Preserve the form and existing site layout. No real client material was read, copied, uploaded or sent.
+- Replaced both project pages' purported anonymous client contexts and Case 01-03 stories with general delivery steps, project planning topics and a confidentiality statement. Existing URLs, section structure, styles, navigation, forms and resource paths remain unchanged. Added a language-matched link to the existing clearly fictional automation workflow.
+- Corrected three bilingual articles that implied anonymisation was sufficient for disclosure. Original publication dates retained; visible updates, generated metadata and only the eight affected sitemap dates use 2026-09-25.
+- Superseded historical public-case briefs and intake. Updated standing SEO instructions to prevent future publication of confidential cases or collection of case evidence in the public repository. A blank private sales-demo checklist lives only in an ignored local report; it contains no customer facts and is not an approved client deck.
+- Publicity completed: one English Google Business Profile Update on the verified Go Marketing Pty Ltd business, linking to the updated small-business guide with Learn more. The embedded manager returned the exact text with status Published. No paid promotion, media upload, bulk messaging or address changes. LinkedIn remains blocked at sign-in; no company post or personal-account substitute.
+- Pre-release verification: all 48 tests and the 123-page/55-bilingual-pair SEO gate pass. Eight modified pages checked at 1440, 390 and 320px: no horizontal/text overflow, heading collisions or broken images. Desktop process cards have equal widths/heights; mobile cards stack without fixed-height clipping. Visual spot checks covered the English process cards, Chinese confidentiality block and English article heading/date. The Chinese fictional-demo link navigated to the correct language and anchor.
+- Protected-resource comparison against HEAD confirms stylesheet, font, icon, script and image tags plus form markup unchanged on all eight pages. Private demo/plan files are Git-ignored and excluded from the public preview. Deployment confirmation follows after push. No ranking or lead increase is claimed from publication alone.
+
 ## 2026-09-25 SEO and promotion priority
 
 - Owner direction: keep the existing form unchanged; pause form changes and delivery tests. Focus on website promotion and SEO. No test submissions, form-provider changes or new tracking configuration in this release.

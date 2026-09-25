@@ -1,5 +1,7 @@
 # Chinese-Audience Proof and Authority Outreach Plan
 
+Status as of 2026-09-25: the case-study and client-reference portions below are SUPERSEDED by the owner's no-public-client-work requirement. Do not build real or anonymised case pages, solicit project-identifying backlinks, or reuse client assets in promotion. Use educational guides, general delivery processes and independently created fictional demonstrations. Private sharing requires specific agreement/recipient/material approval; directory corrections still require confirmed current business details.
+
 Date: 2026-07-17
 
 ## Objective
