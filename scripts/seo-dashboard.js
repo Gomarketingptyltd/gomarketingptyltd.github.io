@@ -262,6 +262,8 @@ function main() {
     const pairs = queryPageRows(latest.queryPages, query);
     const topPair = pairs[0] || null;
     const ownerPair = pairs.find((row) => row.page === pageUrl(expectedPath)) || null;
+    const previousOwnerPair = queryPageRows(previous.queryPages, query)
+      .find((row) => row.page === pageUrl(expectedPath)) || null;
     const ownership = !topPair
       ? "not in top exported pairs"
       : topPair.page === pageUrl(expectedPath)
@@ -269,12 +271,19 @@ function main() {
         : "wrong-page lead";
     const ownerPosition = ownerPair ? number(ownerPair.position) : 0;
     const ownerCtr = ownerPair ? number(ownerPair.ctr) : 0;
+    const ownerImpressions = ownerPair ? number(ownerPair.impressions) : 0;
+    const previousOwnerImpressions = previousOwnerPair ? number(previousOwnerPair.impressions) : 0;
+    const ownerImpressionsRising = previousOwnerImpressions > 0
+      ? ownerImpressions >= previousOwnerImpressions * 1.15
+      : false;
     const ownerScore = ownership === "wrong-page lead"
       ? 5
       : ownerPair && ownerPosition >= 4 && ownerPosition <= 15 && ownerCtr < 0.02
         ? 5
-        : ownerPair && ownerPosition > 15 && ownerPosition <= 25
-          ? 3
+        : ownerPair && ownerPosition > 15 && ownerPosition <= 25 && ownerImpressionsRising
+          ? 4
+          : ownerPair && ownerPosition > 15 && ownerPosition <= 25
+            ? 3
           : ownerPair
             ? 2
             : "-";
@@ -285,6 +294,7 @@ function main() {
       ownerPair ? number(ownerPair.impressions) : 0,
       ownerPair ? pct(ownerPair.ctr) : "0.00%",
       ownerPair ? fixed(ownerPair.position, 1) : "-",
+      ownerPair && previousOwnerPair ? signed(ownerImpressions - previousOwnerImpressions) : "-",
       ownerScore,
       ownership,
     ];
@@ -326,7 +336,7 @@ function main() {
     "",
     latest.queryPages.length
       ? markdownTable(
-        ["Query", "Expected owner", "Top landing page", "Owner impressions", "Owner CTR", "Owner position", "Owner score", "Status"],
+        ["Query", "Expected owner", "Top landing page", "Owner impressions", "Owner CTR", "Owner position", "Owner impr delta", "Owner score", "Status"],
         ownershipRows,
       )
       : "- No `query_pages.csv` export is available for this report. Run a fresh Search Console snapshot.",
