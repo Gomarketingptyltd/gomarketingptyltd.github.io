@@ -344,7 +344,7 @@ async function runReport(args) {
       startDate,
       endDate,
       dimensions: dims,
-      rowLimit,
+      rowLimit: name === "query_pages" ? Math.max(rowLimit, 2500) : rowLimit,
     });
     writeCsv(`${outputDir}/${name}.csv`, formatRowsForCsv(results[name], dims));
   }
@@ -461,7 +461,7 @@ async function runSnapshot(args) {
       startDate,
       endDate,
       dimensions: dims,
-      rowLimit,
+      rowLimit: name === "query_pages" ? Math.max(rowLimit, 2500) : rowLimit,
     });
     writeCsv(`${outputDir}/${name}.csv`, formatRowsForCsv(results[name], dims));
   }

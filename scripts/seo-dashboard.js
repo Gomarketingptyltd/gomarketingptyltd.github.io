@@ -33,6 +33,18 @@ const PRIORITY_QUERIES = [
   "marketing automation sydney",
 ];
 
+const QUERY_OWNERS = {
+  "marketing agency sydney": "/",
+  "digital marketing services sydney": "/services/digital.html",
+  "digital marketing strategy sydney": "/services/digital.html",
+  "chinese marketing agency sydney": "/services/sydneyBilingualMarketingAgency.html",
+  "chinese marketing sydney": "/services/chineseCommunityGrowth.html",
+  "xiaohongshu marketing sydney": "/services/xiaohongshuWeChatContentSupport.html",
+  "wechat marketing agency australia": "/services/xiaohongshuWeChatContentSupport.html",
+  "marketing support services": "/services/support.html",
+  "marketing automation sydney": "/services/marketingAutomationServicesSydney.html",
+};
+
 function parseCsvLine(line) {
   const values = [];
   let current = "";
@@ -95,6 +107,7 @@ function loadReport(name) {
     summary: JSON.parse(fs.readFileSync(path.join(dir, "summary.json"), "utf8")),
     pages: readCsv(path.join(dir, "pages.csv")),
     queries: readCsv(path.join(dir, "queries.csv")),
+    queryPages: readCsv(path.join(dir, "query_pages.csv")),
   };
 }
 
@@ -127,6 +140,18 @@ function findPage(rows, pagePath) {
 
 function findQuery(rows, query) {
   return rows.find((row) => row.query.toLowerCase() === query.toLowerCase()) || null;
+}
+
+function queryPageRows(rows, query) {
+  return rows
+    .filter((row) => row.query.toLowerCase() === query.toLowerCase())
+    .sort((a, b) => number(b.impressions) - number(a.impressions));
+}
+
+function displayPath(url) {
+  if (!url) return "-";
+  if (!url.startsWith(SITE_URL)) return url;
+  return url.slice(SITE_URL.length) || "/";
 }
 
 function opportunity({ latest, previous }) {
@@ -232,6 +257,39 @@ function main() {
     ];
   });
 
+  const ownershipRows = PRIORITY_QUERIES.map((query) => {
+    const expectedPath = QUERY_OWNERS[query];
+    const pairs = queryPageRows(latest.queryPages, query);
+    const topPair = pairs[0] || null;
+    const ownerPair = pairs.find((row) => row.page === pageUrl(expectedPath)) || null;
+    const ownership = !topPair
+      ? "not in top exported pairs"
+      : topPair.page === pageUrl(expectedPath)
+        ? "correct owner"
+        : "wrong-page lead";
+    const ownerPosition = ownerPair ? number(ownerPair.position) : 0;
+    const ownerCtr = ownerPair ? number(ownerPair.ctr) : 0;
+    const ownerScore = ownership === "wrong-page lead"
+      ? 5
+      : ownerPair && ownerPosition >= 4 && ownerPosition <= 15 && ownerCtr < 0.02
+        ? 5
+        : ownerPair && ownerPosition > 15 && ownerPosition <= 25
+          ? 3
+          : ownerPair
+            ? 2
+            : "-";
+    return [
+      query,
+      expectedPath,
+      topPair ? displayPath(topPair.page) : "-",
+      ownerPair ? number(ownerPair.impressions) : 0,
+      ownerPair ? pct(ownerPair.ctr) : "0.00%",
+      ownerPair ? fixed(ownerPair.position, 1) : "-",
+      ownerScore,
+      ownership,
+    ];
+  });
+
   const topActions = pageRows
     .filter((row) => row[8] !== "hold")
     .sort((a, b) => number(b[7]) - number(a[7]))
@@ -263,6 +321,15 @@ function main() {
       ["Query", "Clicks", "Impressions", "CTR", "Position", "Impr delta"],
       queryRows,
     ),
+    "",
+    "## Priority Query Ownership",
+    "",
+    latest.queryPages.length
+      ? markdownTable(
+        ["Query", "Expected owner", "Top landing page", "Owner impressions", "Owner CTR", "Owner position", "Owner score", "Status"],
+        ownershipRows,
+      )
+      : "- No `query_pages.csv` export is available for this report. Run a fresh Search Console snapshot.",
     "",
     "## Next Action Queue",
     "",
