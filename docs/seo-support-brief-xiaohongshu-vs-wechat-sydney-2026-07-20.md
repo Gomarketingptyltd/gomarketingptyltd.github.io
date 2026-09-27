@@ -53,7 +53,7 @@ Help a Sydney business decide whether it needs discovery content, private-commun
 - Cite platform documentation or reputable first-party sources for product capabilities when drafting.
 - Label market observations as practical guidance, not universal platform facts.
 - Do not use audience-size statistics without a current, attributable source and date.
-- Do not publish client names, screenshots, quotations or outcomes without written approval.
+- Do not publish client names, project context, screenshots, quotations or outcomes. The current owner boundary prohibits public client case studies, including anonymised or disguised versions.
 
 ## Live-SERP differentiation gate — added 2026-07-27
 
@@ -66,7 +66,7 @@ The 2026-07-27 review found that specialist results increasingly expose their pl
 | What changes by sector? | Include Sydney hospitality, property, health/wellness and professional-service scenarios with a useful next action for each. | Use scenarios only unless a completed evidence intake authorises a real result. |
 | What changes the scope or cost? | Explain the practical scope drivers: platform count, setup/verification, content volume, creator activity, paid media, response workflow and reporting. | Do not publish fees until the business approves a real pricing position. Never borrow competitor price ranges. |
 | How will success be judged? | Connect platform-native indicators to branded search, website behaviour, enquiries, bookings and CRM evidence. | State attribution limits and avoid vanity-metric promises. |
-| Why use Go Marketing? | Position the value as connecting bilingual message quality, Sydney market context, platform roles and the conversion path. | Proof claims require the approved case-study intake; otherwise use process differentiation only. |
+| Why use Go Marketing? | Position the value as connecting bilingual message quality, Sydney market context, platform roles and the conversion path. | Use process differentiation, independently verifiable public business facts or an explicitly fictional demonstration created from scratch. Do not use client work as public proof. |
 
 Current comparison set: [Deep Reach Sydney](https://www.deepreachagency.com/locations/sydney/) for local audience/sector specificity, [RedNote Marketing](https://rednotemarketing.com.au/) for dedicated platform education, [Riseo](https://riseo.com.au/services/wechat-xiaohongshu-marketing-australia/) for process/pricing/proof visibility, and [Vantage Digital](https://vantagedigital.com.au/) for experience/network proof. These are editorial gap references, not sources for Go Marketing claims.
 
@@ -107,7 +107,7 @@ Publication inputs still required:
 | Go Marketing pricing position | Approved public range, `custom quote only`, or `do not publish pricing` | Pending |
 | Deliverable boundaries | Setup, content volume, creator work, paid media and reporting inclusions | Pending |
 | Platform capability sources | Current first-party URLs checked during drafting | Ready for drafting; source matrix below checked 2026-08-26 |
-| Proof/case block | Completed evidence intake with publication approval | Optional; pending |
+| Public trust block | Approved service-process detail, independently verifiable business facts, or a from-scratch fictional demonstration clearly labelled as such | Optional; no client material permitted |
 
 Do not publish until the pricing-position row and platform-source row are complete. If pricing remains confidential, publish the scope-driver explanation with an explicit custom-scope CTA and no artificial range.
 
