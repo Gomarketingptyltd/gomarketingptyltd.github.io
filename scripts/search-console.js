@@ -330,6 +330,7 @@ async function runReport(args) {
   const dimensions = {
     queries: ["query"],
     pages: ["page"],
+    query_pages: ["query", "page"],
     countries: ["country"],
     devices: ["device"],
     dates: ["date"],
@@ -360,6 +361,7 @@ async function runReport(args) {
   console.log(`Saved Search Console report to ${outputDir}`);
   console.log(`- Queries: ${results.queries.length}`);
   console.log(`- Pages: ${results.pages.length}`);
+  console.log(`- Query/page pairs: ${results.query_pages.length}`);
   console.log(`- Countries: ${results.countries.length}`);
   console.log(`- Devices: ${results.devices.length}`);
   console.log(`- Dates: ${results.dates.length}`);
@@ -446,6 +448,7 @@ async function runSnapshot(args) {
   const dimensions = {
     queries: ["query"],
     pages: ["page"],
+    query_pages: ["query", "page"],
     countries: ["country"],
     devices: ["device"],
     dates: ["date"],
