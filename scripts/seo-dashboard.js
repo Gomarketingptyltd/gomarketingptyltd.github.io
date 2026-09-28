@@ -291,6 +291,8 @@ function main() {
       query,
       expectedPath,
       topPair ? displayPath(topPair.page) : "-",
+      topPair ? number(topPair.impressions) : 0,
+      topPair ? fixed(topPair.position, 1) : "-",
       ownerPair ? number(ownerPair.impressions) : 0,
       ownerPair ? pct(ownerPair.ctr) : "0.00%",
       ownerPair ? fixed(ownerPair.position, 1) : "-",
@@ -336,7 +338,7 @@ function main() {
     "",
     latest.queryPages.length
       ? markdownTable(
-        ["Query", "Expected owner", "Top landing page", "Owner impressions", "Owner CTR", "Owner position", "Owner impr delta", "Owner score", "Status"],
+        ["Query", "Expected owner", "Top landing page", "Top impressions", "Top position", "Owner impressions", "Owner CTR", "Owner position", "Owner impr delta", "Owner score", "Status"],
         ownershipRows,
       )
       : "- No `query_pages.csv` export is available for this report. Run a fresh Search Console snapshot.",
@@ -350,6 +352,7 @@ function main() {
     "## Manager Notes",
     "",
     "- A lower average position number is better.",
+    "- A `wrong-page lead` is a diagnosis trigger, not an automatic rewrite: confirm informational versus commercial intent and recent edits first.",
     "- Use this dashboard with `docs/seo-manager-operating-system.md`; do not ship edits without production safety checks.",
     "- GSC data has reporting lag, so validate material edits on the next scheduled pulse before judging impact.",
   ];

@@ -409,6 +409,7 @@ Indexing counts are not available from the Sitemaps API. Its indexed field is de
 - Avg position: ${Number(summary.totals.position || 0).toFixed(2)}
 - Query rows: ${summary.counts.queries}
 - Page rows: ${summary.counts.pages}
+- Query/page rows: ${summary.counts.query_pages || 0}
 
 ## Current Leaders
 
@@ -418,6 +419,7 @@ Indexing counts are not available from the Sitemaps API. Its indexed field is de
 ## Files
 
 - Summary JSON: ${path.join(outputDir, "summary.json")}
+- Query/page ownership CSV: ${path.join(outputDir, "query_pages.csv")}
 - Snapshot markdown: ${path.join(outputDir, "snapshot.md")}
 `;
 }

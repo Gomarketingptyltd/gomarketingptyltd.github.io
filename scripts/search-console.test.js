@@ -13,7 +13,7 @@ function snapshot(sitemaps) {
       startDate: "2026-08-25",
       endDate: "2026-09-21",
       totals: { clicks: 19, impressions: 4880, ctr: 19 / 4880, position: 43.02 },
-      counts: { queries: 295, pages: 55 },
+      counts: { queries: 295, pages: 55, query_pages: 412 },
     },
   });
 }
@@ -32,6 +32,8 @@ test("snapshot does not interpret deprecated sitemap indexed values as counts", 
     assert.match(report, /indexed field is deprecated/);
     assert.doesNotMatch(report, /\| indexed:|Indexed from sitemap:/);
     assert.match(report, /Clicks: 19/);
+    assert.match(report, /Query\/page rows: 412/);
+    assert.match(report, /Query\/page ownership CSV: \/tmp\/search-console-report\/query_pages\.csv/);
   }
 });
 

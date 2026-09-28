@@ -1,6 +1,6 @@
 # SEO Dashboard
 
-- Generated: 2026-09-27T23:54:34.926Z
+- Generated: 2026-09-27T23:56:32.893Z
 - Latest GSC window: 2026-08-28 to 2026-09-24
 - Previous comparison window: 2026-08-26 to 2026-09-22
 - Source: /Users/rosyyu/Documents/Playground/site/.search-console/reports/2026-08-28_to_2026-09-24
@@ -44,17 +44,17 @@
 
 ## Priority Query Ownership
 
-| Query | Expected owner | Top landing page | Owner impressions | Owner CTR | Owner position | Owner impr delta | Owner score | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| marketing agency sydney | / | - | 0 | 0.00% | - | - | - | not in top exported pairs |
-| digital marketing services sydney | /services/digital.html | /services/digital.html | 2 | 0.00% | 57.5 | -1 | 2 | correct owner |
-| digital marketing strategy sydney | /services/digital.html | /services/digital.html | 3 | 0.00% | 58.3 | +1 | 2 | correct owner |
-| chinese marketing agency sydney | /services/sydneyBilingualMarketingAgency.html | /services/sydneyBilingualMarketingAgency.html | 51 | 0.00% | 8.7 | -2 | 5 | correct owner |
-| chinese marketing sydney | /services/chineseCommunityGrowth.html | /services/howToReachChineseConsumersInSydney.html | 2 | 0.00% | 28.0 | -1 | 5 | wrong-page lead |
-| xiaohongshu marketing sydney | /services/xiaohongshuWeChatContentSupport.html | - | 0 | 0.00% | - | - | - | not in top exported pairs |
-| wechat marketing agency australia | /services/xiaohongshuWeChatContentSupport.html | /services/ | 0 | 0.00% | - | - | 5 | wrong-page lead |
-| marketing support services | /services/support.html | /services/support.html | 59 | 0.00% | 11.1 | -4 | 5 | correct owner |
-| marketing automation sydney | /services/marketingAutomationServicesSydney.html | /services/marketingAutomationServicesSydney.html | 22 | 0.00% | 21.5 | -1 | 3 | correct owner |
+| Query | Expected owner | Top landing page | Top impressions | Top position | Owner impressions | Owner CTR | Owner position | Owner impr delta | Owner score | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| marketing agency sydney | / | - | 0 | - | 0 | 0.00% | - | - | - | not in top exported pairs |
+| digital marketing services sydney | /services/digital.html | /services/digital.html | 2 | 57.5 | 2 | 0.00% | 57.5 | -1 | 2 | correct owner |
+| digital marketing strategy sydney | /services/digital.html | /services/digital.html | 3 | 58.3 | 3 | 0.00% | 58.3 | +1 | 2 | correct owner |
+| chinese marketing agency sydney | /services/sydneyBilingualMarketingAgency.html | /services/sydneyBilingualMarketingAgency.html | 51 | 8.7 | 51 | 0.00% | 8.7 | -2 | 5 | correct owner |
+| chinese marketing sydney | /services/chineseCommunityGrowth.html | /services/howToReachChineseConsumersInSydney.html | 20 | 9.8 | 2 | 0.00% | 28.0 | -1 | 5 | wrong-page lead |
+| xiaohongshu marketing sydney | /services/xiaohongshuWeChatContentSupport.html | - | 0 | - | 0 | 0.00% | - | - | - | not in top exported pairs |
+| wechat marketing agency australia | /services/xiaohongshuWeChatContentSupport.html | /services/ | 41 | 81.8 | 0 | 0.00% | - | - | 5 | wrong-page lead |
+| marketing support services | /services/support.html | /services/support.html | 59 | 11.1 | 59 | 0.00% | 11.1 | -4 | 5 | correct owner |
+| marketing automation sydney | /services/marketingAutomationServicesSydney.html | /services/marketingAutomationServicesSydney.html | 22 | 21.5 | 22 | 0.00% | 21.5 | -1 | 3 | correct owner |
 
 ## Next Action Queue
 

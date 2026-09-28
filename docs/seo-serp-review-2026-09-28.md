@@ -23,6 +23,18 @@ The most actionable local signal remains `services/howToReachChineseConsumersInS
 - The broad owner pages are outside the fast snippet zone and mostly lost impressions in the overlapping comparison. Their constraint is authority and independently verifiable trust signals, not missing generic copy or unpublished client evidence.
 - The Chinese-agency owner correctly leads `chinese marketing agency sydney`, but its page-one impressions have zero clicks; the snippet edit addresses that CTR gap without changing ownership. The broader `chinese marketing sydney` family still needs rechecking once the 2026-09-25 guide edit has been crawled.
 
+## Query ownership controls
+
+The new combined query/page export provides a like-for-like owner check that aggregate page averages cannot supply:
+
+| Query | Intended owner | Current leading page | Owner signal | Decision |
+| --- | --- | --- | --- | --- |
+| `chinese marketing agency sydney` | Chinese-agency page | Chinese-agency page | 51 impressions, position 8.7, zero CTR; impressions -2 vs comparison | Title edit shipped; validate after recrawl |
+| `chinese marketing sydney` | Chinese-community page | Practical guide | Owner: 2 impressions at position 28; guide: 20 at 9.8 | Hold through the guide's 2026-09-25 recrawl; recheck commercial vs informational ownership on 2026-10-09 |
+| `marketing support services` | Support page | Support page | 59 impressions, position 11.1, zero CTR; impressions -4 | Hold because the page changed on 2026-09-24, after the report window |
+| `marketing automation sydney` | Automation service page | Automation service page | 22 impressions, position 21.5, zero CTR; impressions -1 | Hold; the score-4 rising-impression threshold is not met |
+| `wechat marketing agency australia` | Xiaohongshu/WeChat support page | Services overview | Leading row: 41 impressions at position 81.8; intended owner absent from the export | Record as a low-ranking ownership gap; do not stack another support-page edit before the current changes are measured |
+
 ## Decision and trigger
 
 Ship the Chinese-agency title refinement and submit the sitemap on 2026-09-28. On 2026-10-09 pull page/query pulses for the practical guide, Chinese-agency owner, Chinese-community owner and Xiaohongshu support page. On or after 2026-10-23 compare a full post-edit 28-day window. Edit again only if weak CTR persists after recrawl, commercial intent continues landing on the guide, or approved service/pricing boundaries become available.
