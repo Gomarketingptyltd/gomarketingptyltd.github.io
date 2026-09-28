@@ -1,5 +1,15 @@
 # SEO Execution Log
 
+## 2026-09-28 Approved cadence and social pilot setup
+
+- Updated the existing SEO automation rather than creating a duplicate. It remains active on Monday, Wednesday and Friday at 09:30 Australia/Sydney, using the existing project, local execution environment and model settings. Removed the mandatory one-hour/minimum-duration requirement; an evidence-based hold is valid.
+- Aligned the operating instructions with qualified enquiries, adjacent final-data comparisons, verified recrawl timing and the owner's confidentiality boundaries. Existing forms, page layouts, Analytics, DNS, mail and account permissions remain unchanged. Reuse today's completed SEO review and indexing request ledger instead of repeating requests or rewriting recently released pages.
+- Prepared a private four-week social pilot through 25 October and exact first-week copy with proposed local times. Later-week topics are planning only. Existing LinkedIn and Google Business Profile publications are recorded to prevent duplicates. New copy is awaiting owner review; proposed times are not scheduled posts. Meta image briefs are not completed or approved artwork.
+- Publishing requires approval of the exact copy, final asset, company account, destination and time, followed by queue and platform-result verification. Missed slots are not automatically backfilled. No client cases, paid promotion, bulk messages, new subscriptions, profile edits or UTM parameters are authorised by this setup.
+- Opened the official Meta business login page for the owner. The session remains at sign-in; Facebook company-page identity, Instagram connection and scheduling access are not yet verified. No new accounts or cross-platform permissions were created.
+- Safety: all 55 tests and the 123-HTML/55-bilingual-pair release gate passed. Drafts and calendar are confirmed Git-ignored. This change contains public-safe operating documentation only; no website HTML, CSS or browser JavaScript is changed.
+- Next actions: owner reviews the private weekly batch and completes Meta login; schedule only approved and complete material. Continue the existing September 30 recrawl check and review the pilot after October 25 before extending social cadence. No new social post was scheduled or published during this setup.
+
 ## 2026-09-28 Login and weekly promotion follow-up
 
 - Reopened LinkedIn and confirmed the existing Go Marketing PTY LTD company-admin session. Published the prepared English small-business checklist once as the company. Verified both "Post successful" and the live post, including the correct guide preview: https://www.linkedin.com/feed/update/urn:li:share:7510170234956300289. No personal-account post, paid boost, subscription or bulk outreach.
