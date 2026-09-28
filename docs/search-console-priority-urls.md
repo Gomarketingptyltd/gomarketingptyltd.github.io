@@ -2,9 +2,21 @@
 
 Google Search Console supports manual **Request indexing** inside the URL Inspection tool. For normal websites, that request is still a manual UI action, so the most practical approach is to submit the highest-value pages first and let the sitemap handle the rest.
 
+## Current decision rule - 2026-09-28
+
+The lists below are inspection priorities, not a recurring batch-submission instruction. Historical recovery notes do not override fresh URL Inspection results.
+
+- Inspect an important URL before requesting it. A missing Performance row does not prove that the URL is unindexed.
+- Request once when a significant deployed update is newer than Google's last crawl, or an important indexable page remains unindexed after technical checks.
+- If the UI already shows **Indexing requested** for the current release, do not click **Request again**. Repeated requests do not improve queue priority.
+- Record the exact URL, reason and confirmed result. An accepted request is not a completed crawl, guaranteed inclusion or ranking improvement.
+- Use the sitemap for broad discovery. Never remove intentional noindex, redirects or canonical rules merely to lower an exclusion count.
+
+Source: [Google's recrawl guidance](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
 ## First priority
 
-Submit these first:
+Inspect these first when a material release or verified indexing issue warrants a review:
 
 1. `https://gomarketing.net.au/`
 2. `https://gomarketing.net.au/services/`
@@ -67,7 +79,7 @@ Then inspect only the newly changed support URL if a manual request is available
 
 ## Monday quick-run shortlist
 
-If you only want the shortest useful weekly pass, submit these first on Mondays after major updates:
+For a weekly review, inspect the relevant changed pages below. Monday is not itself a reason to submit them again; apply the current decision rule above and skip unchanged, healthy or already-queued URLs:
 
 1. `https://gomarketing.net.au/`
 2. `https://gomarketing.net.au/services/sydneyBilingualMarketingAgency.html`
@@ -111,14 +123,14 @@ Decision boundary: do not treat absence from the stale 2026-06-07 to 2026-07-04 
 
 ## Second priority
 
-Then submit the two newest search-supporting articles:
+Then inspect these supporting articles when they meet the current decision rule:
 
 1. `https://gomarketing.net.au/services/chineseMarketingAgencyVsBilingualMarketingAgencySydney.html`
 2. `https://gomarketing.net.au/services/chineseEnglishWebsiteMessagingSydney.html`
 
 ## Third priority
 
-Then submit the Chinese equivalents:
+Then inspect the relevant Chinese equivalents:
 
 1. `https://gomarketing.net.au/cn/`
 2. `https://gomarketing.net.au/cn/sydneyBilingualMarketingAgency.html`
@@ -132,7 +144,7 @@ Then submit the Chinese equivalents:
 
 ## Fourth priority
 
-Then submit the Chinese versions of the newest supporting articles:
+Then inspect the Chinese versions of these supporting articles:
 
 1. `https://gomarketing.net.au/cn/chineseMarketingAgencyVsBilingualMarketingAgencySydney.html`
 2. `https://gomarketing.net.au/cn/chineseEnglishWebsiteMessagingSydney.html`
@@ -144,12 +156,13 @@ In Search Console:
 1. Open the property `sc-domain:gomarketing.net.au`
 2. Paste one full URL into the top inspection bar
 3. Wait for the inspection result
-4. Click **Request indexing**
-5. Repeat for the next URL in the list
+4. Check coverage, last crawl, canonical and whether a request is already queued. Resolve an actual technical blocker before requesting.
+5. Click **Request indexing** only when the current decision rule warrants it; wait for the confirmation and record the outcome.
+6. Continue only with other priority URLs that independently need action. Stop on quota or access errors; do not bypass them.
 
 ## Notes
 
 - Use this list when a page is newly published, significantly rewritten, or strategically important.
 - For bulk discovery, your submitted sitemap should stay as the main source of URL discovery.
 - If Google says a page is already indexed, you do not need to request indexing again unless the page changed materially.
-- Google notes that indexing can take up to a week or two, there is a daily limit, and sitemap submission remains the best path for many updated pages.
+- Google notes that crawling can take a few days to a few weeks and is not guaranteed. Request quotas apply; sitemap submission remains the better path for many updated pages.
