@@ -1831,7 +1831,7 @@ Every new entry must include:
 
 # 2026-09-28 — Monday full strategy and data review
 
-- Run time: started 2026-09-28 09:32 AEST; required one-hour session guard active
+- Run time: 2026-09-28 09:32-10:29 AEST; full guarded SEO manager block completed
 - Run type: Monday full strategy and data review
 - Data window: fresh Search Console snapshot for 2026-08-28 to 2026-09-24; previous dashboard comparison window 2026-08-26 to 2026-09-22
 - Source files reviewed: `docs/page-one-sprint-plan.md`, `docs/seo-manager-operating-system.md`, `docs/seo-dashboard.md`, `docs/seo-serp-review-2026-09-25.md`, `.search-console/reports/2026-08-28_to_2026-09-24/*`, and current search-result samples for all five required query families
@@ -1849,7 +1849,9 @@ Every new entry must include:
 - Shipped output: query/page ownership export in `scripts/search-console.js`; a new priority-query ownership table in `scripts/seo-dashboard.js` and `docs/seo-dashboard.md`; Chinese-agency title/social/schema/breadcrumb refinement from vague `Strategy, Proof & Growth` to concrete `Xiaohongshu & WeChat`; current five-family SERP review; sitemap update/submission; and a complete dated page-decision set.
 - Query/page diagnosis: the agency owner correctly leads `chinese marketing agency sydney` with 51 impressions at position 8.7 (two fewer owner impressions than the comparison window); the practical guide leads `chinese marketing sydney` with 20 impressions at position 9.8 while the intended community owner has two at position 28; `services/support.html` correctly owns `marketing support services` with 59 impressions at position 11.1 (down four); and the marketing-automation owner has 22 impressions at position 21.5 (down one). The guide and support page changed after this reporting window, so both are held through recrawl; marketing automation does not meet the 15% rising-impression rule and remains hold.
 - Validation dates: early page/query ownership and CTR pulse on 2026-10-09; comparable post-edit 28-day judgment on or after 2026-10-23.
-- Next trigger: Wednesday 2026-09-30 should verify sitemap/recrawl status and avoid changing the guide unless a deterministic defect appears. On 2026-10-09 compare the guide, Chinese-agency owner, Chinese-community owner and Xiaohongshu support page; edit only if weak CTR persists after recrawl, commercial intent continues landing on the guide, or approved proof/scope is supplied.
+- Next trigger: Wednesday 2026-09-30 should verify sitemap/recrawl status and avoid changing the guide unless a deterministic defect appears. On 2026-10-09 compare the guide, Chinese-agency owner, Chinese-community owner and Xiaohongshu support page; edit only if weak CTR persists after recrawl, commercial intent continues landing on the guide, or approved public-safe process/service boundaries are supplied.
+- Commits pushed to `origin/main`: `ed41bfb` (Monday review and public-proof governance), `f9bfa3f` (Chinese-agency snippet edit and query/page export), `2329a83` / `ef38c4b` / `42c6d2e` (ownership dashboard, comparable trend and final controls).
+- Final post-push validation: `npm run seo:live-check` passed 23 priority pages and six stylesheet assets; `npm run seo:visual-check` passed 46 desktop/mobile renders. Final report: `.seo-visual/20260928T002811Z/report.md`.
 
 | Page | Opportunity score | Decision | Reason |
 | --- | ---: | --- | --- |
