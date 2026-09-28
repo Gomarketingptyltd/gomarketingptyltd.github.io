@@ -1,6 +1,6 @@
 # Go Marketing: Three Bilingual Promotion Topics
 
-Prepared 25 September 2026. Topic 1 English was published to the verified Go Marketing Pty Ltd Google Business Profile on 25 September; the manager showed "Published" after submission. Other versions/topics remain drafts. No customer story, identity, project screenshot or claimed result is included.
+Prepared 25 September 2026; status updated 28 September. Topic 1 English was published to the verified Go Marketing Pty Ltd Google Business Profile on 25 September and LinkedIn company page on 28 September. Other versions/topics remain drafts. No customer story, identity, project screenshot or claimed result is included.
 
 ## Publishing Order
 
@@ -75,12 +75,13 @@ Do not imply that every integration or native app-store release is included. Do 
 | Topic | Live post URL | Published | Status |
 | --- | --- | --- | --- |
 | Marketing review checklist | No public permalink exposed by the manager | 2026-09-25 | English GBP Update published; Learn more points to the English guide |
+| Marketing review checklist, LinkedIn | [Company post](https://www.linkedin.com/feed/update/urn:li:share:7510170234956300289) | 2026-09-28 | Published as Go Marketing PTY LTD; exact text and guide preview verified |
 | Chinese-Australian audience support | Not published | Not scheduled | Copy ready |
 | Website, app and customer-support tools | Not published | Not scheduled | Copy ready |
 
 Publishing account verified in Google Business Profile Manager as Go Marketing Pty Ltd, status Verified. The first post's submission completed in the embedded manager; its post list displayed the exact copy and "Published". No promotion spend, media upload, client information or address edit was involved. A standalone composer rejected its empty application state before submission; it was closed and did not produce a duplicate post.
 
-LinkedIn company URL was checked, but the current browser is at the sign-in gate. Company publishing rights are not yet verified, so nothing was posted there or through a personal account. No Chinese-channel message or bulk outreach was sent.
+LinkedIn access was restored on 28 September. The company admin dashboard showed no posts in the last 90 days. Topic 1 was published once as Go Marketing PTY LTD; the success confirmation and public post both showed the correct company and guide link. No personal-account substitute, paid boost, Premium trial, bulk invitation or Chinese-channel message was used. The original URL was clean; LinkedIn automatically shortened its displayed text link.
 
 ## Local Visibility and Boundaries
 

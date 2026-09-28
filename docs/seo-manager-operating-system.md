@@ -1,6 +1,6 @@
 # Senior SEO Manager Operating System
 
-Last updated: 2026-09-25
+Last updated: 2026-09-28
 
 ## Current owner boundaries
 
@@ -9,6 +9,9 @@ Last updated: 2026-09-25
 - Selected real material may be discussed privately only after the owner confirms the exact excerpt, recipient and permissions under the relevant agreement. Store any such material outside the public repository and website; `noindex` is not access control.
 - Keep the existing form unchanged. Form changes and delivery tests are paused. Do not require them before continuing safe content and promotion work.
 - Internal enquiry and ranking data stay in ignored local reports. Do not publish the recent enquiry as a client story, testimonial or proof of SEO attribution.
+- Dashboard output is `.search-console/reports/seo-dashboard.md`, not the tracked documentation pointer. Compare adjacent equal-length final-data windows; overlapping snapshots are freshness pulses, not period-over-period growth.
+- A missing performance row is not an indexing failure. Inspect the URL before asking for indexing. Do not repeat requests already queued for the same release.
+- For the 2026-09-25 release, the full post-release window is 2026-09-26 to 2026-10-23; retrieve final data around 2026-10-26. For the 2026-09-28 title release, use 2026-09-29 to 2026-10-26 and retrieve around 2026-10-29. The 2026-10-09 pulse is an early check, not a complete 28-day outcome. Verify actual crawl dates and reporting availability before attributing results.
 
 ## Role mission
 
@@ -45,9 +48,9 @@ Every scheduled SEO manager run must follow this order.
 1. Production safety
    Run `npm run seo:release-gate`, `npm run seo:live-check`, and `npm run seo:visual-check` first. If a deterministic safety check fails, stop ranking edits and treat the run as a production safety incident. If the failure is clearly an environment fetch/browser blocker, record the blocker and rerun from a network-enabled environment before ranking edits.
 2. Data freshness
-   Run `node scripts/search-console.js doctor` and `node scripts/search-console.js snapshot --days=28`. Use the newest report and compare it to the previous report.
+   Run `node scripts/search-console.js doctor` and `node scripts/search-console.js snapshot --days=28`. Fetch the immediately preceding equal-length window with explicit start/end dates before comparing. Do not compare against the last overlapping snapshot.
 3. Page scoring
-   Run `npm run seo:dashboard`, then score every priority page using the opportunity score below.
+   Run `npm run seo:dashboard` to create the ignored local report, then score every priority page using the opportunity score below. Override automated suggestions when a recent release needs time to be crawled or the sample is too small.
 4. Decision
    Assign exactly one action to every priority page: `edit`, `hold`, or `request indexing`.
 5. Execution

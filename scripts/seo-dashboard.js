@@ -5,7 +5,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const REPORTS_DIR = path.join(ROOT, ".search-console", "reports");
-const OUTPUT_PATH = path.join(ROOT, "docs", "seo-dashboard.md");
+const OUTPUT_PATH = path.join(REPORTS_DIR, "seo-dashboard.md");
 const SITE_URL = "https://gomarketing.net.au";
 
 const PRIORITY_PAGES = [
@@ -156,7 +156,7 @@ function displayPath(url) {
 
 function opportunity({ latest, previous }) {
   if (!latest) {
-    return { score: 3, decision: "request indexing", reason: "No row in latest report" };
+    return { score: 3, decision: "hold", reason: "No exported row; inspect indexing before deciding" };
   }
 
   const position = number(latest.position);
@@ -177,7 +177,7 @@ function opportunity({ latest, previous }) {
     return { score: 4, decision: "edit", reason: "Position 16-25 with rising impressions" };
   }
   if (impressions === 0) {
-    return { score: 3, decision: "request indexing", reason: "No impressions in latest report" };
+    return { score: 3, decision: "hold", reason: "No impressions; inspect indexing before deciding" };
   }
   return { score: 2, decision: "hold", reason: "No high-confidence edit trigger yet" };
 }
@@ -212,14 +212,39 @@ function markdownTable(headers, rows) {
   ].join("\n");
 }
 
+function selectComparison(dirs) {
+  const ranges = dirs.map((name) => {
+    const match = /^(\d{4}-\d{2}-\d{2})_to_(\d{4}-\d{2}-\d{2})$/.exec(name);
+    if (!match) throw new Error(`Invalid report range: ${name}`);
+    const start = Date.parse(`${match[1]}T00:00:00Z`);
+    const end = Date.parse(`${match[2]}T00:00:00Z`);
+    if (!Number.isFinite(start) || !Number.isFinite(end) || end < start) {
+      throw new Error(`Invalid report range: ${name}`);
+    }
+    return { name, start, end };
+  }).sort((a, b) => a.end - b.end || a.start - b.start);
+  const latest = ranges.at(-1);
+  if (!latest) throw new Error("No Search Console report ranges available");
+  const length = latest.end - latest.start + 86400000;
+  const previous = ranges.find((range) => range.end === latest.start - 86400000
+    && range.start === latest.start - length);
+  if (!previous) {
+    const start = new Date(latest.start - length).toISOString().slice(0, 10);
+    const end = new Date(latest.start - 86400000).toISOString().slice(0, 10);
+    throw new Error(`Missing adjacent equal-length comparison. Run node scripts/search-console.js report --start=${start} --end=${end}`);
+  }
+  return { latest: latest.name, previous: previous.name };
+}
+
 function main() {
   const dirs = reportDirs();
   if (dirs.length < 1) {
     throw new Error("No Search Console reports found. Run npm run search-console:snapshot -- --days=28 first.");
   }
 
-  const latest = loadReport(dirs[dirs.length - 1]);
-  const previous = dirs.length > 1 ? loadReport(dirs[dirs.length - 2]) : latest;
+  const selected = selectComparison(dirs);
+  const latest = loadReport(selected.latest);
+  const previous = loadReport(selected.previous);
   const generatedAt = new Date().toISOString();
   const latestDataAgeDays = daysSince(latest.summary.endDate);
   const freshnessNote = latestDataAgeDays > 4
@@ -233,9 +258,9 @@ function main() {
     return [
       page.label,
       page.path,
-      latestRow ? number(latestRow.clicks) : 0,
-      latestRow ? number(latestRow.impressions) : 0,
-      latestRow ? pct(latestRow.ctr) : "0.00%",
+      latestRow ? number(latestRow.clicks) : "-",
+      latestRow ? number(latestRow.impressions) : "-",
+      latestRow ? pct(latestRow.ctr) : "-",
       latestRow ? fixed(latestRow.position, 1) : "-",
       previousRow && latestRow ? signed(number(latestRow.impressions) - number(previousRow.impressions)) : "-",
       action.score,
@@ -249,9 +274,9 @@ function main() {
     const previousRow = findQuery(previous.queries, query);
     return [
       query,
-      latestRow ? number(latestRow.clicks) : 0,
-      latestRow ? number(latestRow.impressions) : 0,
-      latestRow ? pct(latestRow.ctr) : "0.00%",
+      latestRow ? number(latestRow.clicks) : "-",
+      latestRow ? number(latestRow.impressions) : "-",
+      latestRow ? pct(latestRow.ctr) : "-",
       latestRow ? fixed(latestRow.position, 1) : "-",
       previousRow && latestRow ? signed(number(latestRow.impressions) - number(previousRow.impressions)) : "-",
     ];
@@ -291,10 +316,10 @@ function main() {
       query,
       expectedPath,
       topPair ? displayPath(topPair.page) : "-",
-      topPair ? number(topPair.impressions) : 0,
+      topPair ? number(topPair.impressions) : "-",
       topPair ? fixed(topPair.position, 1) : "-",
-      ownerPair ? number(ownerPair.impressions) : 0,
-      ownerPair ? pct(ownerPair.ctr) : "0.00%",
+      ownerPair ? number(ownerPair.impressions) : "-",
+      ownerPair ? pct(ownerPair.ctr) : "-",
       ownerPair ? fixed(ownerPair.position, 1) : "-",
       ownerPair && previousOwnerPair ? signed(ownerImpressions - previousOwnerImpressions) : "-",
       ownerScore,
@@ -351,6 +376,11 @@ function main() {
     "",
     "## Manager Notes",
     "",
+    "- Private local report: do not publish or commit business performance data.",
+    "- Global Web Search data, not a fixed Sydney rank. Use country-filtered query/page pairs for the Australian audience.",
+    "- Scores are review suggestions, not approval to edit. Recent releases and small samples require a manager hold.",
+    "- A missing exported row does not establish non-indexing; confirm through URL Inspection.",
+    "- A dash means no exported row, not zero searches. Query exports may omit anonymised or lower-volume rows.",
     "- A lower average position number is better.",
     "- A `wrong-page lead` is a diagnosis trigger, not an automatic rewrite: confirm informational versus commercial intent and recent edits first.",
     "- Use this dashboard with `docs/seo-manager-operating-system.md`; do not ship edits without production safety checks.",
@@ -361,4 +391,6 @@ function main() {
   console.log(`Wrote SEO dashboard to ${OUTPUT_PATH}`);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { OUTPUT_PATH, opportunity, selectComparison };
