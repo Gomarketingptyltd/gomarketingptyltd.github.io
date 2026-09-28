@@ -1,5 +1,12 @@
 # SEO Execution Log
 
+## 2026-09-28 Instagram identity alignment
+
+- At the owner's request, updated the existing company Instagram username to `gomarketing.net.au` and verified the resulting company profile at https://www.instagram.com/gomarketing.net.au/. Revised its public bio to match the website's Sydney bilingual marketing, brand strategy, Chinese-Australian audience growth and digital-tool services. No other account, permission or security settings were changed.
+- Replaced 221 old Instagram URLs across 111 tracked HTML pages, covering public social links and structured-data identities. Updated the metadata generator and business-profile reference document so later regeneration does not restore the old URL.
+- Verified every changed HTML file and both supporting files against HEAD: their sole change is the exact old-to-new Instagram URL replacement. Parsed all 111 JSON-LD blocks. Forms, CSS, scripts, images, navigation labels, page copy, canonical/hreflang, article dates and sitemap remain unchanged.
+- All 55 tests and the 123-HTML/55-bilingual-pair SEO release gate passed, including whitespace validation. Deployment and production-link confirmation follow after the scoped commit; this identity update is not evidence of ranking improvement.
+
 ## 2026-09-28 Approved cadence and social pilot setup
 
 - Updated the existing SEO automation rather than creating a duplicate. It remains active on Monday, Wednesday and Friday at 09:30 Australia/Sydney, using the existing project, local execution environment and model settings. Removed the mandatory one-hour/minimum-duration requirement; an evidence-based hold is valid.

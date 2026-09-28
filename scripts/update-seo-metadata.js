@@ -17,7 +17,7 @@ const CHINESE_AGENCY_DESCRIPTION =
   "Go Marketing 是一家位于悉尼的双语营销机构，帮助餐饮、地产、健康养生、牙科及服务型企业在华人社区与澳洲主流市场之间建立更清晰的沟通、更强的信任和更好的可见度。";
 const SOCIAL_PROFILES = [
   "https://www.linkedin.com/company/go-marketing-pty-ltd/",
-  "https://www.instagram.com/gomarketing22/",
+  "https://www.instagram.com/gomarketing.net.au/",
   "https://twitter.com/GoMarketing18",
   "https://www.facebook.com/profile.php?id=100078097333826",
   "https://www.youtube.com/channel/UCENkRPv-bwIm1n_2zygeKag",

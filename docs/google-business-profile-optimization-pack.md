@@ -109,7 +109,7 @@ Primary website:
 Social links already used on the website:
 
 - LinkedIn: `https://www.linkedin.com/company/go-marketing-pty-ltd/`
-- Instagram: `https://www.instagram.com/gomarketing22/`
+- Instagram: `https://www.instagram.com/gomarketing.net.au/`
 - X: `https://twitter.com/GoMarketing18`
 - Facebook: `https://www.facebook.com/profile.php?id=100078097333826`
 - YouTube: `https://www.youtube.com/channel/UCENkRPv-bwIm1n_2zygeKag`
