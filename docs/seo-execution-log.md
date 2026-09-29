@@ -2057,3 +2057,13 @@ Every new entry must include:
 | `services/xiaohongshuMarketingForSydneyRestaurants.html` | 4 | `request indexing` | Inspect both canonicals and the current version first after OAuth recovery |
 | `services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html` | 3 | `request indexing` | Material bilingual improvements remain absent from the stale report |
 | `services/xiaohongshuWeChatContentSupport.html` | 5 | `hold` | Publication requires approved pricing and delivery boundaries |
+
+## 2026-09-30 - Wednesday recrawl verification and hold
+
+- Reused the adjacent 28-day final-data review from 28 September rather than fetching an identical performance window two days later.
+- Confirmed Search Console authorization, then ran fresh indexed-version checks for the five URLs in the 28 September request ledger. All returned successful fetches, allowed indexing and matching declared/Google canonicals.
+- The Chinese bilingual-agency URL has now been crawled and is submitted and indexed. The four English priority updates still show crawl dates before their latest releases, so their accepted requests were not repeated.
+- Decision: hold all current priority pages. No second snippet test, copy edit, sitemap submission or indexing request was justified while the recent releases await recrawl and final data.
+- Production safety passed: 62 tests, 123 HTML files, 55 bilingual pairs, 23 live priority pages and six stylesheet assets. Initial restricted-network fetch failures were cleared by the successful read-only network checks and were not treated as a site incident.
+- Social follow-up remained within the approval ledger: the approved Meta carousel was awaiting its 30 September 10:00 scheduled publication when this SEO check completed; all other drafts remained unapproved and unscheduled.
+- Next triggers: verify the approved Meta publication after its scheduled time; run the early query/page pulse on 9 October; evaluate full post-release windows around 26 and 29 October subject to final-data availability.
