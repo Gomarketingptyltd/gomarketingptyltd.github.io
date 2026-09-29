@@ -1,5 +1,16 @@
 # SEO Execution Log
 
+## 2026-09-29 Scoped service capability and answer clarification
+
+- Owner-confirmed scope: business apps and app-store launch support, e-commerce operations, bespoke CRM and internal marketing systems. Updated the existing English/Chinese automation and website service pairs rather than adding competing thin pages or rewriting recent agency titles.
+- Public answers distinguish the service from the project-specific decision: users and tasks first, then platform, integrations, permissions, pricing, ownership and delivery scope. App-store approval, unrestricted tool compatibility, exclusive ownership and sales or ranking gains are not promised.
+- No client work, app listing, screenshot or identifying information was published. Relevant private material is conditional on the agreement and permissions; otherwise use a clearly fictional demonstration. Linked the existing language-matched process/confidentiality pages.
+- Preserved title/H1, canonical/hreflang, header/footer, card counts, images, resource references and forms. No CSS, browser scripts, Analytics, form provider, DNS, mail or account-setting changes. Targeted metadata generation is idempotent; only four sitemap lastmod dates changed.
+- Repaired a local gate defect: the scanner was treating ignored social-preview HTML as public site content. Excluded the existing private SEO directories and added a fixture regression proving invalid public HTML still fails. No private preview was modified or exposed.
+- Verification: 62 tests, 123 HTML files and 55 bilingual pairs pass. All 32 FAQ entries match visible text and generated structured data. Twelve desktop/mobile renders at 1440/390/320px show no horizontal/text overflow, heading collisions or broken loaded images; screenshots and language-matched contact paths inspected. Original forms were not submitted.
+- A private bilingual consultation guide and verification notes are kept under the ignored `.search-console/reports/2026-09-29-service-answers/` directory. This is a source-grounded answer guide, not a deployed chatbot or evidence of independent AI citation.
+- Release checks follow separately. Reuse the existing September 30 crawl review; do not repeatedly submit the September 28 indexing requests or claim ranking improvement from this change.
+
 ## 2026-09-28 Instagram identity alignment
 
 - At the owner's request, updated the existing company Instagram username to `gomarketing.net.au` and verified the resulting company profile at https://www.instagram.com/gomarketing.net.au/. Revised its public bio to match the website's Sydney bilingual marketing, brand strategy, Chinese-Australian audience growth and digital-tool services. No other account, permission or security settings were changed.

@@ -60,7 +60,8 @@ function walk(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const filePath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if ([".git", "node_modules"].includes(entry.name)) return [];
+      // Private reports and visual-review drafts are not published website pages.
+      if ([".git", "node_modules", ".search-console", ".seo-visual", ".seo-session"].includes(entry.name)) return [];
       return walk(filePath);
     }
     return entry.isFile() ? [filePath] : [];
