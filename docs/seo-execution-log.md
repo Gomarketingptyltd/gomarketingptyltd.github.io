@@ -2067,3 +2067,13 @@ Every new entry must include:
 - Production safety passed: 62 tests, 123 HTML files, 55 bilingual pairs, 23 live priority pages and six stylesheet assets. Initial restricted-network fetch failures were cleared by the successful read-only network checks and were not treated as a site incident.
 - Social follow-up remained within the approval ledger: the approved Meta carousel was awaiting its 30 September 10:00 scheduled publication when this SEO check completed; all other drafts remained unapproved and unscheduled.
 - Next triggers: verify the approved Meta publication after its scheduled time; run the early query/page pulse on 9 October; evaluate full post-release windows around 26 and 29 October subject to final-data availability.
+
+## 2026-10-05 - Monday strategy review and authorization hold
+
+- Production safety passed on the live site: 23 priority pages and six stylesheet assets loaded successfully. The local release-gate test phase passed all 62 tests; the repository-wide final diff phase was stopped after the known full-worktree refresh stall, with no website mutation attempted.
+- Search Console configuration and scope remain present, but the saved OAuth token is expired or revoked. No fresh performance snapshot, dashboard comparison, URL Inspection, sitemap submission or indexing request was attempted after that deterministic authorization result.
+- The latest valid comparison remains the adjacent 28-day final-data windows of 2026-08-01 to 2026-08-28 and 2026-08-29 to 2026-09-25. It predates the September 24-28 releases and therefore does not justify a second title, copy or internal-link edit.
+- Weekly priority: restore the existing Search Console authorization, then run the planned 9 October Australian query/page pulse for the agency, practical-guide, Support and automation owners. Treat it as directional evidence only; preserve the full post-release reviews around 26 and 29 October.
+- Decision: hold every current priority page. Do not repeat the September 28 indexing requests or resubmit the unchanged sitemap. No filler article is justified this week while the newer automation/service answers and recent releases await crawl and fresh evidence.
+- Owned-channel verification confirmed the previously approved W1-M1 carousel is live on both company identities. No unapproved draft was scheduled or published, and no inbox, profile, permission, boost or account setting was changed.
+- Exact recovery: run `npm run search-console:auth` with the account holder, then `node scripts/search-console.js doctor`; after authorization is healthy, fetch the current final 28-day window and its immediately preceding equal-length period before regenerating the private dashboard.
