@@ -2,7 +2,8 @@
   "scripts": {
     "seo:metadata": "node scripts/update-seo-metadata.js",
     "seo:sitemap": "node scripts/update-sitemap.js",
-    "seo:check": "node --test scripts/update-seo-metadata.test.js scripts/search-console.test.js scripts/seo-dashboard.test.js scripts/enquiry.test.js scripts/analytics.test.js scripts/content-privacy.test.js scripts/service-help.test.js && node scripts/seo-check.js",
+    "seo:check": "node --test scripts/update-seo-metadata.test.js scripts/search-console.test.js scripts/seo-dashboard.test.js scripts/enquiry.test.js scripts/analytics.test.js scripts/content-privacy.test.js scripts/service-help.test.js scripts/blog-images.test.js && node scripts/seo-check.js",
+    "seo:blog-images": "node scripts/blog-images.js",
     "test:enquiry": "node --test scripts/enquiry.test.js",
     "seo:release-gate": "npm run seo:check && git diff --check",
     "seo:live-check": "node scripts/verify-live-stylesheets.js",

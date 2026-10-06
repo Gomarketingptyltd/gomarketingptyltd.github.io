@@ -1,5 +1,15 @@
 # SEO Execution Log
 
+## 2026-10-06 Unique article imagery
+
+- Owner requested distinct images for different blog articles. Audited 22 independent articles and their Chinese translations: five groups reused cover photos. Replaced six duplicated assignments and one visually similar business-feasibility image, retaining the other topic-specific covers.
+- Added seven locally hosted, reviewed Pexels photographs with source/photographer records. New files are 1200 x 750 JPEGs, each under 250 KB. No client evidence, confidential material or claimed endorsements. English/Chinese versions and placements for the same article intentionally share one image.
+- Updated 14 article pages and both Insights lists, including descriptive bilingual alt text, Open Graph, Twitter, WebPage and BlogPosting images. Homepage cards already refer to distinct, unchanged article covers. Forms, styles, scripts, titles, page copy, canonical/hreflang, dates and sitemap are unchanged.
+- Added the image manifest, source/path/content-hash duplication checks, thumbnail/translation/metadata checks and future-article registration guard to the existing GitHub SEO gate. Editorial rules are in `docs/blog-image-policy.md`.
+- Safety comparison caught a legacy metadata-generator issue: update-only date labels could erase a recorded publication date. Added validated preservation and regression coverage for English and both Chinese label formats. Regeneration is idempotent for all 14 edited articles, preserving the original dates.
+- Pre-release verification: 94 tests, 125 HTML files and 55 bilingual pairs pass. A strict comparison confirms all 16 edited HTML files differ only in image attributes and image metadata; eight protected core files are byte-identical. Browser QA passed 48 renders across 1440, 390 and 320px, including all list images after scrolling, with no broken images, horizontal overflow or clipped headings. Private evidence: `.seo-visual/blog-images-20261006/`.
+- Production verification is a separate step after the scoped release; this entry alone is not evidence of deployment. No ranking claim or new indexing submission is associated with the image refresh.
+
 ## 2026-10-06 Standalone enquiry help and public-safe brochure release
 
 - Following owner approval, prepared two independent static routes: a bilingual service FAQ and a shareable Xiaohongshu/Local Market brochure. No main-navigation or sitemap entry for the brochure; both routes request noindex. Public links are not access control.

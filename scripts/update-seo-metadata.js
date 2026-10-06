@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const BLOG_IMAGES = require("./blog-images.json");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE_URL = "https://gomarketing.net.au";
@@ -87,94 +88,6 @@ const CUSTOM_SOCIAL_IMAGES = {
     `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
   "cn/insights.html":
     `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
-  "services/bilingualMarketingNotTranslation.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
-  "cn/bilingualMarketingNotTranslation.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
-  "services/restaurantTrustChineseCustomers.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29394567.jpg`,
-  "cn/restaurantTrustChineseCustomers.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29394567.jpg`,
-  "services/websiteMessagingMistakes.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-5483188.jpg`,
-  "cn/websiteMessagingMistakes.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-5483188.jpg`,
-  "services/wechatXiaohongshuPlatformFit.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
-  "cn/wechatXiaohongshuPlatformFit.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
-  "services/propertyCommunicationChineseAudiences.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-17082224.jpg`,
-  "cn/propertyCommunicationChineseAudiences.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-17082224.jpg`,
-  "services/digitalCredibilityChecklist.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
-  "cn/digitalCredibilityChecklist.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
-  "services/xiaohongshuVsInstagramHospitality.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
-  "cn/xiaohongshuVsInstagramHospitality.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
-  "services/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
-  "cn/chineseAustralianAudiencesDiscoverLocalBusinesses.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
-  "services/howToReachChineseConsumersInSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
-  "cn/howToReachChineseConsumersInSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-30470951.jpg`,
-  "services/xiaohongshuMarketingForSydneyRestaurants.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
-  "cn/xiaohongshuMarketingForSydneyRestaurants.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
-  "services/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
-  "cn/digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
-  "services/dentalTrustChinesePatientsSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
-  "cn/dentalTrustChinesePatientsSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-12746003.jpg`,
-  "services/localSeoStartsWithClearMessaging.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
-  "cn/localSeoStartsWithClearMessaging.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
-  "services/howToEvaluateWhetherBusiness.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8970671.jpg`,
-  "cn/howToEvaluateWhetherBusiness.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8970671.jpg`,
-  "services/howToMakeMotion.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-7818230.jpg`,
-  "cn/howToMakeMotion.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-7818230.jpg`,
-  "services/whatIsBrandKit.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8970685.jpg`,
-  "cn/whatIsBrandKit.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8970685.jpg`,
-  "services/whatIsAgileMarketing.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8279219.jpg`,
-  "cn/whatIsAgileMarketing.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-8279219.jpg`,
-  "services/whatIsGlobalStrategy.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-7412032.jpg`,
-  "cn/whatIsGlobalStrategy.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-7412032.jpg`,
-  "services/whatIsMarketingAutomation.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
-  "cn/whatIsMarketingAutomation.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
-  "services/whatIsDigitalPoster.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-12887602.jpg`,
-  "cn/whatIsDigitalPoster.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-12887602.jpg`,
-  "services/chineseMarketingAgencyVsBilingualMarketingAgencySydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
-  "cn/chineseMarketingAgencyVsBilingualMarketingAgencySydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-4344340.jpg`,
-  "services/chineseEnglishWebsiteMessagingSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
-  "cn/chineseEnglishWebsiteMessagingSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-10347149.jpg`,
 };
 
 const SOCIAL_BLOCK_RE =
@@ -330,6 +243,21 @@ function articleDatesFromHtml(html) {
   }
 
   const legacy = meta[1].match(/<span class=["']date["']>([\s\S]*?)<\/span>/i);
+  // Some older pages display only an update date; retain their recorded publication.
+  const legacyText = legacy ? cleanText(legacy[1]) : "";
+  if (!dates.published && (/^Updated\s+/i.test(legacyText) || /更新$/.test(legacyText) || /^更新于/.test(legacyText))) {
+    const previous = html.match(/<meta\s+property=["']article:published_time["'][^>]*content=["']([^"']+)["']/i)?.[1];
+    const parsed = new Date(previous);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(previous || "") || !Number.isFinite(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== previous) {
+      throw new Error("Update-only article date requires a valid recorded publication date");
+    }
+    dates.published = previous;
+    dates.modified ||= normalizeDate(legacyText.replace(/^Updated\s+/i, "").replace(/更新$/, "").replace(/^更新于/, ""));
+    const modified = new Date(dates.modified);
+    if (!dates.modified || !Number.isFinite(modified.getTime()) || modified.toISOString().slice(0, 10) !== dates.modified) {
+      throw new Error("Invalid legacy article update date");
+    }
+  }
   const published = dates.published || (legacy ? normalizeDate(legacy[1]) : null);
   const modified = dates.modified || published;
   if (modified && (!published || modified < published)) {
@@ -358,6 +286,8 @@ function canonicalUrlFor(relative) {
 }
 
 function socialImageFor(relative) {
+  const article = /^(?:services|cn)\/([^/]+\.html)$/.exec(relative)?.[1];
+  if (article && BLOG_IMAGES[article]) return `${SITE_URL}${BLOG_IMAGES[article].image}`;
   return CUSTOM_SOCIAL_IMAGES[relative] || SOCIAL_IMAGE;
 }
 

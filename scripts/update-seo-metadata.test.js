@@ -2,6 +2,16 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const { articleDatesFromHtml, articleNode, socialMetadata } = require("./update-seo-metadata");
 
+test("update-only legacy pages preserve recorded publication when regenerating image metadata", () => {
+  for (const label of ["Updated Jul 3, 2026", "2026年7月3日更新", "更新于2026年7月3日"]) {
+    const html = `<meta property="article:published_time" content="2026-06-08"><div class="article-meta"><span class="date">${label}</span></div>`;
+    assert.deepEqual(articleDatesFromHtml(html), { published: "2026-06-08", modified: "2026-07-03" });
+    assert.throws(() => articleDatesFromHtml(html.replace("2026-06-08", "2026-08-01")), /cannot precede/);
+    assert.throws(() => articleDatesFromHtml(html.replace("2026-06-08", "2026-02-30")), /valid recorded publication/);
+  }
+  assert.throws(() => articleDatesFromHtml('<div class="article-meta"><span class="date">Updated Jul 3, 2026</span></div>'), /valid recorded publication/);
+});
+
 const meta = (content) => `<div class="article-meta"><span class="date">${content}</span></div>`;
 const dated = (published, modified) => meta(
   `Published <time data-article-date="published" datetime="${published}">Apr 15, 2026</time>` +

@@ -1,0 +1,66 @@
+{
+  "bilingualMarketingNotTranslation.html": {"image": "/images/insights/china-safe/pexels-4344340.jpg", "sourceId": "pexels:4344340"},
+  "chineseAustralianAudiencesDiscoverLocalBusinesses.html": {
+    "image": "/images/insights/editorial/local-business-discovery-5710143.jpg",
+    "sourceId": "pexels:5710143",
+    "source": "https://www.pexels.com/photo/young-asian-women-choosing-elegant-dishware-in-store-5710143/",
+    "photographer": "Sam Lion",
+    "alt": {"en": "Two shoppers consulting a smartphone while browsing ceramics in a shop", "zh": "两位顾客在店内选购陶瓷时一起查看手机"}
+  },
+  "chineseEnglishWebsiteMessagingSydney.html": {
+    "image": "/images/insights/editorial/website-content-planning-196646.jpg",
+    "sourceId": "pexels:196646",
+    "source": "https://www.pexels.com/photo/blue-pen-beside-black-smartphone-on-white-paper-196646/",
+    "photographer": "picjumbo.com",
+    "alt": {"en": "Hand-drawn website wireframes in a notebook beside a phone and keyboard", "zh": "手机和键盘旁的笔记本上绘有网站页面结构草图"}
+  },
+  "chineseMarketingAgencyVsBilingualMarketingAgencySydney.html": {
+    "image": "/images/insights/editorial/agency-strategy-discussion-6457589.jpg",
+    "sourceId": "pexels:6457589",
+    "source": "https://www.pexels.com/photo/diverse-coworkers-discussing-project-in-workspace-6457589/",
+    "photographer": "Alexander Suhorucov",
+    "alt": {"en": "Colleagues discussing a project with documents and a laptop around a table", "zh": "同事围坐在桌前，结合文件和笔记本电脑讨论项目"}
+  },
+  "dentalTrustChinesePatientsSydney.html": {"image": "/images/insights/china-safe/pexels-12746003.jpg", "sourceId": "pexels:12746003"},
+  "digitalCredibilityChecklist.html": {"image": "/images/insights/china-safe/pexels-10347149.jpg", "sourceId": "pexels:10347149"},
+  "digitalMarketingServicesSydneyWhatSmallBusinessesActuallyNeed.html": {
+    "image": "/images/insights/editorial/small-business-digital-planning-4350074.jpg",
+    "sourceId": "pexels:4350074",
+    "source": "https://www.pexels.com/photo/cheerful-female-colleagues-working-on-laptop-together-in-cafe-4350074/",
+    "photographer": "Ketut Subiyanto",
+    "alt": {"en": "Three cafe team members working together on a laptop", "zh": "三位咖啡店团队成员一起使用笔记本电脑"}
+  },
+  "howToEvaluateWhetherBusiness.html": {
+    "image": "/images/insights/editorial/business-feasibility-analysis-590022.jpg",
+    "sourceId": "pexels:590022",
+    "source": "https://www.pexels.com/photo/close-up-photo-of-survey-spreadsheet-590022/",
+    "photographer": "Lukas Blazek",
+    "alt": {"en": "A hand holding a pen over printed bar charts and line graphs", "zh": "手持笔核对纸上的柱状图和折线图"}
+  },
+  "howToMakeMotion.html": {"image": "/images/insights/china-safe/pexels-7818230.jpg", "sourceId": "pexels:7818230"},
+  "howToReachChineseConsumersInSydney.html": {
+    "image": "/images/insights/editorial/sydney-chinatown-discovery-36694772.jpg",
+    "sourceId": "pexels:36694772",
+    "source": "https://www.pexels.com/sv-se/foto/chinatown-gateway-i-sydneys-morgonljus-36694772/",
+    "photographer": "Dun ALrubaie",
+    "alt": {"en": "Traditional gateway and surrounding shopfronts in Sydney Chinatown", "zh": "悉尼唐人街的传统牌楼与周边店铺"}
+  },
+  "localSeoStartsWithClearMessaging.html": {"image": "/images/insights/china-safe/pexels-8970645.jpg", "sourceId": "pexels:8970645"},
+  "propertyCommunicationChineseAudiences.html": {"image": "/images/insights/china-safe/pexels-17082224.jpg", "sourceId": "pexels:17082224"},
+  "restaurantTrustChineseCustomers.html": {"image": "/images/insights/china-safe/pexels-29394567.jpg", "sourceId": "pexels:29394567"},
+  "websiteMessagingMistakes.html": {"image": "/images/insights/china-safe/pexels-5483188.jpg", "sourceId": "pexels:5483188"},
+  "wechatXiaohongshuPlatformFit.html": {"image": "/images/insights/china-safe/pexels-30470951.jpg", "sourceId": "pexels:30470951"},
+  "whatIsAgileMarketing.html": {"image": "/images/insights/china-safe/pexels-8279219.jpg", "sourceId": "pexels:8279219"},
+  "whatIsBrandKit.html": {"image": "/images/insights/china-safe/pexels-8970685.jpg", "sourceId": "pexels:8970685"},
+  "whatIsDigitalPoster.html": {"image": "/images/insights/china-safe/pexels-12887602.jpg", "sourceId": "pexels:12887602"},
+  "whatIsGlobalStrategy.html": {"image": "/images/insights/china-safe/pexels-7412032.jpg", "sourceId": "pexels:7412032"},
+  "whatIsMarketingAutomation.html": {"image": "/images/insights/china-safe/pexels-29205845.jpg", "sourceId": "pexels:29205845"},
+  "xiaohongshuMarketingForSydneyRestaurants.html": {
+    "image": "/images/insights/editorial/restaurant-food-content-693267.jpg",
+    "sourceId": "pexels:693267",
+    "source": "https://www.pexels.com/photo/person-holding-phone-taking-picture-of-served-food-693267/",
+    "photographer": "Helena Lopes",
+    "alt": {"en": "A diner photographing a brunch spread with a smartphone", "zh": "顾客用手机拍摄餐桌上的早午餐"}
+  },
+  "xiaohongshuVsInstagramHospitality.html": {"image": "/images/insights/china-safe/pexels-17564425.jpg", "sourceId": "pexels:17564425"}
+}
