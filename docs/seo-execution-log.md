@@ -1,5 +1,15 @@
 # SEO Execution Log
 
+## 2026-10-06 Xiaohongshu Service Integration
+
+- Owner approved bringing the public-safe brochure into the existing website service journey. Added concise bilingual homepage entry cards and expanded the existing Xiaohongshu/WeChat service pair, rather than creating another indexed URL. Updated the existing service-overview and community-growth card descriptions.
+- Separated client-account management from publishing through the company channel. Retained Everyday totals (3 posts / 3 months and 5 posts / 5 months), reporting boundaries, three revision rounds, approval and delay rules, and Local Market audience scope. Prices, client materials and unconfirmed numeric result/refund promises are not published.
+- Existing brochure URL remains usable and noindex, with links back to both website service languages. Same-service stock photos are reused intentionally across these placements; they are explicitly not client cases. No confidential showcase files were added.
+- Added only scoped CSS for home/service integration. Safety comparison against `f6cbf45` confirms the homepages differ only by the new section and stylesheet; eight protected core files, existing forms, service header/footer/scripts, H1 and canonical/hreflang remain unchanged.
+- Updated two service descriptions and generated seven matching FAQ schema answers per language. Sitemap lastmod changed only for the eight edited indexed pages. No promise of ranking gains or rich-result eligibility; no repeated indexing request.
+- Pre-release: 101 tests, 125 HTML files and 55 bilingual pairs pass; 40 responsive renders pass across 1440, 1024, 768, 390 and 320px. Both language journeys reach the correct service anchor, open the scope and return to the existing form. No enquiry was submitted. Private QA: `.seo-visual/xhs-integration-20261006/`.
+- Deployment and public-byte verification are checked separately; this log is not itself deployment evidence. Unrelated local changes are excluded from the release.
+
 ## 2026-10-06 Unique article imagery
 
 - Owner requested distinct images for different blog articles. Audited 22 independent articles and their Chinese translations: five groups reused cover photos. Replaced six duplicated assignments and one visually similar business-feasibility image, retaining the other topic-specific covers.

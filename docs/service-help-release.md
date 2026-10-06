@@ -2,6 +2,17 @@
 
 Release scope: 6 October 2026.
 
+## Subsequent Website Integration, 6 October 2026
+
+The owner subsequently approved integrating the public-safe brochure content into the main website. The existing indexed pages `/services/xiaohongshuWeChatContentSupport.html` and `/cn/xiaohongshuWeChatContentSupport.html` remain the primary service URLs; do not create another competing landing page or mark these service pages noindex.
+
+- Both homepages now introduce account management and company-channel promotion, linking to the language-matched service page. The service overview and community-growth pages use concrete descriptions of those routes.
+- Service pages retain the shared site navigation/footer, show four expandable service families, and provide seven visible FAQs mirrored in structured data. Quotes link to the existing homepage form or official WhatsApp, without sending any message automatically.
+- Approved stock photos from the brochure illustrate the same service on home, service and brochure pages. They are not case studies. Confidential examples, price lists, original brochures, audience-size claims, numerical outcome promises and unconfirmed refund percentages remain excluded.
+- The shareable brochure URL remains available and noindex; it now links back to both service languages. Its original exclusions still apply. The standalone help tool is unchanged.
+- `css/xhs-services.css` is loaded only by the two homepages and two service pages and is scoped to `.xhs-home`/`.xhs-page` descendants. Shared styles, menu/enquiry/analytics scripts and forms are unchanged. Only the two service descriptions/FAQ metadata and eight actually changed sitemap dates are refreshed.
+- The checks below describe the earlier standalone release. Integration verification: 101 tests, 125 HTML files, 55 bilingual pairs, 40 browser renders at five desktop/mobile widths, and both home-to-service-to-form journeys. No test enquiry is submitted. Evidence remains under ignored `.seo-visual/xhs-integration-20261006/`; production verification follows deployment separately.
+
 ## Public Routes
 
 - `/help/?lang=en` and `/help/?lang=zh`: the same standalone, bilingual FAQ. These links are in the corresponding homepage footers.

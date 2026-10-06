@@ -91,7 +91,9 @@ test('brochure is script-free, quote-only and absent from navigation and sitemap
   assert.ok(html.includes('href="../../help/?lang=en"'));
   assert.doesNotMatch(html, /(?:AUD|\$)\s*\d|1,000|3,000|5,000|half refund|50% refund/i);
   for (const term of ['coogee-original', 'Luna Park', 'One Drop', '203K', '7,830', 'showcase.js', 'Back to review', 'Not published']) assert.ok(!html.includes(term), term);
-  for (const file of ['index.html', 'cn/index.html', 'sitemap.xml']) assert.ok(!read(file).includes('brochure/xiaohongshu'));
+  // The main site reuses approved service photos, but links customers to the indexed service page.
+  for (const file of ['index.html', 'cn/index.html']) assert.doesNotMatch(read(file), /href="[^\"]*brochure\/xiaohongshu/);
+  assert.ok(!read('sitemap.xml').includes('brochure/xiaohongshu'));
   assert.ok(!read('sitemap.xml').includes('/help/'));
 });
 
@@ -100,4 +102,64 @@ test('new public folders contain only the approved static files', () => {
     item.isDirectory() ? list(dir + '/' + item.name).map(file => item.name + '/' + file) : [item.name]);
   assert.deepEqual(list('help').sort(), ['faq-data.js', 'help.css', 'help.js', 'index.html', 'logo.jpeg', 'search.js']);
   assert.deepEqual(list('brochure/xiaohongshu').sort(), ['assets/cafe.jpg', 'assets/logo.jpeg', 'assets/planning.jpg', 'assets/restaurant.jpg', 'brochure-v2.css', 'index.html']);
+});
+
+for (const [lang, home, service, form] of [
+  ['en', 'index.html', 'services/xiaohongshuWeChatContentSupport.html', '../#info'],
+  ['zh', 'cn/index.html', 'cn/xiaohongshuWeChatContentSupport.html', './#info']
+]) {
+  test(`${lang}: homepage routes reach the language-matched integrated service`, () => {
+    const html = read(home);
+    const section = html.match(/<section class="xhs-home"[\s\S]*?<\/section>/)[0];
+    const links = [...section.matchAll(/<a class="xhs-home-card" href="([^"]+)"/g)];
+    assert.equal(links.length, 2);
+    for (const [, href] of links) {
+      const url = new URL(href, 'https://gomarketing.net.au/' + home);
+      assert.equal(url.pathname, '/' + service);
+      assert.match(read(service), new RegExp(`id="${url.hash.slice(1)}"`));
+    }
+    assert.match(read(service), new RegExp(`href="${form.replaceAll('.', '\\.')}"`));
+    assert.match(read(service), /href="https:\/\/wa\.me\/61450428693"/);
+  });
+
+  test(`${lang}: integrated service remains indexed, bilingual, quote-only and client-safe`, () => {
+    const html = read(service);
+    assert.doesNotMatch(html, /name="robots"[^>]*noindex/);
+    assert.match(html, /hreflang="en-AU"/);
+    assert.match(html, /hreflang="zh-Hans"/);
+    assert.equal([...html.matchAll(/<h1[ >]/g)].length, 1);
+    assert.equal([...html.matchAll(/<details class="xhs-scope"/g)].length, 4);
+    for (const id of ['platform-roles', 'what-is-included', 'best-fit', 'related-insights', 'account-management', 'channel-promotion', 'local-market']) {
+      assert.ok(html.includes(`id="${id}"`), id);
+    }
+    assert.doesNotMatch(html, /(?:AUD|\$)\s*\d|1,000|3,000|5,000|50%|half refund|退一半|Luna Park|One Drop|203K|7,830/);
+    assert.doesNotMatch(html, /<form\b|<iframe\b|showcase\.js/i);
+    assert.match(html, lang === 'en' ? /3 posts \/ 3 months/ : /3 篇 \/ 3 个月/);
+    assert.match(html, lang === 'en' ? /5 posts \/ 5 months/ : /5 篇 \/ 5 个月/);
+    assert.match(html, lang === 'en' ? /up to three revision rounds per post/i : /每篇最多三轮修改/);
+    assert.match(html, lang === 'en' ? /unapproved content is not automatically published/i : /未确认的内容不会自动发布/);
+    assert.match(html, lang === 'en' ? /Reports, meetings.*separate management options/ : /报告、会议.*可选服务/);
+    assert.match(html, lang === 'en' ? /Where permission allows/ : /在授权允许的范围内/);
+    assert.match(html, /href="\.\.\/brochure\/xiaohongshu\/"/);
+  });
+
+  test(`${lang}: all seven service FAQ answers match the published structured data`, () => {
+    const html = read(service);
+    const clean = s => s.replace(/&amp;/g, '&').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+    const visible = [...html.matchAll(/<article class="seo-faq__item"><h3>(.*?)<\/h3><p>(.*?)<\/p><\/article>/gs)]
+      .map(m => ({question:clean(m[1]), answer:clean(m[2])}));
+    const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    const page = schema['@graph'].find(n => Array.isArray(n['@type']) && n['@type'].includes('FAQPage'));
+    assert.equal(visible.length, 7);
+    assert.deepEqual(page.mainEntity.map(n => ({question:n.name, answer:n.acceptedAnswer.text})), visible);
+  });
+}
+
+test('shared brochure links to both integrated service languages without exposing private materials', () => {
+  const html = read('brochure/xiaohongshu/index.html');
+  assert.match(html, /href="\.\.\/\.\.\/services\/xiaohongshuWeChatContentSupport.html"/);
+  assert.match(html, /href="\.\.\/\.\.\/cn\/xiaohongshuWeChatContentSupport.html"/);
+  const css = read('css/xhs-services.css');
+  assert.doesNotMatch(css, /@import|url\(|font-size:[^;]*(?:vw|vh)/);
+  assert.doesNotMatch(css, /animation\s*:/);
 });
