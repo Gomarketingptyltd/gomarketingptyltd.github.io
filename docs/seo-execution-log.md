@@ -2117,3 +2117,12 @@ Every new entry must include:
 - Decision: hold every current priority page. Do not repeat the September 28 indexing requests or resubmit the unchanged sitemap. No filler article is justified this week while the newer automation/service answers and recent releases await crawl and fresh evidence.
 - Owned-channel verification confirmed the previously approved W1-M1 carousel is live on both company identities. No unapproved draft was scheduled or published, and no inbox, profile, permission, boost or account setting was changed.
 - Exact recovery: run `npm run search-console:auth` with the account holder, then `node scripts/search-console.js doctor`; after authorization is healthy, fetch the current final 28-day window and its immediately preceding equal-length period before regenerating the private dashboard.
+
+## 2026-10-07 - Wednesday recrawl verification and hold
+
+- Production safety passed completely: 101 release-gate tests, 125 HTML files with 55 bilingual pairs, 23 live priority pages and seven stylesheet assets. The prior full-worktree diff stall did not recur.
+- Search Console authorization is healthy again. Fresh read-only URL Inspection checks for the English agency, Chinese-consumer guide, Support, automation and small-business guide pages all returned submitted/indexed, indexing allowed, successful fetch, robots allowed and matching declared/Google canonicals.
+- Crawl dates remain 22 September for the agency page, 5 September for the Chinese-consumer guide, 17 July for Support, 12 September for automation and 4 July for the small-business guide. These predate the relevant late-September releases, so the accepted requests were not repeated and the unchanged sitemap was not resubmitted.
+- Decision: hold every current priority page. No additional title, copy, internal-link or indexing action is justified before the planned 9 October Australian query/page pulse; that pulse remains directional, with full release-window reviews around 26 and 29 October.
+- At 09:35 AEDT, today's approved Week 2 LinkedIn and Meta slots were still in the future and already had verified platform scheduling records. No duplicate submission, publication claim, account change or inbox action was made.
+- Detailed evidence: ignored `.search-console/reports/2026-10-07-follow-up/review.md`.
