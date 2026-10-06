@@ -1,5 +1,25 @@
 # SEO Execution Log
 
+## 2026-10-06 Standalone enquiry help and public-safe brochure release
+
+- Following owner approval, prepared two independent static routes: a bilingual service FAQ and a shareable Xiaohongshu/Local Market brochure. No main-navigation or sitemap entry for the brochure; both routes request noindex. Public links are not access control.
+- Excluded prices, confidential cases, original source documents and unconfirmed numerical outcome/refund promises. Premium metrics and remedy terms remain for written agreement, not automated inference.
+- Added one FAQ link to each homepage footer. A byte comparison against the pre-release pages confirms no other homepage change and identical form markup. No new paid AI, trackers, transcript storage or contact-message prefill.
+- Validation passed 86 tests, 125 HTML files and 55 bilingual pairs. Chrome checks passed for bilingual FAQ behaviour and brochure layout across five desktop/mobile widths, with zero external requests from either new page.
+- This release supports enquiry routing. It does not establish a ranking increase, change the ongoing SEO observation decision, approve social drafts or resubmit unchanged URLs to Google.
+- Scope, allowlist and rollback guidance are recorded in `docs/service-help-release.md`. Deployment success must be verified separately after the approved push.
+
+## 2026-10-06 Authorization recovery and review-ready promotion batch
+
+- Recovered the existing Search Console authorization with the owner; token refresh and read-only reporting work again. No new scopes, DNS, mail, account-security settings or ownership changes.
+- Retrieved adjacent final-data 28-day windows and Australian query/page pairs, regenerated the ignored dashboard, and inspected six priority indexed URLs. Private metrics and crawl evidence remain in `.search-console/reports/2026-10-06-follow-up/`; none are copied into public site files.
+- Decision: hold public copy and metadata until recrawl/appropriate observation. Six inspected URLs are indexed with matching canonicals and successful fetches, but several crawls still predate recent releases. No repeated indexing request or unchanged sitemap submission. No filler blog, backdated article or ranking guarantee.
+- The full release gate passed 62 tests, 123 HTML files and 55 bilingual pairs, including the Git whitespace phase. The prior Git stall did not reproduce; root cause is not established. Live checks passed for 23 priority pages and six stylesheet URLs.
+- Prepared a private Week 2 owner-review batch: two Meta topics with nine original-logo images, two LinkedIn texts and one Google Business Profile update. Existing charcoal/white direction retained; orange is limited to accents. No client cases, prices, outcome claims, boosts or paid AI. No new social item is scheduled or published.
+- Reconciled private W1-M1 status with the October 5 publication evidence and marked missed, unapproved slots expired. Do not duplicate the published carousel or automatically backfill drafts.
+- Prepared an isolated local brochure candidate without showcase files, prices or unconfirmed refund percentages. Existing brochure, public site and form remain unchanged. Simple FAQ remains a local static tool, not a trained model or deployed agent; its 28 tests passed again. Final content/integration/publication decisions remain with the owner.
+- Next: owner reviews the consolidated local batch; publish only precisely approved assets after native-platform verification. Continue the existing Wednesday/Friday cadence; October 9 is an early pulse, not a complete post-release outcome. This entry is an execution record, not a website deployment.
+
 ## 2026-09-29 Scoped service capability and answer clarification
 
 - Owner-confirmed scope: business apps and app-store launch support, e-commerce operations, bespoke CRM and internal marketing systems. Updated the existing English/Chinese automation and website service pairs rather than adding competing thin pages or rewriting recent agency titles.

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Go Marketing | 服务咨询</title>
+  <meta name="description" content="Common questions about Go Marketing's Xiaohongshu promotion, websites, apps, CRM and automation services. Contact the team for a tailored quotation.">
+  <link rel="stylesheet" href="help.css">
+  <script src="faq-data.js" defer></script>
+  <script src="search.js" defer></script>
+  <script src="help.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#questions" data-text="skip">跳到常见问题</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://gomarketing.net.au/" target="_blank" rel="noopener noreferrer" aria-label="Go Marketing 官网">
+        <img src="logo.jpeg" alt="Go Marketing" width="44" height="44">
+        <span>GO MARKETING<span class="brand-caption" data-text="brandCaption">服务咨询</span></span>
+      </a>
+      <div class="header-actions">
+        <button id="language" type="button" aria-label="Switch to English">EN</button>
+        <a class="button primary" data-contact="whatsapp" href="https://wa.me/61450428693" target="_blank" rel="noopener noreferrer" aria-label="通过 WhatsApp 联系 Go Marketing">WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <div class="intro">
+      <p class="eyebrow" data-text="eyebrow">GO MARKETING · 常见问题</p>
+      <h1 data-text="heading">你想了解哪项服务？</h1>
+      <p class="intro-copy" data-text="intro">从小红书推广、网站与 App，到 CRM 和业务自动化。</p>
+      <form id="search-form" role="search">
+        <label class="visually-hidden" for="search" data-text="searchLabel">搜索常见问题</label>
+        <div class="search-field"><span aria-hidden="true" class="search-icon"></span><input id="search" type="search" maxlength="160" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="例如：报价、App" aria-describedby="search-note"><button id="clear-search" type="button" disabled data-text="clear">清除</button></div>
+        <button class="button search-submit" type="submit" data-text="search">搜索</button>
+      </form>
+      <p id="search-note" class="fine" data-text="searchNote">请只输入问题，不要填写客户资料、密码或保密内容。</p>
+    </div>
+    <div class="help-layout">
+      <aside class="topics-region">
+        <h2 class="small-heading" data-text="topics">按主题查找</h2>
+        <nav id="categories" aria-label="问题主题"></nav>
+      </aside>
+      <section id="questions" tabindex="-1" aria-labelledby="section-title">
+        <div class="results-heading"><h2 id="section-title">热门问题</h2><span id="result-count" role="status" aria-live="polite" aria-atomic="true"></span></div>
+        <div id="faq-list"></div>
+        <div id="empty" class="empty-state" hidden>
+          <span class="empty-mark" aria-hidden="true">?</span>
+          <h3 id="empty-title">这个问题，直接和我们聊聊</h3>
+          <p id="empty-description">暂时没有对应的常见问题。告诉团队你的具体情况，我们会进一步确认。</p>
+          <a class="button primary" data-contact="whatsapp" href="https://wa.me/61450428693" target="_blank" rel="noopener noreferrer" data-text="talkWhatsApp">通过 WhatsApp 咨询</a>
+          <div class="empty-contacts"><a href="mailto:info@gomarketing.net.au" data-contact="email" data-text="email">邮件</a><a href="tel:+61299096785" data-contact="phone" data-text="phone">电话</a></div>
+          <button class="text-button" id="browse-all" type="button" data-text="browseAll">查看全部问题</button>
+        </div>
+        <p class="answer-note" data-text="answerNote">以上为一般服务说明。具体范围、费用与合作条款，由团队与你书面确认。</p>
+        <noscript><p>请开启 JavaScript 查看常见问题，或直接通过 WhatsApp、邮件或电话联系团队。You can also contact our team directly using the links on this page.</p></noscript>
+      </section>
+      <aside class="contact-region" aria-labelledby="contact-title">
+        <div class="contact-content">
+          <p class="eyebrow" data-text="contactEyebrow">聊聊下一步</p>
+          <h2 id="contact-title" data-text="contactTitle">聊聊你的具体需求</h2>
+          <p class="contact-copy" data-text="contactCopy">简单介绍你的业务和目标。没有完整方案，也可以先聊聊。</p>
+          <a class="button primary contact-main" data-contact="whatsapp" href="https://wa.me/61450428693" target="_blank" rel="noopener noreferrer" data-text="talkWhatsApp">通过 WhatsApp 咨询</a>
+          <dl class="contact-details">
+            <div><dt data-text="email">邮件</dt><dd><a data-contact="email" href="mailto:info@gomarketing.net.au">info@gomarketing.net.au</a></dd></div>
+            <div><dt data-text="phone">电话</dt><dd><a data-contact="phone" href="tel:+61299096785">02 9909 6785</a></dd></div>
+          </dl>
+          <p class="fine" data-text="contactNote">不需要先填表。打开联系渠道后，由你自行发送消息。</p>
+        </div>
+      </aside>
+    </div>
+    <footer>
+      <div class="footer-line"><span data-text="serviceLabel">服务咨询 · 常见问题</span><span>© 2026 GO MARKETING PTY LTD</span></div>
+      <details class="privacy"><summary data-text="privacyTitle">搜索与隐私</summary><p data-text="privacyBody">问题搜索只在你的浏览器内进行，不调用 AI，不保存搜索历史，也不向团队发送输入。联系链接不携带你的搜索内容。打开 WhatsApp、邮件或电话后，将使用相应服务的数据处理方式。请勿输入个人信息或保密资料。</p></details>
+    </footer>
+  </main>
+</body>
+</html>
