@@ -2126,3 +2126,29 @@ Every new entry must include:
 - Decision: hold every current priority page. No additional title, copy, internal-link or indexing action is justified before the planned 9 October Australian query/page pulse; that pulse remains directional, with full release-window reviews around 26 and 29 October.
 - At 09:35 AEDT, today's approved Week 2 LinkedIn and Meta slots were still in the future and already had verified platform scheduling records. No duplicate submission, publication claim, account change or inbox action was made.
 - Detailed evidence: ignored `.search-console/reports/2026-10-07-follow-up/review.md`.
+
+## 2026-10-08 - Evidence gates and recovery planning
+
+- Reviewed the operating rules and current private strategy after the owner requested a proactive long-term process with ready fallback paths.
+- Added `docs/seo-decision-and-recovery.md` and linked it as the governing decision protocol. Legacy dashboard scores are review hints, not permission to edit; small CTR samples, multiple ranking URLs and unrecrawled changes do not establish failure.
+- Updated the weekly operating rules to require a hypothesis, comparable baseline, release/recrawl evidence, outcome, stop condition, fallback and bounded review date. A page mutation hold no longer implies that diagnosis or approved acquisition work must stop.
+- Recorded active investigation/preparation cases and the actual readiness of fallback assets in ignored `.search-console/reports/2026-10-08-strategy/recovery-register.md`. Private business metrics remain outside tracked documentation.
+- Scope is documentation and local planning only. No website files, dashboard scoring code, forms, scheduler, account permissions, advertising or social publications were changed. No root cause, new ranking gain or AI citation result is claimed.
+- Next action: diagnose the existing search regression using the preserved same-day data and subsequent crawl evidence, verify available AI reporting, and advance only scoped approved content/distribution work. Existing indexing-request records and title observation windows remain in force.
+
+## 2026-10-08 - Owner-directed near-page-one prioritization
+
+- Re-ranked the private keyword shortlist using the existing complete same-day Australian query/page exports. The owner requested stronger emphasis on attainable commercial opportunities instead of difficult broad terms.
+- Prioritized the bilingual-agency and marketing-support paths for growth preparation, retained Chinese Xiaohongshu and content-marketing queries as lower-sample tests, and separated existing top-ten guide visibility from new first-page targets.
+- Reduced the automation decline from a primary growth allocation to a bounded diagnosis/maintenance workstream; this does not defer verified safety or indexing repairs.
+- Updated the operating instructions and private strategy/register so the new priority supersedes earlier decline-led task ordering. Positions are page/query averages, not fixed localized ranks or measured keyword difficulty.
+- Planning/documentation only: no production HTML, metadata, styles, form, account, spending or schedule changes. Existing release observation and approval gates remain in force.
+
+## 2026-10-08 - Approved opportunity-page delivery and enquiry improvements
+
+- The owner authorized execution after final checks, with near-page-one commercial queries as the standing priority. Broad difficult terms remain maintenance/research work, not the default growth allocation.
+- Scoped release: the existing bilingual-agency and Support page pairs only. Clarified the conditional delivery scope in both languages, corrected the agency heading that said three paths while listing five, and linked the edited enquiry sections to the existing language-matched homepage form.
+- Titles, descriptions, H1s, canonical/hreflang, FAQ structured data, styles, images, original forms and contact handling are unchanged. No new claim, public price, client case, paid service or account permission was introduced. Updated sitemap modification dates for these four genuinely changed URLs only.
+- Baseline passed 101 tests and the 125-page/55-pair SEO scan. Final release gate passed 105 tests, the same site scan and the diff whitespace check after adding four regression tests for language-matched enquiry links, existing form anchors, conditional scope and the stale path count. A direct comparison with the previous version confirmed protected metadata, H1s, footer, scripts, images and forms are unchanged. Deployment evidence is recorded in the ignored strategy register after verification.
+- This is a combined body/enquiry improvement to the two priority owners, not an independently attributable title test or a promised ranking gain. Earlier title versions remain unchanged, but performance after this release cannot isolate their effect. Record the first verified recrawl of the combined version before judging the new observation window.
+- Next checks: the 9 October pulse is technical/recrawl monitoring, not an overnight ranking verdict; the 12 October review checks release health and enquiry paths. Review comparable final-data windows after recrawl, allowing 28 days for a fuller outcome review; low samples remain inconclusive. Existing accepted indexing requests are not repeated.

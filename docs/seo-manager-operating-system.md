@@ -1,6 +1,16 @@
 # Senior SEO Manager Operating System
 
-Last updated: 2026-09-28
+Last updated: 2026-10-08
+
+## Decision and recovery protocol
+
+Read `docs/seo-decision-and-recovery.md` before choosing the next intervention. Its evidence gates supersede historical score-to-edit shortcuts in this document and in dashboard suggestions. A dashboard `edit` label is a review candidate, not authorization or proof that an edit is needed.
+
+Each active workstream needs a falsifiable hypothesis, comparable baseline, observed release/recrawl state, primary outcome, guardrails, next review date and a preselected fallback. Keep the detailed register and business results in ignored local reports. The current private handoff is `.search-console/reports/2026-10-08-strategy/recovery-register.md`; if it is unavailable, reconstruct the evidence rather than inventing its status.
+
+Do not wait for a second bad monthly report to investigate a clear regression. Conversely, do not treat a small click count, low CTR, multiple ranking URLs or an unrecrawled release as proof that the content failed. A page-level hold must not freeze approved distribution, diagnosis and preparation elsewhere.
+
+Owner priority, confirmed 2026-10-08: concentrate discretionary growth work on commercially relevant, non-brand query/page opportunities already near page one, rather than spending most effort on broad difficult terms or the largest historical decline. Use observed relevant impressions, buyer intent, service fit, current result types and effort to prioritize. A position around 8-20 is a candidate signal, not proof of low difficulty or a guaranteed first-page result. Preserve useful existing top-ten visibility and validate small samples before expanding. Keep far-ranking terms on maintenance/diagnosis unless new evidence makes them competitive opportunities; safety and factual repairs remain mandatory. Current private shortlist is in `.search-console/reports/2026-10-08-strategy/seo-ai-growth-plan.md`.
 
 ## Current owner boundaries
 
@@ -26,8 +36,8 @@ The mission is not to "check SEO". The mission is to move priority pages toward 
 
 - Protect production before ranking work. If the site has CSS, encoding, HTTPS, unsafe URL, deploy, or indexing issues, fix/report that before copy or metadata optimization.
 - Use Search Console data as the primary ranking signal, but interpret it with business judgment. Clicks, impressions, CTR, average position, and query-to-page match matter together.
-- One keyword family has one owner page. If two pages fight for the same query, fix ownership before adding more content.
-- Prefer decisive small edits over slow vague advice. A good SEO action should change a real ranking lever: title, meta description, H1, first screen, FAQ, internal links, support content, sitemap, indexing, or cannibalisation.
+- Give each commercial intent a primary service page while preserving genuinely different guide/comparison intents. Multiple URLs for a query are a diagnostic clue, not proof of cannibalisation; establish harmful overlap before consolidation or redirects.
+- Prefer evidence-backed, scoped actions. Page edits, legitimate distribution, diagnosis and measurement are all valid work. Identify the bottleneck before selecting title, body, links, indexing or off-site work; do not manufacture website edits to demonstrate activity.
 - Do not publish generic content. Every article or service-process explanation must support a named owner page and a named query family. Client case pages are not permitted.
 - Do not repeatedly rewrite the same page before Google has had time to recrawl and collect fresh data, unless there is a technical, indexing, or cannibalisation problem.
 - Every action must leave an audit trail in `docs/seo-execution-log.md`.
@@ -55,7 +65,7 @@ Every scheduled SEO manager run must follow this order.
 3. Page scoring
    Run `npm run seo:dashboard` to create the ignored local report, then score every priority page using the opportunity score below. Override automated suggestions when a recent release needs time to be crawled or the sample is too small.
 4. Decision
-   Assign exactly one action to every priority page: `edit`, `hold`, or `request indexing`.
+   Assign exactly one legacy page action to every priority page: `edit`, `hold`, or `request indexing`. Also record the workstream state (`diagnose`, `prepare`, `waiting_for_recrawl`, `evaluate`, `continue`, `switch`, `rollback`, or `close`). A `hold` on page mutation can coexist with active diagnosis or approved distribution.
 5. Execution
    If one or more edits are justified, ship only the highest-confidence action first unless multiple edits are tightly connected and low risk.
 6. Release gate
@@ -106,27 +116,24 @@ The owner can review the weekly batch in one short session. Keep client material
 
 Google rankings cannot be guaranteed by command, but the manager is accountable for the control loop that gives the site the best chance to rise.
 
-If priority rankings do not improve after two fresh comparable GSC reports:
+Apply the trigger matrix in `docs/seo-decision-and-recovery.md`. Separate safety failures, missing data, stale crawling, insufficient exposure, ranking/intent loss, click-through issues, enquiry quality and AI citation issues. Investigate meaningful regressions during the next available run; do not wait for a generic two-report deadline.
 
-- check whether the target query is landing on the wrong page
-- compare the owner page against the current SERP
-- add useful service explanations, clearly fictional examples, FAQ depth or relevant internal links
-- create or improve a support article for the owner page, without publishing client cases
-- strengthen legitimate local visibility through owned profiles and genuine relationships; directory address changes require owner confirmation
-- document the reason the prior action did not move the metric and choose the next escalation
+Before switching a content strategy, check that it was actually deployed, retrieved by the relevant engine and exposed to enough relevant searches for the intended conclusion. If these conditions are not met, fix discovery or reallocate effort to an independent approved workstream. Never write "the change failed" solely because its calendar deadline passed.
+
+Every hold needs a next evidence trigger and bounded review date. After two consecutive reviews without new evidence, change the diagnostic approach or complete an independent acquisition deliverable; repeating the same status is not progress. At the monthly review, explicitly choose continue, revise, switch or stop for each workstream and preserve the reason.
 
 ## Opportunity score
 
-Use this score to decide what deserves action first.
+Use this score only to prioritize investigation. Scores do not establish causation, sample sufficiency or permission to mutate a page. CTR expectations must account for query intent, brand, device, position and result type; fixed percentages below are legacy discovery heuristics, not pass/fail targets.
 
 | Factor | Score | Senior interpretation |
 | --- | ---: | --- |
-| Position 4-10 with CTR below 2% | 5 | Immediate SERP snippet opportunity |
-| Position 11-15 with CTR below 1.5% | 5 | Fast page-one push candidate |
-| Position 16-25 with impressions rising at least 15% vs previous comparable report | 4 | Intent is emerging; refine title, first screen, FAQ, or internal links |
-| Position 26-40 with rising impressions and strong commercial intent | 3 | Usually needs support content or stronger internal links before page copy edits |
-| Wrong page ranking for owner keyword | 5 | Cannibalisation fix has priority over new content |
-| Indexed page has 0 impressions after 14 days | 3 | Check crawl path, sitemap, internal links, and content depth |
+| Position 4-10 with CTR below 2% | 5 | Review actual SERP and comparable segments; low counts alone do not justify a snippet edit |
+| Position 11-15 with CTR below 1.5% | 5 | Review commercial fit and available evidence; no fast page-one promise |
+| Position 16-25 with impressions rising at least 15% vs previous comparable report | 4 | Check demand and query mix before choosing an intervention |
+| Position 26-40 with rising impressions and strong commercial intent | 3 | Diagnose the limiting factor; do not assume another article is needed |
+| Unexpected page ranking for intended service query | 5 | Check intent, canonical and overlap; no automatic merge, redirect or deletion |
+| Indexed page has no exported impressions after 14 days | 3 | Check exposure, demand, reporting limits and discovery; not proof of failure |
 | Important new or updated page with verified stale/missing indexing | 4 | Inspect eligibility and the request ledger; request once only if warranted, with sitemap submission only when appropriate |
 | Any CSS, encoding, HTTPS, or unsafe URL issue | 5 | Production safety incident, not an SEO copy task |
 
@@ -136,9 +143,9 @@ When two pages tie, choose the page closest to revenue and closest to page one.
 
 ### Edit
 
-Use `edit` when the opportunity score is 4 or 5 and the fix is clear.
+Use `edit` only when a specific evidence-backed hypothesis and safe scoped fix are recorded. A score of 4 or 5 alone is not sufficient. Technical or factual defects can justify an edit regardless of the opportunity score.
 
-Preferred edit order:
+Select the intervention that matches the diagnosed bottleneck, not a mandatory title-first order:
 
 - title and meta description when position is decent but CTR is weak
 - H1, first-screen copy, and FAQ when query intent is close but landing-page promise is weak
@@ -195,6 +202,9 @@ Every SEO manager report should include:
 - Production safety result
 - Visual check report path when screenshots are captured
 - Next validation date and trigger for the next action
+- Active hypothesis, evidence confidence, selected fallback and conditions for switching
+- Actual workstream outcome versus task completion; unknowns must remain unknown
+- An independent acquisition action while a page waits, or the exact approval/access condition preventing it
 
 ## SERP review
 

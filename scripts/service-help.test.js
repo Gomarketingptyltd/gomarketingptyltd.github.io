@@ -163,3 +163,37 @@ test('shared brochure links to both integrated service languages without exposin
   assert.doesNotMatch(css, /@import|url\(|font-size:[^;]*(?:vw|vh)/);
   assert.doesNotMatch(css, /animation\s*:/);
 });
+
+for (const [lang, directory, formHref, home] of [
+  ['en', 'services', '../#info', 'index.html'],
+  ['zh', 'cn', './#info', 'cn/index.html']
+]) {
+  test(`${lang}: agency and support enquiries reach the existing language-matched form`, () => {
+    const sections = [
+      read(`${directory}/sydneyBilingualMarketingAgency.html`).match(/<section class="service-overview__cta">[\s\S]*?<\/section>/)?.[0],
+      read(`${directory}/support.html`).match(/<section class="support-page__lead"[^>]*>[\s\S]*?<\/section>/)?.[0]
+    ];
+    for (const section of sections) {
+      assert.ok(section, 'The enquiry section must remain present');
+      assert.ok(section.includes(`href="${formHref}"`));
+      assert.doesNotMatch(section, /<form\b|<iframe\b|<script\b/i);
+      const destination = new URL(formHref, `https://gomarketing.net.au/${directory}/support.html`);
+      assert.equal(destination.pathname + 'index.html', '/' + home);
+      assert.equal(destination.hash, '#info');
+    }
+    assert.match(read(home), /id="info"/);
+    assert.match(read(home), /<form\b/);
+  });
+
+  test(`${lang}: support scope stays conditional and agency paths avoid a stale count`, () => {
+    const support = read(`${directory}/support.html`);
+    const lead = support.match(/<section class="support-page__lead"[^>]*>[\s\S]*?<\/section>/)[0];
+    assert.match(lead, lang === 'en' ? /focused project or\s+ongoing support/ : /单个项目或持续支持/);
+    assert.match(lead, lang === 'en' ? /not all included in a\s+single package/ : /并非所有项目都包含在同一个套餐/);
+    assert.doesNotMatch(lead, /(?:AUD|\$)\s*\d|guaranteed rankings|保证排名|免费完整审计/i);
+    const agency = read(`${directory}/sydneyBilingualMarketingAgency.html`);
+    const paths = agency.match(/<section class="service-overview__section" id="core-paths">[\s\S]*?<\/section>/)[0];
+    assert.equal([...paths.matchAll(/<a class="service-overview__card"/g)].length, 5);
+    assert.doesNotMatch(paths, /three main ways|三条主要服务/);
+  });
+}
