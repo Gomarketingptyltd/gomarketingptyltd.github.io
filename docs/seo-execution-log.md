@@ -1,5 +1,12 @@
 # SEO Execution Log
 
+## 2026-10-09 Targeted social image-quality correction
+
+- Owner clarified that the rejected generic blank-device stock image and similar unsuitable/repeated imagery must not be published; this is not a blanket ban on photography or approved brand graphics.
+- Recorded the verified source hash and affected link previews in a private asset register, and corrected the recurring workflow to preserve unrelated approvals. Source hashes supplement, not replace, visual review; native article previews need the same quality gate as uploads.
+- Found retained source references in the automation article, service metadata overrides and Insights lists. Replacing a website image does not prove that an existing platform preview changed. Production image replacement and live-post removal remain separate, uncompleted actions pending the required exact review/confirmation.
+- No website HTML, styles, form, metadata generator, deployment, tracking, DNS, paid advertising or account permissions changed. Private channel outcomes and confirmation evidence stay outside the public repository.
+
 ## 2026-10-06 Xiaohongshu Service Integration
 
 - Owner approved bringing the public-safe brochure into the existing website service journey. Added concise bilingual homepage entry cards and expanded the existing Xiaohongshu/WeChat service pair, rather than creating another indexed URL. Updated the existing service-overview and community-growth card descriptions.
@@ -2162,3 +2169,30 @@ Every new entry must include:
 - Verified the 7 October approved Meta topic as published on both company identities through the current native planner. LinkedIn verification was blocked by a signed-out admin surface; the 9 October Google and Meta slots were still future at 09:32 AEDT. Missing permalinks, metrics and qualified enquiries remain unknown.
 - Prepared the five-item Week 3 owner-review copy batch privately. Nothing is approved, scheduled or published; the two Meta assets remain pending text-direction approval. The social pilot still ends 25 October and is not extended.
 - Detailed evidence: ignored `.search-console/reports/2026-10-09-friday/review.md`. Next review: 12 October for release health, crawl state and the Australian decline split; preserve the complete 26/29 October outcome windows.
+
+## 2026-10-09 - Owner-requested SEO recheck
+
+- Re-ran the release gate and live safety checks: 105 tests, 125 HTML files/55 bilingual pairs, and 23 production priority pages/seven stylesheet URLs passed. Existing Search Console authorization is healthy. No website, original form, styling, account or publishing change was made.
+- Reused today's complete adjacent Australian final-data windows ending 5 October and 7 September; added read-only device/page segmentation and verified device totals reconcile with the existing property totals. Refreshed the private dashboard; its legacy low-CTR edit hints do not override sample and recrawl gates.
+- Inspected eight exact priority URLs and compared their live content with the release: seven are indexed with matching declared/Google canonicals. The English Xiaohongshu/WeChat service URL is crawled but not indexed, with a pre-release May crawl record. Missing canonical fields on that result are unknown, not a verified mismatch.
+- Verified live robots and sitemap availability, current English service canonical, absence of noindex and existing discovery links. Corrected the release documentation's unsupported blanket indexed-status wording and recorded a specific live-test/request-ledger follow-up. No indexing request or sitemap submission was performed.
+- Agency/Support retain the 8 October release; today's inspection still shows older crawl records, and performance data stops before publication. The practical guide's small near-top-ten signal is preserved. Broad losses remain a diagnosis workstream, not a reason to rewrite every page or declare a penalty.
+- Detailed checks, segmentation, decisions and next trigger are stored only in ignored `.search-console/reports/2026-10-09-friday/review.md`. Next planned review is 12 October, with the English Xiaohongshu indexing check first and no repeat of previously accepted requests.
+
+## 2026-10-09 - Owner-directed indexing action
+
+- Used the existing authorised company Google account, without new ownership verification, credentials, permissions or DNS changes.
+- Tested the English Xiaohongshu/WeChat service URL in Google's live URL tool. At 11:46 AEDT, Google reported that the URL is available, the page can be indexed and one Breadcrumbs item is valid. No prior accepted-request indicator was present; submitted one indexing request and verified the explicit priority-queue acceptance dialog.
+- Request acceptance does not mean the page is indexed, its ranking improved or an enquiry occurred. Preserve the current service URL, separate brochure noindex and original enquiry form. Do not repeat this request.
+- The property-level Manual actions and Security issues reports both showed `No issues detected`. This narrows diagnosis but does not rule out algorithmic, competition, demand, content or retrieval effects.
+- Saved private screenshots and the follow-up decision tree. Review crawl/index status on 12 October; if unchanged on 23 October, diagnose crawl/discovery versus current-version exclusion separately, rather than resubmitting or arbitrarily rewriting. Agency/Support remain the leading commercial opportunity workstreams.
+- No production HTML, CSS, scripts, forms, metadata, sitemap, paid media or social publication was changed in this action.
+
+## 2026-10-12 - Monday comparable-window and recrawl review
+
+- Production safety passed: 105 tests, 125 HTML files/55 bilingual pairs, and 23 live priority pages/seven stylesheet URLs. Search Console authorization and token refresh passed.
+- Pulled the newest final 28-day period and its immediately preceding equal-length period, regenerated the private dashboard, and split the Australian decline by query, page and device. The visibility decline affects both desktop and mobile; detailed metrics remain in ignored private evidence.
+- Fresh read-only checks found the inspected Agency, Support, practical-guide and automation URLs indexed, crawlable and canonical-correct, with live files matching local. Google crawl records still predate the relevant releases, so the current window cannot evaluate the 8 October combined version.
+- Decision: hold page mutations, indexing requests and sitemap submission. Keep Agency/Support as the main commercial workstream, continue bounded automation diagnosis, and inspect discovery evidence on 14 October if crawl records remain stale. No filler article was justified.
+- Week 3 owned-channel drafts remain unapproved and unscheduled; no post was submitted. The targeted rejected-image register remains in force for three exact LinkedIn posts, and no permanent deletion was performed without action-time confirmation.
+- Detailed evidence: ignored `.search-console/reports/2026-10-12-weekly/review.md`. Complete guide and Agency review windows remain around 26 and 29 October, subject to actual recrawl and final-data availability.
