@@ -2196,3 +2196,12 @@ Every new entry must include:
 - Decision: hold page mutations, indexing requests and sitemap submission. Keep Agency/Support as the main commercial workstream, continue bounded automation diagnosis, and inspect discovery evidence on 14 October if crawl records remain stale. No filler article was justified.
 - Week 3 owned-channel drafts remain unapproved and unscheduled; no post was submitted. The targeted rejected-image register remains in force for three exact LinkedIn posts, and no permanent deletion was performed without action-time confirmation.
 - Detailed evidence: ignored `.search-console/reports/2026-10-12-weekly/review.md`. Complete guide and Agency review windows remain around 26 and 29 October, subject to actual recrawl and final-data availability.
+
+## 2026-10-14 - Wednesday recrawl access hold and discovery audit
+
+- Production remained healthy: 23 live priority pages and seven stylesheet URLs passed. The local test/content phase passed 105 tests and scanned 125 HTML files with 55 bilingual pairs; the final repository-wide diff phase encountered the known dirty-worktree refresh stall and was stopped because no release was being attempted.
+- Search Console authorization changed since Monday: the saved OAuth refresh token is expired or revoked, so no fresh URL Inspection or performance request was made. This is an account-access blocker, not evidence of deindexing or a production outage.
+- Independently verified that the Agency and Support bilingual pairs remain in the sitemap, declare self-canonicals and reciprocal language alternates, contain no detected indexing prohibition, and retain real contextual/internal discovery paths.
+- Decision: hold the 8 October Agency/Support release unchanged. No deterministic crawlability defect justified another content, link, sitemap or indexing intervention; existing accepted requests were not repeated.
+- Week 3 content remains unapproved and unscheduled. The 13 October LinkedIn slot was marked missed and will not be backfilled. No rejected-image post was deleted without action-time confirmation.
+- Exact recovery: reauthorize the existing Search Console account, run doctor, then perform one fresh crawl-state inspection. If still pre-release at the 22 October 14-day checkpoint, repeat bounded discovery/rendered-version diagnosis rather than stacking edits.
