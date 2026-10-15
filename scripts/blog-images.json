@@ -54,7 +54,13 @@
   "whatIsBrandKit.html": {"image": "/images/insights/china-safe/pexels-8970685.jpg", "sourceId": "pexels:8970685"},
   "whatIsDigitalPoster.html": {"image": "/images/insights/china-safe/pexels-12887602.jpg", "sourceId": "pexels:12887602"},
   "whatIsGlobalStrategy.html": {"image": "/images/insights/china-safe/pexels-7412032.jpg", "sourceId": "pexels:7412032"},
-  "whatIsMarketingAutomation.html": {"image": "/images/insights/china-safe/pexels-29205845.jpg", "sourceId": "pexels:29205845"},
+  "whatIsMarketingAutomation.html": {
+    "image": "/images/insights/generated/marketing-automation-workflow-planning.jpg",
+    "sourceId": "gomarketing:generated:workflow-planning:2026-10-15",
+    "generated": true,
+    "provenance": "docs/automation-image-provenance.md",
+    "alt": {"en": "Illustrative workflow planning with paper task cards and connecting arrows", "zh": "示意场景：用纸质任务卡和连接箭头规划工作流程"}
+  },
   "xiaohongshuMarketingForSydneyRestaurants.html": {
     "image": "/images/insights/editorial/restaurant-food-content-693267.jpg",
     "sourceId": "pexels:693267",

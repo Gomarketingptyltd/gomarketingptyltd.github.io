@@ -41,9 +41,9 @@ const CUSTOM_SOCIAL_IMAGES = {
   "cn/digital.html":
     `${SITE_URL}/images/insights/china-safe/pexels-8970645.jpg`,
   "services/marketingAutomationServicesSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
+    `${SITE_URL}/images/services/generated/custom-automation-system.jpg`,
   "cn/marketingAutomationServicesSydney.html":
-    `${SITE_URL}/images/insights/china-safe/pexels-29205845.jpg`,
+    `${SITE_URL}/images/services/generated/custom-automation-system.jpg`,
   "services/sydneyHospitalityMarketing.html":
     `${SITE_URL}/images/insights/china-safe/pexels-17564425.jpg`,
   "cn/sydneyHospitalityMarketing.html":

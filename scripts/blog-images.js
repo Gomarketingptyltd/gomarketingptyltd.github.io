@@ -2,6 +2,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { createHash } = require("node:crypto");
 const manifest = require("./blog-images.json");
+const rejected = require("./rejected-images.json");
 const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://gomarketing.net.au";
 
@@ -27,6 +28,10 @@ function checkUnique(entries, readAsset) {
     }
     let bytes;
     try { bytes = readAsset(image); } catch { errors.push(`${article}: missing asset ${image}`); continue; }
+    if (rejected.some((rule) => rule.sourceId === item.sourceId || image.includes(rule.pathMarker)
+      || createHash("sha256").update(bytes).digest("hex") === rule.sha256)) {
+      errors.push(`${article}: owner-rejected image must not be reused`);
+    }
     for (const [kind, key] of Object.entries({ path: image, source: item.sourceId, bytes: createHash("sha256").update(bytes).digest("hex") })) {
       if (used[kind].has(key)) errors.push(`${article}: duplicate ${kind} with ${used[kind].get(key)}`);
       else used[kind].set(key, article);
@@ -36,6 +41,51 @@ function checkUnique(entries, readAsset) {
       if (!item.source?.startsWith("https://") || !item.photographer || !item.alt?.en || !item.alt?.zh) {
         errors.push(`${article}: source, photographer and bilingual alt text are required`);
       }
+    }
+    if (image.startsWith("/images/insights/generated/")) {
+      if (bytes.length > 250 * 1024) errors.push(`${article}: generated image exceeds 250 KB`);
+      if (item.generated !== true || !item.provenance || !item.alt?.en || !item.alt?.zh) {
+        errors.push(`${article}: generated artwork requires provenance and bilingual illustrative alt text`);
+      }
+    }
+  }
+  return errors;
+}
+
+function checkRejectedImages(page, html, readAsset, rules = rejected) {
+  const references = new Set();
+  for (const [tag] of html.matchAll(/<(?:img|source|meta|link)\b[^>]*>/gi)) {
+    const attrs = attributes(tag);
+    if (attrs.src) references.add(attrs.src);
+    for (const srcset of [attrs.srcset, attrs.imagesrcset].filter(Boolean)) {
+      for (const candidate of srcset.split(",")) references.add(candidate.trim().split(/\s+/)[0]);
+    }
+    if (/^(og:image(?::url|:secure_url)?|twitter:image(?::src)?)$/.test(attrs.property || attrs.name || "")) references.add(attrs.content);
+    if (attrs.as === "image" && attrs.href) references.add(attrs.href);
+  }
+  function collect(node, imageContext = false) {
+    if (typeof node === "string" && imageContext) references.add(node);
+    else if (Array.isArray(node)) node.forEach((item) => collect(item, imageContext));
+    else if (node && typeof node === "object") {
+      const isImage = imageContext || [].concat(node["@type"]).includes("ImageObject");
+      for (const [key, value] of Object.entries(node)) {
+        collect(value, /^(image|logo|thumbnailUrl|contentUrl)$/.test(key) || (isImage && key === "url"));
+      }
+    }
+  }
+  for (const [, json] of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) collect(JSON.parse(json));
+  const errors = [];
+  for (const reference of references) {
+    if (!reference) continue;
+    let url;
+    try { url = new URL(reference, `${ORIGIN}/${page}`); } catch { continue; }
+    const pathname = decodeURIComponent(url.pathname);
+    let digest;
+    if (url.origin === ORIGIN && pathname.startsWith("/images/") && readAsset) {
+      try { digest = createHash("sha256").update(readAsset(pathname)).digest("hex"); } catch { /* Missing assets are checked by the site audit. */ }
+    }
+    if (rules.some((rule) => pathname.includes(rule.pathMarker) || digest === rule.sha256)) {
+      errors.push(`${page}: owner-rejected image reference ${reference}`);
     }
   }
   return errors;
@@ -81,10 +131,18 @@ function checkPage(page, html, entries) {
 }
 
 function audit(root = ROOT, entries = manifest) {
-  const errors = checkUnique(entries, (name) => fs.readFileSync(path.join(root, name)));
+  const assets = new Map();
+  const readAsset = (name) => {
+    if (!assets.has(name)) assets.set(name, fs.readFileSync(path.join(root, name)));
+    return assets.get(name);
+  };
+  const errors = checkUnique(entries, readAsset);
   const pages = ["index.html", ...["services", "cn"].flatMap((dir) => fs.readdirSync(path.join(root, dir))
     .filter((name) => name.endsWith(".html")).map((name) => `${dir}/${name}`))];
-  for (const page of pages) errors.push(...checkPage(page, fs.readFileSync(path.join(root, page), "utf8"), entries));
+  for (const page of pages) {
+    const html = fs.readFileSync(path.join(root, page), "utf8");
+    errors.push(...checkPage(page, html, entries), ...checkRejectedImages(page, html, readAsset));
+  }
   for (const article of Object.keys(entries)) {
     for (const lang of ["services", "cn"]) {
       if (!pages.includes(`${lang}/${article}`)) errors.push(`${lang}/${article}: missing article translation`);
@@ -99,4 +157,4 @@ if (require.main === module) {
   else console.log(`Blog images passed: ${Object.keys(manifest).length} unique article covers, translations, thumbnails and metadata.`);
 }
 
-module.exports = { attributes, localPath, checkUnique, checkPage, audit };
+module.exports = { attributes, localPath, checkUnique, checkPage, checkRejectedImages, audit };
