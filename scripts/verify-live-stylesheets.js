@@ -69,6 +69,22 @@ async function main() {
   const issues = [];
   const checkedStylesheets = new Set();
 
+  // These legacy entry points recur in crawl errors but are not service pages.
+  try {
+    const contact = await fetchOk(`${SITE_URL}/contact/`);
+    const html = await contact.text();
+    if (!contact.ok || !/http-equiv="refresh" content="0; url=\/#info"/.test(html)) {
+      issues.push(`/contact/: expected the contact redirect, received HTTP ${contact.status}`);
+    }
+    const icon = await fetchOk(`${SITE_URL}/favicon.ico`);
+    const bytes = Buffer.from(await icon.arrayBuffer());
+    if (!icon.ok || bytes.length < 6 || bytes.readUInt32LE(0) !== 65536) {
+      issues.push(`/favicon.ico: expected a valid icon, received HTTP ${icon.status}`);
+    }
+  } catch (error) {
+    issues.push(`Contact/icon access check failed: ${error.message}`);
+  }
+
   for (const path of PRIORITY_PATHS) {
     const pageUrl = new URL(path, `${SITE_URL}/`).href;
     let pageResponse;
@@ -141,6 +157,7 @@ async function main() {
 
   console.log("Live production safety check passed.");
   console.log(`Checked ${PRIORITY_PATHS.length} priority pages and ${checkedStylesheets.size} unique stylesheet URL(s).`);
+  console.log("Verified the legacy contact redirect and root favicon.");
 }
 
 main().catch((error) => {
