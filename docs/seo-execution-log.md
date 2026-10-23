@@ -1,5 +1,12 @@
 # SEO Execution Log
 
+## 2026-10-23 Agency buyer-guide discovery link
+
+- Added one contextual, language-matched link from each existing Agency service page to the existing buyer-selection guide, inside the quotation-preparation paragraph. The guide already links to the service and original enquiry section. No new landing page or repeated keyword links were created.
+- The change supplements the existing Agency workstream; it does not restart its observation window or create another experiment. No title, H1, metadata, canonical, hreflang, sitemap date, card structure, shared CSS, image, script, navigation, form or privacy change. Only the new link receives an inline underline for visibility.
+- Pre-release checks: 113 existing tests and the SEO scan of 124 HTML files / 55 bilingual pairs passed. English and Chinese views at 1440px and 390px were checked for text/page overflow and broken loaded images; the new guide route was exercised. Private evidence and live-release verification are kept outside the public repository.
+- The separate Google request for the materially updated English buyer guide was accepted after a successful live test. Queue acceptance is not completed crawling or a ranking improvement. Existing requests for other pages were not repeated, and the unchanged sitemap was not resubmitted.
+
 ## 2026-10-09 Targeted social image-quality correction
 
 - Owner clarified that the rejected generic blank-device stock image and similar unsuitable/repeated imagery must not be published; this is not a blanket ban on photography or approved brand graphics.
