@@ -57,6 +57,23 @@ const plainText = (html) => html.replace(/<[^>]+>/g, " ")
   .replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, " ")
   .replace(/\s+/g, " ").trim();
 
+for (const lang of ["services", "cn"]) {
+  test(`${lang}/support.html: execution FAQ is scoped and matches public structured data`, () => {
+    const html = read(`${lang}/support.html`);
+    const body = html.split("<body>")[1];
+    const visible = [...body.matchAll(/<article class="seo-faq__item">\s*<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>\s*<\/article>/g)]
+      .map(([, q, a]) => ({ q: plainText(q), a: plainText(a) }));
+    const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])["@graph"];
+    const faq = graph.find((node) => [].concat(node["@type"]).includes("FAQPage"));
+    assert.equal(visible.length, 4);
+    assert.deepEqual(faq.mainEntity.map((item) => ({ q: item.name, a: item.acceptedAnswer.text })), visible);
+    assert.match(visible[1].q, lang === "cn" ? /持续协助执行/ : /ongoing execution/);
+    assert.match(visible[1].a, lang === "cn" ? /并非包含所有服务的无限量套餐/ : /not an unlimited all-services package/);
+    assert.match(visible[1].a, lang === "cn" ? /哪些工作仍由您的团队负责/ : /which tasks stay with your team/);
+    assert.match(body, lang === "cn" ? /href="\.\/#info"/ : /href="\.\.\/#info"/);
+  });
+}
+
 for (const page of capabilityPages) {
   test(`${page}: all eight FAQ answers are visible and match structured data`, () => {
     const html = read(page);

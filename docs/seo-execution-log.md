@@ -1,5 +1,12 @@
 # SEO Execution Log
 
+## 2026-10-26 Support execution FAQ clarification
+
+- Replaced one repetitive service-fit FAQ on the English and Chinese Support pages with a direct answer about scoped execution alongside a customer's existing team. It distinguishes one-off work and ongoing support, and keeps deliverables, permissions, approvals, reporting and quotation subject to the agreed brief.
+- Updated only the matching FAQ structured data using the existing page-scoped metadata generator. Titles, descriptions, H1s, canonical URLs, hreflang, sitemap, navigation, images, CSS, scripts and original contact routes were preserved. No public price, client example, unlimited-service promise or ranking claim was added.
+- Added two regression tests for visible/structured FAQ parity, the four-item layout and service-scope boundaries. All 115 tests and the 124-page / 55-bilingual-pair SEO check passed. Both languages were visually checked at desktop and mobile widths. No test enquiry was submitted.
+- This is a narrow clarification within the existing Support workstream, not a new landing page or a reset of earlier evaluation dates. Private measurement, release evidence and follow-up decisions remain outside this public log. Release completion and search impact must be verified separately.
+
 ## 2026-10-23 Agency buyer-guide discovery link
 
 - Added one contextual, language-matched link from each existing Agency service page to the existing buyer-selection guide, inside the quotation-preparation paragraph. The guide already links to the service and original enquiry section. No new landing page or repeated keyword links were created.
