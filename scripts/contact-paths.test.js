@@ -21,6 +21,24 @@ test("contact alias is not promoted as a separate search landing page", () => {
   assert.doesNotMatch(read("sitemap.xml"), /<loc>https:\/\/gomarketing\.net\.au\/contact\//);
 });
 
+test("agency introductions link to the existing language-matched enquiry form first", () => {
+  const pages = [
+    ["services/sydneyBilingualMarketingAgency.html", "../#info", "index.html"],
+    ["cn/sydneyBilingualMarketingAgency.html", "./#info", "cn/index.html"],
+  ];
+
+  for (const [page, href, home] of pages) {
+    const hero = read(page).match(/<section class="service-overview__hero">([\s\S]*?)<\/section>/)?.[1];
+    assert.ok(hero, `${page}: introduction exists`);
+    const firstLink = hero.match(/<div class="service-overview__nav">\s*<a href="([^"]+)">([^<]+)<\/a>/);
+    assert.equal(firstLink?.[1], href, `${page}: enquiry precedes chapter links`);
+    assert.ok(firstLink[2].trim(), `${page}: enquiry has a visible label`);
+    assert.doesNotMatch(hero, /<form\b/i);
+    assert.match(read(home), /\bid="info"/);
+    assert.match(read(home), /data-enquiry-form="native"/);
+  }
+});
+
 test("root favicon is an unchanged copy of the existing valid company icon", () => {
   const icon = fs.readFileSync(path.join(root, "favicon.ico"));
   assert.deepEqual(icon, fs.readFileSync(path.join(root, "images/favicon.ico")));
