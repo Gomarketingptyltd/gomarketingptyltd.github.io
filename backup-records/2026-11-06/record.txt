@@ -1,0 +1,38 @@
+Go Marketing source backup record — 2026-11-06 (Australia/Sydney)
+
+Repository: https://github.com/Gomarketingptyltd/gomarketingptyltd.github.io
+Production website: https://gomarketing.net.au/
+Source commit: b9e3f73ec40503b8e9865bb33d3a38bae68fe419
+Source tree: 9fdc3fc71f50f8d202ee720bde5892baa07c3fa0
+
+Dated source references:
+backup/2026-11-06/main
+backup/2026-11-06/v1
+backup/2026-11-06/feature-footer-add-email
+backup/2026-11-06/pull-3
+
+All four dated source branches were read back through GitHub and matched their original commit SHAs.
+This audit branch contains documentation in addition to the source snapshot.
+The production main branch and website configuration were not changed.
+
+Scope and validation:
+- Full mirror backup of the original 3 branches and PR #3 head.
+- 620 original reachable commits and 7284 Git objects.
+- 519 files at the source commit, including 124 HTML files.
+- Git integrity check passed.
+- No Git LFS pointer files or submodule entries found across the backed-up history.
+- No missing same-domain file references found in tracked HTML/CSS.
+- Existing release gate passed: 125 tests; SEO check of 124 HTML files and 55 bilingual page pairs.
+- All 444 checked live website files returned HTTP 200 and matched source SHA-256 hashes.
+- An independent offline Git bundle was created and restored into a new mirror.
+- Restored original refs and 620 commits matched; restored integrity check passed.
+
+Offline history bundle SHA-256:
+3808420201ac609dcbf7cc15f1ccb0ae48b7357d16085bfcd12fac8373a32a78
+
+The offline package also contains the original source files, per-file hashes, test output, live verification, public DNS observations, repository metadata and recovery instructions.
+A Git bundle preserves Git objects and refs, not GitHub account settings or third-party service data.
+The repository is a static website. Formspree submissions, mailbox data, DNS/registrar control, analytics properties and local OAuth credentials require separate account handover.
+Public DNS observations are not a complete DNS zone export or proof of account control.
+This record covers the identified production repository. Any other private developer repository or uncommitted source requires a separate backup.
+Dated branches in the same repository supplement the independent offline backup.
