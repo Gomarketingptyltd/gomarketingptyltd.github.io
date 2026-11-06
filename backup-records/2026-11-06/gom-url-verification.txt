@@ -1,0 +1,23 @@
+GOM 旧链接核对记录
+核对日期：2026年11月6日（悉尼）
+
+用户提供的地址：
+https://github.com/Gomarketingptyltd/GOM
+
+GitHub 对旧地址的仓库 API 返回 Moved Permanently，目标为：
+https://api.github.com/repositories/590289528
+
+通过仓库 ID 590289528 重新查询，当前正式仓库是：
+https://github.com/Gomarketingptyltd/gomarketingptyltd.github.io
+
+结论：
+GOM 是同一个仓库的旧地址，不是尚未备份的另一个源码仓库。
+此前制作的完整备份已经包含该仓库的全部原始分支、PR 代码引用和 620 条提交历史。
+
+再次核对结果：
+生产 main：b9e3f73ec40503b8e9865bb33d3a38bae68fe419
+日期备份 backup/2026-11-06/main：b9e3f73ec40503b8e9865bb33d3a38bae68fe419
+目录树：9fdc3fc71f50f8d202ee720bde5892baa07c3fa0
+与已制作的离线备份基准一致。
+
+证据见同目录 gom-url-verification.json。
